@@ -1,0 +1,5 @@
+<Simulation version="3.6.2">
+   <PythonScript Type="PythonScript">Simulation/DermisMaturation.py</PythonScript>
+   <Resource Type="Python">Simulation/DermisMaturationSteppables.py</Resource>
+   <SerializeSimulation AllowMultipleRestartDirectories="True" FileFormat="text" OutputFrequency="100"/>
+</Simulation>

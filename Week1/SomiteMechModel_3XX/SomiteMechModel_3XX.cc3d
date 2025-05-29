@@ -1,0 +1,4 @@
+<Simulation version="3.6.2">
+   <PythonScript Type="PythonScript">Simulation/SomiteMechModel_3XX.py</PythonScript>
+   <Resource Type="Python">Simulation/SomiteMechModel_3XXSteppables.py</Resource>
+</Simulation>

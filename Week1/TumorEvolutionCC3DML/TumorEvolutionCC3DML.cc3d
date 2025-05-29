@@ -1,0 +1,5 @@
+<Simulation version="3.5.1">
+   <XMLScript Type="XMLScript">Simulation/TumorEvolution.xml</XMLScript>
+   <PythonScript Type="PythonScript">Simulation/TumorEvolution.py</PythonScript>
+   <Resource Type="Python">Simulation/TumorEvolution_steppable.py</Resource>
+</Simulation>

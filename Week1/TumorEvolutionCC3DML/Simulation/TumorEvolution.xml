@@ -1,0 +1,96 @@
+<CompuCell3D Revision="20150220" Version="3.7.3">
+
+   <Metadata>
+        <DebugOutputFrequency>1000</DebugOutputFrequency>
+   </Metadata> 
+   
+   <Potts>
+      <Dimensions x="500" y="500" z="1"/>
+      <Steps>1000001</Steps>
+      <RandomSeed>2284322</RandomSeed>
+      <Temperature>50.0</Temperature>
+      <NeighborOrder>3</NeighborOrder>
+      <Boundary_x>Periodic</Boundary_x>
+      <Boundary_y>Periodic</Boundary_y>      
+   </Potts>
+   
+   <Plugin Name="CellType">
+      <CellType TypeId="0" TypeName="Medium"/>
+      <CellType TypeId="1" TypeName="PCancer"/>
+      <CellType TypeId="2" TypeName="QCancer"/>
+      <CellType TypeId="3" TypeName="Necrotic"/>
+      <CellType TypeId="4" TypeName="PStem"/>
+      <CellType TypeId="5" TypeName="QStem"/>
+   </Plugin>
+   
+   <Plugin Name="Volume"/>
+   
+   <Plugin Name="Surface"/>
+   
+   <Plugin Name="CenterOfMass"/>
+   
+   <Plugin Name="NeighborTracker"/>
+   
+   <Plugin Name="PixelTracker"/>
+   
+   <Plugin Name="AdhesionFlex">
+      <AdhesionMolecule Molecule="Cad"/>
+      <AdhesionMolecule Molecule="Int"/>
+      <AdhesionMolecule Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="Medium" Density="16.0" Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="PCancer" Density="8.0" Molecule="Cad"/>
+      <AdhesionMoleculeDensity CellType="PCancer" Density="8.0" Molecule="Int"/>
+      <AdhesionMoleculeDensity CellType="PCancer" Density="0.0" Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="QCancer" Density="8.0" Molecule="Cad"/>
+      <AdhesionMoleculeDensity CellType="QCancer" Density="8.0" Molecule="Int"/>
+      <AdhesionMoleculeDensity CellType="QCancer" Density="0.0" Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="Necrotic" Density="8.0" Molecule="Cad"/>
+      <AdhesionMoleculeDensity CellType="Necrotic" Density="8.0" Molecule="Int"/>
+      <AdhesionMoleculeDensity CellType="Necrotic" Density="0.0" Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="PStem" Density="8.0" Molecule="Cad"/>
+      <AdhesionMoleculeDensity CellType="PStem" Density="8.0" Molecule="Int"/>
+      <AdhesionMoleculeDensity CellType="PStem" Density="0.0" Molecule="FN"/>
+      <AdhesionMoleculeDensity CellType="QStem" Density="8.0" Molecule="Cad"/>
+      <AdhesionMoleculeDensity CellType="QStem" Density="8.0" Molecule="Int"/>
+      <AdhesionMoleculeDensity CellType="QStem" Density="0.0" Molecule="FN"/>
+      <BindingFormula Name="Binary">
+         <Formula>min(Molecule1,Molecule2)</Formula>
+         <Variables>
+            <AdhesionInteractionMatrix>
+               <BindingParameter Molecule1="Cad" Molecule2="Cad">2.0</BindingParameter>
+               <BindingParameter Molecule1="Int" Molecule2="FN">0.2</BindingParameter>
+            </AdhesionInteractionMatrix>
+         </Variables>
+      </BindingFormula>
+      <NeighborOrder>3</NeighborOrder>
+   </Plugin>
+   
+   <Steppable Type="SteadyStateDiffusionSolver2D" Frequency="10">
+      <DiffusionField Name="Glucose">
+         <DiffusionData>
+            <FieldName>Glucose</FieldName>
+            <DiffusionConstant>13500.0</DiffusionConstant>
+            <DecayConstant>0.45</DecayConstant>
+         </DiffusionData>
+         <SecretionData>
+            <Uptake Type="QStem" MaxUptake="1.69" MichaelisMentenCoef="0.00256"/>                                    
+            <Uptake Type="PStem" MaxUptake="2.25" MichaelisMentenCoef="0.00256"/>                                    
+            <Uptake Type="QCancer" MaxUptake="1.69" MichaelisMentenCoef="0.00256"/>
+            <Uptake Type="PCancer" MaxUptake="2.25" MichaelisMentenCoef="0.00256"/>            
+            <Secretion Type="Medium">0.145</Secretion>
+         </SecretionData>
+      </DiffusionField>
+   </Steppable>
+   
+   <Steppable Type="UniformInitializer">
+      
+      <!-- Initial layout of cells in the form of rectangular slab -->
+      <Region>
+         <BoxMin x="250" y="250" z="0"/>
+         <BoxMax x="253" y="253" z="1"/>
+         <Gap>3</Gap>
+         <Width>0</Width>
+         <Types>QStem</Types>
+      </Region>
+   </Steppable>
+</CompuCell3D>
