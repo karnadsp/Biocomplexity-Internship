@@ -1,0 +1,71 @@
+---START XML---
+```xml
+<CompuCell3D>
+    <Potts>
+        <Dimensions x="100" y="100" z="1"/>
+        <Steps>1000</Steps>
+        <Temperature>10</Temperature>
+    </Potts>
+    <Plugin Name="VolumeTracker"/>
+    <Plugin Name="CenterOfMass"/>
+    <Plugin Name="PixelTracker"/>
+    <Plugin Name="CellType">
+        <CellType TypeName="Epithelial cells" TypeId="1"/>
+        <CellType TypeName="Fibroblasts" TypeId="2"/>
+    </Plugin>
+    <Plugin Name="Contact">
+        <Energy Type1="Epithelial cells" Type2="Epithelial cells">16</Energy>
+        <Energy Type1="Fibroblasts" Type2="Fibroblasts">16</Energy>
+        <Energy Type1="Epithelial cells" Type2="Fibroblasts">10</Energy>
+    </Plugin>
+    <Plugin Name="Chemotaxis">
+        <ChemotaxisByType Type="Epithelial cells" Lambda="10"/>
+        <ChemotaxisByType Type="Fibroblasts" Lambda="10"/>
+    </Plugin>
+    <Steppable Type="VolumeLocalFlex">
+        <TargetVolume>250</TargetVolume>
+        <LambdaVolume>2.0</LambdaVolume>
+    </Steppable>
+</CompuCell3D>
+```
+---END XML---
+---START PYTHON---
+```python
+from cc3d import CompuCellSetup
+
+def configure_simulation():
+    CompuCellSetup.initializeSimulationObjects()
+
+    CompuCellSetup.mainLoop()
+
+
+class WoundHealingSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def start(self):
+        for cell in self.cell_list:
+            if cell.type == self.EPITHELIAL_CELLS:
+                cell.targetVolume = 250
+
+    def step(self, mcs):
+        for cell in self.cell_list:
+            if cell.type == self.FIBROBLASTS:
+                cell.lambdaVolume = 2.0
+
+
+class CellMigrationSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def step(self, mcs):
+        for cell in self.cell_list:
+            if cell.type == self.EPITHELIAL_CELLS:
+                cell.lambdaChemotaxis = 10
+                cell.chemotaxisLambda = 10
+
+
+if __name__ == '__main__':
+    configure_simulation()
+```
+---END PYTHON---

@@ -1,0 +1,65 @@
+---START XML---
+```xml
+<CompuCell3D>
+  <Potts>
+    <Dimensions x="100" y="100" z="1"/>
+    <Steps>500</Steps>
+    <Temperature>10</Temperature>
+    <Flip2DimRatio>0.1</Flip2DimRatio>
+  </Potts>
+  <Plugin Name="Volume">
+    <TargetVolume>250</TargetVolume>
+    <LambdaVolume>2.0</LambdaVolume>
+  </Plugin>
+  <Plugin Name="CenterOfMass"/>
+  <Plugin Name="NeighborTracker"/>
+  <Plugin Name="PixelTracker"/>
+  <Plugin Name="DiffusionSecretion">
+    <DiffusionField>
+      <DiffusionData>
+        <Name>Chemical</Name>
+        <DiffusionConstant>0.01</DiffusionConstant>
+        <DecayConstant>0.0</DecayConstant>
+      </DiffusionData>
+    </DiffusionField>
+  </Plugin>
+  <Plugin Name="AdhesionFlex">
+    <AdhesionEnergy Type1="Epithelial cells" Type2="Epithelial cells">2</AdhesionEnergy>
+    <AdhesionEnergy Type1="Epithelial cells" Type2="Fibroblasts">4</AdhesionEnergy>
+    <AdhesionEnergy Type1="Fibroblasts" Type2="Fibroblasts">2</AdhesionEnergy>
+  </Plugin>
+  <CellType>
+    <CellType Id="0" TypeName="Medium"/>
+    <CellType Id="1" TypeName="Epithelial cells"/>
+    <CellType Id="2" TypeName="Fibroblasts"/>
+  </CellType>
+</CompuCell3D>
+```
+---END XML---
+---START PYTHON---
+```python
+from cc3d import CompuCellSetup
+
+def configure_simulation():
+    CompuCellSetup.setSimulationXMLDescription('simulation.xml')
+
+class WoundHealingSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def step(self, mcs):
+        # Wound healing process code here
+
+class CellMigrationSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def step(self, mcs):
+        # Cell migration process code here
+
+configure_simulation()
+CompuCellSetup.register_steppable(steppable=WoundHealingSteppable(frequency=1))
+CompuCellSetup.register_steppable(steppable=CellMigrationSteppable(frequency=1))
+CompuCellSetup.run()
+```
+---END PYTHON---

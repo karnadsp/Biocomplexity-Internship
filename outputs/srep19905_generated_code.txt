@@ -1,0 +1,42 @@
+---START XML---
+```xml
+<CompuCell3D>
+    <Potts>
+        <Dimensions x="100" y="100" z="1"/>
+        <Steps>500</Steps>
+        <Temperature>10</Temperature>
+    </Potts>
+    <Plugin Name="Volume">
+        <TargetVolume>250</TargetVolume>
+    </Plugin>
+    <Plugin Name="Adhesion">
+        <Energy Type1="Epithelial cells" Type2="Fibroblasts">moderate</Energy>
+    </Plugin>
+    <Plugin Name="DiffusionSolverFE">
+        <DiffusionField>
+            <DiffusionData>
+                <FieldName>FGF</FieldName>
+                <DiffusionConstant>0.01</DiffusionConstant>
+                <DecayConstant>0.0001</DecayConstant>
+            </DiffusionData>
+        </DiffusionField>
+    </Plugin>
+    <Plugin Name="Type">
+        <CellType TypeId="1" TypeName="Epithelial cells"/>
+        <CellType TypeId="2" TypeName="Fibroblasts"/>
+    </Plugin>
+</CompuCell3D>
+```
+---END XML---
+---START PYTHON---
+```python
+from cc3d import CompuCellSetup
+
+def main():
+    CompuCellSetup.initializeSimulationObjects()
+    CompuCellSetup.mainLoop()
+
+if __name__ == '__main__':
+    main()
+```
+---END PYTHON---

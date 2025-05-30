@@ -1,0 +1,65 @@
+---START XML---
+```xml
+<CompuCell3D>
+    <Potts>
+        <Dimensions x="100" y="100" z="1"/>
+        <Steps>1000</Steps>
+        <Temperature>10</Temperature>
+        <Flip2DimRatio>0.1</Flip2DimRatio>
+        <Seed>0</Seed>
+    </Potts>
+    <Plugin Name="Volume">
+        <TargetVolume>250</TargetVolume>
+        <LambdaVolume>2.0</LambdaVolume>
+    </Plugin>
+    <Plugin Name="AdhesionFlex">
+        <EnergyType>0</EnergyType>
+        <AdhesionFlexEnergy>16</AdhesionFlexEnergy>
+    </Plugin>
+    <Plugin Name="DiffusionSolverFE">
+        <DiffusionField>
+            <DiffusionData>
+                <FieldName>Concentration</FieldName>
+                <DiffusionConstant>0.01</DiffusionConstant>
+                <DecayConstant>0.01</DecayConstant>
+            </DiffusionData>
+        </DiffusionField>
+    </Plugin>
+    <Plugin Name="Contact">
+        <EnergyType>0</EnergyType>
+        <ContactEnergy Type1="Epithelial cells" Type2="Epithelial cells">2</ContactEnergy>
+        <ContactEnergy Type1="Epithelial cells" Type2="Fibroblasts">10</ContactEnergy>
+        <ContactEnergy Type1="Fibroblasts" Type2="Fibroblasts">2</ContactEnergy>
+    </Plugin>
+    <CellType TypeId="0" TypeName="Medium"/>
+    <CellType TypeId="1" TypeName="Epithelial cells"/>
+    <CellType TypeId="2" TypeName="Fibroblasts"/>
+</CompuCell3D>
+```
+---END XML---
+---START PYTHON---
+```python
+from cc3d.cpp import CompuCellSetup
+
+def main(*args, **kwargs):
+    sim, simthread = CompuCellSetup.getCoreSimulationObjects()
+
+    CompuCellSetup.initializeSimulationObjects(sim, simthread)
+
+    from cc3d.core.PySteppables import SteppableRegistry
+    steppable_registry = SteppableRegistry()
+
+    from WoundHealingSteppables import WoundHealingSteppable
+    steppable_instance=WoundHealingSteppable(sim, steppable_registry)
+    CompuCellSetup.register_steppable(steppable_instance=steppable_instance)
+
+    from CellMigrationSteppables import CellMigrationSteppable
+    steppable_instance=CellMigrationSteppable(sim, steppable_registry)
+    CompuCellSetup.register_steppable(steppable_instance=steppable_instance)
+
+    CompuCellSetup.run()
+
+if __name__ == '__main__':
+    main()
+```
+---END PYTHON---

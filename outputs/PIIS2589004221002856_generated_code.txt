@@ -1,0 +1,86 @@
+---START XML---
+```xml
+<CompuCell3D>
+  <Potts>
+    <Dimensions x="100" y="100" z="1"/>
+    <Steps>500</Steps>
+    <Temperature>10</Temperature>
+    <Flip2DimRatio>0.1</Flip2DimRatio>
+    <RandomSeed>0</RandomSeed>
+    <NeighborOrder>2</NeighborOrder>
+  </Potts>
+
+  <Plugin Name="Volume">
+    <TargetVolume>250</TargetVolume>
+    <LambdaVolume>2.0</LambdaVolume>
+  </Plugin>
+
+  <Plugin Name="AdhesionFlex">
+    <AdhesionFlexEnergy>
+      <CellTypePair Type1="Epithelial cells" Type2="Fibroblasts" Energy="10"/>
+    </AdhesionFlexEnergy>
+  </Plugin>
+
+  <Plugin Name="DiffusionSolverFE">
+    <DiffusionField>
+      <DiffusionData>
+        <FieldName>Concentration</FieldName>
+        <DiffusionConstant>0.01</DiffusionConstant>
+        <DecayConstant>0.00001</DecayConstant>
+      </DiffusionData>
+    </DiffusionField>
+  </Plugin>
+
+  <CellType>
+    <CellType TypeName="Medium" TypeId="0"/>
+    <CellType TypeName="Epithelial cells" TypeId="1"/>
+    <CellType TypeName="Fibroblasts" TypeId="2"/>
+  </CellType>
+
+</CompuCell3D>
+```
+---END XML---
+
+---START PYTHON---
+```python
+from cc3d import CompuCellSetup
+
+def configure_simulation():
+    CompuCellSetup.initializeSimulationObjects()
+
+    # add extra attributes here
+    CompuCellSetup.mainLoop()
+
+
+class WoundHealingSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def start(self):
+        # initial configuration
+        pass
+
+    def step(self, mcs):
+        # implement wound healing process
+        pass
+
+
+class CellMigrationSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+
+    def start(self):
+        # initial configuration
+        pass
+
+    def step(self, mcs):
+        # implement cell migration process
+        pass
+
+
+CompuCellSetup.register_steppable(steppable=WoundHealingSteppable(frequency=1))
+CompuCellSetup.register_steppable(steppable=CellMigrationSteppable(frequency=1))
+
+configure_simulation()
+```
+---END PYTHON---
