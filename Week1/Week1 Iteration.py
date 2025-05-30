@@ -93,8 +93,8 @@ def save_output(output_str, out_path):
         f.write(output_str)
 
 if __name__ == "__main__":
-    pdf_path = "paper1.pdf"
-    print(f"\n📄 Extracting text from {pdf_path}...")
+    pdf_path = desc_path = input("Enter path to your PDF file: ").strip()
+    print(f"\nExtracting text from {pdf_path}...")
     description = extract_text_from_pdf(pdf_path)
 
     print("\n=== Step 1: Clarification Questions ===")
@@ -112,4 +112,4 @@ if __name__ == "__main__":
     print("\n=== Step 4: Generate CC3D Code ===")
     code = generate_cc3d_code(ontology)
     save_output(code, "outputs/paper1_generated_code.txt")
-    print("✅ Code saved to outputs/paper1_generated_code.txt")
+    print("Code saved to outputs/paper1_generated_code.txt")
