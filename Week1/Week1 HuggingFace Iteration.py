@@ -94,7 +94,7 @@ def save_output(text, path):
         f.write(text)
 
 if __name__ == "__main__":
-    desc_path = "paper1.pdf"  # 📄 replace with your actual PDF path
+    desc_path = desc_path = input("Enter path to your PDF file: ").strip()
     description = load_pdf_text(desc_path)
 
     print("\n=== Step 1: Clarification Questions ===")
