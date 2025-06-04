@@ -9,7 +9,12 @@ from deepseek import DeepSeekAPI
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv(r"project.env")
+load_dotenv("project.env")
+
+# Debug prints
+print("Current working directory:", os.getcwd())
+print("Environment file exists:", os.path.exists("project.env"))
+print("DEEPSEEK_API_KEY value:", os.getenv('DEEPSEEK_API_KEY'))
 
 # Initialize the DeepSeek client
 client = DeepSeekAPI(api_key=os.getenv('DEEPSEEK_API_KEY'))
@@ -49,14 +54,15 @@ class ExperimentLogger:
 
 def get_llm_response(prompt, system_message, logger):
     """Helper function to get response from DeepSeek API"""
-    response = client.chat.completions.create(
+    response = client.chat_completion(
         model="deepseek-chat",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": prompt}
         ]
     )
-    result = response.choices[0].message.content
+    # The response is already a string, no need to access choices or message
+    result = response
     logger.log_interaction("llm_response", 
                          {"prompt": prompt, "system_message": system_message},
                          {"response": result})
@@ -141,6 +147,57 @@ def create_cc3d_file(python_code, logger):
         
         return output_file
 
+def format_for_presentation(experiment_dir):
+    """Format experiment data for easy presentation use"""
+    # Read the experiment summary
+    summary_file = Path(experiment_dir) / "experiment_summary.json"
+    with open(summary_file, 'r') as f:
+        data = json.load(f)
+    
+    # Format the output
+    output = []
+    output.append(f"Experiment: {data['experiment_name']}")
+    output.append(f"Date: {data['timestamp']}\n")
+    
+    # Format each interaction
+    for interaction in data['interactions']:
+        step = interaction['step']
+        if step == 'initial_description':
+            output.append("Initial Description:")
+            output.append(f"- {interaction['output']['description']}\n")
+        elif step == 'llm_response':
+            if 'ontology annotations' in interaction['input']['prompt'].lower():
+                output.append("Ontology Annotations:")
+                # Clean up the JSON response
+                response = interaction['output']['response']
+                if '```json' in response:
+                    response = response.split('```json')[1].split('```')[0].strip()
+                try:
+                    annotations = json.loads(response)
+                    for category, items in annotations.items():
+                        if items:  # Only show non-empty categories
+                            output.append(f"\n{category}:")
+                            if isinstance(items, list):
+                                for item in items:
+                                    if 'CellOntology' in item:
+                                        output.append(f"- {item['CellOntology']['label']} (ID: {item['CellOntology']['id']})")
+                                    elif 'id' in item:
+                                        output.append(f"- {item['label']} (ID: {item['id']})")
+                            elif isinstance(items, dict):
+                                for subcat, subitems in items.items():
+                                    if subitems:
+                                        output.append(f"  {subcat}:")
+                                        for subitem in subitems:
+                                            output.append(f"  - {subitem}")
+                except json.JSONDecodeError:
+                    output.append(response)
+                output.append("")
+        elif step == 'clarifications':
+            output.append("Clarifications Provided:")
+            output.append(f"- {interaction['output']['answers']}\n")
+    
+    return "\n".join(output)
+
 def main():
     print("Welcome to the Biological System Modeling Assistant!")
     
@@ -185,6 +242,13 @@ def main():
     # Save complete experiment summary
     logger.save_experiment_summary()
     print(f"\nExperiment summary has been saved to '{logger.experiment_dir}/experiment_summary.json'")
+    
+    # Format and save presentation-ready output
+    presentation_text = format_for_presentation(logger.experiment_dir)
+    presentation_file = logger.experiment_dir / "presentation_ready.txt"
+    with open(presentation_file, 'w') as f:
+        f.write(presentation_text)
+    print(f"\nPresentation-ready format has been saved to '{presentation_file}'")
 
 if __name__ == "__main__":
     main() 

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-04T11:14:12.321904",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\nfrom cc3d.core.XMLUtils import ElementCC3D\n\nclass NeuronGliaSimulation(SteppableBasePy):\n    def __init__(self, frequency=1):\n        SteppableBasePy.__init__(self, frequency)\n        \n    def start(self):\n        # Create cell types\n        self.neuron_type = self.create_new_cell_type(\"Neuron\")\n        self.glia_type = self.create_new_cell_type(\"Glia\")\n        \n        # Set basic parameters\n        cell_type_params = ElementCC3D(\"Plugin\", {\"Name\": \"CellType\"})\n        cell_type_params.ElementCC3D(\"CellType\", {\"TypeId\": \"0\", \"TypeName\": \"Medium\"})\n        cell_type_params.ElementCC3D(\"CellType\", {\"TypeId\": str(self.neuron_type.type), \"TypeName\": \"Neuron\"})\n        cell_type_params.ElementCC3D(\"CellType\", {\"TypeId\": str(self.glia_type.type), \"TypeName\": \"Glia\"})\n        self.add_child(cell_type_params)\n        \n        # Volume constraint plugin\n        vol_plugin = ElementCC3D(\"Plugin\", {\"Name\": \"Volume\"})\n        vol_plugin.ElementCC3D(\"VolumeEnergyParameters\", {\"CellType\": \"Neuron\", \"LambdaVolume\": \"2.0\", \"TargetVolume\": \"25\"})\n        vol_plugin.ElementCC3D(\"VolumeEnergyParameters\", {\"CellType\": \"Glia\", \"LambdaVolume\": \"2.0\", \"TargetVolume\": \"25\"})\n        self.add_child(vol_plugin)\n        \n        # Surface constraint plugin\n        surf_plugin = ElementCC3D(\"Plugin\", {\"Name\": \"Surface\"})\n        surf_plugin.ElementCC3D(\"SurfaceEnergyParameters\", {\"CellType\": \"Neuron\", \"LambdaSurface\": \"0.2\", \"TargetSurface\": \"20\"})\n        surf_plugin.ElementCC3D(\"SurfaceEnergyParameters\", {\"CellType\": \"Glia\", \"LambdaSurface\": \"0.2\", \"TargetSurface\": \"20\"})\n        self.add_child(surf_plugin)\n\n    def step(self, mcs):\n        pass\n\n    def finish(self):\n        pass"
+  },
+  "output": {
+    "output_file": "generated_cc3d_model.cc3d"
+  }
+}
