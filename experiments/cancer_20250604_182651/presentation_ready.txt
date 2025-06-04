@@ -1,0 +1,83 @@
+Experiment: cancer
+Date: 20250604_182651
+
+Initial Description:
+- one cancerous cell invading other cells
+
+Clarifications Provided:
+- make your best guesses
+
+Ontology Annotations:
+
+Cell_Ontology:
+  terms:
+  - {'id': 'CL:0001063', 'label': 'cancer cell', 'definition': 'A cell that is part of a malignant neoplasm.'}
+  - {'id': 'CL:0000548', 'label': 'invasive cell', 'definition': 'A cell that has the ability to invade surrounding tissues.'}
+
+Gene_Ontology:
+  terms:
+  - {'id': 'GO:0006915', 'label': 'apoptotic process', 'definition': 'A programmed cell death process which begins when a cell receives an internal (e.g., DNA damage) or external signal (e.g., ligand binding to a death receptor), and proceeds through a series of biochemical events (signaling pathway phase) which trigger an execution phase.'}
+  - {'id': 'GO:0034330', 'label': 'cell junction organization', 'definition': 'A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a cell junction.'}
+  - {'id': 'GO:0042060', 'label': 'wound healing', 'definition': 'The series of events that restore integrity to a damaged tissue, following an injury.'}
+
+MeSH:
+  terms:
+  - {'id': 'D009369', 'label': 'Neoplasm Invasiveness', 'definition': 'Ability of neoplasms to infiltrate and actively destroy surrounding tissue.'}
+  - {'id': 'D009361', 'label': 'Neoplasm Metastasis', 'definition': 'The transfer of a neoplasm from one organ or part of the body to another remote from the primary site.'}
+  - {'id': 'D018908', 'label': 'Cell Movement', 'definition': 'The movement of cells from one location to another. Distinguish from CYTOKINESIS which is the process of dividing the CYTOPLASM of a cell.'}
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CancerInvasionSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        super().__init__(frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cancer_type = self.add_new_type("CancerCell", "CL:0001063")
+        self.invasive_type = self.add_new_type("InvasiveCell", "CL:0000548")
+        
+        # Set cell type parameters
+        self.set_cell_type_parameters(self.cancer_type, "Volume", 25)
+        self.set_cell_type_parameters(self.cancer_type, "Surface", 20)
+        self.set_cell_type_parameters(self.invasive_type, "Volume", 20)
+        self.set_cell_type_parameters(self.invasive_type, "Surface", 25)
+        
+        # Set apoptosis parameters
+        self.set_cell_type_parameters(self.cancer_type, "Apoptosis", 0.01)
+        self.set_cell_type_parameters(self.invasive_type, "Apoptosis", 0.05)
+        
+        # Set motility parameters
+        self.set_cell_type_parameters(self.cancer_type, "Motility", 10)
+        self.set_cell_type_parameters(self.invasive_type, "Motility", 50)
+        
+        # Initialize cell field
+        for i in range(10):
+            cell = self.new_cell(self.cancer_type)
+            self.cell_field[10*i:10*i+5, 10:15, 0] = cell
+            
+        for i in range(5):
+            cell = self.new_cell(self.invasive_type)
+            self.cell_field[10*i:10*i+5, 80:85, 0] = cell
+            
+    def step(self, mcs):
+        # Update cell behaviors based on MCS
+        for cell in self.cell_list:
+            if cell.type == self.cancer_type and mcs % 100 == 0:
+                if random.random() < 0.01:  # Random transformation to invasive
+                    cell.type = self.invasive_type
+            
+            if cell.type == self.invasive_type:
+                # Increase motility for invasive cells
+                cell.lambdaVecX = 50
+                cell.lambdaVecY = 50
+                
+                # Random apoptosis
+                if random.random() < 0.01:
+                    cell.targetVolume = 0
+
+CompuCellSetup.register_steppable(steppable=CancerInvasionSteppable(frequency=1))
+```
