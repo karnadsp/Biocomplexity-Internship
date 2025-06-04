@@ -5,14 +5,14 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 import deepseek
-from deepseek import DeepSeek
+from deepseek import DeepSeekAPI
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(r"project.env")
 
 # Initialize the DeepSeek client
-client = DeepSeek(api_key=os.getenv('DEEPSEEK_API_KEY'))
+client = DeepSeekAPI(api_key=os.getenv('DEEPSEEK_API_KEY'))
 
 class ExperimentLogger:
     def __init__(self, experiment_name):
