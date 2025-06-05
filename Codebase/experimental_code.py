@@ -135,8 +135,8 @@ def create_cc3d_file(python_code, logger):
         with open(config_file, "w") as f:
             f.write(config_content)
         
-        # Create the .cc3d zip file
-        output_file = "generated_cc3d_model.cc3d"
+        # Create the .cc3d zip file in the experiment directory
+        output_file = os.path.join(logger.experiment_dir, "generated_cc3d_model.cc3d")
         with zipfile.ZipFile(output_file, 'w') as zipf:
             zipf.write(sim_file, "Simulation.py")
             zipf.write(config_file, "Simulation.cc3d")

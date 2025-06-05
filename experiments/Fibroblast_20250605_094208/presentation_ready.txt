@@ -1,0 +1,122 @@
+Experiment: Fibroblast
+Date: 20250605_094208
+
+Initial Description:
+- cylindrical segment with epithelial tissue surrounded by fibroblasts enclosing a lumen representitive of the inside of the animal
+
+Clarifications Provided:
+- 1 simple, 2 they are myofibroblasts, 3 it is keratinized, 4 representitive of inside of the animals body, 5 no, 6 wound healing, 7 no, 8 it is on the skin, 9 no, 10 no
+
+Ontology Annotations:
+
+CellOntology:
+  cell_type:
+  - {'id': 'CL:0000186', 'label': 'epithelial cell', 'comment': 'Epithelial tissue forms the lining of the lumen.'}
+  - {'id': 'CL:0000187', 'label': 'myofibroblast', 'comment': 'Fibroblasts enclosing the epithelial tissue are specified as myofibroblasts.'}
+
+GeneOntology:
+  biological_process:
+  - {'id': 'GO:0043588', 'label': 'skin development', 'comment': 'The structure is keratinized and located on the skin.'}
+  - {'id': 'GO:0042060', 'label': 'wound healing', 'comment': 'The structure is involved in wound healing processes.'}
+  cellular_component:
+  - {'id': 'GO:0044431', 'label': 'lumen', 'comment': "The cylindrical segment encloses a lumen representative of the inside of the animal's body."}
+  molecular_function:
+  - {'id': 'GO:0031424', 'label': 'keratinization', 'comment': 'The epithelial tissue is keratinized.'}
+
+MeSH:
+  anatomy:
+  - {'id': 'D012867', 'label': 'Skin', 'comment': 'The structure is located on the skin.'}
+  processes:
+  - {'id': 'D014947', 'label': 'Wound Healing', 'comment': 'The structure is involved in wound healing.'}
+  cells:
+  - {'id': 'D005347', 'label': 'Fibroblasts', 'comment': 'The enclosing cells are myofibroblasts, a specialized type of fibroblast.'}
+  - {'id': 'D004848', 'label': 'Epithelial Cells', 'comment': 'The inner lining is composed of epithelial cells.'}
+
+Ontology Annotations:
+```python
+from cc3d import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class SkinWoundHealingSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.EpithelialCell = self.new_cell_type("EpithelialCell")
+        self.Myofibroblast = self.new_cell_type("Myofibroblast")
+        
+        # Set up initial cell configuration
+        self.build_epithelial_tissue()
+        self.build_myofibroblast_enclosure()
+        
+        # Set up parameters for skin development and wound healing
+        self.setup_cell_parameters()
+        
+    def step(self, mcs):
+        # Implement wound healing and skin development processes
+        self.apply_keratinization()
+        self.update_wound_healing(mcs)
+        
+    def build_epithelial_tissue(self):
+        # Create epithelial cells forming the lumen
+        for x, y, z in self.every_pixel():
+            if self.is_lumen_region(x, y, z):
+                cell = self.new_cell(self.EpithelialCell)
+                self.cell_field[x, y, z] = cell
+    
+    def build_myofibroblast_enclosure(self):
+        # Create myofibroblast cells surrounding epithelial tissue
+        for x, y, z in self.every_pixel():
+            if self.is_enclosure_region(x, y, z):
+                cell = self.new_cell(self.Myofibroblast)
+                self.cell_field[x, y, z] = cell
+    
+    def is_lumen_region(self, x, y, z):
+        # Define geometry of lumen region
+        return (x - 50)**2 + (y - 50)**2 < 400  # Example circular lumen
+    
+    def is_enclosure_region(self, x, y, z):
+        # Define geometry of myofibroblast enclosure
+        return 400 < (x - 50)**2 + (y - 50)**2 < 900  # Example ring around lumen
+    
+    def setup_cell_parameters(self):
+        # Configure parameters for skin development
+        self.set_cell_type_parameters(self.EpithelialCell, {
+            'Volume': 25,
+            'Surface': 20,
+            'TargetVolume': 25,
+            'LambdaVolume': 2.0,
+            'TargetSurface': 20,
+            'LambdaSurface': 0.2
+        })
+        
+        self.set_cell_type_parameters(self.Myofibroblast, {
+            'Volume': 30,
+            'Surface': 25,
+            'TargetVolume': 30,
+            'LambdaVolume': 2.0,
+            'TargetSurface': 25,
+            'LambdaSurface': 0.2
+        })
+    
+    def apply_keratinization(self):
+        # Implement keratinization process for epithelial cells
+        for cell in self.cell_list:
+            if cell.type == self.EpithelialCell:
+                # Modify cell properties to simulate keratinization
+                pass
+    
+    def update_wound_healing(self, mcs):
+        # Implement wound healing process
+        if mcs % 100 == 0:  # Example: periodic wound application
+            self.apply_wound()
+    
+    def apply_wound(self):
+        # Create a wound by removing some epithelial cells
+        for cell in self.cell_list:
+            if cell.type == self.EpithelialCell and self.random() < 0.1:
+                self.delete_cell(cell)
+
+CompuCellSetup.register_steppable(steppable=SkinWoundHealingSimulation(frequency=1))
+```
