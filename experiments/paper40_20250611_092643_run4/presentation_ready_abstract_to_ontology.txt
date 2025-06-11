@@ -1,0 +1,73 @@
+Experiment: paper40
+Date: 20250611_092643
+Run Number: 4
+
+Initial Description:
+-  Comparison of changes in the volume fold of a tumor mass in our model with experimental data: KP-1 cells, PANC-1 cells and MIAPaCa-2 cells, AN-1 cells, MDA-MB-231 cells and SCC-25 cells
+
+Ontology Annotations:
+
+CellOntology:
+- tumor cell (ID: CL:0000542)
+- epithelial cell of pancreas (ID: CL:0001064)
+- breast epithelial cell (ID: CL:0000236)
+- squamous epithelial cell (ID: CL:0002258)
+
+GeneOntology:
+- cell proliferation (ID: GO:0008283)
+- apoptotic process (ID: GO:0006915)
+- regulation of cell adhesion (ID: GO:0030155)
+
+MeSH:
+- Neoplasms (ID: D009369)
+- Pancreatic Neoplasms (ID: D010190)
+- Breast Neoplasms (ID: D001943)
+- Carcinoma, Squamous Cell (ID: D002294)
+- Tumor Burden (ID: D018358)
+
+ExperimentalModels:
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type_tumor = self.new_cell_type("Tumor")
+        self.cell_type_pancreatic = self.new_cell_type("Pancreatic")
+        self.cell_type_breast = self.new_cell_type("Breast")
+        self.cell_type_squamous = self.new_cell_type("Squamous")
+        
+        # Set basic parameters
+        self.set_cell_type_proliferation_rate(self.cell_type_tumor, 0.1)
+        self.set_cell_type_proliferation_rate(self.cell_type_pancreatic, 0.08)
+        self.set_cell_type_proliferation_rate(self.cell_type_breast, 0.09)
+        self.set_cell_type_proliferation_rate(self.cell_type_squamous, 0.07)
+        
+        # Initialize cells
+        self.potts.createCell()
+        self.cell.type = self.cell_type_tumor
+        self.cell.targetVolume = 25
+        self.cell.lambdaVolume = 2.0
+        
+    def step(self, mcs):
+        # Update cell behaviors
+        for cell in self.cell_list:
+            if cell.type == self.cell_type_tumor:
+                if mcs % 10 == 0 and random.random() < 0.05:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_pancreatic:
+                if mcs % 15 == 0 and random.random() < 0.03:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_breast:
+                if mcs % 12 == 0 and random.random() < 0.04:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_squamous:
+                if mcs % 18 == 0 and random.random() < 0.02:
+                    self.divide_cell_random_orientation(cell)
+```

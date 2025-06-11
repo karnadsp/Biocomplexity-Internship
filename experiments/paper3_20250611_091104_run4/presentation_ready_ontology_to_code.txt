@@ -1,0 +1,72 @@
+Experiment: paper3
+Date: 20250611_091104
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import *
+import CompuCell
+import sys
+
+class OvarianCancerSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.mesothelial = self.addCellType("Mesothelial")
+        self.cancer = self.addCellType("OvarianCancer")
+        
+        # Set up parameters
+        self.cellField = self.potts.getCellField()
+        self.dim = self.cellField.getDim()
+        
+        # Configure cell properties
+        self.setCellTypeMotilityParameters()
+        self.setupInitialConditions()
+        
+    def setCellTypeMotilityParameters(self):
+        # Configure motility parameters
+        self.setMotilityParameters(self.mesothelial, 10, 0.5)
+        self.setMotilityParameters(self.cancer, 50, 0.8)
+        
+        # Configure adhesion parameters
+        self.setCellTypeAdhesionParameters()
+        
+    def setCellTypeAdhesionParameters(self):
+        # Set adhesion parameters between cell types and medium
+        self.setCellTypeAdhesion(self.mesothelial, "Medium", 10)
+        self.setCellTypeAdhesion(self.cancer, "Medium", 5)
+        
+        # Set adhesion between cell types
+        self.setCellTypeAdhesion(self.mesothelial, self.mesothelial, 20)
+        self.setCellTypeAdhesion(self.cancer, self.cancer, 15)
+        self.setCellTypeAdhesion(self.mesothelial, self.cancer, 8)
+        
+    def setupInitialConditions(self):
+        # Create initial cell layout
+        for x, y, z in self.everyPixel(10, 10, 1):
+            if x < self.dim.x/2:
+                cell = self.newCell(self.mesothelial)
+                self.cellField.set(x, y, z, cell)
+            else:
+                cell = self.newCell(self.cancer)
+                self.cellField.set(x, y, z, cell)
+                
+    def step(self, mcs):
+        # Implement simulation logic for each step
+        if mcs % 100 == 0:
+            self.updateCellBehaviors()
+            
+    def updateCellBehaviors(self):
+        # Update cell properties during simulation
+        for cell in self.cellList:
+            if cell.type == self.cancer:
+                # Increase cancer cell motility over time
+                self.setMotilityParameters(cell.type, 50 + mcs/10, 0.8)
+
+CompuCellSetup.registerSteppable(steppable=OvarianCancerSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
+
+CC3D File Created: experiments\paper3_20250611_091104_run4\generated_cc3d_model.cc3d

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:27:54.945933",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\nfrom cc3d.core.PyCoreSpecs import *\n\nclass TumorSimulation(SteppableBasePy):\n    def __init__(self, frequency=1):\n        SteppableBasePy.__init__(self, frequency)\n        \n    def start(self):\n        # Define cell types\n        self.cell_type_tumor = self.new_cell_type(\"Tumor\")\n        self.cell_type_pancreatic = self.new_cell_type(\"Pancreatic\")\n        self.cell_type_breast = self.new_cell_type(\"Breast\")\n        self.cell_type_squamous = self.new_cell_type(\"Squamous\")\n        \n        # Set basic parameters\n        self.set_cell_type_proliferation_rate(self.cell_type_tumor, 0.1)\n        self.set_cell_type_proliferation_rate(self.cell_type_pancreatic, 0.08)\n        self.set_cell_type_proliferation_rate(self.cell_type_breast, 0.09)\n        self.set_cell_type_proliferation_rate(self.cell_type_squamous, 0.07)\n        \n        # Initialize cells\n        self.potts.createCell()\n        self.cell.type = self.cell_type_tumor\n        self.cell.targetVolume = 25\n        self.cell.lambdaVolume = 2.0\n        \n    def step(self, mcs):\n        # Update cell behaviors\n        for cell in self.cell_list:\n            if cell.type == self.cell_type_tumor:\n                if mcs % 10 == 0 and random.random() < 0.05:\n                    self.divide_cell_random_orientation(cell)\n            elif cell.type == self.cell_type_pancreatic:\n                if mcs % 15 == 0 and random.random() < 0.03:\n                    self.divide_cell_random_orientation(cell)\n            elif cell.type == self.cell_type_breast:\n                if mcs % 12 == 0 and random.random() < 0.04:\n                    self.divide_cell_random_orientation(cell)\n            elif cell.type == self.cell_type_squamous:\n                if mcs % 18 == 0 and random.random() < 0.02:\n                    self.divide_cell_random_orientation(cell)"
+  },
+  "output": {
+    "output_file": "experiments\\paper40_20250611_092643_run4\\generated_cc3d_model.cc3d"
+  }
+}

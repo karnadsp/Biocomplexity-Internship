@@ -1,0 +1,85 @@
+Experiment: paper40
+Date: 20250611_092237
+Run Number: 1
+
+Initial Description:
+-  Comparison of changes in the volume fold of a tumor mass in our model with experimental data: KP-1 cells, PANC-1 cells and MIAPaCa-2 cells, AN-1 cells, MDA-MB-231 cells and SCC-25 cells
+
+Ontology Annotations:
+
+CellOntology:
+- tumor cell (ID: CL:0001064)
+- epithelial cell (ID: CL:0000540)
+- carcinoma cell (ID: CL:0008030)
+
+GeneOntology:
+- cell proliferation (ID: GO:0008283)
+- apoptotic process (ID: GO:0006915)
+- cell differentiation (ID: GO:0030154)
+
+MeSH:
+- Neoplasms (ID: D009369)
+- Carcinoma (ID: D002277)
+- Tumor Burden (ID: D018358)
+
+CellLines:
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        super().__init__(frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell_type = self.new_cell_type("TumorCell")
+        self.epithelial_cell_type = self.new_cell_type("EpithelialCell")
+        self.carcinoma_cell_type = self.new_cell_type("CarcinomaCell")
+        
+        # Configure cell parameters
+        cell_type_specs = CellTypePluginConfigurator()
+        cell_type_specs.param_new(self.tumor_cell_type, "Volume", 25)
+        cell_type_specs.param_new(self.tumor_cell_type, "LambdaVolume", 2.0)
+        cell_type_specs.param_new(self.epithelial_cell_type, "Volume", 20)
+        cell_type_specs.param_new(self.epithelial_cell_type, "LambdaVolume", 1.5)
+        cell_type_specs.param_new(self.carcinoma_cell_type, "Volume", 30)
+        cell_type_specs.param_new(self.carcinoma_cell_type, "LambdaVolume", 2.5)
+        
+        # Configure contact energies
+        contact_energy_specs = ContactPluginConfigurator()
+        contact_energy_specs.param_new(self.tumor_cell_type, self.tumor_cell_type, 16)
+        contact_energy_specs.param_new(self.tumor_cell_type, self.epithelial_cell_type, 20)
+        contact_energy_specs.param_new(self.tumor_cell_type, self.carcinoma_cell_type, 18)
+        contact_energy_specs.param_new(self.epithelial_cell_type, self.epithelial_cell_type, 10)
+        contact_energy_specs.param_new(self.epithelial_cell_type, self.carcinoma_cell_type, 15)
+        contact_energy_specs.param_new(self.carcinoma_cell_type, self.carcinoma_cell_type, 14)
+        
+        # Initialize cell field
+        for i in range(10):
+            cell = self.new_cell(self.tumor_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+            
+        for i in range(10, 20):
+            cell = self.new_cell(self.epithelial_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+            
+        for i in range(20, 30):
+            cell = self.new_cell(self.carcinoma_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+
+    def step(self, mcs):
+        # Implement cell behaviors
+        for cell in self.cell_list:
+            if cell.type == self.tumor_cell_type:
+                if mcs % 10 == 0 and random.random() < 0.1:  # proliferation
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.epithelial_cell_type:
+                if random.random() < 0.01:  # differentiation
+                    cell.type = self.carcinoma_cell_type
+            elif cell.type == self.carcinoma_cell_type:
+                if random.random() < 0.005:  # apoptosis
+                    self.delete_cell(cell)
+```

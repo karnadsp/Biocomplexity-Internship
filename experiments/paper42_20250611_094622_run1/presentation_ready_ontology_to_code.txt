@@ -1,0 +1,84 @@
+Experiment: paper42
+Date: 20250611_094622
+Run Number: 1
+
+Generated CC3D Code:
+```python
+from pybind11_tests import CompuCellSetup
+from PySteppables import *
+import CompuCell
+import sys
+
+class KidneyDevelopmentSteppable(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        self.nephron_progenitor_type = None
+        self.ureteric_bud_type = None
+        
+    def start(self):
+        # Define cell types
+        self.nephron_progenitor_type = self.addCellType("NephronProgenitor")
+        self.ureteric_bud_type = self.addCellType("UretericBud")
+        
+        # Set up initial conditions
+        cell_field = self.potts.getCellField()
+        dim = cell_field.getDim()
+        
+        # Create nephron progenitor cells
+        for i in range(50):
+            cell = self.newCell(self.nephron_progenitor_type)
+            x = int(dim.x * 0.25 + random.random() * dim.x * 0.5)
+            y = int(dim.y * 0.25 + random.random() * dim.y * 0.5)
+            z = int(dim.z * 0.25 + random.random() * dim.z * 0.5)
+            cell.targetVolume = 25
+            cell.lambdaVolume = 2.0
+            cell_field.set(x, y, z, cell)
+        
+        # Create ureteric bud cells
+        for i in range(20):
+            cell = self.newCell(self.ureteric_bud_type)
+            x = int(dim.x * 0.75 + random.random() * dim.x * 0.2)
+            y = int(dim.y * 0.75 + random.random() * dim.y * 0.2)
+            z = int(dim.z * 0.75 + random.random() * dim.z * 0.2)
+            cell.targetVolume = 30
+            cell.lambdaVolume = 2.0
+            cell_field.set(x, y, z, cell)
+    
+    def step(self, mcs):
+        # Migration behavior for nephron progenitor cells
+        for cell in self.cellList:
+            if cell.type == self.nephron_progenitor_type:
+                # Random migration with slight bias toward ureteric bud
+                if mcs % 10 == 0:
+                    cell.lambdaVecX = -0.1  # slight bias toward left (ureteric bud side)
+                    cell.lambdaVecY = 0.0
+                    cell.lambdaVecZ = 0.0
+                    
+            elif cell.type == self.ureteric_bud_type:
+                # Branching behavior
+                if mcs % 100 == 0 and random.random() < 0.1:
+                    new_cell = self.newCell(self.ureteric_bud_type)
+                    new_cell.targetVolume = cell.targetVolume
+                    new_cell.lambdaVolume = cell.lambdaVolume
+                    # Place new cell near parent
+                    x, y, z = self.getCentroid(cell)
+                    self.cellField.set(x+1, y, z, new_cell)
+        
+        # Update volume constraints
+        for cell in self.cellList:
+            cell.targetVolume += 0.01  # gradual growth
+
+    def getCentroid(self, cell):
+        x, y, z = 0, 0, 0
+        count = 0
+        for pt in cell.getPixelList():
+            x += pt.pixel.x
+            y += pt.pixel.y
+            z += pt.pixel.z
+            count += 1
+        return x//count, y//count, z//count
+
+CompuCellSetup.registerSteppable(KidneyDevelopmentSteppable(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
+
+CC3D File Created: experiments\paper42_20250611_094622_run1\generated_cc3d_model.cc3d

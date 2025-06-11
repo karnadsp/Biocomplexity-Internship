@@ -1,0 +1,99 @@
+Experiment: paper3
+Date: 20250611_090720
+Run Number: 1
+
+Initial Description:
+- Ovarian cancer cells invade by clearing mesothelial cells
+
+Ontology Annotations:
+
+CellOntology:
+  Cell_Type:
+  - {'id': 'CL:0000218', 'label': 'mesothelial cell', 'description': 'A specialized epithelial cell that lines the peritoneal, pleural, and pericardial cavities.'}
+  - {'id': 'CL:0001064', 'label': 'ovarian cancer cell', 'description': 'A malignant cell derived from ovarian tissue.'}
+
+GeneOntology:
+  Biological_Process:
+  - {'id': 'GO:0007155', 'label': 'cell adhesion', 'description': 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix.'}
+  - {'id': 'GO:0030335', 'label': 'positive regulation of cell migration', 'description': 'Any process that activates or increases the frequency, rate or extent of cell migration.'}
+  - {'id': 'GO:0006915', 'label': 'apoptotic process', 'description': 'A programmed cell death process which begins when a cell receives an internal (e.g., DNA damage) or external signal (e.g., ligand binding to a death receptor), and proceeds through a series of biochemical events (signaling pathway phase) which trigger an execution phase.'}
+  Molecular_Function:
+  - {'id': 'GO:0005515', 'label': 'protein binding', 'description': 'Binding to a protein, any macromolecular complex containing one or more polypeptide chains.'}
+  - {'id': 'GO:0005200', 'label': 'structural constituent of cytoskeleton', 'description': 'The action of a molecule that contributes to the structural integrity of the cytoskeleton.'}
+  Cellular_Component:
+  - {'id': 'GO:0005925', 'label': 'focal adhesion', 'description': 'A cell-substrate junction that anchors the cell to the extracellular matrix and that forms a point of termination of actin filaments.'}
+  - {'id': 'GO:0005886', 'label': 'plasma membrane', 'description': 'The membrane surrounding a cell that separates the cell from its external environment.'}
+
+MeSH:
+  Disease:
+  - {'id': 'D010051', 'label': 'Ovarian Neoplasms', 'description': 'Tumors or cancer of the OVARY.'}
+  Biological_Process:
+  - {'id': 'D002461', 'label': 'Cell Movement', 'description': 'The movement of cells from one location to another.'}
+  - {'id': 'D017209', 'label': 'Apoptosis', 'description': 'A regulated cell death mechanism characterized by distinctive morphologic changes in the nucleus and cytoplasm.'}
+  Anatomy:
+  - {'id': 'A10.615.550', 'label': 'Ovary', 'description': 'The reproductive organ (GONADS) in female animals.'}
+  - {'id': 'A10.615.550.760', 'label': 'Ovarian Follicle', 'description': 'An OOCYTE-containing structure in the cortex of the OVARY.'}
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class OvarianCancerSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.mesothelial_type = self.new_cell_type("Mesothelial")
+        self.ovarian_cancer_type = self.new_cell_type("OvarianCancer")
+        
+        # Set cell type parameters
+        self.cell_type_plugin.setTypeId(self.mesothelial_type, 1)
+        self.cell_type_plugin.setTypeId(self.ovarian_cancer_type, 2)
+        
+        # Configure cell adhesion
+        self.contact_plugin.setNewContactEnergy(self.mesothelial_type, self.mesothelial_type, 16)
+        self.contact_plugin.setNewContactEnergy(self.ovarian_cancer_type, self.ovarian_cancer_type, 16)
+        self.contact_plugin.setNewContactEnergy(self.mesothelial_type, self.ovarian_cancer_type, 22)
+        
+        # Initialize cell field
+        for x, y, z in self.every_pixel():
+            if x < 20:
+                cell = self.new_cell(self.mesothelial_type)
+                self.cell_field[x, y, z] = cell
+            elif x > 80:
+                cell = self.new_cell(self.ovarian_cancer_type)
+                self.cell_field[x, y, z] = cell
+    
+    def step(self, mcs):
+        # Implement cell behaviors
+        for cell in self.cell_list:
+            if cell.type == self.ovarian_cancer_type:
+                # Cancer cell migration behavior
+                if mcs % 10 == 0:
+                    self.move_cell_random(cell)
+                
+                # Apoptosis probability
+                if random.random() < 0.001:
+                    cell.targetVolume = 0
+                    cell.lambdaVolume = 100
+            
+            elif cell.type == self.mesothelial_type:
+                # Mesothelial cell behavior
+                if random.random() < 0.0005:
+                    cell.targetVolume = 0
+                    cell.lambdaVolume = 100
+
+    def move_cell_random(self, cell):
+        x, y, z = int(cell.xCOM), int(cell.yCOM), int(cell.zCOM)
+        new_x = x + random.randint(-1, 1)
+        new_y = y + random.randint(-1, 1)
+        
+        if (0 <= new_x < self.dim.x) and (0 <= new_y < self.dim.y):
+            if not self.cell_field[new_x, new_y, z]:
+                self.cell_field[x, y, z] = None
+                self.cell_field[new_x, new_y, z] = cell
+
+CompuCellSetup.register_steppable(steppable=OvarianCancerSimulation(frequency=1))
+```

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:50:36.168961",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom pybind import CompuCellSetup\nfrom PySteppables import SteppableBasePy\nimport CompuCell\n\nclass KidneyDevelopmentSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        \n    def start(self):\n        # Define cell types\n        self.nephron_progenitor = self.addCellType(\"NephronProgenitor\")\n        self.ureteric_bud = self.addCellType(\"UretericBud\")\n        \n        # Set basic parameters\n        cell_volume = 25\n        lambda_volume = 2.0\n        \n        # Configure volume constraint for both cell types\n        for cell_type in [self.nephron_progenitor, self.ureteric_bud]:\n            self.cellField[cell_type].targetVolume = cell_volume\n            self.cellField[cell_type].lambdaVolume = lambda_volume\n        \n        # Initial cell placement\n        for i in range(10):\n            cell = self.newCell(self.nephron_progenitor)\n            self.cellField[cell.x, cell.y, 0] = cell\n            \n        for i in range(5):\n            cell = self.newCell(self.ureteric_bud)\n            self.cellField[cell.x, cell.y, 0] = cell\n    \n    def step(self, mcs):\n        # Migration and interaction logic\n        for cell in self.cellList:\n            if cell.type == self.nephron_progenitor:\n                # Nephron progenitor behavior\n                pass\n            elif cell.type == self.ureteric_bud:\n                # Ureteric bud cell behavior\n                pass\n\nCompuCellSetup.registerSteppable(KidneyDevelopmentSimulation(CompuCellSetup.getSimulator()))"
+  },
+  "output": {
+    "output_file": "experiments\\paper42_20250611_094944_run4\\generated_cc3d_model.cc3d"
+  }
+}

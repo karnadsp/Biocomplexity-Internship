@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:51:38.681995",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom pybind11_tests import CompuCellSetup\nfrom PySteppables import *\nimport CompuCell\nimport sys\n\nclass KidneyDevelopmentSteppable(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        \n    def start(self):\n        # Define cell types\n        self.nephron_progenitor = self.createNewCellType(\"NephronProgenitor\", \"CL:0005002\")\n        self.ureteric_bud = self.createNewCellType(\"UretericBud\", \"CL:0000185\")\n        \n        # Set basic parameters\n        self.cellField = self.potts.getCellFieldG()\n        self.dim = self.cellField.getDim()\n        \n        # Initialize some cells\n        for i in range(100):\n            x = int(random() * (self.dim.x-20) + 10)\n            y = int(random() * (self.dim.y-20) + 10)\n            z = int(random() * (self.dim.z-20) + 10)\n            \n            if random() < 0.5:\n                cell = self.newCell(self.nephron_progenitor)\n            else:\n                cell = self.newCell(self.ureteric_bud)\n            \n            self.cellField.set(x, y, z, cell)\n        \n    def step(self, mcs):\n        # Simulation logic for each step\n        for cell in self.cellList:\n            if cell.type == self.nephron_progenitor:\n                # Nephron progenitor behavior\n                pass\n            elif cell.type == self.ureteric_bud:\n                # Ureteric bud cell behavior\n                pass\n        \n        # Additional simulation rules can be added here\n        if mcs % 100 == 0:\n            print(\"Current MCS:\", mcs)\n\n    def finish(self):\n        # Cleanup or finalization code\n        pass\n\n# Register the steppable\nCompuCellSetup.register_steppable(steppable=KidneyDevelopmentSteppable(frequency=1))"
+  },
+  "output": {
+    "output_file": "experiments\\paper42_20250611_095036_run5\\generated_cc3d_model.cc3d"
+  }
+}

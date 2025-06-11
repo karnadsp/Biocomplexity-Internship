@@ -1,0 +1,95 @@
+Experiment: paper3
+Date: 20250611_090946
+Run Number: 3
+
+Initial Description:
+- Ovarian cancer cells invade by clearing mesothelial cells
+
+Ontology Annotations:
+
+Cell_Ontology:
+  Cell_Types:
+  - {'Term': 'CL:0000066', 'Label': 'epithelial cell of ovary', 'Description': 'An epithelial cell that is part of the ovary.'}
+  - {'Term': 'CL:0000077', 'Label': 'mesothelial cell', 'Description': 'A squamous epithelial cell that lines the coelomic cavities (peritoneal, pericardial, and pleural) and internal organs.'}
+  Processes:
+  - {'Term': 'CL:0000000', 'Label': 'cell invasion', 'Description': 'The movement of one cell into or through another cell or tissue.'}
+
+Gene_Ontology:
+  Biological_Processes:
+  - {'Term': 'GO:0007155', 'Label': 'cell adhesion', 'Description': 'The attachment of a cell to another cell or to an underlying substrate such as the extracellular matrix, via adhesion molecules.'}
+  - {'Term': 'GO:0030030', 'Label': 'cell projection organization', 'Description': 'A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a cell projection.'}
+  - {'Term': 'GO:0006928', 'Label': 'movement of cell or subcellular component', 'Description': 'The directed movement of a cell or subcellular component.'}
+  Molecular_Functions:
+  - {'Term': 'GO:0005515', 'Label': 'protein binding', 'Description': 'Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).'}
+  - {'Term': 'GO:0046872', 'Label': 'metal ion binding', 'Description': 'Interacting selectively and non-covalently with any metal ion.'}
+  Cellular_Components:
+  - {'Term': 'GO:0005886', 'Label': 'plasma membrane', 'Description': 'The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.'}
+  - {'Term': 'GO:0005925', 'Label': 'focal adhesion', 'Description': 'A cell-substrate junction that anchors the cell to the extracellular matrix and that forms a point of termination of actin filaments. In insects focal adhesion has also been referred to as hemi-adherens junction.'}
+
+MeSH:
+  Diseases:
+  - {'Term': 'D010051', 'Label': 'Ovarian Neoplasms', 'Description': 'Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.'}
+  Biological_Phenomena:
+  - {'Term': 'D002465', 'Label': 'Cell Movement', 'Description': 'The movement of cells from one location to another. Distinguish from CYTOKINESIS which is the process of dividing the CYTOPLASM of a cell.'}
+  - {'Term': 'D002478', 'Label': 'Cells, Cultured', 'Description': 'Cells propagated in vitro in special media conducive to their growth. Cultured cells are used to study developmental, morphologic, metabolic, physiologic, and genetic processes, among others.'}
+  Anatomy:
+  - {'Term': 'A05.360.319.114.630', 'Label': 'Ovary', 'Description': 'The reproductive organ (GONADS) in female animals. In vertebrates, the ovary contains two functional parts: the OVARIAN FOLLICLE for the production of female germ cells (OOGENESIS); and the endocrine cells (GRANULOSA CELLS; THECA CELLS; and LUTEAL CELLS) for the production of ESTROGENS and PROGESTERONE.'}
+
+Ontology Annotations:
+```python
+from pybindCC3D import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class OvarianEpithelialSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.epithelial_cell = self.new_cell_type("Epithelial_Ovary", "CL:0000066")
+        self.mesothelial_cell = self.new_cell_type("Mesothelial", "CL:0000077")
+        
+        # Set up parameters
+        self.cell_adhesion_params = {
+            "Epithelial_Ovary": {"Epithelial_Ovary": 10, "Mesothelial": 5},
+            "Mesothelial": {"Epithelial_Ovary": 5, "Mesothelial": 15}
+        }
+        
+        # Configure adhesion
+        for cell_type1, adhesion_dict in self.cell_adhesion_params.items():
+            for cell_type2, energy in adhesion_dict.items():
+                self.get_xml_element('Plugin', {'Name': 'Contact'})\
+                    .getElement('Energy', {'Type1': cell_type1, 'Type2': cell_type2})\
+                    .ElementCC3D('Energy', {}, str(energy))
+        
+        # Configure cell motility
+        self.get_xml_element('Plugin', {'Name': 'Chemotaxis'})
+        self.get_xml_element('Plugin', {'Name': 'Volume'})
+        
+    def step(self, mcs):
+        # Simulation logic for each step
+        for cell in self.cell_list:
+            if cell.type == self.epithelial_cell:
+                # Implement invasion behavior
+                if mcs % 100 == 0:
+                    self.invade_mesothelial(cell)
+            
+    def invade_mesothelial(self, cell):
+        # Simple invasion logic
+        target_cells = [neighbor for neighbor in self.get_cell_neighbors(cell) 
+                       if neighbor and neighbor.type == self.mesothelial_cell]
+        if target_cells:
+            target = target_cells[0]
+            # Apply force to simulate invasion
+            self.apply_vector_force(cell, target, 0.1)
+            
+    def on_stop(self):
+        # Cleanup if needed
+        pass
+        
+def configure_simulation():
+    from cc3d.CompuCellSetup import register_steppable
+    register_steppable(OvarianEpithelialSimulation(frequency=1))
+    
+configure_simulation()
+```

@@ -1,0 +1,76 @@
+Experiment: paper3
+Date: 20250611_090834
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from pyrcell3d import CompuCellSetup
+from PySteppables import SteppableBasePy
+import CompuCell
+
+class OvarianCancerInvasionSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.cellTypes = {
+            'OvarianCancerCell': self.createNewCellType("OvarianCancerCell"),
+            'MesothelialCell': self.createNewCellType("MesothelialCell")
+        }
+        
+        # Set cell type parameters
+        self.setCellTypeParameters("OvarianCancerCell", {
+            'Volume': 50,
+            'LambdaVolume': 2.0,
+            'TargetVolume': 50,
+            'ChemotaxisLambda': 100,
+            'Chemotaxis': {'ChemicalField': 'Chemoattractant', 'Lambda': 100}
+        })
+        
+        self.setCellTypeParameters("MesothelialCell", {
+            'Volume': 40,
+            'LambdaVolume': 2.0,
+            'TargetVolume': 40,
+            'AdhesionMolecules': {'Integrin': 10}
+        })
+        
+        # Initialize fields
+        self.addScalarFieldCellLevelPy("Chemoattractant")
+        
+        # Create initial cell layout
+        for i in range(100):
+            cell = self.newCell(self.cellTypes['MesothelialCell'])
+            self.cellField[10 + i % 10, 10 + i // 10, 0] = cell
+        
+        for i in range(20):
+            cell = self.newCell(self.cellTypes['OvarianCancerCell'])
+            self.cellField[50 + i % 5, 50 + i // 5, 0] = cell
+    
+    def step(self, mcs):
+        # Update chemoattractant field
+        chemoattractant = self.getScalarFieldPy("Chemoattractant")
+        for x, y, z in self.everyPixel():
+            if self.cellField[x, y, z] and self.cellField[x, y, z].type == self.cellTypes['OvarianCancerCell']:
+                chemoattractant[x, y, z] = 100
+            else:
+                chemoattractant[x, y, z] = max(0, chemoattractant[x, y, z] - 1)
+        
+        # Monitor cell migration and adhesion
+        if mcs % 100 == 0:
+            self.trackCellCounts()
+    
+    def trackCellCounts(self):
+        cancer_count = 0
+        meso_count = 0
+        for cell in self.cellList:
+            if cell.type == self.cellTypes['OvarianCancerCell']:
+                cancer_count += 1
+            elif cell.type == self.cellTypes['MesothelialCell']:
+                meso_count += 1
+        print(f"Step {self.mcs}: Cancer cells={cancer_count}, Mesothelial cells={meso_count}")
+
+CompuCellSetup.registerSteppable(steppable=OvarianCancerInvasionSimulation(_simulator=CompuCellSetup.getSimulator()))
+```
+
+CC3D File Created: experiments\paper3_20250611_090834_run2\generated_cc3d_model.cc3d

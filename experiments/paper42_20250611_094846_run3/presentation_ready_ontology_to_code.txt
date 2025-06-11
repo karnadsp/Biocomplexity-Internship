@@ -1,0 +1,66 @@
+Experiment: paper42
+Date: 20250611_094846
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class KidneyDevelopmentSteppable(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.nephron_progenitor = self.create_new_cell_type("NephronProgenitor")
+        self.ureteric_bud = self.create_new_cell_type("UretericBud")
+        
+        # Set up initial cell configuration
+        self.build_initial_cells()
+        
+        # Set cell parameters
+        self.set_cell_parameters()
+        
+    def step(self, mcs):
+        # Implement cell behaviors
+        self.regulate_cell_behaviors(mcs)
+        
+    def build_initial_cells(self):
+        # Create initial cells
+        for i in range(10):
+            cell = self.new_cell(self.nephron_progenitor)
+            self.cell_field[10*i:10*i+5, 10:20, 0] = cell
+            
+        for i in range(5):
+            cell = self.new_cell(self.ureteric_bud)
+            self.cell_field[10*i:10*i+5, 30:40, 0] = cell
+            
+    def set_cell_parameters(self):
+        # Set parameters for nephron progenitor cells
+        for cell in self.cell_list:
+            if cell.type == self.nephron_progenitor:
+                cell.targetVolume = 25
+                cell.lambdaVolume = 2.0
+                cell.lambdaChemotaxis = 0.1
+                
+            elif cell.type == self.ureteric_bud:
+                cell.targetVolume = 20
+                cell.lambdaVolume = 2.0
+                cell.lambdaChemotaxis = 0.2
+                
+    def regulate_cell_behaviors(self, mcs):
+        # Implement cell migration and morphogenesis
+        for cell in self.cell_list:
+            if cell.type == self.nephron_progenitor:
+                # Nephron progenitor behaviors
+                pass
+                
+            elif cell.type == self.ureteric_bud:
+                # Ureteric bud branching behaviors
+                pass
+
+CompuCellSetup.register_steppable(steppable=KidneyDevelopmentSteppable(frequency=1))
+```
+
+CC3D File Created: experiments\paper42_20250611_094846_run3\generated_cc3d_model.cc3d

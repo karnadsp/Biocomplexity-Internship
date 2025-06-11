@@ -1,0 +1,182 @@
+Experiment Analysis Report
+==================================================
+
+Code Similarity Analysis
+------------------------------
+Mean similarity: 0.376
+Median similarity: 0.394
+Standard deviation: 0.397
+
+Pairwise Code Similarities:
+Runs 1 vs 1: 1.000
+Runs 1 vs 1: 0.000
+Runs 1 vs 2: 0.000
+Runs 1 vs 3: 0.000
+Runs 1 vs 4: 0.000
+Runs 1 vs 5: 0.000
+Runs 1 vs 1: 0.000
+Runs 1 vs 2: 0.000
+Runs 1 vs 3: 0.000
+Runs 1 vs 4: 0.000
+Runs 1 vs 5: 0.000
+Runs 1 vs 2: 0.790
+Runs 1 vs 3: 0.559
+Runs 1 vs 4: 0.820
+Runs 1 vs 5: 0.790
+Runs 2 vs 3: 0.394
+Runs 2 vs 4: 0.790
+Runs 2 vs 5: 1.000
+Runs 3 vs 4: 0.529
+Runs 3 vs 5: 0.425
+Runs 4 vs 5: 0.802
+
+Ontology Similarity Analysis
+------------------------------
+
+CellOntology:
+  Mean similarity: 0.714
+  Median similarity: 1.000
+  Standard deviation: 0.463
+
+GeneOntology:
+  Mean similarity: 0.714
+  Median similarity: 1.000
+  Standard deviation: 0.463
+
+MeSH:
+  Mean similarity: 0.333
+  Median similarity: 0.000
+  Standard deviation: 0.483
+
+Other:
+  Mean similarity: 0.106
+  Median similarity: 0.056
+  Standard deviation: 0.223
+
+Pairwise Ontology Similarities:
+
+Runs 1 vs 1:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 1.000
+
+Runs 1 vs 1:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 2:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.000
+
+Runs 1 vs 3:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.000
+
+Runs 1 vs 1:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 2:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.000
+
+Runs 1 vs 3:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.000
+
+Runs 1 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.000
+
+Runs 1 vs 2:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.056
+
+Runs 1 vs 3:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 1.000
+  Other: 0.375
+
+Runs 1 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.077
+
+Runs 1 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.067
+
+Runs 2 vs 3:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 0.000
+  Other: 0.077
+
+Runs 2 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.062
+
+Runs 2 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.118
+
+Runs 3 vs 4:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 0.000
+  Other: 0.125
+
+Runs 3 vs 5:
+  CellOntology: 0.000
+  GeneOntology: 0.000
+  MeSH: 0.000
+  Other: 0.100
+
+Runs 4 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 0.000
+  Other: 0.167

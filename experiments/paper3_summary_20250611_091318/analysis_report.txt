@@ -1,0 +1,105 @@
+Experiment Analysis Report
+==================================================
+
+Code Similarity Analysis
+------------------------------
+Mean similarity: 0.704
+Median similarity: 0.702
+Standard deviation: 0.154
+
+Pairwise Code Similarities:
+Runs 1 vs 2: 0.462
+Runs 1 vs 3: 0.568
+Runs 1 vs 4: 0.644
+Runs 1 vs 5: 0.568
+Runs 2 vs 3: 0.702
+Runs 2 vs 4: 0.806
+Runs 2 vs 5: 0.702
+Runs 3 vs 4: 0.796
+Runs 3 vs 5: 1.000
+Runs 4 vs 5: 0.796
+
+Ontology Similarity Analysis
+------------------------------
+
+CellOntology:
+  Mean similarity: 1.000
+  Median similarity: 1.000
+  Standard deviation: 0.000
+
+GeneOntology:
+  Mean similarity: 1.000
+  Median similarity: 1.000
+  Standard deviation: 0.000
+
+MeSH:
+  Mean similarity: 1.000
+  Median similarity: 1.000
+  Standard deviation: 0.000
+
+Other:
+  Mean similarity: 0.052
+  Median similarity: 0.038
+  Standard deviation: 0.028
+
+Pairwise Ontology Similarities:
+
+Runs 1 vs 2:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.038
+
+Runs 1 vs 3:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.034
+
+Runs 1 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.038
+
+Runs 1 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.120
+
+Runs 2 vs 3:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.038
+
+Runs 2 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.043
+
+Runs 2 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.087
+
+Runs 3 vs 4:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.038
+
+Runs 3 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.037
+
+Runs 4 vs 5:
+  CellOntology: 1.000
+  GeneOntology: 1.000
+  MeSH: 1.000
+  Other: 0.042

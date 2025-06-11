@@ -1,0 +1,64 @@
+Experiment: paper3
+Date: 20250611_090946
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class OvarianEpithelialSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.epithelial_cell = self.new_cell_type("Epithelial_Ovary", "CL:0000066")
+        self.mesothelial_cell = self.new_cell_type("Mesothelial", "CL:0000077")
+        
+        # Set up parameters
+        self.cell_adhesion_params = {
+            "Epithelial_Ovary": {"Epithelial_Ovary": 10, "Mesothelial": 5},
+            "Mesothelial": {"Epithelial_Ovary": 5, "Mesothelial": 15}
+        }
+        
+        # Configure adhesion
+        for cell_type1, adhesion_dict in self.cell_adhesion_params.items():
+            for cell_type2, energy in adhesion_dict.items():
+                self.get_xml_element('Plugin', {'Name': 'Contact'})\
+                    .getElement('Energy', {'Type1': cell_type1, 'Type2': cell_type2})\
+                    .ElementCC3D('Energy', {}, str(energy))
+        
+        # Configure cell motility
+        self.get_xml_element('Plugin', {'Name': 'Chemotaxis'})
+        self.get_xml_element('Plugin', {'Name': 'Volume'})
+        
+    def step(self, mcs):
+        # Simulation logic for each step
+        for cell in self.cell_list:
+            if cell.type == self.epithelial_cell:
+                # Implement invasion behavior
+                if mcs % 100 == 0:
+                    self.invade_mesothelial(cell)
+            
+    def invade_mesothelial(self, cell):
+        # Simple invasion logic
+        target_cells = [neighbor for neighbor in self.get_cell_neighbors(cell) 
+                       if neighbor and neighbor.type == self.mesothelial_cell]
+        if target_cells:
+            target = target_cells[0]
+            # Apply force to simulate invasion
+            self.apply_vector_force(cell, target, 0.1)
+            
+    def on_stop(self):
+        # Cleanup if needed
+        pass
+        
+def configure_simulation():
+    from cc3d.CompuCellSetup import register_steppable
+    register_steppable(OvarianEpithelialSimulation(frequency=1))
+    
+configure_simulation()
+```
+
+CC3D File Created: experiments\paper3_20250611_090946_run3\generated_cc3d_model.cc3d

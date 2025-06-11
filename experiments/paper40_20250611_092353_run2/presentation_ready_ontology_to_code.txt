@@ -1,0 +1,61 @@
+Experiment: paper40
+Date: 20250611_092353
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from pybind11_tests import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell = self.add_new_type("TumorCell", "CL:0001064")
+        self.cancer_cell = self.add_new_type("CancerCell", "CL:0001034")
+        self.epithelial_cell = self.add_new_type("EpithelialCell", "CL:0000540")
+        self.pancreatic_ductal_cell = self.add_new_type("PancreaticDuctalCell", "CL:0000598")
+        self.breast_epithelial_cell = self.add_new_type("BreastEpithelialCell", "CL:0000236")
+        self.squamous_cell = self.add_new_type("SquamousCell", "CL:0002057")
+        
+        # Set basic parameters
+        self.cell_proliferation = self.get_xml_element('cell_proliferation')
+        self.blood_vessel_development = self.get_xml_element('blood_vessel_development')
+        self.wound_healing = self.get_xml_element('wound_healing')
+        self.apoptotic_process = self.get_xml_element('apoptotic_process')
+        
+        # Initialize cell population
+        self.create_cell_population()
+        
+    def step(self, mcs):
+        # Update cell behaviors based on MCS
+        self.update_cell_behaviors(mcs)
+        
+    def create_cell_population(self):
+        # Create initial cell population
+        for i in range(10):
+            cell = self.new_cell(self.tumor_cell)
+            self.cell_field[10*i:10*(i+1), 10*i:10*(i+1), 0] = cell
+            
+        for i in range(5):
+            cell = self.new_cell(self.cancer_cell)
+            self.cell_field[50+10*i:60+10*i, 50+10*i:60+10*i, 0] = cell
+            
+    def update_cell_behaviors(self, mcs):
+        # Implement cell behaviors based on ontology
+        for cell in self.cell_list:
+            if cell.type == self.tumor_cell:
+                if mcs % 100 == 0:
+                    self.divide_cell_random_orientation(cell)
+                    
+            elif cell.type == self.cancer_cell:
+                if mcs % 50 == 0:
+                    self.divide_cell_random_orientation(cell)
+                    
+            if mcs % 200 == 0 and random.random() < 0.1:
+                cell.targetVolume = cell.volume * 1.1
+```
+
+CC3D File Created: experiments\paper40_20250611_092353_run2\generated_cc3d_model.cc3d

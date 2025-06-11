@@ -1,0 +1,56 @@
+Experiment: paper3
+Date: 20250611_091216
+Run Number: 5
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class OvarianNeoplasmsSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Create cell types
+        self.epithelial_cell = self.new_cell_type("Epithelial_Ovary")
+        self.mesothelial_cell = self.new_cell_type("Mesothelial")
+        
+        # Set up parameters
+        self.cell_dim = 20
+        self.invasion_prob = 0.01
+        
+        # Initialize cell populations
+        for i in range(10):
+            cell = self.new_cell(self.epithelial_cell)
+            self.cell_field[int(self.dim.x/2) + random.randint(-10,10), 
+                           int(self.dim.y/2) + random.randint(-10,10), 
+                           0] = cell
+            
+        for i in range(5):
+            cell = self.new_cell(self.mesothelial_cell)
+            self.cell_field[random.randint(0,self.dim.x-1), 
+                           random.randint(0,self.dim.y-1), 
+                           0] = cell
+            
+    def step(self, mcs):
+        # Simulate cell invasion behavior
+        for cell in self.cell_list:
+            if cell.type == self.epithelial_cell and random.random() < self.invasion_prob:
+                # Simulate epithelial to mesenchymal transition
+                cell.type = self.mesothelial_cell
+                
+            if cell.type == self.mesothelial_cell:
+                # Simulate increased migration
+                if random.random() < 0.1:
+                    self.move_cell_random(cell, 1)
+
+    def move_cell_random(self, cell, step_size):
+        x, y, z = cell.xCOM, cell.yCOM, cell.zCOM
+        new_x = x + random.randint(-step_size, step_size)
+        new_y = y + random.randint(-step_size, step_size)
+        new_z = z
+        self.cell_field[int(new_x), int(new_y), int(new_z)] = cell
+```
+
+CC3D File Created: experiments\paper3_20250611_091216_run5\generated_cc3d_model.cc3d

@@ -1,0 +1,79 @@
+Experiment: paper40
+Date: 20250611_092524
+Run Number: 3
+
+Initial Description:
+-  Comparison of changes in the volume fold of a tumor mass in our model with experimental data: KP-1 cells, PANC-1 cells and MIAPaCa-2 cells, AN-1 cells, MDA-MB-231 cells and SCC-25 cells
+
+Ontology Annotations:
+
+CellOntology:
+- tumor cell (ID: CL_0000548)
+- pancreatic ductal cell (ID: CL_0001034)
+- breast epithelial cell (ID: CL_0001035)
+- squamous epithelial cell (ID: CL_0002057)
+
+GeneOntology:
+- cell proliferation (ID: GO:0008283)
+- blood vessel development (ID: GO:0001568)
+- cell adhesion (ID: GO:0007155)
+
+MeSH:
+- Neoplasms (ID: D009369)
+- Tumor Microenvironment (ID: D018358)
+- Cell Line, Tumor (ID: D002448)
+- Pancreatic Neoplasms (ID: D010190)
+- Breast Neoplasms (ID: D001943)
+- Squamous Cell Carcinoma (ID: D013498)
+
+Ontology Annotations:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PySteppablesExamples import MitosisSteppable
+
+class TumorMicroenvironmentSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell_type = self.addCellType("TumorCell")
+        self.pancreatic_cell_type = self.addCellType("PancreaticDuctalCell")
+        self.breast_cell_type = self.addCellType("BreastEpithelialCell")
+        self.squamous_cell_type = self.addCellType("SquamousEpithelialCell")
+        
+        # Set cell type parameters
+        self.cellTypes[self.tumor_cell_type].targetVolume = 25
+        self.cellTypes[self.tumor_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.pancreatic_cell_type].targetVolume = 20
+        self.cellTypes[self.pancreatic_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.breast_cell_type].targetVolume = 22
+        self.cellTypes[self.breast_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.squamous_cell_type].targetVolume = 18
+        self.cellTypes[self.squamous_cell_type].lambdaVolume = 2.0
+        
+        # Initialize cells
+        for i in range(100):
+            cell = self.newCell(self.tumor_cell_type)
+            self.cellField[int(self.dim.x/2)][int(self.dim.y/2)][0] = cell
+        
+    def step(self, mcs):
+        # Implement cell behaviors
+        for cell in self.cellList:
+            if cell.type == self.tumor_cell_type and mcs % 100 == 0:
+                # Simulate proliferation
+                if cell.volume > 30:
+                    self.divideCellRandomOrientation(cell)
+            
+            # Implement adhesion effects
+            if cell.type == self.breast_cell_type:
+                cell.lambdaAdhesion = 10.0
+            elif cell.type == self.squamous_cell_type:
+                cell.lambdaAdhesion = 15.0
+
+CompuCellSetup.registerSteppable(steppable=TumorMicroenvironmentSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```

@@ -1,0 +1,328 @@
+=== Run 1 ===
+
+Experiment: paper40
+Date: 20250611_092237
+Run Number: 1
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        super().__init__(frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell_type = self.new_cell_type("TumorCell")
+        self.epithelial_cell_type = self.new_cell_type("EpithelialCell")
+        self.carcinoma_cell_type = self.new_cell_type("CarcinomaCell")
+        
+        # Configure cell parameters
+        cell_type_specs = CellTypePluginConfigurator()
+        cell_type_specs.param_new(self.tumor_cell_type, "Volume", 25)
+        cell_type_specs.param_new(self.tumor_cell_type, "LambdaVolume", 2.0)
+        cell_type_specs.param_new(self.epithelial_cell_type, "Volume", 20)
+        cell_type_specs.param_new(self.epithelial_cell_type, "LambdaVolume", 1.5)
+        cell_type_specs.param_new(self.carcinoma_cell_type, "Volume", 30)
+        cell_type_specs.param_new(self.carcinoma_cell_type, "LambdaVolume", 2.5)
+        
+        # Configure contact energies
+        contact_energy_specs = ContactPluginConfigurator()
+        contact_energy_specs.param_new(self.tumor_cell_type, self.tumor_cell_type, 16)
+        contact_energy_specs.param_new(self.tumor_cell_type, self.epithelial_cell_type, 20)
+        contact_energy_specs.param_new(self.tumor_cell_type, self.carcinoma_cell_type, 18)
+        contact_energy_specs.param_new(self.epithelial_cell_type, self.epithelial_cell_type, 10)
+        contact_energy_specs.param_new(self.epithelial_cell_type, self.carcinoma_cell_type, 15)
+        contact_energy_specs.param_new(self.carcinoma_cell_type, self.carcinoma_cell_type, 14)
+        
+        # Initialize cell field
+        for i in range(10):
+            cell = self.new_cell(self.tumor_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+            
+        for i in range(10, 20):
+            cell = self.new_cell(self.epithelial_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+            
+        for i in range(20, 30):
+            cell = self.new_cell(self.carcinoma_cell_type)
+            self.cell_field[5*i:5*i+5, 5*i:5*i+5, 0] = cell
+
+    def step(self, mcs):
+        # Implement cell behaviors
+        for cell in self.cell_list:
+            if cell.type == self.tumor_cell_type:
+                if mcs % 10 == 0 and random.random() < 0.1:  # proliferation
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.epithelial_cell_type:
+                if random.random() < 0.01:  # differentiation
+                    cell.type = self.carcinoma_cell_type
+            elif cell.type == self.carcinoma_cell_type:
+                if random.random() < 0.005:  # apoptosis
+                    self.delete_cell(cell)
+```
+
+CC3D File Created: experiments\paper40_20250611_092237_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: paper40
+Date: 20250611_092353
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from pybind11_tests import CompuCellSetup
+from cc3d.core.PySteppables import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell = self.add_new_type("TumorCell", "CL:0001064")
+        self.cancer_cell = self.add_new_type("CancerCell", "CL:0001034")
+        self.epithelial_cell = self.add_new_type("EpithelialCell", "CL:0000540")
+        self.pancreatic_ductal_cell = self.add_new_type("PancreaticDuctalCell", "CL:0000598")
+        self.breast_epithelial_cell = self.add_new_type("BreastEpithelialCell", "CL:0000236")
+        self.squamous_cell = self.add_new_type("SquamousCell", "CL:0002057")
+        
+        # Set basic parameters
+        self.cell_proliferation = self.get_xml_element('cell_proliferation')
+        self.blood_vessel_development = self.get_xml_element('blood_vessel_development')
+        self.wound_healing = self.get_xml_element('wound_healing')
+        self.apoptotic_process = self.get_xml_element('apoptotic_process')
+        
+        # Initialize cell population
+        self.create_cell_population()
+        
+    def step(self, mcs):
+        # Update cell behaviors based on MCS
+        self.update_cell_behaviors(mcs)
+        
+    def create_cell_population(self):
+        # Create initial cell population
+        for i in range(10):
+            cell = self.new_cell(self.tumor_cell)
+            self.cell_field[10*i:10*(i+1), 10*i:10*(i+1), 0] = cell
+            
+        for i in range(5):
+            cell = self.new_cell(self.cancer_cell)
+            self.cell_field[50+10*i:60+10*i, 50+10*i:60+10*i, 0] = cell
+            
+    def update_cell_behaviors(self, mcs):
+        # Implement cell behaviors based on ontology
+        for cell in self.cell_list:
+            if cell.type == self.tumor_cell:
+                if mcs % 100 == 0:
+                    self.divide_cell_random_orientation(cell)
+                    
+            elif cell.type == self.cancer_cell:
+                if mcs % 50 == 0:
+                    self.divide_cell_random_orientation(cell)
+                    
+            if mcs % 200 == 0 and random.random() < 0.1:
+                cell.targetVolume = cell.volume * 1.1
+```
+
+CC3D File Created: experiments\paper40_20250611_092353_run2\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 3 ===
+
+Experiment: paper40
+Date: 20250611_092524
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PySteppablesExamples import MitosisSteppable
+
+class TumorMicroenvironmentSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.tumor_cell_type = self.addCellType("TumorCell")
+        self.pancreatic_cell_type = self.addCellType("PancreaticDuctalCell")
+        self.breast_cell_type = self.addCellType("BreastEpithelialCell")
+        self.squamous_cell_type = self.addCellType("SquamousEpithelialCell")
+        
+        # Set cell type parameters
+        self.cellTypes[self.tumor_cell_type].targetVolume = 25
+        self.cellTypes[self.tumor_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.pancreatic_cell_type].targetVolume = 20
+        self.cellTypes[self.pancreatic_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.breast_cell_type].targetVolume = 22
+        self.cellTypes[self.breast_cell_type].lambdaVolume = 2.0
+        
+        self.cellTypes[self.squamous_cell_type].targetVolume = 18
+        self.cellTypes[self.squamous_cell_type].lambdaVolume = 2.0
+        
+        # Initialize cells
+        for i in range(100):
+            cell = self.newCell(self.tumor_cell_type)
+            self.cellField[int(self.dim.x/2)][int(self.dim.y/2)][0] = cell
+        
+    def step(self, mcs):
+        # Implement cell behaviors
+        for cell in self.cellList:
+            if cell.type == self.tumor_cell_type and mcs % 100 == 0:
+                # Simulate proliferation
+                if cell.volume > 30:
+                    self.divideCellRandomOrientation(cell)
+            
+            # Implement adhesion effects
+            if cell.type == self.breast_cell_type:
+                cell.lambdaAdhesion = 10.0
+            elif cell.type == self.squamous_cell_type:
+                cell.lambdaAdhesion = 15.0
+
+CompuCellSetup.registerSteppable(steppable=TumorMicroenvironmentSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
+
+CC3D File Created: experiments\paper40_20250611_092524_run3\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 4 ===
+
+Experiment: paper40
+Date: 20250611_092643
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import *
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type_tumor = self.new_cell_type("Tumor")
+        self.cell_type_pancreatic = self.new_cell_type("Pancreatic")
+        self.cell_type_breast = self.new_cell_type("Breast")
+        self.cell_type_squamous = self.new_cell_type("Squamous")
+        
+        # Set basic parameters
+        self.set_cell_type_proliferation_rate(self.cell_type_tumor, 0.1)
+        self.set_cell_type_proliferation_rate(self.cell_type_pancreatic, 0.08)
+        self.set_cell_type_proliferation_rate(self.cell_type_breast, 0.09)
+        self.set_cell_type_proliferation_rate(self.cell_type_squamous, 0.07)
+        
+        # Initialize cells
+        self.potts.createCell()
+        self.cell.type = self.cell_type_tumor
+        self.cell.targetVolume = 25
+        self.cell.lambdaVolume = 2.0
+        
+    def step(self, mcs):
+        # Update cell behaviors
+        for cell in self.cell_list:
+            if cell.type == self.cell_type_tumor:
+                if mcs % 10 == 0 and random.random() < 0.05:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_pancreatic:
+                if mcs % 15 == 0 and random.random() < 0.03:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_breast:
+                if mcs % 12 == 0 and random.random() < 0.04:
+                    self.divide_cell_random_orientation(cell)
+            elif cell.type == self.cell_type_squamous:
+                if mcs % 18 == 0 and random.random() < 0.02:
+                    self.divide_cell_random_orientation(cell)
+```
+
+CC3D File Created: experiments\paper40_20250611_092643_run4\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 5 ===
+
+Experiment: paper40
+Date: 20250611_092754
+Run Number: 5
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class TumorSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.KP1 = self.add_new_type("KP-1_cells", "KP-1 cells")
+        self.PANC1 = self.add_new_type("PANC-1_cells", "PANC-1 cells")
+        self.MIAPaCa2 = self.add_new_type("MIAPaCa-2_cells", "MIAPaCa-2 cells")
+        self.AN1 = self.add_new_type("AN-1_cells", "AN-1 cells")
+        self.MDAMB231 = self.add_new_type("MDA-MB-231_cells", "MDA-MB-231 cells")
+        self.SCC25 = self.add_new_type("SCC-25_cells", "SCC-25 cells")
+        
+        # Set volume parameters
+        self.set_volume_params()
+        
+        # Initialize tumor cells
+        self.initialize_tumor()
+        
+    def set_volume_params(self):
+        # Set target volume and lambda volume for each cell type
+        self.cell_type_param_map = {
+            self.KP1: {"target_volume": 25, "lambda_volume": 2.0},
+            self.PANC1: {"target_volume": 25, "lambda_volume": 2.0},
+            self.MIAPaCa2: {"target_volume": 25, "lambda_volume": 2.0},
+            self.AN1: {"target_volume": 25, "lambda_volume": 2.0},
+            self.MDAMB231: {"target_volume": 25, "lambda_volume": 2.0},
+            self.SCC25: {"target_volume": 25, "lambda_volume": 2.0}
+        }
+        
+        for cell_type, params in self.cell_type_param_map.items():
+            self.get_xml_element('Plugin', {'Name': 'Volume'}).getElement('VolumeEnergyParameters', 
+                {'CellType': cell_type.__str__()}).ElementCC3D('TargetVolume').Text = str(params["target_volume"])
+            self.get_xml_element('Plugin', {'Name': 'Volume'}).getElement('VolumeEnergyParameters', 
+                {'CellType': cell_type.__str__()}).ElementCC3D('LambdaVolume').Text = str(params["lambda_volume"])
+    
+    def initialize_tumor(self):
+        # Create initial tumor cells
+        for i in range(10):
+            cell = self.new_cell(self.KP1)
+            self.cell_field[self.dim.x//2 + random.randint(-5,5), 
+                           self.dim.y//2 + random.randint(-5,5), 
+                           0] = cell
+            
+    def step(self, mcs):
+        # Implement tumor growth logic
+        for cell in self.cell_list:
+            if cell.type in [self.KP1, self.PANC1, self.MIAPaCa2, self.AN1, 
+                            self.MDAMB231, self.SCC25]:
+                # Random proliferation
+                if mcs % 100 == 0 and random.random() < 0.1:
+                    self.divide_cell_random_orientation(cell)
+
+CompuCellSetup.register_steppable(steppable=TumorSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\paper40_20250611_092754_run5\generated_cc3d_model.cc3d
+
+
+==================================================

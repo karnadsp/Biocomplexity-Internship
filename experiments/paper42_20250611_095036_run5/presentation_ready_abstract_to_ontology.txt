@@ -1,0 +1,87 @@
+Experiment: paper42
+Date: 20250611_095036
+Run Number: 5
+
+Initial Description:
+- During early kidney organogenesis, nephron progenitor (NP) cells move from the tip to the corner region of the ureteric bud (UB) branches in order to form the pretubular aggregate
+
+Ontology Annotations:
+
+Cell Ontology:
+  cell_types:
+  - {'id': 'CL:0005002', 'label': 'nephron progenitor cell', 'description': 'A progenitor cell that gives rise to nephron epithelial cells during kidney development.'}
+  - {'id': 'CL:0000185', 'label': 'ureteric bud cell', 'description': 'An epithelial cell that is part of the ureteric bud, a structure involved in kidney development.'}
+
+Gene Ontology:
+  biological_processes:
+  - {'id': 'GO:0060993', 'label': 'kidney morphogenesis', 'description': 'The process in which the anatomical structures of the kidney are generated and organized.'}
+  - {'id': 'GO:0001656', 'label': 'metanephros development', 'description': 'The process whose specific outcome is the progression of the metanephros over time, from its formation to the mature structure.'}
+  - {'id': 'GO:0035789', 'label': 'nephron tubule formation', 'description': 'The developmental process pertaining to the initial formation of a nephron tubule from unspecified parts.'}
+  cellular_components:
+  - {'id': 'GO:0034707', 'label': 'ureteric bud', 'description': 'A tube that grows out from the metanephric duct and branches repeatedly to form the collecting duct system of the kidney.'}
+  - {'id': 'GO:0035788', 'label': 'pretubular aggregate', 'description': 'A transient structure formed during kidney development that gives rise to the nephron tubules.'}
+  molecular_functions:
+  - {'id': 'GO:0048568', 'label': 'embryonic organ development', 'description': 'The process whose specific outcome is the progression of an embryonic organ over time, from its formation to the mature structure.'}
+
+MeSH:
+  anatomy:
+  - {'id': 'D007668', 'label': 'Kidney', 'description': 'Body organ that filters blood for the secretion of urine and that regulates ion concentrations.'}
+  - {'id': 'D014550', 'label': 'Ureter', 'description': 'One of a pair of thick-walled tubes that transports urine from the KIDNEY PELVIS to the URINARY BLADDER.'}
+  developmental_biology:
+  - {'id': 'D002872', 'label': 'Organogenesis', 'description': 'Formation of differentiated cells and complicated tissue organization to provide specialized functions.'}
+  - {'id': 'D015183', 'label': 'Stem Cells', 'description': 'Relatively undifferentiated cells that retain the ability to divide and proliferate throughout postnatal life to provide progenitor cells that can differentiate into specialized cells.'}
+
+Ontology Annotations:
+```python
+from pybind11_tests import CompuCellSetup
+from PySteppables import *
+import CompuCell
+import sys
+
+class KidneyDevelopmentSteppable(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.nephron_progenitor = self.createNewCellType("NephronProgenitor", "CL:0005002")
+        self.ureteric_bud = self.createNewCellType("UretericBud", "CL:0000185")
+        
+        # Set basic parameters
+        self.cellField = self.potts.getCellFieldG()
+        self.dim = self.cellField.getDim()
+        
+        # Initialize some cells
+        for i in range(100):
+            x = int(random() * (self.dim.x-20) + 10)
+            y = int(random() * (self.dim.y-20) + 10)
+            z = int(random() * (self.dim.z-20) + 10)
+            
+            if random() < 0.5:
+                cell = self.newCell(self.nephron_progenitor)
+            else:
+                cell = self.newCell(self.ureteric_bud)
+            
+            self.cellField.set(x, y, z, cell)
+        
+    def step(self, mcs):
+        # Simulation logic for each step
+        for cell in self.cellList:
+            if cell.type == self.nephron_progenitor:
+                # Nephron progenitor behavior
+                pass
+            elif cell.type == self.ureteric_bud:
+                # Ureteric bud cell behavior
+                pass
+        
+        # Additional simulation rules can be added here
+        if mcs % 100 == 0:
+            print("Current MCS:", mcs)
+
+    def finish(self):
+        # Cleanup or finalization code
+        pass
+
+# Register the steppable
+CompuCellSetup.register_steppable(steppable=KidneyDevelopmentSteppable(frequency=1))
+```

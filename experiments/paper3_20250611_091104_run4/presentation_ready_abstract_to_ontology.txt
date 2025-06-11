@@ -1,0 +1,99 @@
+Experiment: paper3
+Date: 20250611_091104
+Run Number: 4
+
+Initial Description:
+- Ovarian cancer cells invade by clearing mesothelial cells
+
+Ontology Annotations:
+
+Cell_Ontology:
+  Cell_Type:
+  - {'Term': 'CL:0002079', 'Label': 'mesothelial cell', 'Definition': 'A squamous epithelial cell that is part of the mesothelium, a layer of cells that lines body cavities and covers the outer surface of internal organs.'}
+  - {'Term': 'CL:0001063', 'Label': 'ovarian cancer cell', 'Definition': 'A malignant cell originating in the ovary, often characterized by uncontrolled proliferation and invasive behavior.'}
+
+Gene_Ontology:
+  Biological_Process:
+  - {'Term': 'GO:0016477', 'Label': 'cell migration', 'Definition': 'The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues.'}
+  - {'Term': 'GO:0030335', 'Label': 'positive regulation of cell migration', 'Definition': 'Any process that activates or increases the frequency, rate or extent of cell migration.'}
+  - {'Term': 'GO:0007160', 'Label': 'cell-matrix adhesion', 'Definition': 'The binding of a cell to the extracellular matrix via adhesion molecules.'}
+  Molecular_Function:
+  - {'Term': 'GO:0005201', 'Label': 'extracellular matrix structural constituent', 'Definition': 'The action of a molecule that contributes to the structural integrity of the extracellular matrix.'}
+  Cellular_Component:
+  - {'Term': 'GO:0005578', 'Label': 'proteinaceous extracellular matrix', 'Definition': 'A layer consisting mainly of proteins (especially collagen) and glycosaminoglycans (mostly as proteoglycans) that forms a sheet underlying cells.'}
+
+MeSH:
+  Diseases:
+  - {'Term': 'D010051', 'Label': 'Ovarian Neoplasms', 'Definition': 'Tumors or cancer of the OVARY.'}
+  Anatomy:
+  - {'Term': 'A05.360.319.114.630', 'Label': 'Ovary', 'Definition': 'The reproductive organ (GONADS) in female animals.'}
+  - {'Term': 'A10.615.550', 'Label': 'Mesothelium', 'Definition': 'The layer of flat cells, derived from the mesoderm, that lines the body cavity of the embryo. In the adult it forms the simple squamous epithelium that covers the surface of all true serous membranes (PERITONEUM; PLEURA; PERICARDIUM).'}
+  Biological_Phenomena:
+  - {'Term': 'G04.185.515.250', 'Label': 'Neoplasm Invasiveness', 'Definition': 'Ability of neoplasms to infiltrate and actively destroy surrounding tissue.'}
+
+Ontology Annotations:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import *
+import CompuCell
+import sys
+
+class OvarianCancerSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.mesothelial = self.addCellType("Mesothelial")
+        self.cancer = self.addCellType("OvarianCancer")
+        
+        # Set up parameters
+        self.cellField = self.potts.getCellField()
+        self.dim = self.cellField.getDim()
+        
+        # Configure cell properties
+        self.setCellTypeMotilityParameters()
+        self.setupInitialConditions()
+        
+    def setCellTypeMotilityParameters(self):
+        # Configure motility parameters
+        self.setMotilityParameters(self.mesothelial, 10, 0.5)
+        self.setMotilityParameters(self.cancer, 50, 0.8)
+        
+        # Configure adhesion parameters
+        self.setCellTypeAdhesionParameters()
+        
+    def setCellTypeAdhesionParameters(self):
+        # Set adhesion parameters between cell types and medium
+        self.setCellTypeAdhesion(self.mesothelial, "Medium", 10)
+        self.setCellTypeAdhesion(self.cancer, "Medium", 5)
+        
+        # Set adhesion between cell types
+        self.setCellTypeAdhesion(self.mesothelial, self.mesothelial, 20)
+        self.setCellTypeAdhesion(self.cancer, self.cancer, 15)
+        self.setCellTypeAdhesion(self.mesothelial, self.cancer, 8)
+        
+    def setupInitialConditions(self):
+        # Create initial cell layout
+        for x, y, z in self.everyPixel(10, 10, 1):
+            if x < self.dim.x/2:
+                cell = self.newCell(self.mesothelial)
+                self.cellField.set(x, y, z, cell)
+            else:
+                cell = self.newCell(self.cancer)
+                self.cellField.set(x, y, z, cell)
+                
+    def step(self, mcs):
+        # Implement simulation logic for each step
+        if mcs % 100 == 0:
+            self.updateCellBehaviors()
+            
+    def updateCellBehaviors(self):
+        # Update cell properties during simulation
+        for cell in self.cellList:
+            if cell.type == self.cancer:
+                # Increase cancer cell motility over time
+                self.setMotilityParameters(cell.type, 50 + mcs/10, 0.8)
+
+CompuCellSetup.registerSteppable(steppable=OvarianCancerSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
