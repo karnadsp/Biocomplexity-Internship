@@ -7,6 +7,7 @@ from pathlib import Path
 import deepseek
 from deepseek import DeepSeekAPI
 from dotenv import load_dotenv
+import statistics
 
 # Load environment variables from .env file
 load_dotenv("project.env")
@@ -20,10 +21,11 @@ print("DEEPSEEK_API_KEY value:", os.getenv('DEEPSEEK_API_KEY'))
 client = DeepSeekAPI(api_key=os.getenv('DEEPSEEK_API_KEY'))
 
 class ExperimentLogger:
-    def __init__(self, experiment_name):
+    def __init__(self, experiment_name, run_number=1):
         self.experiment_name = experiment_name
+        self.run_number = run_number
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}")
+        self.experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}_run{run_number}")
         self.experiment_dir.mkdir(parents=True, exist_ok=True)
         self.interaction_log = []
         
@@ -49,6 +51,7 @@ class ExperimentLogger:
             json.dump({
                 "experiment_name": self.experiment_name,
                 "timestamp": self.timestamp,
+                "run_number": self.run_number,
                 "interactions": self.interaction_log
             }, f, indent=2)
 
@@ -147,8 +150,8 @@ def create_cc3d_file(python_code, logger):
         
         return output_file
 
-def format_for_presentation(experiment_dir):
-    """Format experiment data for easy presentation use"""
+def format_for_presentation(experiment_dir, phase="all"):
+    """Format experiment data for easy presentation use, with option to show specific phases"""
     # Read the experiment summary
     summary_file = Path(experiment_dir) / "experiment_summary.json"
     with open(summary_file, 'r') as f:
@@ -157,98 +160,130 @@ def format_for_presentation(experiment_dir):
     # Format the output
     output = []
     output.append(f"Experiment: {data['experiment_name']}")
-    output.append(f"Date: {data['timestamp']}\n")
+    output.append(f"Date: {data['timestamp']}")
+    output.append(f"Run Number: {data.get('run_number', 1)}\n")
     
     # Format each interaction
     for interaction in data['interactions']:
         step = interaction['step']
-        if step == 'initial_description':
-            output.append("Initial Description:")
-            output.append(f"- {interaction['output']['description']}\n")
-        elif step == 'llm_response':
-            if 'ontology annotations' in interaction['input']['prompt'].lower():
-                output.append("Ontology Annotations:")
-                # Clean up the JSON response
-                response = interaction['output']['response']
-                if '```json' in response:
-                    response = response.split('```json')[1].split('```')[0].strip()
-                try:
-                    annotations = json.loads(response)
-                    for category, items in annotations.items():
-                        if items:  # Only show non-empty categories
-                            output.append(f"\n{category}:")
-                            if isinstance(items, list):
-                                for item in items:
-                                    if 'CellOntology' in item:
-                                        output.append(f"- {item['CellOntology']['label']} (ID: {item['CellOntology']['id']})")
-                                    elif 'id' in item:
-                                        output.append(f"- {item['label']} (ID: {item['id']})")
-                            elif isinstance(items, dict):
-                                for subcat, subitems in items.items():
-                                    if subitems:
-                                        output.append(f"  {subcat}:")
-                                        for subitem in subitems:
-                                            output.append(f"  - {subitem}")
-                except json.JSONDecodeError:
-                    output.append(response)
+        
+        # Abstract to Ontology phase
+        if phase in ["all", "abstract_to_ontology"]:
+            if step == 'initial_description':
+                output.append("Initial Description:")
+                output.append(f"- {interaction['output']['description']}\n")
+            elif step == 'llm_response':
+                if 'ontology annotations' in interaction['input']['prompt'].lower():
+                    output.append("Ontology Annotations:")
+                    # Clean up the JSON response
+                    response = interaction['output']['response']
+                    if '```json' in response:
+                        response = response.split('```json')[1].split('```')[0].strip()
+                    try:
+                        annotations = json.loads(response)
+                        for category, items in annotations.items():
+                            if items:  # Only show non-empty categories
+                                output.append(f"\n{category}:")
+                                if isinstance(items, list):
+                                    for item in items:
+                                        if 'CellOntology' in item:
+                                            output.append(f"- {item['CellOntology']['label']} (ID: {item['CellOntology']['id']})")
+                                        elif 'id' in item:
+                                            output.append(f"- {item['label']} (ID: {item['id']})")
+                                elif isinstance(items, dict):
+                                    for subcat, subitems in items.items():
+                                        if subitems:
+                                            output.append(f"  {subcat}:")
+                                            for subitem in subitems:
+                                                output.append(f"  - {subitem}")
+                    except json.JSONDecodeError:
+                        output.append(response)
+                    output.append("")
+            elif step == 'clarifications':
+                output.append("Clarifications Provided:")
+                output.append(f"- {interaction['output']['answers']}\n")
+        
+        # Ontology to Code phase
+        if phase in ["all", "ontology_to_code"]:
+            if step == 'llm_response' and 'CompuCell3D' in interaction['input']['prompt']:
+                output.append("Generated CC3D Code:")
+                output.append(interaction['output']['response'])
                 output.append("")
-        elif step == 'clarifications':
-            output.append("Clarifications Provided:")
-            output.append(f"- {interaction['output']['answers']}\n")
+            elif step == 'cc3d_file_creation':
+                output.append(f"CC3D File Created: {interaction['output']['output_file']}\n")
     
     return "\n".join(output)
+
+def run_experiment(experiment_name, description, run_number=1):
+    """Run a single experiment with the given parameters"""
+    logger = ExperimentLogger(experiment_name, run_number)
+    
+    # Log initial description
+    logger.log_interaction("initial_description", {}, {"description": description})
+    
+    # Generate and log ontology annotations directly from description
+    annotations = generate_ontology_annotations(description, "", logger)
+    
+    # Generate and log CC3D code
+    cc3d_code = generate_cc3d_starter_code(annotations, logger)
+    cc3d_code = cc3d_code.replace("```python", "").replace("```", "").strip()
+    
+    if "from cc3d.core.PySteppables import *" not in cc3d_code:
+        cc3d_code = "from cc3d.core.PySteppables import *\n\n" + cc3d_code
+    
+    # Create and save the .cc3d file
+    output_file = create_cc3d_file(cc3d_code, logger)
+    
+    # Save complete experiment summary
+    logger.save_experiment_summary()
+    
+    # Format and save presentation-ready output for both phases
+    for phase in ["abstract_to_ontology", "ontology_to_code"]:
+        presentation_text = format_for_presentation(logger.experiment_dir, phase)
+        presentation_file = logger.experiment_dir / f"presentation_ready_{phase}.txt"
+        with open(presentation_file, 'w') as f:
+            f.write(presentation_text)
+    
+    return logger.experiment_dir
 
 def main():
     print("Welcome to the Biological System Modeling Assistant!")
     
-    # Initialize experiment logger
+    # Get experiment parameters
     experiment_name = input("Enter a name for this experiment: ")
-    logger = ExperimentLogger(experiment_name)
+    num_runs = int(input("Enter the number of runs for reproducibility assessment (default: 3): ") or "3")
     
     print("\nPlease provide a description of the biological system you wish to model:")
     description = input("> ")
-    logger.log_interaction("initial_description", {}, {"description": description})
     
-    print("\nGenerating clarification questions...")
-    questions = generate_clarification_questions(description, logger)
-    print("\nPlease answer these clarification questions:")
-    print(questions)
+    # Run multiple experiments
+    experiment_dirs = []
+    for run in range(1, num_runs + 1):
+        print(f"\nRunning experiment {run} of {num_runs}...")
+        experiment_dir = run_experiment(experiment_name, description, run)
+        experiment_dirs.append(experiment_dir)
+        print(f"Completed run {run}. Results saved in {experiment_dir}")
     
-    clarifications = input("\nEnter your clarifications:\n> ")
-    logger.log_interaction("clarifications", {"questions": questions}, {"answers": clarifications})
+    # Create a summary of all runs
+    summary_dir = Path(f"experiments/{experiment_name}_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+    summary_dir.mkdir(parents=True, exist_ok=True)
     
-    print("\nGenerating ontology annotations...")
-    annotations = generate_ontology_annotations(description, clarifications, logger)
-    print("\nGenerated annotations:")
-    print(annotations)
+    # Combine results from all runs
+    for phase in ["abstract_to_ontology", "ontology_to_code"]:
+        combined_output = []
+        for run_dir in experiment_dirs:
+            presentation_file = Path(run_dir) / f"presentation_ready_{phase}.txt"
+            if presentation_file.exists():
+                with open(presentation_file, 'r') as f:
+                    combined_output.append(f"=== Run {run_dir.name.split('_run')[1]} ===\n")
+                    combined_output.append(f.read())
+                    combined_output.append("\n" + "="*50 + "\n")
+        
+        # Save combined results
+        with open(summary_dir / f"combined_results_{phase}.txt", 'w') as f:
+            f.write("\n".join(combined_output))
     
-    print("\nGenerating CC3D starter code...")
-    cc3d_code = generate_cc3d_starter_code(annotations, logger)
-    
-    # Clean up the code by removing any markdown code block markers
-    cc3d_code = cc3d_code.replace("```python", "").replace("```", "").strip()
-    
-    # Ensure the code has the basic required structure
-    if "from cc3d.core.PySteppables import *" not in cc3d_code:
-        cc3d_code = "from cc3d.core.PySteppables import *\n\n" + cc3d_code
-    
-    print("\nGenerated CC3D starter code:")
-    print(cc3d_code)
-    
-    # Create and save the .cc3d file
-    output_file = create_cc3d_file(cc3d_code, logger)
-    print(f"\nCC3D simulation has been saved to '{output_file}'")
-    
-    # Save complete experiment summary
-    logger.save_experiment_summary()
-    print(f"\nExperiment summary has been saved to '{logger.experiment_dir}/experiment_summary.json'")
-    
-    # Format and save presentation-ready output
-    presentation_text = format_for_presentation(logger.experiment_dir)
-    presentation_file = logger.experiment_dir / "presentation_ready.txt"
-    with open(presentation_file, 'w') as f:
-        f.write(presentation_text)
-    print(f"\nPresentation-ready format has been saved to '{presentation_file}'")
+    print(f"\nAll runs completed. Combined results saved in {summary_dir}")
 
 if __name__ == "__main__":
     main() 

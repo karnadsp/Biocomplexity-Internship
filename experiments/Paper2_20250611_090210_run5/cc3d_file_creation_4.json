@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:03:09.027321",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\nfrom cc3d import CompuCellSetup\n\nclass CellAdhesionSimulation(SteppableBasePy):\n    def __init__(self, frequency=1):\n        SteppableBasePy.__init__(self, frequency)\n        \n    def start(self):\n        # Define cell types\n        self.cell_type = self.add_new_type(\"Cell\", 1)\n        self.cell_doublet_type = self.add_new_type(\"CellDoublet\", 2)\n        \n        # Set cell adhesion parameters\n        self.cell_adhesion_plugin = self.get_cell_adhesion_plugin()\n        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_type, 10)\n        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_doublet_type, 20)\n        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_doublet_type, self.cell_doublet_type, 15)\n        \n        # Initialize cells\n        for i in range(10):\n            cell = self.potts.createCell()\n            cell.type = self.cell_type\n            self.cell_field[0:10, 0:10, 0] = cell\n            \n        for i in range(5):\n            cell = self.potts.createCell()\n            cell.type = self.cell_doublet_type\n            self.cell_field[20:30, 20:30, 0] = cell\n\n    def step(self, mcs):\n        # Simulation step logic\n        for cell in self.cell_list:\n            if cell.type == self.cell_type:\n                # Apply random motion to single cells\n                if mcs % 10 == 0:\n                    cell.lambdaVecX = 2.0 * (random.random() - 0.5)\n                    cell.lambdaVecY = 2.0 * (random.random() - 0.5)\n            elif cell.type == self.cell_doublet_type:\n                # Apply coordinated motion to doublets\n                if mcs % 20 == 0:\n                    cell.lambdaVecX = 1.5 * (random.random() - 0.5)\n                    cell.lambdaVecY = 1.5 * (random.random() - 0.5)\n\nCompuCellSetup.register_steppable(steppable=CellAdhesionSimulation(frequency=1))"
+  },
+  "output": {
+    "output_file": "experiments\\Paper2_20250611_090210_run5\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,87 @@
+Experiment: Attempt1
+Date: 20250611_084501
+Run Number: 2
+
+Initial Description:
+- cylindrical segment with epithelial tissue surrounded by fibroblasts enclosing a lumen representitive of the inside of the animal
+
+Ontology Annotations:
+
+Cell_Ontology:
+  terms:
+  - {'id': 'CL:0000066', 'label': 'epithelial cell', 'description': 'A cell that is usually found in a two-dimensional sheet with a free surface. The sheet may be one or several cells thick.'}
+  - {'id': 'CL:0000057', 'label': 'fibroblast', 'description': 'A cell of the connective tissue which produces collagen and other extracellular matrix proteins.'}
+
+Gene_Ontology:
+  terms:
+  - {'id': 'GO:0008150', 'label': 'biological_process', 'description': 'Any process specifically pertinent to the functioning of integrated living units.'}
+  - {'id': 'GO:0044464', 'label': 'cell part', 'description': 'Any constituent part of a cell, the basic structural and functional unit of all organisms.'}
+  - {'id': 'GO:0031982', 'label': 'vesicle', 'description': 'A small, membrane-bounded sac that transports or stores materials within cells.'}
+
+MeSH:
+  terms:
+  - {'id': 'D004848', 'label': 'Epithelium', 'description': 'The layers of cells that cover internal and external surfaces of the body, including the lining of vessels and other small cavities.'}
+  - {'id': 'D005347', 'label': 'Fibroblasts', 'description': 'Connective tissue cells which secrete an extracellular matrix rich in collagen and other macromolecules.'}
+  - {'id': 'D008168', 'label': 'Lumens', 'description': 'The cavity or channel within a tubular structure or organ.'}
+
+additional_annotations:
+  structure:
+  - label
+  - description
+  function:
+  - label
+  - description
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CylindricalSegmentSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.EpithelialCell = self.new_cell_type("EpithelialCell")
+        self.Fibroblast = self.new_cell_type("Fibroblast")
+        self.Lumen = self.new_cell_type("Lumen")
+        
+        # Set up initial configuration
+        self.build_cylindrical_segment()
+        
+    def build_cylindrical_segment(self):
+        # Create lumen
+        lumen_cell = self.new_cell(self.Lumen)
+        self.cell_field[10:20, 10:20, 10] = lumen_cell
+        
+        # Create epithelial layer around lumen
+        for x, y, z in self.every_pixel():
+            if self.cell_field[x, y, z] is None:
+                dist = self.distance_from_lumen(x, y, z)
+                if 3 <= dist <= 5:
+                    epi_cell = self.new_cell(self.EpithelialCell)
+                    self.cell_field[x, y, z] = epi_cell
+                elif 5 < dist <= 8:
+                    fibro_cell = self.new_cell(self.Fibroblast)
+                    self.cell_field[x, y, z] = fibro_cell
+    
+    def distance_from_lumen(self, x, y, z):
+        # Simple distance calculation from center of lumen
+        return ((x - 15)**2 + (y - 15)**2)**0.5
+        
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cell_list:
+            if cell.type == self.EpithelialCell:
+                # Epithelial cell behavior
+                pass
+            elif cell.type == self.Fibroblast:
+                # Fibroblast behavior
+                pass
+            elif cell.type == self.Lumen:
+                # Lumen behavior
+                pass
+
+CompuCellSetup.register_steppable(steppable=CylindricalSegmentSimulation(frequency=1))
+```

@@ -1,0 +1,78 @@
+Experiment: Paper2
+Date: 20250611_085821
+Run Number: 1
+
+Initial Description:
+-  single cell and cell doublet geometry obtained using a 3D cellular Potts model
+
+Ontology Annotations:
+
+Cell_Ontology:
+  terms:
+  - {'id': 'CL:0000000', 'label': 'cell', 'description': 'A basic structural and functional unit of living organisms.'}
+  - {'id': 'CL:0000003', 'label': 'doublet cell', 'description': 'A cell that is formed by the fusion or incomplete separation of two cells.'}
+
+Gene_Ontology:
+  terms:
+  - {'id': 'GO:0005623', 'label': 'cell', 'description': 'The basic structural and functional unit of all organisms.'}
+  - {'id': 'GO:0044464', 'label': 'cell part', 'description': 'Any constituent part of a cell.'}
+  - {'id': 'GO:0009987', 'label': 'cellular process', 'description': 'Any process that is carried out at the cellular level.'}
+
+MeSH:
+  terms:
+  - {'id': 'D002477', 'label': 'Cell Physiological Phenomena', 'description': 'Cellular processes, properties, and characteristics.'}
+  - {'id': 'D002465', 'label': 'Cell Movement', 'description': 'The movement of cells from one location to another.'}
+  - {'id': 'D015398', 'label': 'Models, Biological', 'description': 'Theoretical representations that simulate the behavior or activity of biological processes or phenomena.'}
+  - {'id': 'D015405', 'label': 'Models, Theoretical', 'description': 'Theoretical representations that simulate the behavior or activity of systems, processes, or phenomena.'}
+
+Other:
+  terms:
+  - {'id': 'Cellular_Potts_Model', 'label': 'Cellular Potts Model', 'description': 'A computational modeling approach used to simulate the behavior of cells and tissues, often incorporating cell geometry, adhesion, and other physical properties.'}
+  - {'id': '3D_Modeling', 'label': '3D Modeling', 'description': 'The process of developing a mathematical representation of any three-dimensional surface of an object via specialized software.'}
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CellSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.cell_type = self.add_new_cell_type("Cell")
+        self.doublet_type = self.add_new_cell_type("DoubletCell")
+        
+        # Set basic parameters
+        self.cell_field = self.potts.getCellField()
+        self.dim = self.cell_field.getDim()
+        
+        # Place initial cells
+        for i in range(10):
+            cell = self.new_cell(self.cell_type)
+            self.cell_field[random.randint(0, self.dim.x-1), 
+                           random.randint(0, self.dim.y-1), 
+                           0] = cell
+        
+        # Place some doublet cells
+        for i in range(5):
+            cell = self.new_cell(self.doublet_type)
+            self.cell_field[random.randint(0, self.dim.x-1), 
+                           random.randint(0, self.dim.y-1), 
+                           0] = cell
+
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cell_list:
+            if cell.type == self.doublet_type:
+                # Doublet cells have different properties
+                cell.targetVolume = 50
+                cell.lambdaVolume = 2.0
+            else:
+                # Regular cells
+                cell.targetVolume = 30
+                cell.lambdaVolume = 1.0
+
+CompuCellSetup.register_steppable(steppable=CellSimulation(frequency=1))
+```

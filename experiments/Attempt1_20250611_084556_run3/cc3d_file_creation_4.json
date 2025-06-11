@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T08:46:47.575872",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom pybindCC3D import CompuCellSetup\nfrom PySteppables import SteppableBasePy\nfrom PlayerPython import *\n\nclass EpithelialFibroblastSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        \n    def start(self):\n        # Define cell types\n        self.epithelial_type = self.addCellType(\"EpithelialCell\")\n        self.fibroblast_type = self.addCellType(\"Fibroblast\")\n        \n        # Set basic parameters\n        self.cellField = self.potts.getCellField()\n        self.dim = self.cellField.getDim()\n        \n        # Initialize cells\n        for x, y, z in self.everyPixel(1, 1, 1):\n            if x < self.dim.x//2:\n                cell = self.newCell(self.epithelial_type)\n            else:\n                cell = self.newCell(self.fibroblast_type)\n            self.cellField[x, y, z] = cell\n            \n    def step(self, mcs):\n        # Simulation logic for each step\n        for cell in self.cellList:\n            if cell.type == self.epithelial_type:\n                # Epithelial cell behavior\n                pass\n            elif cell.type == self.fibroblast_type:\n                # Fibroblast behavior\n                pass\n\ncompucell = CompuCellSetup.SimulationThread()\nsteppable = EpithelialFibroblastSimulation(compucell.getSimulator())\nCompuCellSetup.registerSteppable(steppable)\ncompucell.start()"
+  },
+  "output": {
+    "output_file": "experiments\\Attempt1_20250611_084556_run3\\generated_cc3d_model.cc3d"
+  }
+}

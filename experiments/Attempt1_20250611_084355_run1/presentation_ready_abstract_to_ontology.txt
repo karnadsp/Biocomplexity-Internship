@@ -1,0 +1,108 @@
+Experiment: Attempt1
+Date: 20250611_084355
+Run Number: 1
+
+Initial Description:
+- cylindrical segment with epithelial tissue surrounded by fibroblasts enclosing a lumen representitive of the inside of the animal
+
+Ontology Annotations:
+
+Cell_Ontology:
+- epithelial cell (ID: CL:0000066)
+- fibroblast (ID: CL:0000057)
+
+Gene_Ontology:
+- plasma membrane (ID: GO:0005886)
+- vesicle (ID: GO:0031982)
+- intercellular bridge (ID: GO:0045171)
+
+MeSH:
+- Epithelium (ID: D004848)
+- Fibroblasts (ID: D005347)
+- Lumen (ID: D008168)
+
+UBERON:
+- epithelial tissue (ID: UBERON:0000483)
+- lumen of tube (ID: UBERON:0000481)
+
+comment:
+
+Ontology Annotations:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import Metadata
+
+class EpithelialTubeSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.epithelial_type = self.new_cell_type("Epithelial")
+        self.fibroblast_type = self.new_cell_type("Fibroblast")
+        self.lumen_type = self.new_cell_type("Lumen")
+        
+        # Set up initial cell layout
+        self.build_initial_configuration()
+        
+        # Set up cell properties
+        self.set_cell_type_properties()
+        
+    def build_initial_configuration(self):
+        # Create a simple tubular structure
+        for x, y, z in self.every_pixel():
+            pt = CompuCell.Point3D(x, y, z)
+            dist_from_center = ((x-50)**2 + (y-50)**2)**0.5
+            
+            if dist_from_center < 20:
+                cell = self.new_cell(self.lumen_type)
+                self.cell_field[pt] = cell
+            elif 20 <= dist_from_center < 30:
+                cell = self.new_cell(self.epithelial_type)
+                self.cell_field[pt] = cell
+            elif 30 <= dist_from_center < 40:
+                cell = self.new_cell(self.fibroblast_type)
+                self.cell_field[pt] = cell
+    
+    def set_cell_type_properties(self):
+        # Configure epithelial cells
+        epithelial_specs = {
+            'Volume': 25,
+            'Surface': 50,
+            'TargetSurface': 50,
+            'LambdaSurface': 2.0
+        }
+        
+        # Configure fibroblasts
+        fibroblast_specs = {
+            'Volume': 30,
+            'Surface': 60,
+            'TargetSurface': 60,
+            'LambdaSurface': 2.0
+        }
+        
+        # Configure lumen
+        lumen_specs = {
+            'Volume': 1000,
+            'Surface': 0,
+            'TargetSurface': 0,
+            'LambdaSurface': 0.0
+        }
+        
+        self.set_cell_type_parameters(self.epithelial_type, epithelial_specs)
+        self.set_cell_type_parameters(self.fibroblast_type, fibroblast_specs)
+        self.set_cell_type_parameters(self.lumen_type, lumen_specs)
+        
+    def step(self, mcs):
+        # Perform actions each simulation step
+        if mcs % 100 == 0:
+            self.update_cell_properties()
+            
+    def update_cell_properties(self):
+        # Update cell properties during simulation
+        for cell in self.cell_list:
+            if cell.type == self.epithelial_type:
+                cell.targetVolume += 1
+            elif cell.type == self.fibroblast_type:
+                cell.lambdaSurface *= 1.05
+```

@@ -1,0 +1,81 @@
+Experiment: Paper2
+Date: 20250611_090008
+Run Number: 3
+
+Initial Description:
+-  single cell and cell doublet geometry obtained using a 3D cellular Potts model
+
+Ontology Annotations:
+
+Cell_Ontology:
+  cell_types:
+  - {'id': 'CL:0000000', 'label': 'cell', 'description': 'A basic structural and functional unit of all living organisms.'}
+  - {'id': 'CL:0000003', 'label': 'doublet cell', 'description': 'A cell that is formed by the fusion or close association of two cells.'}
+
+Gene_Ontology:
+  biological_processes:
+  - {'id': 'GO:0009987', 'label': 'cellular process', 'description': 'Any process that is carried out at the cellular level.'}
+  - {'id': 'GO:0007010', 'label': 'cytoskeleton organization', 'description': 'A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures.'}
+  cellular_components:
+  - {'id': 'GO:0005623', 'label': 'cell', 'description': 'The basic structural and functional unit of all organisms.'}
+  molecular_functions:
+  - {'id': 'GO:0005198', 'label': 'structural molecule activity', 'description': 'The action of a molecule that contributes to the structural integrity of a complex or assembly within or outside a cell.'}
+
+MeSH:
+  descriptors:
+  - {'id': 'D002477', 'label': 'Cell Physiological Phenomena', 'description': 'Cellular processes, properties, and characteristics.'}
+  - {'id': 'D002465', 'label': 'Cell Movement', 'description': 'The movement of cells from one location to another.'}
+  - {'id': 'D015398', 'label': 'Models, Biological', 'description': 'Theoretical representations that simulate the behavior or activity of biological processes or diseases.'}
+  - {'id': 'D015091', 'label': 'Computer Simulation', 'description': 'Computer-based representation of physical systems and phenomena such as chemical processes.'}
+
+additional_annotations:
+  model_type:
+  - label
+  - description
+  geometry:
+  - label
+  - description
+
+Ontology Annotations:
+```python
+from pybind11_tests import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PyPlugins import *
+
+class BasicCellSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.cell = self.createNewCellType("CL:0000000", "cell")
+        self.doublet_cell = self.createNewCellType("CL:0000003", "doublet_cell")
+        
+        # Set basic parameters
+        self.cell.type = self.cell
+        self.doublet_cell.type = self.doublet_cell
+        
+        # Set target volume parameters
+        self.cell.targetVolume = 25
+        self.doublet_cell.targetVolume = 50
+        
+        # Create initial cells
+        self.createCell(self.cell, (0, 0, 0))
+        self.createCell(self.doublet_cell, (10, 10, 0))
+        
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cellList:
+            if cell.type == self.cell:
+                cell.targetVolume += 0.1  # Simple growth model
+            elif cell.type == self.doublet_cell:
+                cell.lambdaVolume = 2.0  # Different volume constraint
+                
+        # Update visualization
+        if mcs % 10 == 0:
+            self.visualizeCells()
+
+def configureSimulation(sim):
+    CompuCellSetup.registerSteppable(BasicCellSimulation(sim, 1))
+    return sim
+```

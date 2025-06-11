@@ -1,0 +1,74 @@
+Experiment: Paper2
+Date: 20250611_090101
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+
+import sys
+from random import uniform
+import math
+
+class CellOntologySteppable(steppables.SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        steppables.SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.addCellType("Cell")
+        self.cell_doublet_type = self.addCellType("CellDoublet")
+        
+        # Set basic parameters
+        self.cell_type_params = {
+            "Volume": 25,
+            "Surface": 20,
+            "TargetVolume": 25,
+            "LambdaVolume": 2.0,
+            "TargetSurface": 20,
+            "LambdaSurface": 0.2
+        }
+        
+        self.cell_doublet_params = {
+            "Volume": 50,
+            "Surface": 30,
+            "TargetVolume": 50,
+            "LambdaVolume": 2.0,
+            "TargetSurface": 30,
+            "LambdaSurface": 0.2
+        }
+        
+        # Configure cell types
+        self.setCellTypeParameters(self.cell_type, self.cell_type_params)
+        self.setCellTypeParameters(self.cell_doublet_type, self.cell_doublet_params)
+        
+        # Set adhesion parameters
+        self.setCellTypeCellTypeAdhesion("Cell", "Cell", 10)
+        self.setCellTypeCellTypeAdhesion("Cell", "CellDoublet", 15)
+        self.setCellTypeCellTypeAdhesion("CellDoublet", "CellDoublet", 20)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.newCell(self.cell_type)
+            self.cellField[10+i, 10+i, 0] = cell
+            
+        for i in range(5):
+            cell = self.newCell(self.cell_doublet_type)
+            self.cellField[30+i, 30+i, 0] = cell
+
+    def step(self, mcs):
+        # Basic cell behavior during simulation
+        for cell in self.cellList:
+            if cell.type == self.cell_type:
+                if mcs % 10 == 0:
+                    cell.targetVolume += uniform(-1, 1)
+            elif cell.type == self.cell_doublet_type:
+                if mcs % 20 == 0:
+                    cell.lambdaVolume *= uniform(0.9, 1.1)
+
+CompuCellSetup.registerSteppable(CellOntologySteppable(_simulator, _frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_090101_run4\generated_cc3d_model.cc3d

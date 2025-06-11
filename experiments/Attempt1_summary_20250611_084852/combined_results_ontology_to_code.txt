@@ -1,0 +1,369 @@
+=== Run 1 ===
+
+Experiment: Attempt1
+Date: 20250611_084355
+Run Number: 1
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.PyCoreSpecs import Metadata
+
+class EpithelialTubeSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.epithelial_type = self.new_cell_type("Epithelial")
+        self.fibroblast_type = self.new_cell_type("Fibroblast")
+        self.lumen_type = self.new_cell_type("Lumen")
+        
+        # Set up initial cell layout
+        self.build_initial_configuration()
+        
+        # Set up cell properties
+        self.set_cell_type_properties()
+        
+    def build_initial_configuration(self):
+        # Create a simple tubular structure
+        for x, y, z in self.every_pixel():
+            pt = CompuCell.Point3D(x, y, z)
+            dist_from_center = ((x-50)**2 + (y-50)**2)**0.5
+            
+            if dist_from_center < 20:
+                cell = self.new_cell(self.lumen_type)
+                self.cell_field[pt] = cell
+            elif 20 <= dist_from_center < 30:
+                cell = self.new_cell(self.epithelial_type)
+                self.cell_field[pt] = cell
+            elif 30 <= dist_from_center < 40:
+                cell = self.new_cell(self.fibroblast_type)
+                self.cell_field[pt] = cell
+    
+    def set_cell_type_properties(self):
+        # Configure epithelial cells
+        epithelial_specs = {
+            'Volume': 25,
+            'Surface': 50,
+            'TargetSurface': 50,
+            'LambdaSurface': 2.0
+        }
+        
+        # Configure fibroblasts
+        fibroblast_specs = {
+            'Volume': 30,
+            'Surface': 60,
+            'TargetSurface': 60,
+            'LambdaSurface': 2.0
+        }
+        
+        # Configure lumen
+        lumen_specs = {
+            'Volume': 1000,
+            'Surface': 0,
+            'TargetSurface': 0,
+            'LambdaSurface': 0.0
+        }
+        
+        self.set_cell_type_parameters(self.epithelial_type, epithelial_specs)
+        self.set_cell_type_parameters(self.fibroblast_type, fibroblast_specs)
+        self.set_cell_type_parameters(self.lumen_type, lumen_specs)
+        
+    def step(self, mcs):
+        # Perform actions each simulation step
+        if mcs % 100 == 0:
+            self.update_cell_properties()
+            
+    def update_cell_properties(self):
+        # Update cell properties during simulation
+        for cell in self.cell_list:
+            if cell.type == self.epithelial_type:
+                cell.targetVolume += 1
+            elif cell.type == self.fibroblast_type:
+                cell.lambdaSurface *= 1.05
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084355_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: Attempt1
+Date: 20250611_084501
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CylindricalSegmentSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.EpithelialCell = self.new_cell_type("EpithelialCell")
+        self.Fibroblast = self.new_cell_type("Fibroblast")
+        self.Lumen = self.new_cell_type("Lumen")
+        
+        # Set up initial configuration
+        self.build_cylindrical_segment()
+        
+    def build_cylindrical_segment(self):
+        # Create lumen
+        lumen_cell = self.new_cell(self.Lumen)
+        self.cell_field[10:20, 10:20, 10] = lumen_cell
+        
+        # Create epithelial layer around lumen
+        for x, y, z in self.every_pixel():
+            if self.cell_field[x, y, z] is None:
+                dist = self.distance_from_lumen(x, y, z)
+                if 3 <= dist <= 5:
+                    epi_cell = self.new_cell(self.EpithelialCell)
+                    self.cell_field[x, y, z] = epi_cell
+                elif 5 < dist <= 8:
+                    fibro_cell = self.new_cell(self.Fibroblast)
+                    self.cell_field[x, y, z] = fibro_cell
+    
+    def distance_from_lumen(self, x, y, z):
+        # Simple distance calculation from center of lumen
+        return ((x - 15)**2 + (y - 15)**2)**0.5
+        
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cell_list:
+            if cell.type == self.EpithelialCell:
+                # Epithelial cell behavior
+                pass
+            elif cell.type == self.Fibroblast:
+                # Fibroblast behavior
+                pass
+            elif cell.type == self.Lumen:
+                # Lumen behavior
+                pass
+
+CompuCellSetup.register_steppable(steppable=CylindricalSegmentSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084501_run2\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 3 ===
+
+Experiment: Attempt1
+Date: 20250611_084556
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PlayerPython import *
+
+class EpithelialFibroblastSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.epithelial_type = self.addCellType("EpithelialCell")
+        self.fibroblast_type = self.addCellType("Fibroblast")
+        
+        # Set basic parameters
+        self.cellField = self.potts.getCellField()
+        self.dim = self.cellField.getDim()
+        
+        # Initialize cells
+        for x, y, z in self.everyPixel(1, 1, 1):
+            if x < self.dim.x//2:
+                cell = self.newCell(self.epithelial_type)
+            else:
+                cell = self.newCell(self.fibroblast_type)
+            self.cellField[x, y, z] = cell
+            
+    def step(self, mcs):
+        # Simulation logic for each step
+        for cell in self.cellList:
+            if cell.type == self.epithelial_type:
+                # Epithelial cell behavior
+                pass
+            elif cell.type == self.fibroblast_type:
+                # Fibroblast behavior
+                pass
+
+compucell = CompuCellSetup.SimulationThread()
+steppable = EpithelialFibroblastSimulation(compucell.getSimulator())
+CompuCellSetup.registerSteppable(steppable)
+compucell.start()
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084556_run3\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 4 ===
+
+Experiment: Attempt1
+Date: 20250611_084647
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.XMLUtils import ElementCC3D
+
+class EpithelialLumenSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        super().__init__(frequency)
+        
+    def start(self):
+        # Create cell types
+        self.epithelial = self.new_cell_type("Epithelial")
+        self.fibroblast = self.new_cell_type("Fibroblast")
+        self.lumen = self.new_cell_type("Lumen")
+        
+        # Set up initial configuration
+        self.build_cylindrical_segment()
+        
+        # Set cell parameters
+        self.set_cell_parameters()
+        
+    def build_cylindrical_segment(self):
+        # Create lumen (center of cylinder)
+        lumen_cells = self.cell_field_2D if self.dim == 2 else self.cell_field_3D
+        center = [dim//2 for dim in lumen_cells.dim]
+        radius = min(center) // 2
+        
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if dist < radius:
+                lumen_cells[x, y, z] = self.new_cell(self.lumen)
+                
+        # Create epithelial layer around lumen
+        epi_thickness = 5
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if radius <= dist < radius + epi_thickness:
+                lumen_cells[x, y, z] = self.new_cell(self.epithelial)
+                
+        # Create fibroblast layer around epithelium
+        fibro_thickness = 8
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if radius + epi_thickness <= dist < radius + epi_thickness + fibro_thickness:
+                lumen_cells[x, y, z] = self.new_cell(self.fibroblast)
+    
+    def distance_from_center(self, x, y, z, center):
+        if self.dim == 2:
+            return ((x - center[0])**2 + (y - center[1])**2)**0.5
+        else:
+            return ((x - center[0])**2 + (y - center[1])**2 + (z - center[2])**2)**0.5
+            
+    def set_cell_parameters(self):
+        # Set target volumes and adhesion parameters
+        self.set_cell_type_target_volume(self.epithelial, 25)
+        self.set_cell_type_target_volume(self.fibroblast, 30)
+        self.set_cell_type_target_volume(self.lumen, 0)  # Lumen should not grow
+        
+        # Set adhesion parameters
+        self.cell_type_contact_energy[self.epithelial][self.epithelial] = 2
+        self.cell_type_contact_energy[self.epithelial][self.fibroblast] = 4
+        self.cell_type_contact_energy[self.epithelial][self.lumen] = 10
+        self.cell_type_contact_energy[self.fibroblast][self.fibroblast] = 3
+        self.cell_type_contact_energy[self.fibroblast][self.lumen] = 10
+        self.cell_type_contact_energy[self.lumen][self.lumen] = 0
+        
+    def step(self, mcs):
+        # Add any dynamic behaviors here
+        pass
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084647_run4\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 5 ===
+
+Experiment: Attempt1
+Date: 20250611_084755
+Run Number: 5
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class EpithelialFibroblastSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.Epithelial = self.new_cell_type("Epithelial", "CL:0000066")
+        self.Fibroblast = self.new_cell_type("Fibroblast", "CL:0000057")
+        self.Lumen = self.new_cell_type("Lumen", "GO:0005178")
+        
+        # Set cell type parameters
+        self.cellookup = {
+            self.Epithelial: {"Type": "Epithelial", "Description": "Epithelial cells forming sheets"},
+            self.Fibroblast: {"Type": "Fibroblast", "Description": "Connective tissue cells"},
+            self.Lumen: {"Type": "Lumen", "Description": "Internal space of tubular structure"}
+        }
+        
+        # Initialize cells
+        self.build_epithelial_layer()
+        self.place_fibroblasts()
+        self.create_lumen()
+        
+    def build_epithelial_layer(self):
+        for x, y, z in self.every_pixel():
+            if self.is_border_pixel(x, y, z):
+                cell = self.new_cell(self.Epithelial)
+                self.cell_field[x, y, z] = cell
+                
+    def place_fibroblasts(self):
+        for i in range(10):
+            x = self.random.randint(10, self.dim.x-10)
+            y = self.random.randint(10, self.dim.y-10)
+            z = self.random.randint(1, self.dim.z-1)
+            cell = self.new_cell(self.Fibroblast)
+            self.cell_field[x, y, z] = cell
+            
+    def create_lumen(self):
+        center_x = self.dim.x // 2
+        center_y = self.dim.y // 2
+        for x in range(center_x-5, center_x+5):
+            for y in range(center_y-5, center_y+5):
+                cell = self.new_cell(self.Lumen)
+                self.cell_field[x, y, 0] = cell
+                
+    def step(self, mcs):
+        for cell in self.cell_list:
+            if cell.type == self.Epithelial:
+                self.handle_epithelial_cell(cell)
+            elif cell.type == self.Fibroblast:
+                self.handle_fibroblast(cell)
+                
+    def handle_epithelial_cell(self, cell):
+        # Epithelial cell behavior
+        pass
+        
+    def handle_fibroblast(self, cell):
+        # Fibroblast behavior
+        pass
+
+CompuCellSetup.register_steppable(steppable=EpithelialFibroblastSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084755_run5\generated_cc3d_model.cc3d
+
+
+==================================================

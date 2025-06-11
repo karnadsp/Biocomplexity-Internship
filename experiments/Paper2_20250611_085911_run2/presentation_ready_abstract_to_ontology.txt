@@ -1,0 +1,84 @@
+Experiment: Paper2
+Date: 20250611_085911
+Run Number: 2
+
+Initial Description:
+-  single cell and cell doublet geometry obtained using a 3D cellular Potts model
+
+Ontology Annotations:
+
+Cell_Ontology:
+  terms:
+  - {'id': 'CL:0000000', 'label': 'cell', 'description': 'A basic structural and functional unit of all living organisms.'}
+  - {'id': 'CL:0000003', 'label': 'doublet cell', 'description': 'A cell that is formed by the fusion or close association of two cells.'}
+
+Gene_Ontology:
+  terms:
+  - {'id': 'GO:0005623', 'label': 'cell', 'description': 'The basic structural and functional unit of all organisms.'}
+  - {'id': 'GO:0044464', 'label': 'cell part', 'description': 'Any constituent part of a cell.'}
+  - {'id': 'GO:0032502', 'label': 'developmental process', 'description': 'A biological process whose specific outcome is the progression of an integrated living unit over time from an initial condition to a later condition.'}
+
+MeSH:
+  terms:
+  - {'id': 'D002477', 'label': 'Cell', 'description': 'The fundamental, structural, and functional units or subunits of living organisms.'}
+  - {'id': 'D015398', 'label': 'Models, Biological', 'description': 'Theoretical representations that simulate the behavior or activity of biological processes or diseases.'}
+  - {'id': 'D015405', 'label': 'Models, Theoretical', 'description': 'Theoretical representations that simulate the behavior or activity of systems, processes, or phenomena.'}
+  - {'id': 'D015407', 'label': 'Models, Statistical', 'description': 'Statistical formulations or analyses which, when applied to data and found to fit the data, are then used to verify the assumptions and parameters used in the analysis.'}
+
+Other:
+  terms:
+  - {'label': '3D cellular Potts model', 'description': 'A computational model used to simulate the behavior of cells in three dimensions, based on the Potts model from statistical mechanics.'}
+  - {'label': 'single cell geometry', 'description': 'The spatial configuration and shape of an individual cell.'}
+  - {'label': 'cell doublet geometry', 'description': 'The spatial configuration and shape of a doublet cell, formed by the close association or fusion of two cells.'}
+
+Ontology Annotations:
+```python
+from pybind import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PySteppablesExamples import MitosisSteppable
+
+class CellSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.addCellType("Cell")
+        self.doublet_type = self.addCellType("DoubletCell")
+        
+        # Set basic parameters
+        cell_params = {
+            'VolumeLambda': 2.0,
+            'TargetVolume': 25,
+            'LambdaVolume': 2.0
+        }
+        
+        doublet_params = {
+            'VolumeLambda': 4.0,
+            'TargetVolume': 50,
+            'LambdaVolume': 4.0
+        }
+        
+        # Apply parameters to cell types
+        self.setCellParameters(self.cell_type, **cell_params)
+        self.setCellParameters(self.doublet_type, **doublet_params)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.newCell(self.cell_type)
+            self.cellField[10*i:10*i+5, 10*i:10*i+5, 0] = cell
+        
+        for i in range(5):
+            doublet = self.newCell(self.doublet_type)
+            self.cellField[50+10*i:50+10*i+10, 50+10*i:50+10*i+10, 0] = doublet
+
+    def step(self, mcs):
+        # Update cell properties each step
+        for cell in self.cellList:
+            if cell.type == self.cell_type:
+                cell.targetVolume += 0.1 if mcs % 10 == 0 else 0
+            elif cell.type == self.doublet_type:
+                cell.targetVolume += 0.2 if mcs % 5 == 0 else 0
+
+CompuCellSetup.registerSteppable(steppable=CellSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```

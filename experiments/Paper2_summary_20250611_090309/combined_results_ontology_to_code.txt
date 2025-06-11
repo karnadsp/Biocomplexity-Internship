@@ -1,0 +1,314 @@
+=== Run 1 ===
+
+Experiment: Paper2
+Date: 20250611_085821
+Run Number: 1
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CellSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.cell_type = self.add_new_cell_type("Cell")
+        self.doublet_type = self.add_new_cell_type("DoubletCell")
+        
+        # Set basic parameters
+        self.cell_field = self.potts.getCellField()
+        self.dim = self.cell_field.getDim()
+        
+        # Place initial cells
+        for i in range(10):
+            cell = self.new_cell(self.cell_type)
+            self.cell_field[random.randint(0, self.dim.x-1), 
+                           random.randint(0, self.dim.y-1), 
+                           0] = cell
+        
+        # Place some doublet cells
+        for i in range(5):
+            cell = self.new_cell(self.doublet_type)
+            self.cell_field[random.randint(0, self.dim.x-1), 
+                           random.randint(0, self.dim.y-1), 
+                           0] = cell
+
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cell_list:
+            if cell.type == self.doublet_type:
+                # Doublet cells have different properties
+                cell.targetVolume = 50
+                cell.lambdaVolume = 2.0
+            else:
+                # Regular cells
+                cell.targetVolume = 30
+                cell.lambdaVolume = 1.0
+
+CompuCellSetup.register_steppable(steppable=CellSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_085821_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: Paper2
+Date: 20250611_085911
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from pybind import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PySteppablesExamples import MitosisSteppable
+
+class CellSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.addCellType("Cell")
+        self.doublet_type = self.addCellType("DoubletCell")
+        
+        # Set basic parameters
+        cell_params = {
+            'VolumeLambda': 2.0,
+            'TargetVolume': 25,
+            'LambdaVolume': 2.0
+        }
+        
+        doublet_params = {
+            'VolumeLambda': 4.0,
+            'TargetVolume': 50,
+            'LambdaVolume': 4.0
+        }
+        
+        # Apply parameters to cell types
+        self.setCellParameters(self.cell_type, **cell_params)
+        self.setCellParameters(self.doublet_type, **doublet_params)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.newCell(self.cell_type)
+            self.cellField[10*i:10*i+5, 10*i:10*i+5, 0] = cell
+        
+        for i in range(5):
+            doublet = self.newCell(self.doublet_type)
+            self.cellField[50+10*i:50+10*i+10, 50+10*i:50+10*i+10, 0] = doublet
+
+    def step(self, mcs):
+        # Update cell properties each step
+        for cell in self.cellList:
+            if cell.type == self.cell_type:
+                cell.targetVolume += 0.1 if mcs % 10 == 0 else 0
+            elif cell.type == self.doublet_type:
+                cell.targetVolume += 0.2 if mcs % 5 == 0 else 0
+
+CompuCellSetup.registerSteppable(steppable=CellSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_085911_run2\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 3 ===
+
+Experiment: Paper2
+Date: 20250611_090008
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from pybind11_tests import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PyPlugins import *
+
+class BasicCellSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Initialize cell types
+        self.cell = self.createNewCellType("CL:0000000", "cell")
+        self.doublet_cell = self.createNewCellType("CL:0000003", "doublet_cell")
+        
+        # Set basic parameters
+        self.cell.type = self.cell
+        self.doublet_cell.type = self.doublet_cell
+        
+        # Set target volume parameters
+        self.cell.targetVolume = 25
+        self.doublet_cell.targetVolume = 50
+        
+        # Create initial cells
+        self.createCell(self.cell, (0, 0, 0))
+        self.createCell(self.doublet_cell, (10, 10, 0))
+        
+    def step(self, mcs):
+        # Basic simulation step
+        for cell in self.cellList:
+            if cell.type == self.cell:
+                cell.targetVolume += 0.1  # Simple growth model
+            elif cell.type == self.doublet_cell:
+                cell.lambdaVolume = 2.0  # Different volume constraint
+                
+        # Update visualization
+        if mcs % 10 == 0:
+            self.visualizeCells()
+
+def configureSimulation(sim):
+    CompuCellSetup.registerSteppable(BasicCellSimulation(sim, 1))
+    return sim
+```
+
+CC3D File Created: experiments\Paper2_20250611_090008_run3\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 4 ===
+
+Experiment: Paper2
+Date: 20250611_090101
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+
+import sys
+from random import uniform
+import math
+
+class CellOntologySteppable(steppables.SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        steppables.SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.addCellType("Cell")
+        self.cell_doublet_type = self.addCellType("CellDoublet")
+        
+        # Set basic parameters
+        self.cell_type_params = {
+            "Volume": 25,
+            "Surface": 20,
+            "TargetVolume": 25,
+            "LambdaVolume": 2.0,
+            "TargetSurface": 20,
+            "LambdaSurface": 0.2
+        }
+        
+        self.cell_doublet_params = {
+            "Volume": 50,
+            "Surface": 30,
+            "TargetVolume": 50,
+            "LambdaVolume": 2.0,
+            "TargetSurface": 30,
+            "LambdaSurface": 0.2
+        }
+        
+        # Configure cell types
+        self.setCellTypeParameters(self.cell_type, self.cell_type_params)
+        self.setCellTypeParameters(self.cell_doublet_type, self.cell_doublet_params)
+        
+        # Set adhesion parameters
+        self.setCellTypeCellTypeAdhesion("Cell", "Cell", 10)
+        self.setCellTypeCellTypeAdhesion("Cell", "CellDoublet", 15)
+        self.setCellTypeCellTypeAdhesion("CellDoublet", "CellDoublet", 20)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.newCell(self.cell_type)
+            self.cellField[10+i, 10+i, 0] = cell
+            
+        for i in range(5):
+            cell = self.newCell(self.cell_doublet_type)
+            self.cellField[30+i, 30+i, 0] = cell
+
+    def step(self, mcs):
+        # Basic cell behavior during simulation
+        for cell in self.cellList:
+            if cell.type == self.cell_type:
+                if mcs % 10 == 0:
+                    cell.targetVolume += uniform(-1, 1)
+            elif cell.type == self.cell_doublet_type:
+                if mcs % 20 == 0:
+                    cell.lambdaVolume *= uniform(0.9, 1.1)
+
+CompuCellSetup.registerSteppable(CellOntologySteppable(_simulator, _frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_090101_run4\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 5 ===
+
+Experiment: Paper2
+Date: 20250611_090210
+Run Number: 5
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CellAdhesionSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.add_new_type("Cell", 1)
+        self.cell_doublet_type = self.add_new_type("CellDoublet", 2)
+        
+        # Set cell adhesion parameters
+        self.cell_adhesion_plugin = self.get_cell_adhesion_plugin()
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_type, 10)
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_doublet_type, 20)
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_doublet_type, self.cell_doublet_type, 15)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.potts.createCell()
+            cell.type = self.cell_type
+            self.cell_field[0:10, 0:10, 0] = cell
+            
+        for i in range(5):
+            cell = self.potts.createCell()
+            cell.type = self.cell_doublet_type
+            self.cell_field[20:30, 20:30, 0] = cell
+
+    def step(self, mcs):
+        # Simulation step logic
+        for cell in self.cell_list:
+            if cell.type == self.cell_type:
+                # Apply random motion to single cells
+                if mcs % 10 == 0:
+                    cell.lambdaVecX = 2.0 * (random.random() - 0.5)
+                    cell.lambdaVecY = 2.0 * (random.random() - 0.5)
+            elif cell.type == self.cell_doublet_type:
+                # Apply coordinated motion to doublets
+                if mcs % 20 == 0:
+                    cell.lambdaVecX = 1.5 * (random.random() - 0.5)
+                    cell.lambdaVecY = 1.5 * (random.random() - 0.5)
+
+CompuCellSetup.register_steppable(steppable=CellAdhesionSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_090210_run5\generated_cc3d_model.cc3d
+
+
+==================================================

@@ -1,0 +1,76 @@
+Experiment: Attempt1
+Date: 20250611_084647
+Run Number: 4
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d.core.XMLUtils import ElementCC3D
+
+class EpithelialLumenSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        super().__init__(frequency)
+        
+    def start(self):
+        # Create cell types
+        self.epithelial = self.new_cell_type("Epithelial")
+        self.fibroblast = self.new_cell_type("Fibroblast")
+        self.lumen = self.new_cell_type("Lumen")
+        
+        # Set up initial configuration
+        self.build_cylindrical_segment()
+        
+        # Set cell parameters
+        self.set_cell_parameters()
+        
+    def build_cylindrical_segment(self):
+        # Create lumen (center of cylinder)
+        lumen_cells = self.cell_field_2D if self.dim == 2 else self.cell_field_3D
+        center = [dim//2 for dim in lumen_cells.dim]
+        radius = min(center) // 2
+        
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if dist < radius:
+                lumen_cells[x, y, z] = self.new_cell(self.lumen)
+                
+        # Create epithelial layer around lumen
+        epi_thickness = 5
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if radius <= dist < radius + epi_thickness:
+                lumen_cells[x, y, z] = self.new_cell(self.epithelial)
+                
+        # Create fibroblast layer around epithelium
+        fibro_thickness = 8
+        for x, y, z in self.every_pixel():
+            dist = self.distance_from_center(x, y, z, center)
+            if radius + epi_thickness <= dist < radius + epi_thickness + fibro_thickness:
+                lumen_cells[x, y, z] = self.new_cell(self.fibroblast)
+    
+    def distance_from_center(self, x, y, z, center):
+        if self.dim == 2:
+            return ((x - center[0])**2 + (y - center[1])**2)**0.5
+        else:
+            return ((x - center[0])**2 + (y - center[1])**2 + (z - center[2])**2)**0.5
+            
+    def set_cell_parameters(self):
+        # Set target volumes and adhesion parameters
+        self.set_cell_type_target_volume(self.epithelial, 25)
+        self.set_cell_type_target_volume(self.fibroblast, 30)
+        self.set_cell_type_target_volume(self.lumen, 0)  # Lumen should not grow
+        
+        # Set adhesion parameters
+        self.cell_type_contact_energy[self.epithelial][self.epithelial] = 2
+        self.cell_type_contact_energy[self.epithelial][self.fibroblast] = 4
+        self.cell_type_contact_energy[self.epithelial][self.lumen] = 10
+        self.cell_type_contact_energy[self.fibroblast][self.fibroblast] = 3
+        self.cell_type_contact_energy[self.fibroblast][self.lumen] = 10
+        self.cell_type_contact_energy[self.lumen][self.lumen] = 0
+        
+    def step(self, mcs):
+        # Add any dynamic behaviors here
+        pass
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084647_run4\generated_cc3d_model.cc3d

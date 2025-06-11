@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:01:01.376184",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom pybind11_tests import CompuCellSetup\nfrom PySteppables import SteppableBasePy\nfrom PyPlugins import *\n\nclass BasicCellSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        \n    def start(self):\n        # Initialize cell types\n        self.cell = self.createNewCellType(\"CL:0000000\", \"cell\")\n        self.doublet_cell = self.createNewCellType(\"CL:0000003\", \"doublet_cell\")\n        \n        # Set basic parameters\n        self.cell.type = self.cell\n        self.doublet_cell.type = self.doublet_cell\n        \n        # Set target volume parameters\n        self.cell.targetVolume = 25\n        self.doublet_cell.targetVolume = 50\n        \n        # Create initial cells\n        self.createCell(self.cell, (0, 0, 0))\n        self.createCell(self.doublet_cell, (10, 10, 0))\n        \n    def step(self, mcs):\n        # Basic simulation step\n        for cell in self.cellList:\n            if cell.type == self.cell:\n                cell.targetVolume += 0.1  # Simple growth model\n            elif cell.type == self.doublet_cell:\n                cell.lambdaVolume = 2.0  # Different volume constraint\n                \n        # Update visualization\n        if mcs % 10 == 0:\n            self.visualizeCells()\n\ndef configureSimulation(sim):\n    CompuCellSetup.registerSteppable(BasicCellSimulation(sim, 1))\n    return sim"
+  },
+  "output": {
+    "output_file": "experiments\\Paper2_20250611_090008_run3\\generated_cc3d_model.cc3d"
+  }
+}

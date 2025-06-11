@@ -1,0 +1,57 @@
+Experiment: Paper2
+Date: 20250611_085911
+Run Number: 2
+
+Generated CC3D Code:
+```python
+from pybind import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PySteppablesExamples import MitosisSteppable
+
+class CellSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.addCellType("Cell")
+        self.doublet_type = self.addCellType("DoubletCell")
+        
+        # Set basic parameters
+        cell_params = {
+            'VolumeLambda': 2.0,
+            'TargetVolume': 25,
+            'LambdaVolume': 2.0
+        }
+        
+        doublet_params = {
+            'VolumeLambda': 4.0,
+            'TargetVolume': 50,
+            'LambdaVolume': 4.0
+        }
+        
+        # Apply parameters to cell types
+        self.setCellParameters(self.cell_type, **cell_params)
+        self.setCellParameters(self.doublet_type, **doublet_params)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.newCell(self.cell_type)
+            self.cellField[10*i:10*i+5, 10*i:10*i+5, 0] = cell
+        
+        for i in range(5):
+            doublet = self.newCell(self.doublet_type)
+            self.cellField[50+10*i:50+10*i+10, 50+10*i:50+10*i+10, 0] = doublet
+
+    def step(self, mcs):
+        # Update cell properties each step
+        for cell in self.cellList:
+            if cell.type == self.cell_type:
+                cell.targetVolume += 0.1 if mcs % 10 == 0 else 0
+            elif cell.type == self.doublet_type:
+                cell.targetVolume += 0.2 if mcs % 5 == 0 else 0
+
+CompuCellSetup.registerSteppable(steppable=CellSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_085911_run2\generated_cc3d_model.cc3d

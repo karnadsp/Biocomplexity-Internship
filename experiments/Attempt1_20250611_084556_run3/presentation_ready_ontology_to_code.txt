@@ -1,0 +1,48 @@
+Experiment: Attempt1
+Date: 20250611_084556
+Run Number: 3
+
+Generated CC3D Code:
+```python
+from pybindCC3D import CompuCellSetup
+from PySteppables import SteppableBasePy
+from PlayerPython import *
+
+class EpithelialFibroblastSimulation(SteppableBasePy):
+    def __init__(self, _simulator, _frequency=1):
+        SteppableBasePy.__init__(self, _simulator, _frequency)
+        
+    def start(self):
+        # Define cell types
+        self.epithelial_type = self.addCellType("EpithelialCell")
+        self.fibroblast_type = self.addCellType("Fibroblast")
+        
+        # Set basic parameters
+        self.cellField = self.potts.getCellField()
+        self.dim = self.cellField.getDim()
+        
+        # Initialize cells
+        for x, y, z in self.everyPixel(1, 1, 1):
+            if x < self.dim.x//2:
+                cell = self.newCell(self.epithelial_type)
+            else:
+                cell = self.newCell(self.fibroblast_type)
+            self.cellField[x, y, z] = cell
+            
+    def step(self, mcs):
+        # Simulation logic for each step
+        for cell in self.cellList:
+            if cell.type == self.epithelial_type:
+                # Epithelial cell behavior
+                pass
+            elif cell.type == self.fibroblast_type:
+                # Fibroblast behavior
+                pass
+
+compucell = CompuCellSetup.SimulationThread()
+steppable = EpithelialFibroblastSimulation(compucell.getSimulator())
+CompuCellSetup.registerSteppable(steppable)
+compucell.start()
+```
+
+CC3D File Created: experiments\Attempt1_20250611_084556_run3\generated_cc3d_model.cc3d

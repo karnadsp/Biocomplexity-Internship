@@ -1,0 +1,53 @@
+Experiment: Paper2
+Date: 20250611_090210
+Run Number: 5
+
+Generated CC3D Code:
+```python
+from cc3d.core.PySteppables import *
+from cc3d import CompuCellSetup
+
+class CellAdhesionSimulation(SteppableBasePy):
+    def __init__(self, frequency=1):
+        SteppableBasePy.__init__(self, frequency)
+        
+    def start(self):
+        # Define cell types
+        self.cell_type = self.add_new_type("Cell", 1)
+        self.cell_doublet_type = self.add_new_type("CellDoublet", 2)
+        
+        # Set cell adhesion parameters
+        self.cell_adhesion_plugin = self.get_cell_adhesion_plugin()
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_type, 10)
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_type, self.cell_doublet_type, 20)
+        self.cell_adhesion_plugin.set_adhesion_energy(self.cell_doublet_type, self.cell_doublet_type, 15)
+        
+        # Initialize cells
+        for i in range(10):
+            cell = self.potts.createCell()
+            cell.type = self.cell_type
+            self.cell_field[0:10, 0:10, 0] = cell
+            
+        for i in range(5):
+            cell = self.potts.createCell()
+            cell.type = self.cell_doublet_type
+            self.cell_field[20:30, 20:30, 0] = cell
+
+    def step(self, mcs):
+        # Simulation step logic
+        for cell in self.cell_list:
+            if cell.type == self.cell_type:
+                # Apply random motion to single cells
+                if mcs % 10 == 0:
+                    cell.lambdaVecX = 2.0 * (random.random() - 0.5)
+                    cell.lambdaVecY = 2.0 * (random.random() - 0.5)
+            elif cell.type == self.cell_doublet_type:
+                # Apply coordinated motion to doublets
+                if mcs % 20 == 0:
+                    cell.lambdaVecX = 1.5 * (random.random() - 0.5)
+                    cell.lambdaVecY = 1.5 * (random.random() - 0.5)
+
+CompuCellSetup.register_steppable(steppable=CellAdhesionSimulation(frequency=1))
+```
+
+CC3D File Created: experiments\Paper2_20250611_090210_run5\generated_cc3d_model.cc3d

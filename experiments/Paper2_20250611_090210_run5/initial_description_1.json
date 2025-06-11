@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-06-11T09:02:10.684771",
+  "step": "initial_description",
+  "input": {},
+  "output": {
+    "description": " single cell and cell doublet geometry obtained using a 3D cellular Potts model"
+  }
+}

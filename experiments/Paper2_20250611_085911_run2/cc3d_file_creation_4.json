@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-11T09:00:08.181755",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom pybind import CompuCellSetup\nfrom PySteppables import SteppableBasePy\nfrom PySteppablesExamples import MitosisSteppable\n\nclass CellSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        \n    def start(self):\n        # Define cell types\n        self.cell_type = self.addCellType(\"Cell\")\n        self.doublet_type = self.addCellType(\"DoubletCell\")\n        \n        # Set basic parameters\n        cell_params = {\n            'VolumeLambda': 2.0,\n            'TargetVolume': 25,\n            'LambdaVolume': 2.0\n        }\n        \n        doublet_params = {\n            'VolumeLambda': 4.0,\n            'TargetVolume': 50,\n            'LambdaVolume': 4.0\n        }\n        \n        # Apply parameters to cell types\n        self.setCellParameters(self.cell_type, **cell_params)\n        self.setCellParameters(self.doublet_type, **doublet_params)\n        \n        # Initialize cells\n        for i in range(10):\n            cell = self.newCell(self.cell_type)\n            self.cellField[10*i:10*i+5, 10*i:10*i+5, 0] = cell\n        \n        for i in range(5):\n            doublet = self.newCell(self.doublet_type)\n            self.cellField[50+10*i:50+10*i+10, 50+10*i:50+10*i+10, 0] = doublet\n\n    def step(self, mcs):\n        # Update cell properties each step\n        for cell in self.cellList:\n            if cell.type == self.cell_type:\n                cell.targetVolume += 0.1 if mcs % 10 == 0 else 0\n            elif cell.type == self.doublet_type:\n                cell.targetVolume += 0.2 if mcs % 5 == 0 else 0\n\nCompuCellSetup.registerSteppable(steppable=CellSimulation(_simulator=CompuCellSetup.getSimulator(), _frequency=1))"
+  },
+  "output": {
+    "output_file": "experiments\\Paper2_20250611_085911_run2\\generated_cc3d_model.cc3d"
+  }
+}
