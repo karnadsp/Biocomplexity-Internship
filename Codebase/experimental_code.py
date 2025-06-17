@@ -4,8 +4,7 @@ import zipfile
 import tempfile
 from datetime import datetime
 from pathlib import Path
-import deepseek
-from deepseek import DeepSeekAPI
+import replicate
 from dotenv import load_dotenv
 import statistics
 from difflib import SequenceMatcher
@@ -17,10 +16,10 @@ load_dotenv("project.env")
 # Debug prints
 print("Current working directory:", os.getcwd())
 print("Environment file exists:", os.path.exists("project.env"))
-print("DEEPSEEK_API_KEY value:", os.getenv('DEEPSEEK_API_KEY'))
+print("REPLICATE_API_TOKEN value:", os.getenv('REPLICATE_API_TOKEN'))
 
-# Initialize the DeepSeek client
-client = DeepSeekAPI(api_key=os.getenv('DEEPSEEK_API_KEY'))
+# Initialize the Replicate client
+client = replicate.Client(api_token=os.getenv('REPLICATE_API_TOKEN'))
 
 class ExperimentLogger:
     def __init__(self, experiment_name, run_number=1):
@@ -58,16 +57,27 @@ class ExperimentLogger:
             }, f, indent=2)
 
 def get_llm_response(prompt, system_message, logger):
-    """Helper function to get response from DeepSeek API"""
-    response = client.chat_completion(
-        model="deepseek-chat",
-        messages=[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": prompt}
-        ]
+    """Helper function to get response from Replicate API"""
+    # Format the messages for the model
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": prompt}
+    ]
+    
+    # Call the Replicate API
+    response = client.run(
+        "meta/llama-2-70b-chat:02e509c789964a7ea8736978a43525956ef40397be9033abf9fd2badfe68c9e3",
+        input={
+            "messages": messages,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_tokens": 2000
+        }
     )
-    # The response is already a string, no need to access choices or message
-    result = response
+    
+    # Extract the response text
+    result = response[-1]["content"] if isinstance(response, list) else response
+    
     logger.log_interaction("llm_response", 
                          {"prompt": prompt, "system_message": system_message},
                          {"response": result})
