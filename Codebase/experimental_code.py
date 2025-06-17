@@ -288,72 +288,109 @@ def calculate_similarity(str1, str2):
 
 def analyze_run_consistency(experiment_dirs):
     """Analyze consistency of ontologies and code across runs"""
-    ontology_results = []
-    code_results = []
+    # Track results for each stage
+    stage_results = {
+        'natural_to_ontology': [],  # Natural language to ontology conversion
+        'ontology_to_code': [],     # Ontology to CC3D code conversion
+        'natural_to_code': []       # End-to-end conversion
+    }
     
-    # Extract ontologies and code from each run
+    # Extract results from each run
     for run_dir in experiment_dirs:
         with open(Path(run_dir) / "experiment_summary.json", 'r') as f:
             data = json.load(f)
             
-        # Extract ontologies
+        run_data = {
+            'natural_to_ontology': None,
+            'ontology_to_code': None,
+            'natural_to_code': None
+        }
+        
+        # Extract data for each stage
         for interaction in data['interactions']:
-            if interaction['step'] == 'llm_response' and 'ontology annotations' in interaction['input']['prompt'].lower():
-                ontologies = extract_ontologies_from_response(interaction['output']['response'])
-                ontology_results.append(ontologies)
-            elif interaction['step'] == 'llm_response' and 'CompuCell3D' in interaction['input']['prompt']:
-                code = extract_code_from_response(interaction['output']['response'])
-                code_results.append(code)
+            if interaction['step'] == 'llm_response':
+                if 'ontology annotations' in interaction['input']['prompt'].lower():
+                    # Natural language to ontology conversion
+                    ontologies = extract_ontologies_from_response(interaction['output']['response'])
+                    run_data['natural_to_ontology'] = ontologies
+                    run_data['natural_to_code'] = ontologies  # Store for end-to-end analysis
+                elif 'CompuCell3D' in interaction['input']['prompt']:
+                    # Ontology to code conversion
+                    code = extract_code_from_response(interaction['output']['response'])
+                    run_data['ontology_to_code'] = code
+                    run_data['natural_to_code'] = code  # Store for end-to-end analysis
+        
+        # Add run data to stage results
+        for stage in stage_results:
+            if run_data[stage] is not None:
+                stage_results[stage].append(run_data[stage])
     
-    # Calculate consistency metrics
+    # Calculate consistency metrics for each stage
     consistency_metrics = {
-        'ontology_consistency': {},
-        'code_similarity': []
+        'natural_to_ontology': {
+            'ontology_consistency': {},
+            'stage_name': 'Natural Language to Ontology'
+        },
+        'ontology_to_code': {
+            'code_similarity': [],
+            'stage_name': 'Ontology to CC3D Code'
+        },
+        'natural_to_code': {
+            'code_similarity': [],
+            'stage_name': 'Natural Language to CC3D Code (End-to-End)'
+        }
     }
     
-    # Calculate ontology consistency
-    if ontology_results:
+    # Calculate ontology consistency for natural_to_ontology stage
+    if stage_results['natural_to_ontology']:
         for category in ['CellOntology', 'GeneOntology', 'MeSH']:
             all_terms = set()
-            for result in ontology_results:
+            for result in stage_results['natural_to_ontology']:
                 all_terms.update(result[category])
             
             term_frequencies = {}
             for term in all_terms:
-                count = sum(1 for result in ontology_results if term in result[category])
-                term_frequencies[term] = count / len(ontology_results)
+                count = sum(1 for result in stage_results['natural_to_ontology'] if term in result[category])
+                term_frequencies[term] = count / len(stage_results['natural_to_ontology'])
             
-            consistency_metrics['ontology_consistency'][category] = term_frequencies
+            consistency_metrics['natural_to_ontology']['ontology_consistency'][category] = term_frequencies
     
-    # Calculate code similarity
-    if len(code_results) > 1:
-        for i in range(len(code_results)):
-            for j in range(i + 1, len(code_results)):
-                similarity = calculate_similarity(code_results[i], code_results[j])
-                consistency_metrics['code_similarity'].append({
-                    'run_pair': f"{i+1}-{j+1}",
-                    'similarity': similarity
-                })
+    # Calculate code similarity for ontology_to_code and natural_to_code stages
+    for stage in ['ontology_to_code', 'natural_to_code']:
+        if len(stage_results[stage]) > 1:
+            for i in range(len(stage_results[stage])):
+                for j in range(i + 1, len(stage_results[stage])):
+                    similarity = calculate_similarity(stage_results[stage][i], stage_results[stage][j])
+                    consistency_metrics[stage]['code_similarity'].append({
+                        'run_pair': f"{i+1}-{j+1}",
+                        'similarity': similarity
+                    })
     
     return consistency_metrics
 
 def format_consistency_analysis(metrics):
     """Format consistency analysis results for presentation"""
     output = []
-    output.append("=== Consistency Analysis ===\n")
+    output.append("=== Pipeline Stage Consistency Analysis ===\n")
     
-    # Format ontology consistency
-    output.append("Ontology Consistency:")
-    for category, term_frequencies in metrics['ontology_consistency'].items():
-        output.append(f"\n{category}:")
-        for term, frequency in sorted(term_frequencies.items(), key=lambda x: x[1], reverse=True):
-            output.append(f"- {term}: {frequency:.2%} consistency")
-    
-    # Format code similarity
-    if metrics['code_similarity']:
-        output.append("\nCode Similarity:")
-        for pair in metrics['code_similarity']:
-            output.append(f"- Runs {pair['run_pair']}: {pair['similarity']:.2%} similar")
+    # Format results for each stage
+    for stage_key, stage_metrics in metrics.items():
+        output.append(f"\n{stage_metrics['stage_name']} Stage:")
+        output.append("=" * len(stage_metrics['stage_name']) + "=" * 7)
+        
+        if 'ontology_consistency' in stage_metrics:
+            output.append("\nOntology Consistency:")
+            for category, term_frequencies in stage_metrics['ontology_consistency'].items():
+                output.append(f"\n{category}:")
+                for term, frequency in sorted(term_frequencies.items(), key=lambda x: x[1], reverse=True):
+                    output.append(f"- {term}: {frequency:.2%} consistency")
+        
+        if 'code_similarity' in stage_metrics and stage_metrics['code_similarity']:
+            output.append("\nCode Similarity:")
+            for pair in stage_metrics['code_similarity']:
+                output.append(f"- Runs {pair['run_pair']}: {pair['similarity']:.2%} similar")
+        
+        output.append("\n" + "-" * 50)
     
     return "\n".join(output)
 
