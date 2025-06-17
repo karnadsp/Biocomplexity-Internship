@@ -8,6 +8,8 @@ import deepseek
 from deepseek import DeepSeekAPI
 from dotenv import load_dotenv
 import statistics
+from difflib import SequenceMatcher
+import re
 
 # Load environment variables from .env file
 load_dotenv("project.env")
@@ -246,6 +248,115 @@ def run_experiment(experiment_name, description, run_number=1):
     
     return logger.experiment_dir
 
+def extract_ontologies_from_response(response):
+    """Extract ontology terms from LLM response"""
+    ontologies = {
+        'CellOntology': set(),
+        'GeneOntology': set(),
+        'MeSH': set()
+    }
+    
+    try:
+        if '```json' in response:
+            response = response.split('```json')[1].split('```')[0].strip()
+        data = json.loads(response)
+        
+        for category, items in data.items():
+            if isinstance(items, list):
+                for item in items:
+                    if 'CellOntology' in item:
+                        ontologies['CellOntology'].add(f"{item['CellOntology']['label']} ({item['CellOntology']['id']})")
+                    elif 'GeneOntology' in item:
+                        ontologies['GeneOntology'].add(f"{item['GeneOntology']['label']} ({item['GeneOntology']['id']})")
+                    elif 'MeSH' in item:
+                        ontologies['MeSH'].add(f"{item['MeSH']['label']} ({item['MeSH']['id']})")
+    except (json.JSONDecodeError, KeyError):
+        pass
+    
+    return ontologies
+
+def extract_code_from_response(response):
+    """Extract Python code from LLM response"""
+    code = response
+    if '```python' in response:
+        code = response.split('```python')[1].split('```')[0].strip()
+    return code
+
+def calculate_similarity(str1, str2):
+    """Calculate similarity ratio between two strings"""
+    return SequenceMatcher(None, str1, str2).ratio()
+
+def analyze_run_consistency(experiment_dirs):
+    """Analyze consistency of ontologies and code across runs"""
+    ontology_results = []
+    code_results = []
+    
+    # Extract ontologies and code from each run
+    for run_dir in experiment_dirs:
+        with open(Path(run_dir) / "experiment_summary.json", 'r') as f:
+            data = json.load(f)
+            
+        # Extract ontologies
+        for interaction in data['interactions']:
+            if interaction['step'] == 'llm_response' and 'ontology annotations' in interaction['input']['prompt'].lower():
+                ontologies = extract_ontologies_from_response(interaction['output']['response'])
+                ontology_results.append(ontologies)
+            elif interaction['step'] == 'llm_response' and 'CompuCell3D' in interaction['input']['prompt']:
+                code = extract_code_from_response(interaction['output']['response'])
+                code_results.append(code)
+    
+    # Calculate consistency metrics
+    consistency_metrics = {
+        'ontology_consistency': {},
+        'code_similarity': []
+    }
+    
+    # Calculate ontology consistency
+    if ontology_results:
+        for category in ['CellOntology', 'GeneOntology', 'MeSH']:
+            all_terms = set()
+            for result in ontology_results:
+                all_terms.update(result[category])
+            
+            term_frequencies = {}
+            for term in all_terms:
+                count = sum(1 for result in ontology_results if term in result[category])
+                term_frequencies[term] = count / len(ontology_results)
+            
+            consistency_metrics['ontology_consistency'][category] = term_frequencies
+    
+    # Calculate code similarity
+    if len(code_results) > 1:
+        for i in range(len(code_results)):
+            for j in range(i + 1, len(code_results)):
+                similarity = calculate_similarity(code_results[i], code_results[j])
+                consistency_metrics['code_similarity'].append({
+                    'run_pair': f"{i+1}-{j+1}",
+                    'similarity': similarity
+                })
+    
+    return consistency_metrics
+
+def format_consistency_analysis(metrics):
+    """Format consistency analysis results for presentation"""
+    output = []
+    output.append("=== Consistency Analysis ===\n")
+    
+    # Format ontology consistency
+    output.append("Ontology Consistency:")
+    for category, term_frequencies in metrics['ontology_consistency'].items():
+        output.append(f"\n{category}:")
+        for term, frequency in sorted(term_frequencies.items(), key=lambda x: x[1], reverse=True):
+            output.append(f"- {term}: {frequency:.2%} consistency")
+    
+    # Format code similarity
+    if metrics['code_similarity']:
+        output.append("\nCode Similarity:")
+        for pair in metrics['code_similarity']:
+            output.append(f"- Runs {pair['run_pair']}: {pair['similarity']:.2%} similar")
+    
+    return "\n".join(output)
+
 def main():
     print("Welcome to the Biological System Modeling Assistant!")
     
@@ -283,7 +394,14 @@ def main():
         with open(summary_dir / f"combined_results_{phase}.txt", 'w') as f:
             f.write("\n".join(combined_output))
     
-    print(f"\nAll runs completed. Combined results saved in {summary_dir}")
+    # Perform and save consistency analysis
+    consistency_metrics = analyze_run_consistency(experiment_dirs)
+    consistency_analysis = format_consistency_analysis(consistency_metrics)
+    
+    with open(summary_dir / "consistency_analysis.txt", 'w') as f:
+        f.write(consistency_analysis)
+    
+    print(f"\nAll runs completed. Combined results and consistency analysis saved in {summary_dir}")
 
 if __name__ == "__main__":
     main() 
