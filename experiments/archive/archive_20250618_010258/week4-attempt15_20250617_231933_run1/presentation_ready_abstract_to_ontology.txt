@@ -1,0 +1,30 @@
+Experiment: week4-attempt15
+Date: 20250617_231933
+Run Number: 1
+
+Initial Description:
+- This paper presents simulations of in vitro Epithelial to Mesenchymal Transition (EMT). The conditions of 2D migration on the surface, and 3D invasion into a collagen gel are represented as a cellular Potts model. The model demonstrates that a loss of endocardial adhesion is a sufficient condition for 2D migration behaviour, while a simultaneous loss of endocardial cohesion and gain in endocardial to collagen gel adhesion is a sufficient condition for 3D invasion. The 3D model captures the hierarchy effective surface tensions that correspond to the three experimental conditions of stable monolayer, 2D migration, and 3D invasion. A 2D cellular Potts model is used to investigate the relationship between cell shape changes, motility and adhesion during the condition of 2D migration.
+
+Ontology Annotations:
+``` json 
+ {
+    " Cell  Ont ology ":  {
+      " CL : 000 006 6 ":  " Ep ith elial ",
+      " CL : 000 006 7 ":  " Mes ench ym al "
+    },
+    " Gene  Ont ology ":  {
+      " GO : 001 071 8 ":  " Ep ith elial  to  Mes ench ym al  Transition ",
+      " GO : 001 647 7 ":  " cell  migration ",
+      " GO : 000 715 5 ":  " cell  ad hesion ",
+      " GO : 003 003 0 ":  " cell  shape ",
+      " GO : 004 001 2 ":  " mot ility "
+    },
+    " Me SH ":  {
+      " D 019 254 ":  " in  vitro ",
+      " D 003 094 ":  " coll agen ",
+      " D 002 302 ":  " cell  migration ",
+      " D 002 302 ":  " cell  ad hesion ",
+      " D 016 001 ":  " computer  simulation "
+    }
+ }
+ ```

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:47:51.563258",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import PySteppable\n\nclass Simulation(PySteppable):\n    def __init__(self, _simulator, _frequency=100):\n        PySteppable.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.frequency = _frequency\n\n    def start(self):\n        self.simulator.get_potts_field().initialize_cell_type/plugins/CellType/Epithelial\n        self.cell = self.simulator.cell_field.add_cell(10, 10, 0, \"Epithelial\")\n        self.cell.volume = 100\n\n    def step(self, mcs):\n        print(f\"Simulation step: {mcs}\")\n\n# Define cell types and parameters\ncell_type = \"Epithelial\"\ncell_parameters = {\n    \"cell_division_rate\": 0.01,\n    \"cell_proliferation_rate\": 0.005\n}\n\n# Create simulation instance\nsim = Simulation(None)\nCompuCellSetup.setSimulation(sim)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_09_Paper_9_0618_0246_run1\\generated_cc3d_model.cc3d"
+  }
+}

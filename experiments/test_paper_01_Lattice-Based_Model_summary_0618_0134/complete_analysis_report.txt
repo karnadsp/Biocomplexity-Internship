@@ -1,0 +1,242 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_01_Lattice-Based_Model
+Generated: 2025-06-18 01:34:47
+Total Runs: 3
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists characterize DCIS by four tissue morphologies (micropapillary, cribriform, solid, and comedo), but the underlying mechanisms that distinguish the development and progression of these morphologies are not well understood. Here we explored the conditions leading to the emergence of the different morphologies of DCIS using a two-dimensional multi-cell lattice-based model that incorporates cell proliferation, apoptosis, necrosis, adhesion, and contractility. We found that the relative rates of cell proliferation and apoptosis governed which of the four morphologies emerged. High proliferation and low apoptosis favored the emergence of solid and comedo morphologies. In contrast, low proliferation and high apoptosis led to the micropapillary morphology, whereas high proliferation and high apoptosis led to the cribriform morphology. The natural progression between morphologies cannot be investigated in vivo since lesions are usually surgically removed upon detection; however, our model suggests probable transitions between these morphologies during breast cancer progression. Importantly, cribriform and comedo appear to be the ultimate morphologies of DCIS. Motivated by previous experimental studies demonstrating that tumor cells behave differently depending on where they are located within the mammary duct in vivo or in engineered tissues, we examined the effects of tissue geometry on the progression of DCIS. In agreement with our previous experimental work, we found that cells are more likely to invade from the end of ducts and that this preferential invasion is regulated by cell adhesion and contractility. This model provides additional insight into tumor cell behavior and allows the exploration of phenotypic transitions not easily monitored in vivo.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: paper_01_Lattice-Based_Model_0618_0126_run1
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0126_run1
+  Timestamp: 0618_0126
+  Interactions: 4
+  CC3D Model: 2908 bytes
+
+Run 2: paper_01_Lattice-Based_Model_0618_0130_run2
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0130_run2
+  Timestamp: 0618_0130
+  Interactions: 4
+  CC3D Model: 4715 bytes
+
+Run 3: paper_01_Lattice-Based_Model_0618_0132_run3
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0132_run3
+  Timestamp: 0618_0132
+  Interactions: 4
+  CC3D Model: 2940 bytes
+
+
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-18 01:34:47
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 12
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] Epithelial (CL:0000057)
+     33.3% [███░░░░░░░] epithelial cell (CL:0000066)
+     33.3% [███░░░░░░░] Mammary epithelial cell (CL:0000060)
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Epithelial (CL:0000057)
+     33.3% epithelial cell (CL:0000066)
+     33.3% Mammary epithelial cell (CL:0000060)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] necrosis (GO:0070265)
+     33.3% [███░░░░░░░] Cell proliferation (GO:0008283)
+     33.3% [███░░░░░░░] Cell adhesion (GO:0098602)
+     33.3% [███░░░░░░░] cell adhesion (GO:0007155)
+     33.3% [███░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% necrosis (GO:0070265)
+     33.3% Cell proliferation (GO:0008283)
+     33.3% Cell adhesion (GO:0098602)
+     ... and 9 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 10
+     • Average consistency: 40.0%
+     • Maximum consistency: 66.7%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     66.7% [██████░░░░] Cell Proliferation (D002205)
+     66.7% [██████░░░░] Breast Neoplasms (D001943)
+     33.3% [███░░░░░░░] Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% [███░░░░░░░] Tumor Cells (D015649)
+     33.3% [███░░░░░░░] Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% Tumor Cells (D015649)
+     33.3% Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 3
+     • Average similarity: 14.2%
+     • Minimum similarity: 12.8%
+     • Maximum similarity: 15.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 12.8% [█░░░░░░░░░]
+     Runs 1-3: 15.8% [█░░░░░░░░░]
+     Runs 2-3: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] Epithelial (CL:0000057)
+     33.3% [███░░░░░░░] epithelial cell (CL:0000066)
+     33.3% [███░░░░░░░] Mammary epithelial cell (CL:0000060)
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Epithelial (CL:0000057)
+     33.3% epithelial cell (CL:0000066)
+     33.3% Mammary epithelial cell (CL:0000060)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] necrosis (GO:0070265)
+     33.3% [███░░░░░░░] Cell proliferation (GO:0008283)
+     33.3% [███░░░░░░░] Cell adhesion (GO:0098602)
+     33.3% [███░░░░░░░] cell adhesion (GO:0007155)
+     33.3% [███░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% necrosis (GO:0070265)
+     33.3% Cell proliferation (GO:0008283)
+     33.3% Cell adhesion (GO:0098602)
+     ... and 9 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 10
+     • Average consistency: 40.0%
+     • Maximum consistency: 66.7%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     66.7% [██████░░░░] Cell Proliferation (D002205)
+     66.7% [██████░░░░] Breast Neoplasms (D001943)
+     33.3% [███░░░░░░░] Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% [███░░░░░░░] Tumor Cells (D015649)
+     33.3% [███░░░░░░░] Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% Tumor Cells (D015649)
+     33.3% Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 3
+     • Average similarity: 14.2%
+     • Minimum similarity: 12.8%
+     • Maximum similarity: 15.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 12.8% [█░░░░░░░░░]
+     Runs 1-3: 15.8% [█░░░░░░░░░]
+     Runs 2-3: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (33.3%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (33.3%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (40.0%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (33.3%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (33.3%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (40.0%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:44:55.087088",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import PySteppable\n\nclass SimulationClass(PySteppable):\n    def __init__(self, _simulator, _cellType):\n        PySteppable.__init__(self, _simulator, _cellType)\n        self.simulator = _simulator\n        self.cellType = _cellType\n        self.step = 0\n        self.cell_type_string = \"Epithelial\"\n        self.cell_cycle_duration = 10  # Duration of cell cycle in simulation steps\n\n    def start(self):\n        self.step = 0\n        self.simulator.registerObserver(\"CellCountObserver\", \"CountCells\", {\"cellType\": self.cellType})\n        self.simulator.registerScheduler(self.schedulerCallback, 10)  # Schedule step method every 10 steps\n\n    def step(self):\n        self.step += 1\n        print(f\"Step: {self.step}, Number of Epithelial cells: {self.simulator.cellCount(self.cellType)}\")\n\ndef schedulerCallback(simulator, steppable):\n    steppable.step()\n\nsimulator = CompuCellSetup.Simulator()\nsimulator.setSimulationDimensions(50, 50, 1)\nsimulator.addSteppable(SimulationClass(simulator, \"Epithelial\"))\nsimulator.run(100)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_08_Paper_8_0618_0243_run4\\generated_cc3d_model.cc3d"
+  }
+}

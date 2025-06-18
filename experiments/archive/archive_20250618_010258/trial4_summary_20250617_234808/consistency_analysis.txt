@@ -1,0 +1,21 @@
+=== Pipeline Stage Consistency Analysis ===
+
+
+Natural Language to Ontology Stage:
+===================================
+
+Ontology Consistency:
+
+--------------------------------------------------
+
+Ontology to CC3D Code Stage:
+============================
+
+--------------------------------------------------
+
+Natural Language to CC3D Code (End-to-End) Stage:
+=================================================
+
+Ontology Consistency:
+
+--------------------------------------------------

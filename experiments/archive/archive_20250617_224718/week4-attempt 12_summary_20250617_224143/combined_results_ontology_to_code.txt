@@ -1,0 +1,147 @@
+=== Run 1 ===
+
+Experiment: week4-attempt 12
+Date: 20250617_223621
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          super (S imulation ,  self ).__ init __ (_ sim ulator ,  _ model )
+          self .model  =  _ model 
+          self .sim ulator  =  _ sim ulator 
+        
+          #  Initialize  cell  type  parameters 
+          self .cell _type  =  {' ep ith elial ':   0 ,  ' mes ench ym al ':   1 ,  ' endo th elial ':   2 }
+         
+          #  Initialize  mot ility  parameters 
+          self .m ot ility _parameters  =  {
+              ' ep ith elial ':  {' mot ility ':   1 . 0 ,  ' p ersistence ':   0 . 5 },
+              ' mes ench ym al ':  {' mot ility ':   2 . 0 ,  ' p ersistence ':   0 . 7 },
+              ' endo th elial ':  {' mot ility ':   0 . 5 ,  ' p ersistence ':   0 . 3 }
+          }
+         
+          #  Initialize  ad hesion  parameters 
+          self .ad hesion _parameters  =  {
+              ' ep ith elial ':  {' cell _cell ':   10 . 0 ,  ' cell _medium ':   5 . 0 },
+              ' mes ench ym al ':  {' cell _cell ':   5 . 0 ,  ' cell _medium ':   2 . 0 },
+              ' endo th elial ':  {' cell _cell ':   8 . 0 ,  ' cell _medium ':   3 . 0 }
+          }
+
+      def  start (self ):
+          #  Initialize  simulation 
+          self .sim ulator .initialize ()
+         
+          #  Create   3 D  lattice 
+          self .sim ulator .create L attice ( 100 ,   100 ,   10 )
+         
+          #  Place  cells 
+          self .sim ulator .add Cell G CM ( 50 ,   50 ,   0 ,  self .cell _type [' ep ith elial '])
+          self .sim ulator .add Cell G CM ( 50 ,   50 ,   5 ,  self .cell _type [' mes ench ym al '])
+          self .sim ulator .add Cell G CM ( 50 ,   50 ,   9 ,  self .cell _type [' endo th elial '])
+
+      def  step (self ,  m cs ):
+          #  Update  cell  behaviors 
+          for  cell  in  self .sim ulator .cell List :
+              cell _type  =  self .sim ulator .cell Type [cell ]
+              if  cell _type  ==  self .cell _type [' ep ith elial ']:
+                  #  Ep ith elial  to  mes ench ym al  transition  logic 
+                  if  cell .m ot ility  >  self .m ot ility _parameters [' ep ith elial '][' mot ility ']:
+                      self .sim ulator .change Cell Type (cell ,  self .cell _type [' mes ench ym al '])
+              elif  cell _type  ==  self .cell _type [' mes ench ym al ']:
+                  #  Cell  migration  logic 
+                  cell .m ot ility  +=   0 . 1 
+              elif  cell _type  ==  self .cell _type [' endo th elial ']:
+                  #  Cell  ad hesion  logic 
+                  cell .ad hesion  +=   0 . 05 
+
+          #  Update  visualization 
+          self .sim ulator .update Visualization ()
+
+ #  Run  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .set Simulation (S imulation (sim ))
+ sim .run ( 100 )
+ ```
+
+CC3D File Created: experiments\week4-attempt 12_20250617_223621_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week4-attempt 12
+Date: 20250617_223949
+Run Number: 2
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Ep ith elial To Mes ench ym al Transition Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ num Ep ith elial Cells = 100 ,  _ num Mes ench ym al Cells = 50 ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator )
+          self .num Ep ith elial Cells  =  _ num Ep ith elial Cells 
+          self .num Mes ench ym al Cells  =  _ num Mes ench ym al Cells 
+          self .ep ith elial Cell Type  =  ' Ep ith elial '
+          self .m es ench ym al Cell Type  =  ' Mes ench ym al '
+         
+      def  start (self ):
+          #  Create  epith elial  cells 
+          for  _  in  range (self .num Ep ith elial Cells ):
+              cell  =  self .new Cell (self .ep ith elial Cell Type )
+              cell .shape  =   1    #  Compact  shape  for  epith elial  cells 
+              cell .m ot ility  =   0 . 5    #  Moderate  mot ility 
+              self .cell Field .add Cell (cell )
+             
+          #  Create  mes ench ym al  cells 
+          for  _  in  range (self .num Mes ench ym al Cells ):
+              cell  =  self .new Cell (self .m es ench ym al Cell Type )
+              cell .shape  =   0 . 7    #  More  elong ated  shape  for  mes ench ym al  cells 
+              cell .m ot ility  =   1 . 0    #  High  mot ility 
+              self .cell Field .add Cell (cell )
+             
+          #  Set  up  cell -cell  ad hesion  parameters 
+          self .set P otts Ad hesion Parameters (self .ep ith elial Cell Type ,  self .ep ith elial Cell Type ,   10 . 0 )
+          self .set P otts Ad hesion Parameters (self .m es ench ym al Cell Type ,  self .m es ench ym al Cell Type ,   5 . 0 )
+          self .set P otts Ad hesion Parameters (self .ep ith elial Cell Type ,  self .m es ench ym al Cell Type ,   2 . 0 )
+         
+          #  Set  up  cell  cohesion  parameters 
+          self .set P otts C oh esion Parameters (self .ep ith elial Cell Type ,   10 . 0 )
+          self .set P otts C oh esion Parameters (self .m es ench ym al Cell Type ,   5 . 0 )
+         
+      def  step (self ,  m cs ):
+          #  Update  cell  properties  based  on  simulation  time 
+          if  m cs  >   100 :
+              #  Increase  mot ility  of  mes ench ym al  cells  over  time 
+              for  cell  in  self .cell List :
+                  if  cell .type  ==  self .m es ench ym al Cell Type :
+                      cell .m ot ility  +=   0 . 02 
+                  elif  cell .type  ==  self .ep ith elial Cell Type :
+                      cell .shape  -=   0 . 01    #  Sim ulate  E MT  by  changing  shape 
+
+      def  new Cell (self ,  cell Type ):
+          cell  =  Com pu Cell 3 D .Cell ()
+          cell .type  =  cell Type 
+          return  cell 
+
+      def  set P otts Ad hesion Parameters (self ,  type 1 ,  type 2 ,  strength ):
+          self .sim ulator .set P otts Ad hesion Strength (type 1 ,  type 2 ,  strength )
+         
+      def  set P otts C oh esion Parameters (self ,  type ,  strength ):
+          self .sim ulator .set P otts C oh esion Strength (type ,  strength )
+
+ #  Return  the  simulation  class 
+ simulation  =  Ep ith elial To Mes ench ym al Transition Simulation 
+ ```
+
+CC3D File Created: experiments\week4-attempt 12_20250617_223949_run2\generated_cc3d_model.cc3d
+
+
+==================================================

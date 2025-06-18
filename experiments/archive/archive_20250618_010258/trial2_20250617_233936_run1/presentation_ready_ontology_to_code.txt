@@ -1,0 +1,41 @@
+Experiment: trial2
+Date: 20250617_233936
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ frequency = 1 ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ frequency )
+          self .sim ulator  =  _ sim ulator 
+          self .step  =   0 
+          self .sim ulator .set Simulation Name (" Basic Cell Simulation ")
+         
+      def  start (self ):
+          self .step  =   0 
+          print (" Simulation  started .")
+         
+      def  step (self ):
+          self .step  +=   1 
+          print (f " Simulation  step :  { self .step }")
+
+ #  Set  up  cell  types  and  parameters 
+ Com pu Cell Setup .set Simulation Parameters (
+      _ simulation _name =" Basic Cell Simulation ",
+      _ cell _types =[
+          {" Type ":  " Cell ",  " Properties ":  {" D iameter ":   2 . 0 }}
+      ],
+      _ volume Constraint =  {" Type ":  " Volume ",  " Constraint ":  " K oen ig ",  " Parameters ":  {" K oen ig Constant ":   1 . 0 }},
+      _ f ocal Point Pl astic ity =  {" Type ":  " F ocal Point Pl astic ity ",  " Parameters ":  {" F ocal Point E lastic Constant ":   100 . 0 ,  " F ocal Point St iff ness ":   100 . 0 }}
+ )
+
+ #  Initialize  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .add Ste pp able (S imulation (sim ,   1 ))
+ sim .run ( 100 )
+ ```
+
+CC3D File Created: experiments\trial2_20250617_233936_run1\generated_cc3d_model.cc3d

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:08:00.088611",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import *\nfrom steppables import *\n\nclass BasicSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulation_name = \"BasicSimulation\"\n\n    def start(self):\n        self.simulator.createField(\"Field1\", 1)\n        self.simulator.fieldName.fieldName = \"Field1\"\n\n    def step(self, mcs):\n        print(f\"Step: {mcs}, Time: {self.simulator.getTime()}\")\n\n\ndef main():\n    sim = CompuCell3D()\n    sim.simulation_name = \"BasicSimulation\"\n    sim.num_steps = 100\n    sim.output_freq = 10\n    sim.add_steerable(\"BasicSimulation\")\n    sim.run()\n\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_04_Paper_4_0618_0206_run1\\generated_cc3d_model.cc3d"
+  }
+}

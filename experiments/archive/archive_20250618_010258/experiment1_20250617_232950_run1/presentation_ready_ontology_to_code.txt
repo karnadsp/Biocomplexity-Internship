@@ -1,0 +1,37 @@
+Experiment: experiment1
+Date: 20250617_232950
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell Setup  import  Sim ulator 
+ from  ste pp ables  import  *
+ from  ste pp ables  import  Simple G rowth And Ap opt osis Ste pp able 
+
+ class  Mac roph age Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ frequency = 1 ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ frequency )
+          self .sim ulator  =  _ sim ulator 
+          self .sim ulator _name  =  " Mac roph age Simulation "
+
+      def  start (self ):
+          self .sim ulator .add _ste pp able (_ ste pp able =self )
+          self .sim ulator .add _ste pp able (S imple G rowth And Ap opt osis Ste pp able (
+              growth _rate = 0 . 01 ,
+              apoptosis _rate = 0 . 01 ,
+              cell _types =[ self .cell _type ]))
+         
+      def  step (self ,  m cs ):
+          if  m cs  %   10  ==   0 :
+              print (f " Simulation  step :  { m cs }")
+
+ def  main ():
+      simulator  =  Simulator ()
+      simulator .add _ste pp able (M ac roph age Simulation (sim ulator ))
+      simulator .run ( 100 0 )
+
+ if  __ name __  ==  "__ main __":
+      main ()
+ ```
+
+CC3D File Created: experiments\experiment1_20250617_232950_run1\generated_cc3d_model.cc3d

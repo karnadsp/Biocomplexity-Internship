@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:02:56.586736",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, Mitosis\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        super(EpithelialProliferationSimulation, self).__init__(_simulator, _frequency)\n        self.simulator = _simulator\n        self.simulation_name = \"Epithelial Proliferation\"\n        self.simulation_duration = 1000  # Simulation duration in Monte Carlo steps\n        self.cell_division_rate = 0.1  # Cell division rate per cell per MCS\n\n    def start(self):\n        # Initialize simulation\n        self.simulator.setSimulationName(self.simulation_name)\n        self.simulator.setSimulationDuration(self.simulation_duration)\n        \n        # Create a single epithelial cell at the center of the lattice\n        cell = self.simulator.createCell()\n        cell.cellType = 'Epithelial'\n        cell.position = [10, 10, 0]  # Assuming 2D simulation\n        self.simulator.addCellToSimulation(cell)\n        \n        # Add mitosis steppable\n        mitosis_steppable = Mitosis(self.simulator, _frequency=1)\n        self.simulator.addSteppable(mitosis_steppable)\n\n    def step(self, mcs):\n        # Calculate cell division based on rate\n        if mcs % 100 == 0:\n            self.divide_cells()\n\n    def divide_cells(self):\n        cells_to_divide = self.simulator.getCellsByType('Epithelial')\n        for cell in cells_to_divide:\n            if cell.volume > 50:  # Divide cells when they reach a certain size\n                self.simulator.divideCellRandomOrientation(cell)\n\n# Create simulation instance\nsim = EpithelialProliferationSimulation(None)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_10_Paper_10_0618_0301_run5\\generated_cc3d_model.cc3d"
+  }
+}

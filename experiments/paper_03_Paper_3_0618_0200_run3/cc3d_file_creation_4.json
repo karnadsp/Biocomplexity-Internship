@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:02:34.638270",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.frequency = _frequency\n        self.num_cells = 100\n        self.EMT_rate = 0.01\n        self.division_rate = 0.05\n\n    def start(self):\n        self.simulator.getSimulationDimensions()\n        self.create_cells()\n\n    def create_cells(self):\n        cell_type_epithelial = 'Epithelial'\n        cell_type_mesenchymal = 'Mesenchymal'\n        \n        for _ in range(self.num_cells//2):\n            cell = self.simulator.createCell()\n            cell.cellType = cell_type_epithelial\n            self.simulator.addCellToSimulation(cell)\n            \n        for _ in range(self.num_cells//2):\n            cell = self.simulator.createCell()\n            cell.cellType = cell_type_mesenchymal\n            self.simulator.addCellToSimulation(cell)\n\n    def step(self):\n        self.handle_EMT()\n        self.handle_cell_division()\n\n    def handle_EMT(self):\n        for cell in self.simulator.cellList:\n            if cell.cellType == 'Epithelial':\n                if self.EMT_rate > self.simulator.random()\n                    cell.cellType = 'Mesenchymal'\n\n    def handle_cell_division(self):\n        for cell in self.simulator.cellList:\n            if self.division_rate > self.simulator.random()\n                self.simulator.divideCellRandomOrientation(cell)\n\ndef main():\n    sim = CompuCellSetup.Simulator()\n    sim.simulationDimensions = (100, 100, 1)\n    sim.setSimulationTime(100, 100)\n    sim.addSteppable(Simulation(sim, 1))\n    sim.run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_03_Paper_3_0618_0200_run3\\generated_cc3d_model.cc3d"
+  }
+}

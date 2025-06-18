@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:57:37.437740",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import PySteppable, SteppableBasePy\n\nclass SimulationClass(SteppableBasePy):\n    def __init__(self, _simulator, _num_cells):\n        SteppableBasePy.__init__(self, _simulator)\n        self.num_cells = _num_cells\n        self.cell_type = 'Epithelial'\n        self.cell_type_id = 0\n        self.cell_color = _rgb(255, 255, 255)\n        self.division_distance = 1.0\n        self.division_step = 100\n\n    def start(self):\n        self.cell_field = self.simulator.get_cell_field()\n        self.lattice = self.simulator.get_lattice()\n        self.create_cells()\n\n    def step(self, mcs):\n        num_cells = self.cell_field.get_number_of_cells()\n        print(f\"Number of cells at step {mcs}: {num_cells}\")\n        if num_cells >= 100:\n            self.simulator.stop()\n\n    def create_cells(self):\n        for i in range(self.num_cells):\n            cell = self.cell_field.find_cell_by_type(self.cell_type_id)\n            x = self.lattice.x_length * 0.5 + (i % 10) * 1.0\n            y = self.lattice.y_length * 0.5 + (i // 10) * 1.0\n            self.cell_field.add_cell(cell, (x, y, 0))\n            cell.type = self.cell_type_id\n            cell.nucleus = 1\n\ndef main():\n    simulator = CompuCellSetup.Simulator()\n    simulator.set_output_directory(\"output\")\n    simulator.set_num_steps(1000)\n    simulator.set_num_threads(4)\n    simulator.add_steppable(SimulationClass(simulator, 10))\n    simulator.run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_02_Paper_2_0618_0156_run5\\generated_cc3d_model.cc3d"
+  }
+}

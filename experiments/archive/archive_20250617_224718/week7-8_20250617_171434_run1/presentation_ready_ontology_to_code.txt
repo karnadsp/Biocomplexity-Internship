@@ -1,0 +1,609 @@
+Experiment: week7-8
+Date: 20250617_171434
+Run Number: 1
+
+Generated CC3D Code:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+cell
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+CL
+:
+000
+026
+78
+",
+
+       
+ "
+name
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+gene
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+020
+9
+",
+
+       
+ "
+name
+":
+ "
+protein
+ modification
+ by
+ small
+ protein
+ conjug
+ation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+635
+1
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+651
+1
+",
+
+       
+ "
+name
+":
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+813
+4
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+ factor
+ binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+001
+656
+7
+",
+
+       
+ "
+name
+":
+ "
+protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+003
+139
+7
+",
+
+       
+ "
+name
+":
+ "
+negative
+ regulation
+ of
+ protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+004
+594
+4
+",
+
+       
+ "
+name
+":
+ "
+positive
+ regulation
+ of
+ transcription
+ from
+ RNA
+ polymer
+ase
+ II
+ promoter
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+005
+108
+5
+",
+
+       
+ "
+name
+":
+ "
+reg
+ulation
+ of
+ prote
+as
+omal
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+mesh
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+000
+442
+",
+
+       
+ "
+name
+":
+ "
+Math
+ematic
+al
+ Modeling
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+020
+822
+",
+
+       
+ "
+name
+":
+ "
+Pro
+te
+ol
+ysis
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+045
+345
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+051
+359
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+054
+321
+",
+
+       
+ "
+name
+":
+ "
+Trans
+cription
+,
+ Genetic
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+055
+778
+",
+
+       
+ "
+name
+":
+ "
+Gene
+ Expression
+ Regulation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+063
+801
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+064
+577
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Stability
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+065
+424
+",
+
+       
+ "
+name
+":
+ "
+Systems
+ Biology
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+CC3D File Created: experiments\week7-8_20250617_171434_run1\generated_cc3d_model.cc3d

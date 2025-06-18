@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T16:30:41.290405",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nHere\n is\n a\n structured\n JSON\n object\n containing\n ontology\n annotations\n based\n on\n the\n provided\n information\n about\n E\n3\n ubiqu\nitin\n lig\nases\n:\n\n\n\njson\n\n\n{\n\n \n \"\nCell\n Ont\nology\n\":\n {\n\n   \n \"\nE\n3\n ubiqu\nitin\n lig\nase\n\":\n \"\nE\n3\n ubiqu\nitin\n lig\nase\n\",\n\n   \n \"\nPro\nte\nol\nysis\n\":\n \"\npro\nte\nol\nysis\n\",\n\n   \n \"\nTrans\ncription\n\":\n \"\ntrans\ncription\n,\n DNA\n-\ntempl\nated\n\",\n\n   \n \"\nUb\niqu\nitin\n-pro\nte\nas\nome\n system\n\":\n \"\nub\niqu\nitin\n-pro\nte\nas\nome\n system\n\"\n\n \n },\n\n \n \"\nGene\n Ont\nology\n\":\n {\n\n   \n \"\nBi\nological\n Process\n\":\n [\n\n     \n \"\nub\niqu\nitin\n-dependent\n protein\n c\natab\nolic\n process\n\",\n\n     \n \"\ntrans\ncription\n,\n DNA\n-\ntempl\nated\n\"\n\n   \n ],\n\n   \n \"\nM\nolecular\n Function\n\":\n [\n\n     \n \"\nub\niqu\nitin\n protein\n lig\nase\n activity\n\"\n\n   \n ],\n\n   \n \"\nCell\nular\n Component\n\":\n [\n\n     \n \"\npro\nte\nas\nome\n\"\n\n   \n ]\n\n \n },\n\n \n \"\nMe\nSH\n\":\n {\n\n   \n \"\nTerms\n\":\n [\n\n     \n \"\nUb\niqu\nitin\n\",\n\n     \n \"\nPro\nte\nas\nome\n\",\n\n     \n \"\nPro\ntein\n Processing\n,\n Post\n-\nTrans\nl\national\n\",\n\n     \n \"\nTrans\ncription\n,\n Genetic\n\",\n\n     \n \"\nModels\n,\n Biological\n\",\n\n     \n \"\nSystems\n Biology\n\",\n\n     \n \"\nSafety\n\",\n\n     \n \"\nEngineering\n\"\n\n   \n ]\n\n \n }\n\n}"
+  },
+  "output": {
+    "output_file": "experiments\\week4-7_20250617_162928_run3\\generated_cc3d_model.cc3d"
+  }
+}

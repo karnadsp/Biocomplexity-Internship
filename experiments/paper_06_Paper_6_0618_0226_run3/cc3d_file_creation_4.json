@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:27:47.413482",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import *\nfrom Mitosis import Mitosis\nfrom Growth import Growth\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.frequency = _frequency\n        self.simulatorThread = None\n\n    def start(self):\n        # Create a lattice\n        self.simulator.createLattice(50, 50, 1)\n        \n        # Add cells\n        cell = self.simulator.addCell(_type=1, _position=(25, 25, 0))\n        cell.targetVolume = 25\n        cell.targetSurface = 0\n        \n        # Add mitosis\n        mitosis = Mitosis()\n        mitosis mitosis\n        self.simulator.addSteppable(mitosis)\n        \n        # Add growth\n        growth = Growth()\n        growth.growthRate = 0.01\n        self.simulator.addSteppable(growth)\n\n    def step(self, mcs):\n        # Simulation logic\n        pass\n\n# Set simulation parameters\nCompuCellSetup.simulator.setSimulationParameters(_timeSteps=1000, _outputFrequency=10, _latticeSpacing=1.0)\n\n# Run simulation\nCompuCellSetup.main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_06_Paper_6_0618_0226_run3\\generated_cc3d_model.cc3d"
+  }
+}

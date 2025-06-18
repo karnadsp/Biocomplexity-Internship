@@ -1,0 +1,8 @@
+Experiment: Week4-Attempt10
+Date: 20250617_215058
+Run Number: 3
+
+Generated CC3D Code:
+``` python from Com pu Cell Setup import Sim ulate, Inventory from ste pp ables import Ste pp able Base Py class E 3 Ub iqu itin L ig ase Simulation (Ste pp able Base Py): def __ init __(self, _ sim ulator, _ stock): super ().__ init __ (_ sim ulator, _ stock) self.sim ulator = _ sim ulator self stock = _ stock def start (self): # Initialize simulation parameters self.sim ulator.add Ste erable Object (self) self stock [' E 3 L ig ase Con centration '] = 1. 0 self stock [' Ub iqu itin Pro te as ome Activity '] = 0. 5 self stock [' Trans cription al Activation Rate '] = 0. 2 def step (self, m cs): # Update simulation state current _time = self.sim ulator.getTime () if current _time % 100 == 0 : print (f " Simulation time : {current _time}") print (f "E 3 Lig ase Concent ration : {self stock [' E 3 L ig ase Con centration ']}") print (f " Ub iqu itin Prote as ome Activity : {self stock [' Ub iqu itin Pro te as ome Activity ']}") print (f " Trans cription al Activation Rate : {self stock [' Trans cription al Activation Rate ']}\ n ") # Update E 3 Lig ase concentration self stock [' E 3 L ig ase Con centration '] += 0. 01 # Update Ub iqu itin Prote as ome Activity self stock [' Ub iqu itin Pro te as ome Activity '] += 0. 005 # Update Trans cription al Activation Rate self stock [' Trans cription al Activation Rate '] += 0. 002 sim u = Sim ulate () sim u.add Ste erable (E 3 Ub iqu itin L ig ase Simulation (sim u, {})) sim u.run () ```
+
+CC3D File Created: experiments\Week4-Attempt10_20250617_215058_run3\generated_cc3d_model.cc3d

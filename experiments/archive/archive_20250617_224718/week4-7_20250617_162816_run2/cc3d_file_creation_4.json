@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T16:29:28.173808",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nHere\n is\n the\n structured\n ontology\n annotations\n based\n on\n the\n provided\n information\n about\n E\n3\n ubiqu\nitin\n lig\nases\n:\n\n\n\njson\n\n\n{\n\n \n \"\nCell\n Ont\nology\n\":\n [\n\n   \n \"\nE\n3\n ubiqu\nitin\n lig\nase\n\",\n\n   \n \"\nub\niqu\nitin\n-pro\nte\nas\nome\n system\n\",\n\n   \n \"\npro\nte\nol\nysis\n\",\n\n   \n \"\ncell\n nucleus\n\",\n\n   \n \"\ntrans\ncription\nal\n activation\n\"\n\n \n ],\n\n \n \"\nGene\n Ont\nology\n\":\n {\n\n   \n \"\nBi\nological\n Process\n\":\n [\n\n     \n \"\nprotein\n ubiqu\nit\nination\n\",\n\n     \n \"\npro\nte\nol\nysis\n\",\n\n     \n \"\ntrans\ncription\n regulation\n\",\n\n     \n \"\ngene\n expression\n\"\n\n   \n ],\n\n   \n \"\nM\nolecular\n Function\n\":\n [\n\n     \n \"\nub\niqu\nitin\n lig\nase\n activity\n\",\n\n     \n \"\ntrans\ncription\n factor\n activity\n\"\n\n   \n ]\n\n \n },\n\n \n \"\nMe\nSH\n\":\n [\n\n   \n \"\nUb\niqu\nitin\n-Pro\nte\nas\nome\n System\n\",\n\n   \n \"\nPro\nte\nol\nysis\n\",\n\n   \n \"\nTrans\ncription\n,\n Genetic\n\",\n\n   \n \"\nGene\n Expression\n\",\n\n   \n \"\nMath\nematic\nal\n Modeling\n\",\n\n   \n \"\nSystems\n Biology\n\",\n\n   \n \"\nEngineering\n\"\n\n \n ]\n\n}"
+  },
+  "output": {
+    "output_file": "experiments\\week4-7_20250617_162816_run2\\generated_cc3d_model.cc3d"
+  }
+}

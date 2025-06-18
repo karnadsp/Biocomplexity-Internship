@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:46:23.720002",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import PySteppableBase\n\nclass CellProliferationSimulation(PySteppableBase):\n    def __init__(self, _simulator, _frequency=1):\n        PySteppableBase.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.cell_count = 0\n        self.cell_division_time = 10.0  # Time between cell divisions\n        self.cell_proliferation_rate = 0.1  # Proliferation rate\n\n    def start(self):\n        self.cell_count = len(self.simulator.cellList)\n        print(\"Initial cell count:\", self.cell_count)\n\n    def step(self, mcs):\n        if mcs >= self.cell_division_time:\n            self.cell_count = len(self.simulator.cellList)\n            print(f\"Time: {mcs}, Cell count: {self.cell_count}\")\n            self.cell_division_time += 10.0\n\ndef setup(simulation_name=\"CellProliferation\"):\n    # Create instance of CompuCell3D simulator\n    sim = CompuCellSetup.Simulator()\n    \n    # Set simulation parameters\n    sim.simulation_name = simulation_name\n    sim.simulation_time = 100.0\n    sim.time_unit = \"hour\"\n    sim.space_unit = \"cell_diameter\"\n    sim.length_unit = \"micrometer\"\n    \n    # Add steppable\n    sim.add_steppable(CellProliferationSimulation(sim, 1))\n    \n    # Set numerical solvers\n    sim.setNumericalMethod(\"ODE\", \"LSODA\")\n    sim.setSolver(\"Cell\", \"DiffusionSolver3D\")\n    \n    # Set output\n    sim.output = CompuCellSetup.Output()\n    sim.output.output_frequency = 10\n    sim.output.output_directory = \"output\"\n    \n    # Visualize using built-in viewer\n    sim.visualize = True\n    \n    return sim\n\n# Run simulation\nsim = setup()\nsim.run()"
+  },
+  "output": {
+    "output_file": "experiments\\Trial8_0618_0044_run2\\generated_cc3d_model.cc3d"
+  }
+}

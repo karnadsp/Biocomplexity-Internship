@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:01:21.480504",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom cc3d.core import PySteppable\n\nclass EpithelialProliferationSimulation(PySteppable):\n    def __init__(self):\n        PySteppable.__init__(self)\n        self.simulation_name = \"EpithelialProliferation\"\n        self.sim = CompuCellSetup.Simulation()\n        self.sim.setSimulationName(self.simulation_name)\n        self.sim.setNumberOfSteps(100)\n        self.sim.setTimeStep(1.0)\n        self.sim.setTimeOutputInterval(10)\n        \n        # Cell type definition\n        self.cell_type = \"Epithelial\"\n        self.cell_parameters = {\n            \"cellType\": self.cell_type,\n            \"radius\": 5.0,\n            \"nucleusRadius\": 2.0,\n            \"stiffness\": 100.0\n        }\n        \n    def start(self):\n        self.sim.createCell(self.cell_type, self.cell_parameters, position=[0, 0, 0])\n        self.sim.addSteppable(PyMitosis())\n        \n    def step(self, mcs):\n        # Handle cell proliferation\n        for cell in self.sim.cellList:\n            if cell.volume > 100.0:\n                cell.targetVolume = 50.0\n                cell.lambdaVolume = 100.0\n\nclass PyMitosis(PySteppable):\n    def __init__(self):\n        PySteppable.__init__(self)\n        self.mitosis_distance = 5.0\n        self.number_of_daughters = 2\n        \n    def step(self, mcs):\n        for cell in self.sim.cellList:\n            if cell.volume > 100.0:\n                self.sim.mitosis(cell, self.number_of_daughters, self.mitosis_distance)\n\n# Run the simulation\nsim = EpithelialProliferationSimulation()\nCompuCellSetup.run(sim.sim, sim.numberOfSteps)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_10_Paper_10_0618_0259_run4\\generated_cc3d_model.cc3d"
+  }
+}

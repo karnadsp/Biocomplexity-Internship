@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:54:20.846411",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy, Mitosis, Death\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.potts_solver = self.simulator.get_potts_solver()\n        self.cell_id = 0\n        self.num_cells = 10\n        self.start_time = 0\n        self.end_time = 1000\n        self.time_step = 1\n\n    def start(self):\n        self.create_cells()\n\n    def step(self, mcs):\n        if mcs == self.start_time:\n            self.create_cells()\n        if mcs >= self.end_time:\n            self.simulator.stop()\n\n    def create_cells(self):\n        cell_type = 'Epithelial'\n        for _ in range(self.num_cells):\n            cell = self.simulator.cell_field.new_cell(cell_type)\n            cell.diameter = 1.0\n            cell.target_volume = 25.0\n            cell.position = self.simulator.random_position()\n            cell.type_id = self.simulator.cell_type_id.get_type_id(cell_type)\n\ndef main():\n    simulator = Simulator()\n    simulator.set_simulation_dimensions(50, 50, 1)\n    simulator.set_time_steps(start_time=0, end_time=1000, time_step=1)\n    \n    simulator.add_steppable(EpithelialProliferationSimulation(simulator, 1))\n    simulator.add_steppable(Mitosis(simulator, 100))\n    simulator.add_steppable(Death(simulator, 1000))\n    \n    simulator.run()\n    simulator.close()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_09_Paper_9_0618_0252_run5\\generated_cc3d_model.cc3d"
+  }
+}

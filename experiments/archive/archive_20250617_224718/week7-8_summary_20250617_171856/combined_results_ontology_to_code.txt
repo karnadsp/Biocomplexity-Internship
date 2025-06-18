@@ -1,0 +1,1111 @@
+=== Run 1 ===
+
+Experiment: week7-8
+Date: 20250617_171434
+Run Number: 1
+
+Generated CC3D Code:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+cell
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+CL
+:
+000
+026
+78
+",
+
+       
+ "
+name
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+gene
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+020
+9
+",
+
+       
+ "
+name
+":
+ "
+protein
+ modification
+ by
+ small
+ protein
+ conjug
+ation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+635
+1
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+651
+1
+",
+
+       
+ "
+name
+":
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+813
+4
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+ factor
+ binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+001
+656
+7
+",
+
+       
+ "
+name
+":
+ "
+protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+003
+139
+7
+",
+
+       
+ "
+name
+":
+ "
+negative
+ regulation
+ of
+ protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+004
+594
+4
+",
+
+       
+ "
+name
+":
+ "
+positive
+ regulation
+ of
+ transcription
+ from
+ RNA
+ polymer
+ase
+ II
+ promoter
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+005
+108
+5
+",
+
+       
+ "
+name
+":
+ "
+reg
+ulation
+ of
+ prote
+as
+omal
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+mesh
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+000
+442
+",
+
+       
+ "
+name
+":
+ "
+Math
+ematic
+al
+ Modeling
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+020
+822
+",
+
+       
+ "
+name
+":
+ "
+Pro
+te
+ol
+ysis
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+045
+345
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+051
+359
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+054
+321
+",
+
+       
+ "
+name
+":
+ "
+Trans
+cription
+,
+ Genetic
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+055
+778
+",
+
+       
+ "
+name
+":
+ "
+Gene
+ Expression
+ Regulation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+063
+801
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+064
+577
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Stability
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+065
+424
+",
+
+       
+ "
+name
+":
+ "
+Systems
+ Biology
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+CC3D File Created: experiments\week7-8_20250617_171434_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week7-8
+Date: 20250617_171726
+Run Number: 2
+
+Generated CC3D Code:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ that
+ represents
+ the
+ ontology
+ annotations
+ for
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ based
+ on
+ the
+ provided
+ information
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+012
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+013
+4
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+014
+1
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+015
+6
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+as
+omal
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+026
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+ by
+ RNA
+ polymer
+ase
+ II
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+636
+6
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+tein
+ ubiqu
+it
+ination
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+656
+7
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ Ub
+iqu
+itin
+ Lig
+ases
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+D
+011
+037
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+id
+":
+ "
+D
+013
+736
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Math
+ematic
+al
+ Modeling
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+CC3D File Created: experiments\week7-8_20250617_171726_run2\generated_cc3d_model.cc3d
+
+
+==================================================

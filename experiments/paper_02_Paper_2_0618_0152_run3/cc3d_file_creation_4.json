@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:54:17.659214",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, Mitosis\n\nclass EpithelialCellSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _stock):\n        super(EpithelialCellSimulation, self).__init__(_simulator, _stock)\n        self.simulator = _simulator\n        self stock = _stock\n        self.simulation_name = \"EpithelialCellSimulation\"\n        self.add_steppable(Mitosis(self.simulator, self stock, { 'MITOSIS_DISTANCE': 5, 'MITOSIS_NUMBER_OF_STEPS': 10 }))\n\n    def start(self):\n        self.simulator.add_cell_type(\"Epithelial\", \"CL:0000066\")\n        self.simulator.add_cell(\"Epithelial\", self.simulator.get_lattice().get_random_point())\n        self.simulator.add_cell(\"Epithelial\", self.simulator.get_lattice().get_random_point())\n        self.simulator.add_cell(\"Epithelial\", self.simulator.get_lattice().get_random_point())\n\n    def step(self, mcs):\n        if mcs == 100:\n            self.simulator.stop_simulation()\n\nif __name__ == \"__main__\":\n    simulator = CompuCellSetup.Simulator()\n    simulator.setSimulationName(\"EpithelialCellSimulation\")\n    simulator.setLatticeDimensions(50, 50, 1)\n    simulator.setLatticeSpacing(1, 1, 1)\n    simulator.setVolumeMax(100)\n    simulator.setSurfaceAreaMax(100)\n    simulator.setVolumeEnergyFunction(\"Square\")\n    simulator.setSurfaceAreaEnergyFunction(\"Square\")\n    simulator.setVolumeConstraint(1.0)\n    simulator.setSurfaceAreaConstraint(1.0)\n    simulator.setElasticConstantArea(1.0)\n    simulator.setElasticConstantVolume(1.0)\n    simulator.addSteppable(EpithelialCellSimulation(simulator, None))\n    simulator.run(100)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_02_Paper_2_0618_0152_run3\\generated_cc3d_model.cc3d"
+  }
+}

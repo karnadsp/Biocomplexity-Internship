@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T23:27:38.200706",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\npython \n from  Com pu Cell 3 D  import  Com pu Cell Setup \n from  Py Ste pp ables  import  Ste pp able Base Py \n import  numpy \n\n class  E MT Simulation ( Ste pp able Base Py ):\n      def  __ init __( self ,  _ sim ulator ,  _ num Cells ):\n          Ste pp able Base Py .__ init __( self ,  _ sim ulator )\n          self .sim ulator  =  _ sim ulator \n          self .num Cells  =  _ num Cells \n          self .cell Migration Parameter  =   1 . 0 \n          self .cell Ad hesion Parameter  =   1 . 0 \n          self .em t Parameter  =   1 . 0 \n\n      def  start (self ):\n          self .sim ulator .print (\" Starting  E MT  Simulation \")\n          self .sim ulator .schedule Call (self .step ,   10 )\n\n      def  step (self ,  m cs ):\n          pass \n\n #  Define  cell  types \n Ep ith elial  =  {' Name ':  ' Ep ith elial ',  ' Color ':  '# FF 000 0 '}\n Mes ench ym al  =  {' Name ':  ' Mes ench ym al ',  ' Color ':  '# 00 FF 00 '}\n\n #  Set  up  simulation \n sim  =  Com pu Cell Setup .S imulator ()\n sim .set Simulation Dimensions ( 100 ,   100 ,   1 )\n sim .set Num Threads ( 4 )\n\n sim .init Cell k inds ([ Ep ith elial ,  Mes ench ym al ])\n\n sim .add Ste pp able ( EM TS imulation (sim ,   100 ))\n sim .run ( 100 0 )"
+  },
+  "output": {
+    "output_file": "experiments\\week4-attempt15_20250617_232611_run3\\generated_cc3d_model.cc3d"
+  }
+}

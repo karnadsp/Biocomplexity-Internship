@@ -1,0 +1,66 @@
+Experiment: week4-attempt14
+Date: 20250617_231025
+Run Number: 2
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell Setup  import  Sim ulator 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Ep ith elial Mes ench ym al Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          super (E p ith elial Mes ench ym al Simulation ,  self ).__ init __ (_ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+          self .sim ulation _name  =  " Ep ith elial Mes ench ym al Simulation "
+         
+          #  Parameters  for  cell  behavior 
+          self .cell _migration _rate  =   1 . 0 
+          self .cell _ad hesion _strength  =   1 . 0 
+          self .cell _c oh esion _strength  =   1 . 0 
+        
+      def  start (self ):
+          #  Initialize  simulation  properties 
+          self .sim ulator .get Simulation (). set Simulation Name (self .sim ulation _name )
+          self .sim ulator .get Simulation (). set NumberOf Steps ( 100 0 )
+          self .sim ulator .get Simulation (). set Output Frequency ( 100 )
+         
+          #  Set  up  solver 
+          self .sim ulator .set Solver (" min ")
+          self .sim ulator .get Solver (). set NumberOf Iterations ( 100 )
+         
+          #  Create  cell  types 
+          self .ep ith elial _cell _type  =  self .model .add Cell Type (" Ep ith elial ",  " CL : 000 005 7 ")
+          self .m es ench ym al _cell _type  =  self .model .add Cell Type (" Mes ench ym al ",  " CL : 000 006 6 ")
+         
+          #  Set  cell  type  properties 
+          self .ep ith elial _cell _type .setColor ([ 255 ,   0 ,   0 ])    #  Red 
+          self .m es ench ym al _cell _type .setColor ([ 0 ,   0 ,   255 ])    #  Blue 
+        
+          #  Set  cell  type  parameters 
+          self .ep ith elial _cell _type .set Lambda Ad hesion (self .cell _ad hesion _strength )
+          self .ep ith elial _cell _type .set Lambda C oh esion (self .cell _c oh esion _strength )
+          self .m es ench ym al _cell _type .set Lambda Ad hesion (self .cell _ad hesion _strength )
+          self .m es ench ym al _cell _type .set Lambda C oh esion (self .cell _c oh esion _strength )
+         
+      def  step (self ):
+          #  Update  simulation  parameters 
+          current _step  =  self .sim ulator .get Step ()
+          if  current _step  %   100  ==   0 :
+              print (f " Simulation  step :  { current _step }")
+              print (f " Cell  migration  rate :  { self .cell _migration _rate }")
+              print (f " Cell  ad hesion  strength :  { self .cell _ad hesion _strength }")
+              print (f " Cell  cohesion  strength :  { self .cell _c oh esion _strength }")
+             
+              #  Example  of  parameter  update 
+              self .cell _migration _rate  +=   0 . 1 
+              self .cell _ad hesion _strength  +=   0 . 05 
+              self .cell _c oh esion _strength  +=   0 . 02 
+
+ #  Create  instance  of  the  simulation 
+ sim  =  Simulator ()
+ sim .add Ste pp able (E p ith elial Mes ench ym al Simulation (sim ,  sim ))
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt14_20250617_231025_run2\generated_cc3d_model.cc3d

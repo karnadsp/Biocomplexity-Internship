@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:52:40.878254",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, Mitosis\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.frequency = _frequency\n        self.priority = 0\n\n    def start(self):\n        self.simulator.add_steppable(_steppable=Mitosis())\n        self.simulator.cell_types['Epithelial'] = {'color': [255, 255, 255], 'layer': 0}\n        self.simulator.add_cell_type(_type_id=1, _name='Epithelial')\n        self.simulator.set.mitosis(_max_distance=5, _mitosis_duration=10)\n\n    def step(self, mcs):\n        pass\n\nif __name__ == \"__main__\":\n    sim = Simulation(None)\n    CompuCellSetup.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_02_Paper_2_0618_0151_run2\\generated_cc3d_model.cc3d"
+  }
+}

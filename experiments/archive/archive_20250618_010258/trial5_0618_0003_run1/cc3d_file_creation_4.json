@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:05:32.617941",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy\n\nclass MySimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.cell_type = \"Cell\"\n        self.cell_id = None\n        self.process_active = True\n        \n    def start(self):\n        # Create a single cell of type \"Cell\"\n        self.cell_id = self.simulator.cell_id\n        self.simulator.cellField[self.simulator.grid.getGlobalSize()[0]//2, \n                                self.simulator.grid.getGlobalSize()[1]//2, \n                                0] = self.cell_id\n        # Set cell properties based on ontology\n        self.simulator.cellType[self.cell_id] = self.cell_type\n        self.simulator.cellColor[self.cell_id] = [255, 0, 0]\n        \n    def step(self):\n        if self.process_active:\n            # Implement cellular process logic here\n            # For demonstration, change cell color periodically\n            if self.simulator.step_number % 100 == 0:\n                current_color = self.simulator.cellColor[self.cell_id]\n                # Toggle between red and blue\n                self.simulator.cellColor[self.cell_id] = [0, 0, 255] if current_color[0] == 255 else [255, 0, 0]\n                \n    def finish(self):\n        pass\n\ndef main():\n    simulator = Simulator()\n    simulator.simulation_dims = [100, 100, 1]\n    simulator.simulation_duration = 1000\n    simulator.add_steerable(MySimulation(simulator, 1))\n    simulator.run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\trial5_0618_0003_run1\\generated_cc3d_model.cc3d"
+  }
+}

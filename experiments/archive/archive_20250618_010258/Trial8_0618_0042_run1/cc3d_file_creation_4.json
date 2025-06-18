@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:44:33.862333",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _stock):\n        super(Simulation, self).__init__(_simulator, _stock)\n        self.simulator = _simulator\n        self stock = _stock\n\n    def start(self):\n        # Initialize cell types and properties\n        cell_type = {'somatic cell': {'color': [255, 0, 0], 'name': 'somatic cell'}}\n        self.cell_type_dictionary = cell_type\n        self.simulator.cellTypes.append(cell_type)\n        self.simulator.numIterations = 1000\n\n    def step(self, mcs):\n        print(f\"Simulation step: {mcs}\")\n\nsim = Simulator()\nsim.addSteppable(Simulation(sim, None))\nsim.run()"
+  },
+  "output": {
+    "output_file": "experiments\\Trial8_0618_0042_run1\\generated_cc3d_model.cc3d"
+  }
+}

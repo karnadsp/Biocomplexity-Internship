@@ -1,0 +1,210 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-18 01:34:47
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 12
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] Epithelial (CL:0000057)
+     33.3% [███░░░░░░░] epithelial cell (CL:0000066)
+     33.3% [███░░░░░░░] Mammary epithelial cell (CL:0000060)
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Epithelial (CL:0000057)
+     33.3% epithelial cell (CL:0000066)
+     33.3% Mammary epithelial cell (CL:0000060)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] necrosis (GO:0070265)
+     33.3% [███░░░░░░░] Cell proliferation (GO:0008283)
+     33.3% [███░░░░░░░] Cell adhesion (GO:0098602)
+     33.3% [███░░░░░░░] cell adhesion (GO:0007155)
+     33.3% [███░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% necrosis (GO:0070265)
+     33.3% Cell proliferation (GO:0008283)
+     33.3% Cell adhesion (GO:0098602)
+     ... and 9 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 10
+     • Average consistency: 40.0%
+     • Maximum consistency: 66.7%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     66.7% [██████░░░░] Cell Proliferation (D002205)
+     66.7% [██████░░░░] Breast Neoplasms (D001943)
+     33.3% [███░░░░░░░] Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% [███░░░░░░░] Tumor Cells (D015649)
+     33.3% [███░░░░░░░] Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% Tumor Cells (D015649)
+     33.3% Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 3
+     • Average similarity: 14.2%
+     • Minimum similarity: 12.8%
+     • Maximum similarity: 15.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 12.8% [█░░░░░░░░░]
+     Runs 1-3: 15.8% [█░░░░░░░░░]
+     Runs 2-3: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] Epithelial (CL:0000057)
+     33.3% [███░░░░░░░] epithelial cell (CL:0000066)
+     33.3% [███░░░░░░░] Mammary epithelial cell (CL:0000060)
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Epithelial (CL:0000057)
+     33.3% epithelial cell (CL:0000066)
+     33.3% Mammary epithelial cell (CL:0000060)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 33.3%
+     • Maximum consistency: 33.3%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     33.3% [███░░░░░░░] necrosis (GO:0070265)
+     33.3% [███░░░░░░░] Cell proliferation (GO:0008283)
+     33.3% [███░░░░░░░] Cell adhesion (GO:0098602)
+     33.3% [███░░░░░░░] cell adhesion (GO:0007155)
+     33.3% [███░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% necrosis (GO:0070265)
+     33.3% Cell proliferation (GO:0008283)
+     33.3% Cell adhesion (GO:0098602)
+     ... and 9 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 10
+     • Average consistency: 40.0%
+     • Maximum consistency: 66.7%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     66.7% [██████░░░░] Cell Proliferation (D002205)
+     66.7% [██████░░░░] Breast Neoplasms (D001943)
+     33.3% [███░░░░░░░] Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% [███░░░░░░░] Tumor Cells (D015649)
+     33.3% [███░░░░░░░] Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     33.3% Carcinoma, Intraductal, Noninfiltrating (D019034)
+     33.3% Tumor Cells (D015649)
+     33.3% Carcinoma, Ductal, in situ (D019867)
+     ... and 5 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 3
+     • Average similarity: 14.2%
+     • Minimum similarity: 12.8%
+     • Maximum similarity: 15.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 12.8% [█░░░░░░░░░]
+     Runs 1-3: 15.8% [█░░░░░░░░░]
+     Runs 2-3: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (33.3%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (33.3%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (40.0%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (33.3%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (33.3%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (40.0%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

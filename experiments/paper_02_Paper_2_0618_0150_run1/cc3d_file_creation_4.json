@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:51:33.280977",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\nfrom PyPlot import pyplot as plt\n\nclass EpithelialCellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.epithelial_cell_type = None\n        self.proliferation_rate = 0.1\n        self.apoptosis_rate = 0.01\n        self.max_cell_count = 1000\n\n    def start(self):\n        self.epithelial_cell_type = self.simulator.get_cell_type(\"Epithelial\")\n        self.simulator.add_cell(self.epithelial_cell_type, [10, 10, 0])\n        self.cell_count = 0\n        self.time_points = []\n        self.cell_counts = []\n        plt.figure(figsize=(10, 6))\n        plt.title(\"Epithelial Cell Proliferation Over Time\")\n        plt.xlabel(\"Time Step\")\n        plt.ylabel(\"Number of Cells\")\n\n    def step(self, mcs):\n        self.cell_count = len(self.simulator.get_cells_by_type(self.epithelial_cell_type))\n        self.time_points.append(mcs)\n        self.cell_counts.append(self.cell_count)\n        plt.plot(self.time_points, self.cell_counts, 'b-')\n        plt.draw()\n        plt.pause(0.01)\n        \n        if self.cell_count >= self.max_cell_count:\n            self.simulator.stop_simulation()\n\ndef main():\n    simulator = CompuCellSetup.Simulator()\n    simulator.register_steppable(EpithelialCellProliferationSimulation(simulator, 1))\n    simulator.run(1000)\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_02_Paper_2_0618_0150_run1\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:59:04.631223",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import PySteppable\n\nclass Simulation(PySteppable):\n    def __init__(self, instance, _):\n        PySteppable.__init__(self, instance)\n        self.instance = instance\n        self.simulation_duration = 1000  # Total simulation steps\n        self.cell_cycle_duration = 100  # Duration of cell cycle\n        self.initial_cells = 1  # Number of initial cells\n\n    def start(self):\n        # Initialize simulation\n        self.cell_field = self.instance.get_cell_field()\n        self.lattice = self.cell_field.lattice\n        self.lattice_size = self.lattice.size\n        self.cell_types = {'Epithelial': 1}\n        self.cell_id = self.cell_types['Epithelial']\n        \n        # Set initial cell\n        self.initial_cell = self.lattice.find_cell_by_type(self.cell_id)\n        if not self.initial_cell:\n            self.initial_cell = self.lattice.create_cell(self.cell_id, self.lattice.size // 2)\n        self.initial_cell.volume = 1\n        self.initial_cell.cell_cycle = 0\n\n        # Set cell parameters\n        self.proliferation_rate = 0.1\n        self.cell_cycle_duration = 100\n\n    def step(self, mcs):\n        if mcs >= self.simulation_duration:\n            return\n\n        # Update cell cycle\n        for cell in self.cell_field.cells:\n            if cell.type == self.cell_id:\n                cell.cell_cycle += 1\n                if cell.cell_cycle >= self.cell_cycle_duration:\n                    self.divide_cell(cell)\n\n    def divide_cell(self, cell):\n        # Check if cell can divide\n        if cell.volume > 1:\n            # Divide the cell\n            self.lattice.create_cell_in_neighbor_position(cell, cell.position)\n            cell.volume = 1\n            cell.cell_cycle = 0\n\nCompuCellSetup.simulation = Simulation(CompuCellSetup.instance, None)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_03_Paper_3_0618_0157_run1\\generated_cc3d_model.cc3d"
+  }
+}

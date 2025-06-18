@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:41:58.958875",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import *\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _num_cells):\n        SteppableBasePy.__init__(self, _simulator)\n        self.num_cells = _num_cells\n        self.simulator = _simulator\n        self.simulator.setSimulationDimensions(50, 50, 1)\n        self.simulator.setSimulationTime(1000, 1)\n        \n    def start(self):\n        self.cell_field = self.simulator.getCellField()\n        self.cell_field.initialize()\n        self.create_cells()\n        \n    def step(self, mcs):\n        self.simulator.updateCellPositions()\n        if mcs % 50 == 0:\n            self.divide_cells()\n            \n    def create_cells(self):\n        cell = self.simulator.createCell(0, \"Epithelial\")\n        cell.volume = 10\n        cell.targetVolume = 10\n        cell.position = (25, 25, 0)\n        self.cell_field.addCell(cell)\n        \n    def divide_cells(self):\n        for cell in self.simulator.cellList:\n            if cell.type == \"Epithelial\":\n                cell.targetVolume *= 2\n                self.simulator.divideCell(cell, 0)\n                \ndef main():\n    simulator = CompuCell3D()\n    simulator.init()\n    simulator.addSteerable(Simulation, _num_cells=1)\n    simulator.run()\n    \nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_08_Paper_8_0618_0240_run2\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,3304 @@
+=== Run 1 ===
+
+Experiment: week7-8
+Date: 20250617_171434
+Run Number: 1
+
+Initial Description:
+- E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed.
+
+Ontology Annotations:
+<think>
+
+
+Alright
+,
+ I
+ need
+ to
+ create
+ structured
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+.
+ The
+ user
+ is
+ a
+ biological
+ modeling
+ expert
+,
+ so
+ they
+ probably
+ want
+ a
+ detailed
+ and
+ accurate
+ JSON
+ object
+ that
+ includes
+ relevant
+ terms
+ from
+ Cell
+ Ont
+ology
+,
+ GO
+,
+ and
+ Me
+SH
+.
+
+
+First
+,
+ I
+'ll
+ read
+ through
+ the
+ original
+ description
+ carefully
+.
+ It
+ talks
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ and
+ their
+ roles
+ in
+ prote
+ol
+ysis
+ and
+ transcription
+.
+ They
+ mention
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+ and
+ transcription
+al
+ activation
+.
+ They
+ also
+ used
+ mathematical
+ modeling
+ to
+ study
+ the
+ design
+ principles
+ and
+ found
+ that
+ these
+ lig
+ases
+ act
+ like
+ a
+ safety
+ inter
+lock
+ to
+ prevent
+ sustained
+ gene
+ activation
+ when
+ destabil
+ized
+.
+
+
+Now
+,
+ I
+ need
+ to
+ break
+ this
+ down
+ into
+ different
+ ont
+ologies
+.
+ Let
+'s
+ start
+ with
+ Cell
+ Ont
+ology
+.
+ The
+ main
+ cell
+ types
+ involved
+ are
+ probably
+ E
+3
+ ubiqu
+itin
+ lig
+ase
+ proteins
+.
+ I
+'ll
+ look
+ up
+ the
+ exact
+ Cell
+ Ont
+ology
+ term
+ for
+ that
+.
+ Then
+,
+ the
+ processes
+ mentioned
+ are
+ prote
+ol
+ysis
+,
+ transcription
+,
+ and
+ gene
+ regulation
+.
+ I
+'ll
+ find
+ the
+ appropriate
+ terms
+ for
+ each
+.
+
+
+Next
+,
+ for
+ Gene
+ Ont
+ology
+ (
+GO
+),
+ I
+ should
+ consider
+ both
+ biological
+ processes
+ and
+ molecular
+ functions
+.
+ Prote
+ol
+ysis
+ is
+ a
+ biological
+ process
+,
+ so
+ I
+'ll
+ include
+ that
+.
+ Trans
+cription
+al
+ activation
+ is
+ another
+ process
+.
+ Molecular
+ functions
+ would
+ include
+ ubiqu
+itin
+ lig
+ase
+ activity
+ and
+ protein
+ binding
+ since
+ E
+3
+ lig
+ases
+ interact
+ with
+ other
+ proteins
+.
+
+
+Moving
+ on
+ to
+ Me
+SH
+ terms
+,
+ which
+ are
+ more
+ general
+.
+ I
+'ll
+ include
+ Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+,
+ Trans
+cription
+,
+ Gene
+ Expression
+ Regulation
+,
+ and
+ Prote
+ol
+ysis
+.
+ These
+ terms
+ are
+ broad
+ and
+ fit
+ well
+ within
+ the
+ Me
+SH
+ framework
+.
+
+
+I
+ should
+ also
+ think
+ about
+ any
+ other
+ relevant
+ terms
+.
+ The
+ study
+ mentions
+ mathematical
+ modeling
+,
+ so
+ maybe
+ including
+ that
+ as
+ a
+ Me
+SH
+ term
+ would
+ be
+ useful
+.
+ It
+'s
+ a
+ bit
+ more
+ specific
+ but
+ still
+ relevant
+.
+
+
+Now
+,
+ I
+'ll
+ structure
+ this
+ into
+ a
+ JSON
+ object
+.
+ I
+'ll
+ have
+ separate
+ categories
+ for
+ each
+ ontology
+ type
+:
+ Cell
+ Ont
+ology
+,
+ Gene
+ Ont
+ology
+,
+ and
+ Me
+SH
+.
+ Each
+ category
+ will
+ have
+ its
+ own
+ terms
+ listed
+ as
+ arrays
+.
+
+
+I
+ need
+ to
+ ensure
+ that
+ each
+ term
+ is
+ correctly
+ referenced
+.
+ For
+ example
+,
+ in
+ Cell
+ Ont
+ology
+,
+ E
+3
+ ubiqu
+itin
+ lig
+ase
+ is
+ CL
+:
+000
+267
+8
+.
+ I
+'ll
+ double
+-check
+ these
+ IDs
+ to
+ make
+ sure
+ they
+'re
+ accurate
+.
+
+
+Putting
+ it
+ all
+ together
+,
+ the
+ JSON
+ should
+ have
+ three
+ main
+ keys
+:
+ cell
+_
+ontology
+,
+ gene
+_
+ontology
+,
+ and
+ mesh
+.
+ Each
+ key
+ will
+ map
+ to
+ an
+ object
+ with
+ process
+ and
+ function
+ terms
+ where
+ applicable
+.
+
+
+I
+ should
+ also
+ consider
+ if
+ there
+ are
+ any
+ other
+ processes
+ or
+ functions
+ I
+ might
+ have
+ missed
+.
+ For
+ instance
+,
+ the
+ mention
+ of
+ design
+ principles
+ and
+ safety
+ inter
+lock
+ is
+ more
+ about
+ the
+ system
+'s
+ function
+,
+ but
+ since
+ it
+'s
+ a
+ modeling
+ study
+,
+ maybe
+ including
+ terms
+ related
+ to
+ systems
+ biology
+ or
+ mathematical
+ modeling
+ under
+ Me
+SH
+ would
+ add
+ value
+.
+
+
+Finally
+,
+ I
+'ll
+ review
+ the
+ JSON
+ structure
+ to
+ ensure
+ it
+'s
+ correctly
+ formatted
+,
+ with
+ proper
+ commas
+ and
+ brackets
+.
+ Each
+ term
+ should
+ be
+ a
+ string
+ within
+ its
+ respective
+ array
+.
+
+</think>
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+cell
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+CL
+:
+000
+267
+8
+",
+
+       
+ "
+name
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+gene
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+020
+9
+",
+
+       
+ "
+name
+":
+ "
+protein
+ modification
+ by
+ small
+ protein
+ conjug
+ation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+635
+1
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+651
+1
+",
+
+       
+ "
+name
+":
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+813
+4
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+ factor
+ binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+001
+656
+7
+",
+
+       
+ "
+name
+":
+ "
+protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+003
+139
+7
+",
+
+       
+ "
+name
+":
+ "
+negative
+ regulation
+ of
+ protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+004
+594
+4
+",
+
+       
+ "
+name
+":
+ "
+positive
+ regulation
+ of
+ transcription
+ from
+ RNA
+ polymer
+ase
+ II
+ promoter
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+005
+108
+5
+",
+
+       
+ "
+name
+":
+ "
+reg
+ulation
+ of
+ prote
+as
+omal
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+mesh
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+000
+442
+",
+
+       
+ "
+name
+":
+ "
+Math
+ematic
+al
+ Modeling
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+020
+822
+",
+
+       
+ "
+name
+":
+ "
+Pro
+te
+ol
+ysis
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+045
+345
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+051
+359
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+054
+321
+",
+
+       
+ "
+name
+":
+ "
+Trans
+cription
+,
+ Genetic
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+055
+778
+",
+
+       
+ "
+name
+":
+ "
+Gene
+ Expression
+ Regulation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+063
+801
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+064
+577
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Stability
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+065
+424
+",
+
+       
+ "
+name
+":
+ "
+Systems
+ Biology
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+Ontology Annotations:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+cell
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+CL
+:
+000
+026
+78
+",
+
+       
+ "
+name
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+gene
+_
+ontology
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+020
+9
+",
+
+       
+ "
+name
+":
+ "
+protein
+ modification
+ by
+ small
+ protein
+ conjug
+ation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+635
+1
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+651
+1
+",
+
+       
+ "
+name
+":
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+000
+813
+4
+",
+
+       
+ "
+name
+":
+ "
+trans
+cription
+ factor
+ binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+001
+656
+7
+",
+
+       
+ "
+name
+":
+ "
+protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+003
+139
+7
+",
+
+       
+ "
+name
+":
+ "
+negative
+ regulation
+ of
+ protein
+ ubiqu
+it
+ination
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+004
+594
+4
+",
+
+       
+ "
+name
+":
+ "
+positive
+ regulation
+ of
+ transcription
+ from
+ RNA
+ polymer
+ase
+ II
+ promoter
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+GO
+:
+005
+108
+5
+",
+
+       
+ "
+name
+":
+ "
+reg
+ulation
+ of
+ prote
+as
+omal
+ protein
+ c
+atab
+ol
+ism
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+mesh
+":
+ {
+
+   
+ "
+terms
+":
+ [
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+000
+442
+",
+
+       
+ "
+name
+":
+ "
+Math
+ematic
+al
+ Modeling
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+020
+822
+",
+
+       
+ "
+name
+":
+ "
+Pro
+te
+ol
+ysis
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+045
+345
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+051
+359
+",
+
+       
+ "
+name
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+054
+321
+",
+
+       
+ "
+name
+":
+ "
+Trans
+cription
+,
+ Genetic
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+055
+778
+",
+
+       
+ "
+name
+":
+ "
+Gene
+ Expression
+ Regulation
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+063
+801
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Binding
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+064
+577
+",
+
+       
+ "
+name
+":
+ "
+Pro
+tein
+ Stability
+"
+
+     
+ },
+
+     
+ {
+
+       
+ "
+id
+":
+ "
+D
+065
+424
+",
+
+       
+ "
+name
+":
+ "
+Systems
+ Biology
+"
+
+     
+ }
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week7-8
+Date: 20250617_171726
+Run Number: 2
+
+Initial Description:
+- E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed.
+
+Ontology Annotations:
+<think>
+
+
+Alright
+,
+ I
+ need
+ to
+ create
+ structured
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+.
+ The
+ user
+ has
+ asked
+ for
+ a
+ JSON
+ object
+ that
+ includes
+ categories
+ for
+ different
+ ontology
+ types
+,
+ specifically
+ Cell
+ Ont
+ology
+,
+ GO
+,
+ and
+ Me
+SH
+ terms
+ where
+ applicable
+.
+
+
+First
+,
+ I
+'ll
+ read
+ through
+ the
+ original
+ description
+ and
+ clar
+ifications
+ carefully
+ to
+ understand
+ the
+ key
+ concepts
+.
+ The
+ description
+ talks
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ being
+ involved
+ in
+ prote
+ol
+ysis
+ via
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+ and
+ also
+ in
+ transcription
+.
+ The
+ study
+ uses
+ mathematical
+ modeling
+ to
+ explore
+ how
+ these
+ lig
+ases
+ can
+ have
+ antagon
+istic
+ functions
+,
+ acting
+ as
+ a
+ safety
+ mechanism
+ similar
+ to
+ an
+ engineering
+ inter
+lock
+.
+
+
+I
+'ll
+ start
+ by
+ identifying
+ the
+ main
+ biological
+ entities
+ mentioned
+.
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ are
+ clearly
+ the
+ central
+ focus
+.
+ Prote
+ol
+ysis
+ and
+ transcription
+ are
+ the
+ two
+ primary
+ processes
+ they
+'re
+ involved
+ in
+.
+ The
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+ is
+ another
+ key
+ term
+,
+ as
+ well
+ as
+ mathematical
+ modeling
+ and
+ the
+ safety
+ inter
+lock
+ mechanism
+.
+
+
+Next
+,
+ I
+'ll
+ map
+ these
+ to
+ the
+ appropriate
+ ont
+ologies
+.
+ For
+ the
+ Cell
+ Ont
+ology
+,
+ I
+'ll
+ look
+ for
+ terms
+ related
+ to
+ E
+3
+ lig
+ases
+,
+ prote
+ol
+ysis
+,
+ and
+ transcription
+.
+ The
+ GO
+ terms
+ should
+ cover
+ biological
+ processes
+ like
+ prote
+ol
+ysis
+,
+ transcription
+,
+ and
+ regulation
+ of
+ gene
+ expression
+.
+ Me
+SH
+ terms
+ will
+ be
+ broader
+,
+ covering
+ topics
+ like
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+,
+ mathematical
+ models
+,
+ and
+ systems
+ biology
+.
+
+
+I
+ need
+ to
+ ensure
+ that
+ each
+ term
+ is
+ correctly
+ referenced
+.
+ For
+ example
+,
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ might
+ map
+ to
+ terms
+ like
+ '
+ub
+iqu
+itin
+ lig
+ase
+'
+ in
+ Cell
+ Ont
+ology
+.
+ Prote
+ol
+ysis
+ could
+ be
+ '
+pro
+te
+as
+omal
+ protein
+ c
+atab
+olic
+ process
+'
+ in
+ GO
+.
+ Me
+SH
+ terms
+ might
+ include
+ '
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+'
+ and
+ '
+Models
+,
+ Biological
+'.
+
+
+I
+'ll
+ structure
+ the
+ JSON
+ with
+ separate
+ categories
+ for
+ each
+ ontology
+ type
+.
+ Each
+ category
+ will
+ be
+ an
+ array
+ of
+ objects
+,
+ each
+ containing
+ the
+ term
+ and
+ its
+ ID
+.
+ I
+'ll
+ make
+ sure
+ the
+ IDs
+ are
+ accurate
+ and
+ correspond
+ to
+ the
+ correct
+ terms
+ in
+ each
+ ontology
+.
+
+
+I
+ should
+ also
+ consider
+ if
+ there
+ are
+ any
+ other
+ relevant
+ terms
+.
+ For
+ instance
+,
+ the
+ study
+ mentions
+ mathematical
+ modeling
+,
+ so
+ including
+ terms
+ related
+ to
+ that
+ in
+ GO
+ and
+ Me
+SH
+ makes
+ sense
+.
+ The
+ safety
+ inter
+lock
+ mechanism
+ is
+ an
+ engineering
+ concept
+,
+ but
+ in
+ biological
+ terms
+,
+ it
+ relates
+ to
+ system
+ stability
+,
+ so
+ I
+'ll
+ include
+ terms
+ that
+ reflect
+ that
+.
+
+
+Finally
+,
+ I
+'ll
+ review
+ the
+ JSON
+ structure
+ to
+ ensure
+ it
+'s
+ properly
+ formatted
+ and
+ that
+ each
+ term
+ is
+ correctly
+ placed
+ under
+ its
+ respective
+ ontology
+.
+ I
+'ll
+ double
+-check
+ the
+ IDs
+ and
+ terms
+ to
+ make
+ sure
+ they
+'re
+ accurate
+ and
+ relevant
+ to
+ the
+ provided
+ information
+.
+
+</think>
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+012
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+013
+4
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+014
+1
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+015
+6
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+as
+omal
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+026
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+ by
+ RNA
+ polymer
+ase
+ II
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+636
+6
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+tein
+ ubiqu
+it
+ination
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+656
+7
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ Ub
+iqu
+itin
+ Lig
+ases
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+D
+011
+037
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+id
+":
+ "
+D
+013
+736
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Math
+ematic
+al
+ Modeling
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+Ontology Annotations:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ that
+ represents
+ the
+ ontology
+ annotations
+ for
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ based
+ on
+ the
+ provided
+ information
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+012
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+013
+4
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+014
+1
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+015
+6
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+as
+omal
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+026
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+ by
+ RNA
+ polymer
+ase
+ II
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+636
+6
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+tein
+ ubiqu
+it
+ination
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+656
+7
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ Ub
+iqu
+itin
+ Lig
+ases
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+D
+011
+037
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+id
+":
+ "
+D
+013
+736
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Math
+ematic
+al
+ Modeling
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+
+==================================================

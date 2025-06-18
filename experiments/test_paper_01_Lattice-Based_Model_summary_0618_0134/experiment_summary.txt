@@ -1,0 +1,30 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_01_Lattice-Based_Model
+Generated: 2025-06-18 01:34:47
+Total Runs: 3
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists characterize DCIS by four tissue morphologies (micropapillary, cribriform, solid, and comedo), but the underlying mechanisms that distinguish the development and progression of these morphologies are not well understood. Here we explored the conditions leading to the emergence of the different morphologies of DCIS using a two-dimensional multi-cell lattice-based model that incorporates cell proliferation, apoptosis, necrosis, adhesion, and contractility. We found that the relative rates of cell proliferation and apoptosis governed which of the four morphologies emerged. High proliferation and low apoptosis favored the emergence of solid and comedo morphologies. In contrast, low proliferation and high apoptosis led to the micropapillary morphology, whereas high proliferation and high apoptosis led to the cribriform morphology. The natural progression between morphologies cannot be investigated in vivo since lesions are usually surgically removed upon detection; however, our model suggests probable transitions between these morphologies during breast cancer progression. Importantly, cribriform and comedo appear to be the ultimate morphologies of DCIS. Motivated by previous experimental studies demonstrating that tumor cells behave differently depending on where they are located within the mammary duct in vivo or in engineered tissues, we examined the effects of tissue geometry on the progression of DCIS. In agreement with our previous experimental work, we found that cells are more likely to invade from the end of ducts and that this preferential invasion is regulated by cell adhesion and contractility. This model provides additional insight into tumor cell behavior and allows the exploration of phenotypic transitions not easily monitored in vivo.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: paper_01_Lattice-Based_Model_0618_0126_run1
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0126_run1
+  Timestamp: 0618_0126
+  Interactions: 4
+  CC3D Model: 2908 bytes
+
+Run 2: paper_01_Lattice-Based_Model_0618_0130_run2
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0130_run2
+  Timestamp: 0618_0130
+  Interactions: 4
+  CC3D Model: 4715 bytes
+
+Run 3: paper_01_Lattice-Based_Model_0618_0132_run3
+  Directory: experiments\paper_01_Lattice-Based_Model_0618_0132_run3
+  Timestamp: 0618_0132
+  Interactions: 4
+  CC3D Model: 2940 bytes

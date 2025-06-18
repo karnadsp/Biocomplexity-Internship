@@ -1,0 +1,1129 @@
+=== Run 1 ===
+
+Experiment: week4-7
+Date: 20250617_162545
+Run Number: 1
+
+Generated CC3D Code:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+description
+":
+ "
+A
+ type
+ of
+ enzyme
+ that
+ acts
+ as
+ the
+ third
+ component
+ (
+E
+3
+)
+ in
+ the
+ ubiqu
+it
+ination
+ process
+,
+ determining
+ the
+ specificity
+ of
+ protein
+ degradation
+ in
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+description
+":
+ "
+A
+ cellular
+ system
+ responsible
+ for
+ the
+ degradation
+ of
+ proteins
+,
+ involving
+ ubiqu
+it
+ination
+ and
+ subsequent
+ prote
+as
+omal
+ degradation
+."
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ breaking
+ down
+ proteins
+ into
+ smaller
+ peptides
+ or
+ amino
+ acids
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+650
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+al
+ activation
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ by
+ which
+ a
+ gene
+'s
+ expression
+ is
+ increased
+ through
+ the
+ activation
+ of
+ transcription
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+656
+3
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+description
+":
+ "
+Any
+ process
+ that
+ mod
+ulates
+ the
+ expression
+ of
+ genes
+,
+ including
+ transcription
+al
+ and
+ post
+-trans
+cription
+al
+ regulation
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+ lig
+ase
+ activity
+",
+
+     
+ "
+description
+":
+ "
+C
+atal
+ysis
+ of
+ the
+ transfer
+ of
+ ubiqu
+itin
+ to
+ a
+ substrate
+ protein
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+484
+2
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+description
+":
+ "
+A
+ system
+ of
+ cellular
+ enzymes
+ that
+ recognize
+,
+ conjug
+ate
+,
+ and
+ degrade
+ specific
+ proteins
+,
+ thereby
+ regulating
+ the
+ turnover
+ of
+ proteins
+ within
+ the
+ cell
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Gene
+ Expression
+ Regulation
+",
+
+     
+ "
+description
+":
+ "
+Any
+ of
+ the
+ processes
+ by
+ which
+ cellular
+ or
+ viral
+ genes
+ are
+ turned
+ on
+ or
+ turned
+ off
+,
+ including
+ gene
+ activation
+ and
+ gene
+ repression
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ synthes
+izing
+ RNA
+ from
+ DNA
+,
+ carried
+ out
+ by
+ RNA
+ polymer
+ase
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Models
+,
+ The
+oretical
+",
+
+     
+ "
+description
+":
+ "
+The
+oretical
+ models
+ that
+ describe
+ or
+ explain
+ biological
+ processes
+ or
+ phenomena
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+description
+":
+ "
+An
+ interdisciplinary
+ approach
+ that
+ combines
+ biological
+ sciences
+ with
+ engineering
+ and
+ mathematical
+ sciences
+ to
+ understand
+ complex
+ biological
+ systems
+."
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+CC3D File Created: experiments\week4-7_20250617_162545_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week4-7
+Date: 20250617_162816
+Run Number: 2
+
+Generated CC3D Code:
+
+
+
+Here
+ is
+ the
+ structured
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+   
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+   
+ "
+pro
+te
+ol
+ysis
+",
+
+   
+ "
+cell
+ nucleus
+",
+
+   
+ "
+trans
+cription
+al
+ activation
+"
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ {
+
+   
+ "
+Bi
+ological
+ Process
+":
+ [
+
+     
+ "
+protein
+ ubiqu
+it
+ination
+",
+
+     
+ "
+pro
+te
+ol
+ysis
+",
+
+     
+ "
+trans
+cription
+ regulation
+",
+
+     
+ "
+gene
+ expression
+"
+
+   
+ ],
+
+   
+ "
+M
+olecular
+ Function
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+ lig
+ase
+ activity
+",
+
+     
+ "
+trans
+cription
+ factor
+ activity
+"
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+   
+ "
+Pro
+te
+ol
+ysis
+",
+
+   
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+   
+ "
+Gene
+ Expression
+",
+
+   
+ "
+Math
+ematic
+al
+ Modeling
+",
+
+   
+ "
+Systems
+ Biology
+",
+
+   
+ "
+Engineering
+"
+
+ 
+ ]
+
+}
+
+```
+
+
+CC3D File Created: experiments\week4-7_20250617_162816_run2\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 3 ===
+
+Experiment: week4-7
+Date: 20250617_162928
+Run Number: 3
+
+Generated CC3D Code:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ containing
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ {
+
+   
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+   
+ "
+Pro
+te
+ol
+ysis
+":
+ "
+pro
+te
+ol
+ysis
+",
+
+   
+ "
+Trans
+cription
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+",
+
+   
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+":
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+"
+
+ 
+ },
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ {
+
+   
+ "
+Bi
+ological
+ Process
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+   
+ ],
+
+   
+ "
+M
+olecular
+ Function
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+
+   
+ ],
+
+   
+ "
+Cell
+ular
+ Component
+":
+ [
+
+     
+ "
+pro
+te
+as
+ome
+"
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+Me
+SH
+":
+ {
+
+   
+ "
+Terms
+":
+ [
+
+     
+ "
+Ub
+iqu
+itin
+",
+
+     
+ "
+Pro
+te
+as
+ome
+",
+
+     
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+",
+
+     
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+Models
+,
+ Biological
+",
+
+     
+ "
+Systems
+ Biology
+",
+
+     
+ "
+Safety
+",
+
+     
+ "
+Engineering
+"
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+CC3D File Created: experiments\week4-7_20250617_162928_run3\generated_cc3d_model.cc3d
+
+
+==================================================

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:48:03.084899",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy, MitosisSteppable, GrowthSteppable\n\nclass CellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        super().__init__(_simulator, _frequency)\n        self.simulator = _simulator\n        self.simulatorThread = _simulator.simulatorThread\n        self.cellTypes = {'Default': 0}\n        self.nucleusSize = 1.0\n\n    def start(self):\n        self.simulator.getMitosisSteppable().setVolumeMax(100.0)\n        self.simulator.getMitosisSteppable().setVolumeMin(50.0)\n        self.simulator.getMitosisSteppable().setMitosisDistance('0.0')\n        self.simulator.getMitosisSteppable().setNeighborDistance('0.0')\n        self.simulator.getMitosisSteppable().setAnisotropy(1.0)\n        self.simulator.getMitosisSteppable().setRandomness(0.0)\n        self.simulator.getGrowthSteppable().setGrowthRate(0.01)\n        self.simulator.getGrowthSteppable().set GrowthLimit(100.0)\n\n        cell = self.simulator.createCell()\n        cell.cellType = self.cellTypes['Default']\n        cell.volume = 50.0\n        cell.nucleusVolume = self.nucleusSize\n        cell.targetVolume = 50.0\n        cell.growthRate = 0.01\n        cell.position = [10.0, 10.0, 0.0]\n        self.simulator.addCellToSimulation(cell)\n\n    def step(self, mcs):\n        pass\n\n    def finish(self):\n        pass\n\nsim = Simulator()\nsim.simulation_name = \"CellProliferationSimulation\"\nsim.simulation_dims = [20, 20, 1]\nsim.min_simulation_time = 0\nsim.max_simulation_time = 1000\nsim.time_step = 1.0\nsim.save_output_frequency = 100\n\nsim.init()\nsim.add_steppable(CellProliferationSimulation(sim, 1))\nsim.add_steppable(MitosisSteppable(sim, 10))\nsim.add_steppable(GrowthSteppable(sim, 1))\n\nsim.run()"
+  },
+  "output": {
+    "output_file": "experiments\\Trial8_0618_0046_run3\\generated_cc3d_model.cc3d"
+  }
+}

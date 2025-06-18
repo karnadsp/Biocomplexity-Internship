@@ -1,0 +1,289 @@
+Experiment: week4-7
+Date: 20250617_162928
+Run Number: 3
+
+Generated CC3D Code:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ containing
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ {
+
+   
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+   
+ "
+Pro
+te
+ol
+ysis
+":
+ "
+pro
+te
+ol
+ysis
+",
+
+   
+ "
+Trans
+cription
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+",
+
+   
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+":
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+"
+
+ 
+ },
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ {
+
+   
+ "
+Bi
+ological
+ Process
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+   
+ ],
+
+   
+ "
+M
+olecular
+ Function
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+
+   
+ ],
+
+   
+ "
+Cell
+ular
+ Component
+":
+ [
+
+     
+ "
+pro
+te
+as
+ome
+"
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+Me
+SH
+":
+ {
+
+   
+ "
+Terms
+":
+ [
+
+     
+ "
+Ub
+iqu
+itin
+",
+
+     
+ "
+Pro
+te
+as
+ome
+",
+
+     
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+",
+
+     
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+Models
+,
+ Biological
+",
+
+     
+ "
+Systems
+ Biology
+",
+
+     
+ "
+Safety
+",
+
+     
+ "
+Engineering
+"
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+CC3D File Created: experiments\week4-7_20250617_162928_run3\generated_cc3d_model.cc3d

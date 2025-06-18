@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:25:03.699677",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, PyOpenGLSteppable\nfrom PyOpenGL import *\nimport os\n\nclass CellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.num_cells = 100\n        self.simulation_duration = 1000  # simulation steps\n\n    def start(self):\n        # Initialize simulation\n        self.simulator.setSimulationDuration(self.simulation_duration)\n        \n        # Create gland object\n        gland = self.simulator.getGland()\n        \n        # Define cell type\n        cell_type = 'Epithelial'\n        cell_type_id = 0\n        \n        # Set cell properties\n        self.simulator.setNumberofCells(self.num_cells)\n        self.simulator.setCellSize(1)\n        self.simulator.setCellPositionRandom()\n        self.simulator.setVolume(100, 100, 1)\n        self.simulator.setTimeStep(1.0)\n        \n        # Set output directory\n        self.simulator.setOutputDirectory('cell_proliferation_simulation')\n\n    def step(self, mcs):\n        # Calculate number of cells\n        num_cells = self.simulator.getNumberofCells()\n        print(f\"Number of cells at step {mcs}: {num_cells}\")\n\n# Create visualization\nvisualization = PyOpenGLSteppable(name='CellProliferation', frequency=10)\n\n# Run simulation\nsim = CellProliferationSimulation(None)\nCompuCellSetup.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_13_Paper_13_0618_0323_run4\\generated_cc3d_model.cc3d"
+  }
+}

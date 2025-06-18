@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:23:26.984414",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _num_cells):\n        SteppableBasePy.__init__(self, _simulator)\n        self.num_cells = _num_cells\n        self.cell_type = 'Epithelial'\n        self cell_diameter = 2.0\n\n    def start(self):\n        cell = self.cell_field.new_cell(self.cell_type)\n        cell.position = (10, 10)\n        cell.volume = 1\n        cell.diameter = self.cell_diameter\n\n    def step(self, mcs):\n        if mcs == 100:\n            cell = self.cell_field.get_cell_at_position((10, 10))\n            if cell.volume > 100:\n                cell.divide()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_13_Paper_13_0618_0322_run3\\generated_cc3d_model.cc3d"
+  }
+}

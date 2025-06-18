@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:44:17.987754",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import SteppableBasePy, PySteppable\nfrom CompuCell3D.PyModules import Cell\nfrom CompuCell3D import Simulations\n\nclass CellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.step_number = 0\n        self.priority = 10  # Higher priority to run after other steppables\n\n    def start(self):\n        # Initialize simulation with cell types and parameters\n        self.cell_type = self.simulator.get_cell_type('Epithelial')\n        self.cell_division = self.simulator.get_cell_type('Cell Division')\n        self.cell_proliferation = self.simulator.get_cell_type('Cell Proliferation')\n        print(\"Simulation started with cell types: Epithelial, Cell Division, Cell Proliferation\")\n\n    def step(self):\n        # Logic to handle cell proliferation and division\n        self.step_number += 1\n        print(f\"Simulation step: {self.step_number}\")\n        if self.step_number >= 100:\n            self.stopSimulation()\n\ndef main():\n    simulator = Simulations()\n    simulation = CellProliferationSimulation(simulator)\n    simulator.add_steppable(simulation)\n    simulator.set_output_directory(\"output\")\n    simulator.run(100, 10)  # Run 100 steps, output every 10 steps\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_01_Paper_1_0618_0141_run1\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T23:31:53.127258",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\npython \n from  Com pu Cell Setup  import  Sim ulator \n from  ste pp ables  import  *\n from  ste pp ables  import  Simple G rowth And Ap opt osis Ste pp able \n\n class  Mac roph age Simulation ( Ste pp able Base Py ):\n      def  __ init __( self ,  _ sim ulator ,  _ frequency = 1 ):\n          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ frequency )\n          self .sim ulator  =  _ sim ulator \n          self .sim ulator _name  =  \" Mac roph age Simulation \"\n\n      def  start (self ):\n          self .sim ulator .add _ste pp able (_ ste pp able =self )\n          self .sim ulator .add _ste pp able (S imple G rowth And Ap opt osis Ste pp able (\n              growth _rate = 0 . 01 ,\n              apoptosis _rate = 0 . 01 ,\n              cell _types =[ self .cell _type ]))\n         \n      def  step (self ,  m cs ):\n          if  m cs  %   10  ==   0 :\n              print (f \" Simulation  step :  { m cs }\")\n\n def  main ():\n      simulator  =  Simulator ()\n      simulator .add _ste pp able (M ac roph age Simulation (sim ulator ))\n      simulator .run ( 100 0 )\n\n if  __ name __  ==  \"__ main __\":\n      main ()"
+  },
+  "output": {
+    "output_file": "experiments\\experiment1_20250617_232950_run1\\generated_cc3d_model.cc3d"
+  }
+}

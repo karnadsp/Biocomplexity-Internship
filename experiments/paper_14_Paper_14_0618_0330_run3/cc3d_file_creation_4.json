@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:32:11.614283",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import *\nimport CompuCell\nimport numpy as np\nfrom steppables import *\nfrom mitosis-steppable import MitosisSteppable\n\nclass Simulation(SimulationCC3D):\n    def __init__(self):\n        SimulationCC3D.__init__(self)\n        \n    def start(self):\n        self.initializeSimulation()\n        \n    def step(self, mcs):\n        pass\n        \n    def initializeSimulation(self):\n        # Register cell types\n        self.registerCellType(\"Epithelial\", \"Epithelial\")\n        \n        # Initialize cell properties\n        self.cellTypePlugin[\"Epithelial\"].properties[\"color\"] = [255, 255, 255]\n        self.cellTypePlugin[\"Epithelial\"].properties[\"stiffness\"] = 1.0\n        self.cellTypePlugin[\"Epithelial\"].properties[\"adhesion\"] = 10.0\n        \n        # Add mitosis steppable\n        mitosis_steppable = MitosisSteppable()\n        mitosis_steppable.mitosisDistance = 2.0\n        mitosis_steppable.mitosisTargetCount = 20\n        self.addSteppable(mitosis_steppable)\n        \n        # Add initial cell\n        cell = self.makeCell(\"Epithelial\", [10, 10, 0])\n        self.cellFieldG[10, 10, 0] = cell\n        \nclass MitosisSteppable(SteppableBasePy):\n    def __init__(self):\n        SteppableBasePy.__init__(self)\n        self.mitosisDistance = 2.0\n        self.mitosisTargetCount = 20\n        \n    def start(self):\n        pass\n        \n    def step(self, mcs):\n        cells_to_divide = self.cellList\n        for cell in cells_to_divide:\n            if cell.volume > 20:\n                self.divideCellRandomOrientation(cell)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_14_Paper_14_0618_0330_run3\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,171 @@
+=== Run 1 ===
+
+Experiment: week4-attempt12
+Date: 20250617_220712
+Run Number: 1
+
+Initial Description:
+- This paper presents simulations of in vitro Epithelial to Mesenchymal Transition (EMT). The conditions of 2D migration on the surface, and 3D invasion into a collagen gel are represented as a cellular Potts model. The model demonstrates that a loss of endocardial adhesion is a sufficient condition for 2D migration behaviour, while a simultaneous loss of endocardial cohesion and gain in endocardial to collagen gel adhesion is a sufficient condition for 3D invasion. The 3D model captures the hierarchy effective surface tensions that correspond to the three experimental conditions of stable monolayer, 2D migration, and 3D invasion. A 2D cellular Potts model is used to investigate the relationship between cell shape changes, motility and adhesion during the condition of 2D migration.
+
+Ontology Annotations:
+<think> 
+ Okay ,  so  I  need  to  create  a  JSON  object  with  ontology  annotations  based  on  the  provided  information .  The  user  has  specified  that  I  should  use  Cell  Ont ology ,  GO ,  and  Me SH  terms  where  applicable .  Let  me  break  down  the  original  description  and  clar ifications  to  extract  the  relevant  terms .
+
+ First ,  the  paper  is  about  simulations  of  Ep ith elial  to  Mes ench ym al  Transition  ( EM T )  in  vitro .  So  E MT  is  a  key  term .  I 'll  need  to  find  the  corresponding  terms  in  each  ontology .
+
+ Looking  at  the  conditions  described :   2 D  migration  on  a  surface  and   3 D  invasion  into  a  collagen  gel .  These  are  cellular  behaviors ,  so  I  should  find  terms  related  to  cell  migration  and  invasion .  Also ,  the  model  used  is  a  cellular  P otts  model ,  which  is  a  computational  method ,  so  I 'll  need  terms  related  to  that .
+
+ The  model  shows  that  loss  of  end ocard ial  ad hesion  is  sufficient  for   2 D  migration ,  while  loss  of  cohesion  and  increased  ad hesion  to  collagen  gel  enables   3 D  invasion .  So  terms  related  to  cell  ad hesion ,  cohesion ,  and  specifically  end ocard ial  cells  are  important .
+
+ The   3 D  model  captures  surface  tensions  corresponding  to  stable  mon ol ayer ,   2 D  migration ,  and   3 D  invasion .  So  terms  related  to  cell  shape  changes ,  mot ility ,  and  ad hesion  during   2 D  migration  are  also  relevant .
+
+ Now ,  mapping  these  to  the  ont ologies :
+
+ Cell  Ont ology  ( CL )  terms :
+ -  Ep ith elial  cell  ( CL : 000 005 7 )
+ -  Mes ench ym al  cell  ( CL : 000 036 6 )
+ -  End ocard ial  cell  ( CL : 000 254 2 )
+ -  Coll agen  gel  ( I 'm  not  sure  if  there 's  a  specific  CL  term  for  this ,  maybe  under  extr acellular  matrix  components )
+ -  Cellular  P otts  model  ( CL : 000 070 0 )
+
+ GO  terms :
+ -  Ep ith elial  to  mes ench ym al  transition  ( GO : 001 071 8 )
+ -  Cell  migration  ( GO : 001 647 7 )
+ -  Cell  ad hesion  ( GO : 000 715 5 )
+ -  Cell  mot ility  ( GO : 004 001 2 )
+ -  Cell  shape  changes  ( GO : 003 003 2 )
+ -  Extr acellular  matrix  ( GO : 003 101 2 )
+
+ Me SH  terms :
+ -  Ep ith elial -M es ench ym al  Transition  ( D 053 595 )
+ -  Cell  Migration  ( D 002 469 )
+ -  Cell  Ad hesion  ( D 002 469 )
+ -  Coll agen  ( D 003 094 )
+ -  Models ,  Biological  ( D 001 490 )
+ -  Computer  Simulation  ( D 016 211 )
+
+ I  think  I 've  covered  all  the  necessary  terms .  Now ,  I 'll  structure  them  into  a  JSON  object  with  each  ontology  as  a  key  and  an  array  of  terms  as  values .
+ </think> 
+
+ ``` json 
+ {
+    " Cell  Ont ology ":  [
+      " Ep ith elial  cell  ( CL : 000 005 7 )",
+      " Mes ench ym al  cell  ( CL : 000 036 6 )",
+      " End ocard ial  cell  ( CL : 000 254 2 )",
+      " Coll agen  gel ",
+      " Cell ular  P otts  model  ( CL : 000 070 0 )"
+    ],
+    " Gene  Ont ology ":  [
+      " Ep ith elial  to  mes ench ym al  transition  ( GO : 001 071 8 )",
+      " Cell  migration  ( GO : 001 647 7 )",
+      " Cell  ad hesion  ( GO : 000 715 5 )",
+      " Cell  mot ility  ( GO : 004 001 2 )",
+      " Cell  shape  changes  ( GO : 003 003 2 )",
+      " Ex tr acellular  matrix  ( GO : 003 101 2 )"
+    ],
+    " Me SH ":  [
+      " Ep ith elial -M es ench ym al  Transition  ( D 053 595 )",
+      " Cell  Migration  ( D 002 469 )",
+      " Cell  Ad hesion  ( D 002 469 )",
+      " Coll agen  ( D 003 094 )",
+      " Models ,  Biological  ( D 001 490 )",
+      " Computer  Simulation  ( D 016 211 )"
+    ]
+ }
+ ``` 
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week4-attempt12
+Date: 20250617_221038
+Run Number: 2
+
+Initial Description:
+- This paper presents simulations of in vitro Epithelial to Mesenchymal Transition (EMT). The conditions of 2D migration on the surface, and 3D invasion into a collagen gel are represented as a cellular Potts model. The model demonstrates that a loss of endocardial adhesion is a sufficient condition for 2D migration behaviour, while a simultaneous loss of endocardial cohesion and gain in endocardial to collagen gel adhesion is a sufficient condition for 3D invasion. The 3D model captures the hierarchy effective surface tensions that correspond to the three experimental conditions of stable monolayer, 2D migration, and 3D invasion. A 2D cellular Potts model is used to investigate the relationship between cell shape changes, motility and adhesion during the condition of 2D migration.
+
+Ontology Annotations:
+<think> 
+ Okay ,  I  need  to  create  a  JSON  object  with  ontology  annotations  based  on  the  provided  paper  description .  The  user  wants  me  to  include  terms  from  Cell  Ont ology ,  GO ,  and  Me SH  where  applicable .  
+
+ First ,  I 'll  read  through  the  paper  description  to  understand  the  key  concepts .  The  paper  is  about  simulations  of  Ep ith elial  to  Mes ench ym al  Transition  ( EM T )  in  vitro .  They  use  a  cellular  P otts  model  to  simulate   2 D  migration  on  a  surface  and   3 D  invasion  into  a  collagen  gel .  The  model  shows  that  losing  end ocard ial  ad hesion  is  enough  for   2 D  migration ,  while  losing  cohesion  and  gaining  ad hesion  to  collagen  enables   3 D  invasion .  The   3 D  model  captures  surface  tensions  corresponding  to  three  experimental  conditions :  stable  mon ol ayer ,   2 D  migration ,  and   3 D  invasion .  A   2 D  model  investigates  cell  shape  changes ,  mot ility ,  and  ad hesion  during   2 D  migration .
+
+ Now ,  I 'll  break  this  down  into  different  ontology  categories .
+
+ For  Cell  Ont ology ,  the  main  cell  types  involved  are  Ep ith elial  Cells  and  Mes ench ym al  Cells  since  E MT  is  about  their  transition .  The  cellular  processes  include  cell  migration ,  ad hesion ,  and  cohesion .  So ,  I 'll  map  these  to  their  respective  Cell  Ont ology  IDs .
+
+ Next ,  Gene  Ont ology  ( GO )  terms .  E MT  is  a  biological  process ,  so  GO : 000 175 1 .  Cell  migration  is  GO : 001 647 7 .  Cell  ad hesion  is  GO : 000 715 5 ,  and  cell  mot ility  is  GO : 004 887 0 .  These  should  cover  the  biological  processes  described .
+
+ Moving  to  Me SH  terms ,  E MT  isn 't  a  direct  Me SH  term ,  but  Ep ith elial -M es ench ym al  Transition  is .  Cell  migration  and  ad hesion  are  also  Me SH  terms .  Coll agen  g els  are  part  of  the  model ,  so  that 's  another  Me SH  term .  The  cellular  P otts  model  is  a  computational  method ,  so  I 'll  include  that  as  well .
+
+ I  need  to  ensure  each  term  is  correctly  mapped  to  its  ontology .  I 'll  structure  the  JSON  with  separate  sections  for  each  ontology  type ,  listing  the  relevant  terms  with  their  IDs  and  labels .
+
+ I  should  double -check  each  term  to  make  sure  they  accurately  represent  the  concepts  in  the  paper .  For  example ,  ensuring  that  the  Cell  Ont ology  terms  for  Ep ith elial  and  Mes ench ym al  cells  are  correct ,  and  that  the  GO  terms  cover  all  the  processes  mentioned .
+
+ Finally ,  I 'll  format  the  JSON  without  any  additional  explanations ,  just  the  structure  with  the  terms .  I 'll  make  sure  the  syntax  is  correct ,  with  proper  commas  and  brackets .
+ </think> 
+
+ ``` json 
+ {
+    " Cell  Ont ology ":  [
+      {
+        " id ":  " CL : 000 005 7 ",
+        " label ":  " ep ith elial  cell "
+      },
+      {
+        " id ":  " CL : 000 006 6 ",
+        " label ":  " mes ench ym al  cell "
+      },
+      {
+        " id ":  " CL : 000 002 3 ",
+        " label ":  " cell "
+      }
+    ],
+    " Gene  Ont ology ":  [
+      {
+        " id ":  " GO : 000 175 1 ",
+        " label ":  " ep ith elial  to  mes ench ym al  transition "
+      },
+      {
+        " id ":  " GO : 001 647 7 ",
+        " label ":  " cell  migration "
+      },
+      {
+        " id ":  " GO : 000 715 5 ",
+        " label ":  " cell  ad hesion "
+      },
+      {
+        " id ":  " GO : 004 887 0 ",
+        " label ":  " cell  mot ility "
+      }
+    ],
+    " Me SH ":  [
+      {
+        " id ":  " D 000 075 469 ",
+        " label ":  " ep ith elial -m es ench ym al  transition "
+      },
+      {
+        " id ":  " D 000 071 601 ",
+        " label ":  " cell  migration "
+      },
+      {
+        " id ":  " D 000 071 603 ",
+        " label ":  " cell  ad hesion "
+      },
+      {
+        " id ":  " D 000 071 604 ",
+        " label ":  " coll agen "
+      },
+      {
+        " id ":  " D 000 071 602 ",
+        " label ":  " gel "
+      }
+    ]
+ }
+ ``` 
+
+
+==================================================

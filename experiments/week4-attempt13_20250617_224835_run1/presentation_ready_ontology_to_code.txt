@@ -1,0 +1,69 @@
+Experiment: week4-attempt13
+Date: 20250617_224835
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup ,  ste pp ables 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+        
+      def  start (self ):
+          self .sim ulator .get Simulation Thread (). ste pping Rules  =  []
+          self .sim ulator .get Simulation Thread (). ste pping Rules .append (self )
+         
+          #  Initialize  simulation  parameters 
+          self .sim ulator .set Simulation Time ( 0 )
+          self .sim ulator .set Simulation Step ( 1 )
+          self .sim ulator .set NumberOf Steps ( 100 0 )
+         
+          #  Set  up  cell  types 
+          self .cell Types  =  {
+              ' Ep ith elial ':  {' id ':   1 ,  ' color ':  [ 255 ,   0 ,   0 ]},
+              ' Mes ench ym al ':  {' id ':   2 ,  ' color ':  [ 0 ,   255 ,   0 ]},
+              ' Coll agen ':  {' id ':   3 ,  ' color ':  [ 0 ,   0 ,   255 ]}
+          }
+         
+          #  Add  cells  to  the  simulation 
+          self .sim ulator .add Cell Type (self .cell Types [' Ep ith elial '][' id '],  self .cell Types [' Ep ith elial '][' color '])
+          self .sim ulator .add Cell Type (self .cell Types [' Mes ench ym al '][' id '],  self .cell Types [' Mes ench ym al '][' color '])
+          self .sim ulator .add Cell Type (self .cell Types [' Coll agen '][' id '],  self .cell Types [' Coll agen '][' color '])
+         
+          #  Set  up  initial  cell  placement 
+          self .sim ulator .initialize Cell Positions ()
+         
+      def  step (self ,  m cs ):
+          pass 
+        
+      def  finish (self ):
+          pass 
+
+ #  Set  up  the  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .set Simulation Dimensions ( 100 ,   100 ,   1 )
+ sim .set Simulation Size ( 100 ,   100 ,   1 )
+
+ #  Add  ste pp able 
+ sim .add Ste pp able (S imulation (sim ,  None ))
+
+ #  Set  up  cell  types  and  parameters 
+ sim .add Cell Type (" Ep ith elial ",   1 ,  {" color ":  [ 255 ,   0 ,   0 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+ sim .add Cell Type (" Mes ench ym al ",   2 ,  {" color ":  [ 0 ,   255 ,   0 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+ sim .add Cell Type (" Coll agen ",   3 ,  {" color ":  [ 0 ,   0 ,   255 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+
+ #  Set  visualization 
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Ep ith elial "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Mes ench ym al "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Coll agen " })
+
+ #  Run  simulation 
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_224835_run1\generated_cc3d_model.cc3d

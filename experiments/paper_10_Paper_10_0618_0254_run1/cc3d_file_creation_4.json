@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:56:02.412277",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulation_steps = 1000\n        self.output_interval = 10\n\n    def start(self):\n        self.simulator.addSteerableObject(self)\n        self.simulator.snapshot()\n\n    def step(self, mcs):\n        if mcs == self.simulation_steps:\n            self.simulator.stopSimulation()\n        else:\n            self.simulator.nextStep()\n            if mcs % self.output_interval == 0:\n                self.simulator.snapshot()\n\n# Define cell types\nclass Epithelial(CompuCell3D.CellG):\n    cell_type = 'Epithelial'\n    cell_id = 1\n    cell_name = 'Epithelial'\n\nclass Mesenchymal(CompuCell3D.CellG):\n    cell_type = 'Mesenchymal'\n    cell_id = 2\n    cell_name = 'Mesenchymal'\n\n# Basic cell parameters\nEpithelial.settings = {\n    'cell_size': 5,\n    'stiffness': 100\n}\n\nMesenchymal.settings = {\n    'cell_size': 5,\n    'stiffness': 100\n}\n\n# Gene expression and biological process parameters\nclass CyclinDependentKinaseInhibitor(CompuCell3D.GeneProduct):\n    gene_product = 'Cyclin-Dependent Kinase Inhibitor'\n    gene_product_id = 1\n    gene_name = 'CDKN1B'\n\n# Basic simulation parameters\nPotts = CompuCell3D.Potts(\n    simulation_dim=3,\n    thermal_energy=1.0,\n    cell_component=CompuCell3D.CellGeometry\n)\n\nPotts.parameters = {\n    'simulation_dim': 3,\n    'thermal_energy': 1.0,\n    'cell_component': CompuCell3D.CellGeometry\n}\n\n# Save simulation output\nCompuCell3D.setOutputPath('simulation_output')\n\n# Initialize simulation\nsimulator = CompuCell3D.Simulator()\nsimulator.addSteerable(Simulation(simulator))\n\n# Run simulation\nsimulator.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_10_Paper_10_0618_0254_run1\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,61 @@
+=== Run 1 ===
+
+Experiment: trial4
+Date: 20250617_234512
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell Setup  import  Sim ulator 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ frequency = 1 ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ frequency )
+          self .sim ulator  =  _ sim ulator 
+          self .ep ith elial _cells  =   100 
+          self .m es ench ym al _cells  =   50 
+          self .stem _cells  =   20 
+          self .im m une _cells  =   30 
+
+      def  start (self ):
+          self .sim ulator .run ( 100 0 )
+          self .sim ulator .get Output Directory (" .")
+
+          #  Define  cell  types 
+          self .cell _type _ep ith elial  =  " CL : 000 032 4 "
+          self .cell _type _mes ench ym al  =  " CL : 000 036 6 "
+          self .cell _type _st em  =  " CL : 000 003 7 "
+          self .cell _type _ immune  =  " CL : 000 086 9 "
+
+          #  Initialize  cell  positions 
+          self .sim ulator .initialize Cluster (
+              number _of _cells =self .ep ith elial _cells  +  self .m es ench ym al _cells  +  self .stem _cells  +  self .im m une _cells ,
+              cluster _d iameter = 10 ,
+              start _position =( 0 ,   0 ,   0 )
+          )
+
+      def  step (self ,  m cs ):
+          #  Basic  dynamics 
+          print (f " Step :  { m cs }")
+          print (f " Ep ith elial  cells :  { self .ep ith elial _cells }")
+          print (f " Mes ench ym al  cells :  { self .m es ench ym al _cells }")
+          print (f " St em  cells :  { self .stem _cells }")
+          print (f " Imm une  cells :  { self .im m une _cells }")
+
+          #  Update  cell  counts  based  on  proliferation  and  apoptosis 
+          self .ep ith elial _cells  +=   1  if  m cs  %   10  ==   0  else   0 
+          self .m es ench ym al _cells  +=   1  if  m cs  %   10  ==   0  else   0 
+          self .stem _cells  +=   1  if  m cs  %   10  ==   0  else   0 
+          self .im m une _cells  +=   1  if  m cs  %   10  ==   0  else   0 
+
+ #  Set  up  simulation 
+ sim  =  Simulator ()
+ sim .add Ste erable (" Simulation ",  Simulation (sim ,   1 ))
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\trial4_20250617_234512_run1\generated_cc3d_model.cc3d
+
+
+==================================================

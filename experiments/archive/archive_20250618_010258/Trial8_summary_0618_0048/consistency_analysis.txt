@@ -1,0 +1,65 @@
+=== Pipeline Stage Consistency Analysis ===
+
+
+Natural Language to Ontology Stage:
+===================================
+
+Ontology Consistency:
+
+CellOntology:
+- Somatic Cell (CL:0000010): 33.33% consistency
+- somatic cell (CL:0000034): 33.33% consistency
+- Cell (CL:0000000): 33.33% consistency
+
+GeneOntology:
+- Cellular process (GO:0009987): 33.33% consistency
+- Cell Proliferation (GO:0008283): 33.33% consistency
+- Cell Division (GO:0000281): 33.33% consistency
+- cell division (GO:0051781): 33.33% consistency
+
+MeSH:
+- Cell Division (D002493): 33.33% consistency
+- Cells (D002477): 33.33% consistency
+- Cell Proliferation (D002493): 33.33% consistency
+- Cell Proliferation (D002205): 33.33% consistency
+
+--------------------------------------------------
+
+Ontology to CC3D Code Stage:
+============================
+
+Code Similarity:
+- Runs 1-2: 13.23% similar
+- Runs 1-3: 17.57% similar
+- Runs 2-3: 10.61% similar
+
+--------------------------------------------------
+
+Natural Language to CC3D Code (End-to-End) Stage:
+=================================================
+
+Ontology Consistency:
+
+CellOntology:
+- Somatic Cell (CL:0000010): 33.33% consistency
+- somatic cell (CL:0000034): 33.33% consistency
+- Cell (CL:0000000): 33.33% consistency
+
+GeneOntology:
+- Cellular process (GO:0009987): 33.33% consistency
+- Cell Proliferation (GO:0008283): 33.33% consistency
+- Cell Division (GO:0000281): 33.33% consistency
+- cell division (GO:0051781): 33.33% consistency
+
+MeSH:
+- Cell Division (D002493): 33.33% consistency
+- Cells (D002477): 33.33% consistency
+- Cell Proliferation (D002493): 33.33% consistency
+- Cell Proliferation (D002205): 33.33% consistency
+
+Code Similarity:
+- Runs 1-2: 13.23% similar
+- Runs 1-3: 17.57% similar
+- Runs 2-3: 10.61% similar
+
+--------------------------------------------------

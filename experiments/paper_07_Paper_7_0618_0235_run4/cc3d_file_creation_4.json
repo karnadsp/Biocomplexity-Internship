@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:37:22.242568",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import MitosisSteppable, PySteppableBase\n\nclass EpithelialProliferationSimulation(PySteppableBase):\n    def __init__(self, _simulator, _frequency=1):\n        PySteppableBase.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulatorThread = _simulator.simulatorThread\n        self._mitosis_steppable = MitosisSteppable()\n        self._mitosis_steppable.initialize()\n        \n    def start(self):\n        self.simulator.add_steppable(self._mitosis_steppable)\n        self.simulator.add_steppable(self)\n        \n        # Initialize epithelial cell\n        cell = self.simulator.cell_field\n        cell.default_cell_type = self.simulator.cell_type_dict['Epithelial']\n        \n        # Create initial cell\n        self.simulator.create_single_cell_at_location([10, 10, 0])\n        \n    def step(self, mcs):\n        # Implement cell division logic\n        if mcs == 100:\n            for cell in self.simulator.cell_list:\n                if cell.volume > 100:\n                    cell.divide()\n                    \n    def finish(self):\n        pass\n\ndef main():\n    sim = CompuCellSetup.Simulator()\n    sim.simulation_path = \"EpithelialProliferation/\"\n    sim.setSimulationParameters(_simulation_name=\"EpithelialProliferation\", \n                               _steps=1000, \n                               _fidelity=100)\n    \n    # Register cell types\n    sim.register_cell_type(\"Epithelial\")\n    \n    # Add steppables\n    sim.add_steppable(EpithelialProliferationSimulation(sim, 1))\n    \n    # Run simulation\n    sim.run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_07_Paper_7_0618_0235_run4\\generated_cc3d_model.cc3d"
+  }
+}

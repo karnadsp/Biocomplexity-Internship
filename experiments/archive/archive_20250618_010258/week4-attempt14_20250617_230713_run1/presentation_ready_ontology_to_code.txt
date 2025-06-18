@@ -1,0 +1,67 @@
+Experiment: week4-attempt14
+Date: 20250617_230713
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ name ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ name )
+          self .sim ulator  =  _ sim ulator 
+          self .name  =  _ name 
+          self .setup Simulation ()
+
+      def  setup Simulation (self ):
+          self .sim ulator .set Simulation Name (" Ont ology Based Simulation ")
+          self .sim ulator .set Solver (" Diff usion Solver ")
+          self .sim ulator .set NumberOf Steps ( 100 0 )
+          self .sim ulator .set Save Output Frequency ( 100 )
+
+      def  start (self ):
+          self .cell Type Manager  =  self .sim ulator .get Cell Type Manager ()
+          self .cell Type Manager .register Cell Type (" Cell Type 1 ",  " CL : 000 006 6 ")
+          self .cell Type Manager .register Cell Type (" Cell Type 2 ",  " CL : 000 036 6 ")
+
+          self .p otts  =  self .sim ulator .getP otts ()
+          self .p otts .set NumberOf Cells ( 100 )
+          self .p otts .set Cell Type (" Cell Type 1 ",   50 )
+          self .p otts .set Cell Type (" Cell Type 2 ",   50 )
+
+          self .cell P rol ifer ation  =  self .sim ulator .get Ste pp able (" Cell P rol ifer ation ")
+          self .cell P rol ifer ation .set P rol ifer ation Parameters (" Cell Type 1 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+          self .cell P rol ifer ation .set P rol ifer ation Parameters (" Cell Type 2 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+
+          self .cell Death  =  self .sim ulator .get Ste pp able (" Cell Death ")
+          self .cell Death .set Death Parameters (" Cell Type 1 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+          self .cell Death .set Death Parameters (" Cell Type 2 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+
+          self .cell Ad hesion  =  self .sim ulator .get Ste pp able (" Ad hesion Flex ")
+          self .cell Ad hesion .set Ad hesion Parameters (" Cell Type 1 ",  " Cell Type 1 ",   1 . 0 )
+          self .cell Ad hesion .set Ad hesion Parameters (" Cell Type 1 ",  " Cell Type 2 ",   1 . 0 )
+          self .cell Ad hesion .set Ad hesion Parameters (" Cell Type 2 ",  " Cell Type 2 ",   1 . 0 )
+
+          self .cell Rep ulsion  =  self .sim ulator .get Ste pp able (" Rep ulsion Flex ")
+          self .cell Rep ulsion .set Rep ulsion Parameters (" Cell Type 1 ",  " Cell Type 1 ",   1 . 0 )
+          self .cell Rep ulsion .set Rep ulsion Parameters (" Cell Type 1 ",  " Cell Type 2 ",   1 . 0 )
+          self .cell Rep ulsion .set Rep ulsion Parameters (" Cell Type 2 ",  " Cell Type 2 ",   1 . 0 )
+
+          self .cell Mot ility  =  self .sim ulator .get Ste pp able (" Mot ility Flex ")
+          self .cell Mot ility .set Mot ility Parameters (" Cell Type 1 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+          self .cell Mot ility .set Mot ility Parameters (" Cell Type 2 ",   1 . 0 ,   1 . 0 ,   1 . 0 )
+
+      def  step (self ):
+          pass 
+
+ def  main ():
+      simulator  =  Com pu Cell Setup .S imulator ()
+      simulation  =  Simulation (sim ulator ,  " Ont ology Based Simulation ")
+      simulator .run ()
+
+ if  __ name __  ==  "__ main __":
+      main ()
+ ```
+
+CC3D File Created: experiments\week4-attempt14_20250617_230713_run1\generated_cc3d_model.cc3d

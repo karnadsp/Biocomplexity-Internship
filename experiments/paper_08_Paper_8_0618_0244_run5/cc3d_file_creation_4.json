@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:46:14.252249",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, MitosisSteppable, VolumeConstraintSteppable\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _model):\n        SteppableBasePy.__init__(self, _simulator, _model)\n        self.simulator = _simulator\n        self.model = _model\n        self.mitosis_steppable = MitosisSteppable()\n        self.simulator.add_steppable(self.mitosis_steppable)\n        \n    def start(self):\n        self.simulator.read_parameters()\n        self.cell_field = self.simulator.cell_field\n        self.num_cells = self.simulator.get_parameter('num_cells')\n        self.mitosis_distance = self.simulator.get_parameter('mitosis_distance')\n        \n        # Create initial cell\n        cell = self.cell_field.new_cell(0)\n        cell.type = self.cell_field.get_type_id('Epithelial')\n        cell.position = [10, 10, 0]\n        \n    def step(self):\n        # Update cell division counter\n        for cell in self.cell_field.iterate():\n            if cell.type_id == self.cell_field.get_type_id('Epithelial'):\n                cell.attribute['division_count'] += 1\n                \ndef main():\n    # Read simulation parameters\n    simulator = CompuCellSetup.Simulator()\n    simulator.read_parameters('Simulation')\n    \n    # Set simulation parameters\n    simulator.set_num_iterations(1000)\n    simulator.set_output_directory('output')\n    \n    # Register cell types\n    simulator.register_cell_type('Epithelial')\n    \n    # Create simulation instance\n    simulation = Simulation(simulator)\n    \n    # Run simulation\n    simulator.run()\n\nif __name__ == '__main__':\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_08_Paper_8_0618_0244_run5\\generated_cc3d_model.cc3d"
+  }
+}

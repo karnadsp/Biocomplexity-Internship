@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:22:12.705311",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        super(EpithelialProliferationSimulation, self).__init__(_simulator, _frequency)\n        self.simulator = _simulator\n        self.cell_types = {'Epithelial': 0}\n        self.epithelial_params = {\n            'volume': 10,\n            'surface_area': 10,\n            'max_proliferation_cycles': 10,\n            'proliferation_rate': 0.1\n        }\n\n    def start(self):\n        self.simulator.createLattice(100, 100, 1)\n        self.simulator.addCell(0, 0, 0, self.cell_types['Epithelial'])\n        self.simulator.setMitigator()\n        self.simulator.setMitigator(1, self.cell_types['Epithelial'], 'Mitosis')\n\n    def step(self, mcs):\n        for cell in self.simulator.cellList:\n            if cell.type == self.cell_types['Epithelial']:\n                if cell.cellCycle[0] >= 10:\n                    cell.divide()\n                    cell.cellCycle[0] = 0\n                    cell.targetVolume = self.epithelial_params['volume']\n        self.simulator.print(\"MCS: \" + str(mcs))\n\nsim = Simulator()\nsim.addStepping(_stepping=EpithelialProliferationSimulation(sim, 1))\nsim.run(100)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_13_Paper_13_0618_0320_run2\\generated_cc3d_model.cc3d"
+  }
+}

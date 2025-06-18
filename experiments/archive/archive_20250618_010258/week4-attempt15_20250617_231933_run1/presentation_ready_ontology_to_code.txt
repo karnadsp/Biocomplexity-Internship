@@ -1,0 +1,65 @@
+Experiment: week4-attempt15
+Date: 20250617_231933
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+ import  numpy  as  np 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ frequency = 1 ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ frequency )
+          self .sim ulator  =  _ sim ulator 
+          self .step _period  =  _ frequency 
+          self .sim ulation _steps  =   100 0 
+          self .output _frequency  =   10 
+          self .cell _types  =  [' Ep ith elial ',  ' Mes ench ym al ']
+          self .num _cells  =   100 
+
+      def  start (self ):
+          self .sim ulator .get _p otts _solver (). set _output _frequency (self .output _frequency )
+          self .sim ulator .get _p otts _solver (). set _num _iterations ( 100 )
+          self .sim ulator .get _p otts _solver (). set _fl uct uation _s weep ( 0 . 5 )
+         
+          #  Initialize  cells 
+          self .sim ulator .create _l attice ( 100 ,   100 ,   1 )
+          for  x  in  range ( 40 ,   60 ):
+              for  y  in  range ( 40 ,   60 ):
+                  self .sim ulator .cell _field [x ,  y ,   0 ]  =  self .cell _types .index (' Ep ith elial ')
+          for  x  in  range ( 30 ,   70 ):
+              for  y  in  range ( 30 ,   70 ):
+                  if  self .sim ulator .cell _field [x ,  y ,   0 ]  ==  - 1 :
+                      self .sim ulator .cell _field [x ,  y ,   0 ]  =  self .cell _types .index (' Mes ench ym al ')
+
+      def  step (self ,  m cs ):
+          if  m cs  >  self .sim ulation _steps :
+              self .sim ulator .stop _simulation ()
+
+          #  E MT  transition  logic 
+          cells  =  self .sim ulator .cell _list 
+          for  cell  in  cells :
+              if  cell .type  ==  self .cell _types .index (' Ep ith elial '):
+                  if  np .random .rand ()  <  0 . 05 :
+                      cell .type  =  self .cell _types .index (' Mes ench ym al ')
+                      cell .shape  =   1 . 5    #  Change  shape  for  mes ench ym al  cells 
+                      cell .m ot ility  =   2 . 0    #  Increase  mot ility 
+
+          #  Cell  migration  and  ad hesion 
+          for  cell  in  cells :
+              if  cell .type  ==  self .cell _types .index (' Mes ench ym al '):
+                  cell .m ot ility  =   2 . 0 
+                  cell .ad hesion  =   0 . 5 
+              else :
+                  cell .m ot ility  =   1 . 0 
+                  cell .ad hesion  =   1 . 0 
+
+ Com pu Cell Setup .initialize Simulation ()
+ sim  =  Simulation ( Com pu Cell Setup .sim ulator ,   1 )
+ Com pu Cell Setup .add Ste pp able (sim )
+ Com pu Cell Setup .initialize Simulation ()
+ Com pu Cell Setup .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt15_20250617_231933_run1\generated_cc3d_model.cc3d

@@ -1,0 +1,373 @@
+=== Run 1 ===
+
+Experiment: week4-attempt13
+Date: 20250617_224835
+Run Number: 1
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup ,  ste pp ables 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+        
+      def  start (self ):
+          self .sim ulator .get Simulation Thread (). ste pping Rules  =  []
+          self .sim ulator .get Simulation Thread (). ste pping Rules .append (self )
+         
+          #  Initialize  simulation  parameters 
+          self .sim ulator .set Simulation Time ( 0 )
+          self .sim ulator .set Simulation Step ( 1 )
+          self .sim ulator .set NumberOf Steps ( 100 0 )
+         
+          #  Set  up  cell  types 
+          self .cell Types  =  {
+              ' Ep ith elial ':  {' id ':   1 ,  ' color ':  [ 255 ,   0 ,   0 ]},
+              ' Mes ench ym al ':  {' id ':   2 ,  ' color ':  [ 0 ,   255 ,   0 ]},
+              ' Coll agen ':  {' id ':   3 ,  ' color ':  [ 0 ,   0 ,   255 ]}
+          }
+         
+          #  Add  cells  to  the  simulation 
+          self .sim ulator .add Cell Type (self .cell Types [' Ep ith elial '][' id '],  self .cell Types [' Ep ith elial '][' color '])
+          self .sim ulator .add Cell Type (self .cell Types [' Mes ench ym al '][' id '],  self .cell Types [' Mes ench ym al '][' color '])
+          self .sim ulator .add Cell Type (self .cell Types [' Coll agen '][' id '],  self .cell Types [' Coll agen '][' color '])
+         
+          #  Set  up  initial  cell  placement 
+          self .sim ulator .initialize Cell Positions ()
+         
+      def  step (self ,  m cs ):
+          pass 
+        
+      def  finish (self ):
+          pass 
+
+ #  Set  up  the  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .set Simulation Dimensions ( 100 ,   100 ,   1 )
+ sim .set Simulation Size ( 100 ,   100 ,   1 )
+
+ #  Add  ste pp able 
+ sim .add Ste pp able (S imulation (sim ,  None ))
+
+ #  Set  up  cell  types  and  parameters 
+ sim .add Cell Type (" Ep ith elial ",   1 ,  {" color ":  [ 255 ,   0 ,   0 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+ sim .add Cell Type (" Mes ench ym al ",   2 ,  {" color ":  [ 0 ,   255 ,   0 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+ sim .add Cell Type (" Coll agen ",   3 ,  {" color ":  [ 0 ,   0 ,   255 ],  " elastic _const ":   1 . 0 ,  " surface _area ":   10 . 0 })
+
+ #  Set  visualization 
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Ep ith elial "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Mes ench ym al "})
+ sim .add Visualization ( Com pu Cell Setup .Visual ization ,  {" output _frequency ":   100 ,  " type ":  " 2 D ",  " cell _type ":  " Coll agen " })
+
+ #  Run  simulation 
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_224835_run1\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 2 ===
+
+Experiment: week4-attempt13
+Date: 20250617_225145
+Run Number: 2
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  Ep ith elial To Mes ench ym al Transition Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+          self .cell _migration _speed  =   1 . 0 
+          self .cell _ad hesion _strength  =   0 . 5 
+          self .cell _shape _parameters  =  {' target Volume ':   25 ,  ' target Surface ':   20 }
+
+      def  start (self ):
+          self .sim ulator .run ( 100 0 )
+         
+      def  step (self ,  m cs ):
+          for  cell  in  self .sim ulator .cell List :
+              if  cell .type  ==  self .sim ulator .cell Types [' Ep ith elial ']:
+                  cell .target Volume  =  self .cell _shape _parameters [' target Volume ']
+                  cell .target Surface  =  self .cell _shape _parameters [' target Surface ']
+                  cell .lambda Volume  =   2 . 0 
+                  cell .lambda Surface  =   2 . 0 
+                  cell .m igration Speed  =  self .cell _migration _speed 
+                  cell .ad hesion Strength  =  self .cell _ad hesion _strength 
+
+              if  cell .type  ==  self .sim ulator .cell Types [' Mes ench ym al ']:
+                  cell .target Volume  =  self .cell _shape _parameters [' target Volume ']
+                  cell .target Surface  =  self .cell _shape _parameters [' target Surface ']
+                  cell .lambda Volume  =   2 . 0 
+                  cell .lambda Surface  =   2 . 0 
+                  cell .m igration Speed  =  self .cell _migration _speed  *   2 . 0 
+                  cell .ad hesion Strength  =  self .cell _ad hesion _strength  *   0 . 5 
+
+              if  cell .type  ==  self .sim ulator .cell Types [' Ex tr acellular Matrix ']:
+                  cell .target Volume  =   100 0 
+                  cell .target Surface  =   100 0 
+                  cell .lambda Volume  =   0 . 1 
+                  cell .lambda Surface  =   0 . 1 
+                  cell .m igration Speed  =   0 . 0 
+                  cell .ad hesion Strength  =   0 . 0 
+
+ #  Create  instance  of  the  simulation  class 
+ sim  =  Ep ith elial To Mes ench ym al Transition Simulation (sim ulator ,  model )
+
+ #  Set  up  the  simulation 
+ Com pu Cell Setup .sim ulator  =  simulator 
+ Com pu Cell Setup .model  =  model 
+ Com pu Cell Setup .sim ulation  =  sim 
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_225145_run2\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 3 ===
+
+Experiment: week4-attempt13
+Date: 20250617_225339
+Run Number: 3
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell Setup  import  Sim ulator 
+ from  ste pp ables  import  Ste pp able Base Py ,  Model 
+ import  numpy  as  np 
+
+ class  E MT And Cell Migration Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          super ( EM T And Cell Migration Simulation ,  self ).__ init __ (_ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+          self .sim ulation _name  =  " EM T And Cell Migration "
+          self .configuration _file  =  " EM T And Cell Migration .xml "
+
+      def  start (self ):
+          self .sim ulator .read Configuration (self .configuration _file )
+          self .cell _types  =  {
+              ' ep ith elial ':   1 ,
+              ' mes ench ym al ':   2 ,
+              ' endo th elial ':   3 
+          }
+          self  field  =  self .sim ulator .create Field (" coll agen _g el ",   0 )
+
+      def  step (self ,  m cs ):
+          #  Ep ith elial  to  Mes ench ym al  Transition  ( EM T )
+          for  cell  in  self .sim ulator .cell List :
+              if  cell .type  ==  self .cell _types [' ep ith elial ']:
+                  #  Check  if  E MT  should  occur 
+                  if  some _condition :
+                      cell .type  =  self .cell _types [' mes ench ym al ']
+                      #  Update  cell  properties  for  mes ench ym al  cells 
+                      cell .lambda Volume  =   20 
+                      cell .target Volume  =   20 
+
+          #  Mes ench ym al  cell  migration 
+          for  cell  in  self .sim ulator .cell List :
+              if  cell .type  ==  self .cell _types [' mes ench ym al ']:
+                  #  Apply  migration  forces 
+                  self .apply Force (cell ,   0 . 1 ,   0 . 1 )
+
+          #  End oth elial  cell  ad hesion  and  cohesion 
+          for  cell  in  self .sim ulator .cell List :
+              if  cell .type  ==  self .cell _types [' endo th elial ']:
+                  #  Apply  ad hesion  forces 
+                  self .apply Force (cell ,   0 . 2 ,   0 . 2 )
+                  #  Apply  cohesion  forces 
+                  self .apply Force (cell ,   0 . 15 ,   0 . 15 )
+
+          #  Update  collagen  gel  field 
+          self .field  =  self .sim ulator .update Field (" coll agen _g el ")
+
+ def  main ():
+      simulator  =  Simulator ()
+      model  =  Model ()
+      simulation  =  E MT And Cell Migration Simulation (sim ulator ,  model )
+      simulator .add Ste pp able (sim ulation )
+      simulator .run ( 100 0 )
+
+ if  __ name __  ==  "__ main __":
+      main ()
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_225339_run3\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 4 ===
+
+Experiment: week4-attempt13
+Date: 20250617_225527
+Run Number: 4
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+ from  ste pp ables  import  *
+ import  sys 
+
+ class  Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+          self .priority  =   0 
+        
+      def  start (self ):
+          #  Initialize  simulation  parameters 
+          self .sim ulator .add Ste erable Object (self )
+          print (" Simulation  started .")
+         
+      def  step (self ,  m cs ):
+          #  Example  step  logic 
+          if  m cs  ==   100 :
+              print (" Simulation  step  reached   100  M CS .")
+             
+      def  finish (self ):
+          print (" Simulation  finished .")
+
+ #  Define  cell  types 
+ class  Ep ith elial Cell :
+      def  __ init __( self ):
+          self .cell Type  =  ' Ep ith elial '
+          self .cell Id  =   1 
+          self .color  =  [ 255 ,   0 ,   0 ]    #  Red 
+
+ class  Mes ench ym al Cell :
+      def  __ init __( self ):
+          self .cell Type  =  ' Mes ench ym al '
+          self .cell Id  =   2 
+          self .color  =  [ 0 ,   255 ,   0 ]    #  Green 
+
+ class  End oth elial Cell :
+      def  __ init __( self ):
+          self .cell Type  =  ' End oth elial '
+          self .cell Id  =   3 
+          self .color  =  [ 0 ,   0 ,   255 ]    #  Blue 
+
+ #  Set  up  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ model  =  sim .create Model ()
+ sim .init ()
+ sim .set Simulation Parameters (_ simulation Thread = 1 ,  _ save Output = 1 ,  _ output Frequency = 10 )
+
+ #  Add  ste pp ables 
+ sim .add Ste erable (S imulation (sim ,  model ))
+ sim .add Ste erable ( Ad hesion Flex )
+ sim .add Ste erable (M ot ility Flex )
+ sim .add Ste erable (S urface T ension )
+
+ #  Run  simulation 
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_225527_run4\generated_cc3d_model.cc3d
+
+
+==================================================
+
+=== Run 5 ===
+
+Experiment: week4-attempt13
+Date: 20250617_225703
+Run Number: 5
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  ste pp ables  import  Ste pp able Base Py 
+
+ class  E MT Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          super ( EM T Simulation ,  self ).__ init __ (_ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+        
+          #  Initialize  simulation  parameters 
+          self .sim ulator .set Simulation Dimensions ( 50 ,   50 ,   1 )
+          self .sim ulator .set Simulation Time ( 100 0 ,   100 0 )
+         
+          #  Register  cell  types 
+          self .cell Type Manager .register Cell Type (" Ep ith elial ",  " Ep ith elial ")
+          self .cell Type Manager .register Cell Type (" Mes ench ym al ",  " Mes ench ym al ")
+          self .cell Type Manager .register Cell Type (" Coll agen G el ",  " Coll agen G el ")
+         
+          #  Set  cell  properties 
+          self .sim ulator .set Cell G rowth (" Ep ith elial ",  " Uniform G rowth ",  {" growth Rate ":   0 . 001 })
+          self .sim ulator .set Cell G rowth (" Mes ench ym al ",  " Uniform G rowth ",  {" growth Rate ":   0 . 002 })
+         
+          #  Set  surface  tension  parameters 
+          self .sim ulator .set Surface T ension Parameters (" Ep ith elial ",  " Ep ith elial ",   0 . 1 )
+          self .sim ulator .set Surface T ension Parameters (" Mes ench ym al ",  " Mes ench ym al ",   0 . 05 )
+          self .sim ulator .set Surface T ension Parameters (" Ep ith elial ",  " Mes ench ym al ",   0 . 2 )
+          self .sim ulator .set Surface T ension Parameters (" Mes ench ym al ",  " Ep ith elial ",   0 . 2 )
+          self .sim ulator .set Surface T ension Parameters (" Ep ith elial ",  " Coll agen G el ",   0 . 3 )
+          self .sim ulator .set Surface T ension Parameters (" Mes ench ym al ",  " Coll agen G el ",   0 . 1 )
+         
+      def  start (self ):
+          #  Initialize  cells 
+          cell 1  =  self .sim ulator .createCell (" Ep ith elial ",  " Ep ith elial ")
+          cell 1 .volume  =   10 
+          cell 1 .position  =  ( 10 ,   10 ,   0 )
+         
+          cell 2  =  self .sim ulator .createCell (" Mes ench ym al ",  " Mes ench ym al ")
+          cell 2 .volume  =   10 
+          cell 2 .position  =  ( 30 ,   30 ,   0 )
+         
+          cell 3  =  self .sim ulator .createCell (" Coll agen G el ",  " Coll agen G el ")
+          cell 3 .volume  =   100 
+          cell 3 .position  =  ( 25 ,   25 ,   0 )
+         
+          #  Add  cells  to  simulation 
+          self .sim ulator .add Cell To Simulation (cell 1 )
+          self .sim ulator .add Cell To Simulation (cell 2 )
+          self .sim ulator .add Cell To Simulation (cell 3 )
+         
+      def  step (self ,  m cs ):
+          #  Update  cell  positions  and  behaviors 
+          for  cell  in  self .sim ulator .cell List :
+              if  cell .type  ==  " Mes ench ym al ":
+                  #  Sim ulate  cell  migration 
+                  x ,  y ,  z  =  cell .position 
+                  cell .position  =  ( x  +   0 . 1 ,  y  +   0 . 1 ,  z )
+                 
+              elif  cell .type  ==  " Ep ith elial ":
+                  #  Sim ulate  cell  cohesion  and  ad hesion 
+                  x ,  y ,  z  =  cell .position 
+                  cell .position  =  ( x  +   0 . 05 ,  y  +   0 . 05 ,  z )
+                 
+          #  Check  for  cell  death 
+          if  m cs  >   500 :
+              for  cell  in  self .sim ulator .cell List :
+                  if  cell .position [ 0 ]  >   40  or  cell .position [ 1 ]  >   40 :
+                      self .sim ulator .remove Cell (cell )
+                     
+      def  finish (self ):
+          pass 
+
+ #  Create  simulation  instance 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .set Simulation Ste pp able (sim ulation )
+ sim .run ()
+ ```
+
+CC3D File Created: experiments\week4-attempt13_20250617_225703_run5\generated_cc3d_model.cc3d
+
+
+==================================================

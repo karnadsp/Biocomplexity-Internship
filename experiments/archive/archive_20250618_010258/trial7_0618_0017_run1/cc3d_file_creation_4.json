@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:19:28.172339",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass BasicSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _stock):\n        super().__init__(_simulator, _stock)\n        self.simulator = _simulator\n        self stock = _stock\n        self.simulation_name = \"Basic Cell Simulation\"\n        self.max_steps = 1000\n\n    def start(self):\n        self.simulator.print(\"Starting Basic Cell Simulation\")\n\n    def step(self, mcs):\n        self.simulator.print(f\"Step: {mcs}\")\n        if mcs == self.max_steps:\n            self.simulator.print(\"Simulation finished\")\n\ncell_type = \"DefaultCell\"\ncell_name = \"Basic Cell\"\ncell_parameters = {\n    \"cellType\": cell_type,\n    \"cellName\": cell_name,\n    \"volume\": 10,\n    \"minimalVolume\": 1\n}\n\nCompuCellSetup.setSimulationParameters(cell_parameters)"
+  },
+  "output": {
+    "output_file": "experiments\\trial7_0618_0017_run1\\generated_cc3d_model.cc3d"
+  }
+}

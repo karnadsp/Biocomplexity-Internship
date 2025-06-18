@@ -1,0 +1,28 @@
+=== Pipeline Stage Consistency Analysis ===
+
+
+Natural Language to Ontology Stage:
+===================================
+
+Ontology Consistency:
+
+CellOntology:
+
+GeneOntology:
+
+MeSH:
+
+--------------------------------------------------
+
+Ontology to CC3D Code Stage:
+============================
+
+--------------------------------------------------
+
+Natural Language to CC3D Code (End-to-End) Stage:
+=================================================
+
+Code Similarity:
+- Runs 1-2: 100.00% similar
+
+--------------------------------------------------

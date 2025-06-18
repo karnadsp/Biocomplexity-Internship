@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:48:53.675067",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.frequency = _frequency\n\n    def start(self):\n        # Initialize simulation with epithelial cells\n        self.cell_field = self.simulator.get_cell_field()\n        self.simulator.get_cell_field().initialize_cell_cluster(\n            cell_type='Epithelial',\n            cluster_diameter=10,\n            cluster_position=(50, 50)\n        )\n        self.simulator.add_steerable_object(self)\n\n    def step(self, mcs):\n        # Update simulation state\n        self.simulator.get_cell_field().update()\n        print(f\"Simulation step: {mcs}\")\n\n# Set simulation parameters\nsim = CompuCellSetup.Simulation()\nsim.setSimulationDimensions(100, 100)\nsim.setNumberOfSteps(10000)\nsim.setSaveOutputFrequency(100)\n\n# Register steppable\nsim.register_steerable(Simulation(sim, 1))\n\n# Run simulation\nsim.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_01_Paper_1_0618_0147_run4\\generated_cc3d_model.cc3d"
+  }
+}

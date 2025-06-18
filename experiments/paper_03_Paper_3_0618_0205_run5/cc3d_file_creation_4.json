@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:06:48.951515",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\nfrom CompuCell3D.simulator import Simulator\nfrom CompuCell3D.PyLeonardo import PyLeonardo\n\nclass EpithelialCellSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        super(EpithelialCellSimulation, self).__init__(_simulator, _frequency)\n        self.simulator = _simulator\n        self.step = 0\n        self.simulatorThread = None\n\n    def start(self):\n        self.simulatorThread = self.simulator.getSimulatorThread()\n        self.cellType = {'Epithelial': {'color': [255, 255, 255]}}\n        self.simulator.setDefaultCellType(self.cellType['Epithelial'])\n        self.simulator.setSimulationDuration(1000)\n        self.simulator.getPyLeonardo().setOutputDirectory(\"EpithelialSimulation\")\n\n    def step(self, mcs):\n        self.step += 1\n        print(\"Simulation step: \", mcs)\n\ndef main():\n    simulator = Simulator()\n    simulator.setSimulationDimensions(100, 100, 1)\n    simulator.setSimulationTime(1, 1000)\n    simulator.addSteerable(EpithelialCellSimulation(simulator, 1))\n    simulator.run()\n    PyLeonardo().run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_03_Paper_3_0618_0205_run5\\generated_cc3d_model.cc3d"
+  }
+}

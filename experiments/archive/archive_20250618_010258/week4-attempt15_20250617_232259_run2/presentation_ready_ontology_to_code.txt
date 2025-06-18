@@ -1,0 +1,84 @@
+Experiment: week4-attempt15
+Date: 20250617_232259
+Run Number: 2
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell Setup  import  *
+ from  ste pp ables  import  *
+
+ class  Simulation Ste pp able ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ model ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator ,  _ model )
+          self .sim ulator  =  _ sim ulator 
+          self .model  =  _ model 
+          self .name  =  " Simulation Ste pp able "
+          self  cells  =  []
+         
+          #  Initialize  cell  types  and  parameters 
+          self .cell _types  =  {
+              ' Ep ith elial ':  {' id ':   1 ,  ' name ':  ' Ep ith elial ',  ' mot ility ':   1 . 0 ,  ' ad hesion ':   10 . 0 },
+              ' Mes ench ym al ':  {' id ':   2 ,  ' name ':  ' Mes ench ym al ',  ' mot ility ':   2 . 0 ,  ' ad hesion ':   5 . 0 }
+          }
+         
+          #  Initialize  simulation  parameters 
+          self .sim ulation _parameters  =  {
+              ' time _step ':   1 . 0 ,
+              ' total _steps ':   100 0 ,
+              ' grid _size ':  ( 100 ,   100 ),
+              ' number _of _cells ':   100 ,
+              ' mot ility _baseline ':   1 . 0 ,
+              ' ad hesion _energy ':   10 . 0 ,
+              ' em t _probability ':   0 . 1 ,
+              ' em t _strength ':   5 . 0 
+          }
+
+      def  start (self ):
+          #  Initialize  cells 
+          for  _  in  range (self .sim ulation _parameters [' number _of _cells ']):
+              cell  =  self .sim ulator .cell _field .new _cell (self .cell _types [' Ep ith elial '][' id '])
+              cell .position  =  self .sim ulator .get _random _position ()
+              self .cells .append (cell )
+             
+              #  Optionally  create  mes ench ym al  cells 
+              if  _  %   2  ==   0 :
+                  cell  =  self .sim ulator .cell _field .new _cell (self .cell _types [' Mes ench ym al '][' id '])
+                  cell .position  =  self .sim ulator .get _random _position ()
+                  self .cells .append (cell )
+
+      def  step (self ,  m cs ):
+          #  Update  cell  positions  and  behaviors 
+          for  cell  in  self .sim ulator .cell _field .cells :
+              #  Apply  mot ility 
+              cell  mot ility  =  self .cell _types [cell .type _name ][' mot ility ']
+              cell .velocity  =  self .sim ulator .get _random _velocity (m ot ility )
+             
+              #  Apply  ad hesion 
+              cell .ad hesion _energy  =  self .sim ulation _parameters [' ad hesion _energy ']
+             
+              #  Ep ith elial  to  Mes ench ym al  Transition  ( EM T )
+              if  cell .type _name  ==  ' Ep ith elial ':
+                  if  self .sim ulator .random _number ()  < self .sim ulation _parameters [' em t _probability ']:
+                      cell .type  =  self .cell _types [' Mes ench ym al '][' id ']
+                     
+          #  Update  simulation  state 
+          self .sim ulator .update _cell _positions ()
+
+ def  main ():
+      #  Create  simulation 
+      simulator  =  Com pu Cell 3 D ()
+      model  =  simulator .model 
+      model .initialize Simulation ()
+     
+      #  Add  ste pp able 
+      simulation _ste pp able  =  Simulation Ste pp able (sim ulator ,  model )
+      model .add _ste pp able (sim ulation _ste pp able )
+     
+      #  Run  simulation 
+      simulator .run ()
+     
+ if  __ name __  ==  "__ main __":
+      main ()
+ ```
+
+CC3D File Created: experiments\week4-attempt15_20250617_232259_run2\generated_cc3d_model.cc3d

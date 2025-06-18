@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:34:17.705007",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, PyMitosisSteppable\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulatorThread = _simulator.simulatorThread\n        self.simulatorThread.simulationDimensions.x = 100\n        self.simulatorThread.simulationDimensions.y = 100\n        self.simulatorThread.simulationDimensions.z = 1\n        \n        self.cellType = 'Epithelial'\n        self.cellTypeId = 1\n        \n        self.proliferationParams = {\n            'maxProliferationTime': 10,\n            'defaultCellCycleTime': 10,\n            'growthRate': 0.1\n        }\n        \n    def start(self):\n        self.simulatorThread.cellTypes.append(self.cellType)\n        self.simulatorThread.cellTypeIds.append(self.cellTypeId)\n        \n        cell = self.simulatorThread.cellField.newCell(self.cellTypeId)\n        cell.volume = 1\n        cell.position = [50, 50, 0]\n        \n    def step(self):\n        for cell in self.simulatorThread.cellField.cells:\n            if cell.type == self.cellType:\n                if cell.volume > 10:\n                    self.divideCell(cell)\n\n    def divideCell(self, cell):\n        newCell = self.simulatorThread.cellField.newCell(self.cellTypeId)\n        newCell.volume = 1\n        newCell.position = [cell.position[0] + 1, cell.position[1], 0]\n        cell.volume = 1\n\nCompuCellSetup.simulation = EpithelialProliferationSimulation()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_07_Paper_7_0618_0232_run2\\generated_cc3d_model.cc3d"
+  }
+}

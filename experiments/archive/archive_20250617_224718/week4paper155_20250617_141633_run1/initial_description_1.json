@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-06-17T14:16:33.841256",
+  "step": "initial_description",
+  "input": {},
+  "output": {
+    "description": "E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed."
+  }
+}

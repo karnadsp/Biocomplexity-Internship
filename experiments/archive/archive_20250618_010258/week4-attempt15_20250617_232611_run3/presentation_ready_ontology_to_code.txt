@@ -1,0 +1,42 @@
+Experiment: week4-attempt15
+Date: 20250617_232611
+Run Number: 3
+
+Generated CC3D Code:
+``` python 
+ from  Com pu Cell 3 D  import  Com pu Cell Setup 
+ from  Py Ste pp ables  import  Ste pp able Base Py 
+ import  numpy 
+
+ class  E MT Simulation ( Ste pp able Base Py ):
+      def  __ init __( self ,  _ sim ulator ,  _ num Cells ):
+          Ste pp able Base Py .__ init __( self ,  _ sim ulator )
+          self .sim ulator  =  _ sim ulator 
+          self .num Cells  =  _ num Cells 
+          self .cell Migration Parameter  =   1 . 0 
+          self .cell Ad hesion Parameter  =   1 . 0 
+          self .em t Parameter  =   1 . 0 
+
+      def  start (self ):
+          self .sim ulator .print (" Starting  E MT  Simulation ")
+          self .sim ulator .schedule Call (self .step ,   10 )
+
+      def  step (self ,  m cs ):
+          pass 
+
+ #  Define  cell  types 
+ Ep ith elial  =  {' Name ':  ' Ep ith elial ',  ' Color ':  '# FF 000 0 '}
+ Mes ench ym al  =  {' Name ':  ' Mes ench ym al ',  ' Color ':  '# 00 FF 00 '}
+
+ #  Set  up  simulation 
+ sim  =  Com pu Cell Setup .S imulator ()
+ sim .set Simulation Dimensions ( 100 ,   100 ,   1 )
+ sim .set Num Threads ( 4 )
+
+ sim .init Cell k inds ([ Ep ith elial ,  Mes ench ym al ])
+
+ sim .add Ste pp able ( EM TS imulation (sim ,   100 ))
+ sim .run ( 100 0 )
+ ```
+
+CC3D File Created: experiments\week4-attempt15_20250617_232611_run3\generated_cc3d_model.cc3d

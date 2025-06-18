@@ -1,0 +1,491 @@
+Experiment: week7-8
+Date: 20250617_171726
+Run Number: 2
+
+Generated CC3D Code:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ that
+ represents
+ the
+ ontology
+ annotations
+ for
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ based
+ on
+ the
+ provided
+ information
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+012
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+013
+4
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+014
+1
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+",
+
+     
+ "
+id
+":
+ "
+CL
+_
+000
+015
+6
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+as
+omal
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+026
+7
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+ by
+ RNA
+ polymer
+ase
+ II
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+000
+636
+6
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+tein
+ ubiqu
+it
+ination
+",
+
+     
+ "
+id
+":
+ "
+GO
+_
+001
+656
+7
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ Ub
+iqu
+itin
+ Lig
+ases
+",
+
+     
+ "
+id
+":
+ "
+D
+000
+071
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+id
+":
+ "
+D
+011
+037
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+id
+":
+ "
+D
+013
+736
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Math
+ematic
+al
+ Modeling
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+id
+":
+ "
+D
+055
+641
+"
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+CC3D File Created: experiments\week7-8_20250617_171726_run2\generated_cc3d_model.cc3d

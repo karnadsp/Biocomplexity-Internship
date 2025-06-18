@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:06:36.705647",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.timer = 0\n\n    def start(self):\n        self.timer = 0\n        self.simulator.cellFieldG[0][0][0] = self.simulator.createCell('Epithelial', 'Epithelial')\n        self.simulator.cellFieldG[0][0][0].volume = 10\n        self.simulator.cellFieldG[0][0][0].targetVolume = 10\n\n    def step(self, mcs):\n        self.timer += 1\n        if self.timer == 100:\n            cell = self.simulator.cellFieldG[0][0][0]\n            new_cell = self.simulator.createCell('Epithelial', 'Epithelial')\n            new_cell.volume = 5\n            new_cell.targetVolume = 5\n            self.simulator.cellFieldG[1][0][0] = new_cell\n            cell.volume = 5\n            cell.targetVolume = 5\n            self.timer = 0\n\nCompuCellSetup.simulator = CompuCellSetup.Simulator()\nCompuCellSetup.simulator.setSimulationDimensions(10, 1, 1)\nCompuCellSetup.simulator.setFields(\"Cell\")\nCompuCellSetup.simulator.addStepping('Simulation', 1, 1)\nCompuCellSetup.simulator.setDuration(1000)\nCompuCellSetup.simulator.setOutputFrequency(10)\nCompuCellSetup.simulator.setSolver(\"LBFGS\")\nCompuCellSetup.simulator.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_11_Paper_11_0618_0305_run2\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T22:25:15.977758",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\npython \n from  Com pu Cell 3 D  import  Com pu Cell Setup \n from  ste pp ables  import  Ste pp ables \n\n class  E MT Simulation ( Ste pp ables .St e pp able Base Py ):\n      def  __ init __( self ,  _ sim ulator ,  _ num _cells ):\n          Ste pp ables .St e pp able Base Py .__ init __( self ,  _ sim ulator )\n          self .sim ulator  =  _ sim ulator \n          self .num _cells  =  _ num _cells \n        \n          #  Initialize  cell  type  parameters \n          self .cell _mot ility  =   1 . 0 \n          self .cell _ad hesion  =   1 . 0 \n          self .cell _c oh esion  =   1 . 0 \n          self .em t _rate  =   0 . 1 \n        \n      def  start (self ):\n          #  Register  cell  types \n          self .cell _type  =  {' endo th elial ':   0 ,  ' ep ith elial ':   1 ,  ' mes ench ym al ':   2 }\n         \n          #  Set  up  initial  cell  positions  and  types \n          for  i  in  range (self .num _cells ):\n              cell  =  self .sim ulator .cell _field [i ]\n              cell .type  =  self .cell _type [' ep ith elial ']\n             \n          #  Additional  initialization  steps \n          self .sim ulator .add _ste erable _object (self )\n         \n      def  step (self ,  m cs ):\n          #  Implement  E MT  logic \n          #  Implement  cell  migration  logic \n          #  Implement  cell  ad hesion  logic \n          #  Implement  cell  cohesion  logic \n        \n          #  Example  parameter  updates \n          self .em t _rate  +=   0 . 01 \n          self .cell _mot ility  *=   1 . 05 \n        \n em t _simulation  =  E MT Simulation (None ,   100 )"
+  },
+  "output": {
+    "output_file": "experiments\\week4 attempt 13_20250617_222332_run2\\generated_cc3d_model.cc3d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:19:02.337179",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\nimport numpy\n\nclass MySimulation(SteppableBasePy):\n    def __init__(self, _simulator, _num_steps):\n        SteppableBasePy.__init__(self, _simulator, _num_steps)\n        self.simulator = _simulator\n        self.num_steps = _num_steps\n        self.step_number = 0\n        \n    def start(self):\n        print(\"Simulation started.\")\n        \n    def step(self, mcs):\n        print(\"Step number: \", self.step_number)\n        self.step_number += 1\n        if self.step_number == self.num_steps:\n            print(\"Simulation completed.\")\n            \ndef main():\n    # Create simulation object\n    simulator = CompuCellSetup.Simulator()\n    \n    # Set simulation parameters\n    simulator.setSimulationDimensions(50, 50, 1)\n    simulator.setNumberOfSteps(1000)\n    simulator.setSaveOutputFrequency(100)\n    \n    # Register cell types\n    simulator.registerCellType(\"Epithelial\", \"Epithelial\")\n    \n    # Add steppable\n    simulator.addSteppable(MySimulation(simulator, 1000))\n    \n    # Run simulation\n    simulator.run()\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_12_Paper_12_0618_0317_run5\\generated_cc3d_model.cc3d"
+  }
+}

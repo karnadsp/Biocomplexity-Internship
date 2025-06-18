@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:13:48.671629",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy, Mitosis\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.mitosis_steppable = Mitosis(self.simulator)\n        self.mitosis_steppable.initialize()\n        self.simulator.add_steppable(self.mitosis_steppable)\n\n    def start(self):\n        self.simulator.get_cell_field().initialize()\n        self.simulator.get_cell_field().register_cell_type(\"Epithelial\", \"Epithelial\")\n        self.simulator.get_cell_field().register_nuclear_number(1)\n        self.create_single_epithelial_cell()\n\n    def create_single_epithelial_cell(self):\n        cell = self.simulator.get_cell_field().create_cell()\n        cell.type = self.simulator.get_cell_field().get_cell_type(\"Epithelial\")\n        cell.position = [10, 10, 0]\n        self.simulator.get_cell_field().add_cell(cell)\n\n    def step(self, mcs):\n        self.mitosis_steppable.step(mcs)\n\n# XML lines for visualization and simulation setup\nXML_LINES = \"\"\"\n<Simulation>\n  <SimulationParameters>\n    <TimeStep>12</TimeStep>\n    <SimulationDuration>1000</SimulationDuration>\n  </SimulationParameters>\n  <Plugin>\n    <CellType>\n      <Type>Epithelial</Type>\n      <Properties>\n        <Property Name=\"CellType\" Value=\"Epithelial\"/>\n      </Properties>\n    </CellType>\n  </Plugin>\n  <Mitosis>\n    <MitosisParameters>\n      <MitosisSchedule>\n        <MitosisFrequency>24</MitosisFrequency>\n      </MitosisSchedule>\n    </MitosisParameters>\n  </Mitosis>\n</Simulation>\n\"\"\""
+  },
+  "output": {
+    "output_file": "experiments\\paper_04_Paper_4_0618_0212_run5\\generated_cc3d_model.cc3d"
+  }
+}

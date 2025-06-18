@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T01:45:52.494074",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, Mitosis\nimport numpy as np\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulation_name = \"CellProliferationSimulation\"\n        self.cell_types = [\"Mesenchymal\", \"Epithelial\"]\n        self mitosis = Mitosis(self.simulator, {'mitosis_steps': 10, 'mitosis_max_count': 100})\n\n    def start(self):\n        self.simulator.initialize()\n        field = self.simulator.createField(\"Cell\", \"int\")\n        field.setPixel(0, 0, 1)  # Initialize with a single cell\n        self.simulator.setSimulationName(self.simulation_name)\n        self.simulator.setSimulationTime(1000)  # Total simulation steps\n\n    def step(self, mcs):\n        if mcs == 100:\n            # Initialize cells\n            cell_field = self.simulator.get_field(\"Cell\")\n            for x in range(10):\n                for y in range(10):\n                    cell_field.setPixel(x, y, 1 if np.random.rand() > 0.5 else 2)\n        if mcs % 10 == 0:\n            # Cell division logic\n            cell_field = self.simulator.get_field(\"Cell\")\n            for x in range(10):\n                for y in range(10):\n                    cell_type = cell_field.getPixel(x, y)\n                    if cell_type in [1, 2]:\n                        if np.random.rand() < 0.1:\n                            self.mitosis.mitosizeCell(x, y, 1)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_01_Paper_1_0618_0144_run2\\generated_cc3d_model.cc3d"
+  }
+}

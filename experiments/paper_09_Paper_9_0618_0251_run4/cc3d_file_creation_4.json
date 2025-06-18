@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:52:45",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup, Simulation\nfrom steppables import PySteppable, Mitosis, VolumeConstraint\n\nclass SimulationClass(PySteppable):\n    def __init__(self, _simulator, _frequency=1):\n        PySteppable.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.num_cells = 100\n        self.max_steps = 1000\n\n    def start(self):\n        self.simulator.getMitosisSteppable().setNumberOfCellsToDivideEachStep(self.num_cells)\n        cell = self.simulator.createCell()\n        cell.type = 'Epithelial'\n        cell.volume = 1\n        self.simulator.addCellToSimulation(cell, [25, 25, 0])\n\n    def step(self, mcs):\n        if mcs == 1000:\n            self.simulator.stopSimulation()\n        if mcs % 10 == 0:\n            print(\"Current step: \", mcs)\n\nCompuCell3D = CompuCellSetup.Simulator()\nsimulator = CompuCell3D\n\n# Register cell types\nsimulator.registerCellType('Epithelial')\n\n# Add steppables\nsimulator.addSteppable(Mitosis(simulator, 10))\nsimulator.addSteppable(VolumeConstraint(simulator, 1.0))\nsimulator.addSteppable(SimulationClass(simulator))\n\n# Set simulation parameters\nsimulator.setSimulationDimensions(50, 50, 1)\nsimulator.setSimulationTime(1000, 10)\nsimulator.saveOutputData = False\n\n# Run simulation\nsimulator.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_09_Paper_9_0618_0251_run4\\generated_cc3d_model.cc3d"
+  }
+}

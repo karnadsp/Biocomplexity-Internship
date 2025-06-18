@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:12:55.438693",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass CellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _num_cells):\n        super().__init__(_simulator)\n        self.num_cells = _num_cells\n        self.simulator = _simulator\n        self.step = 0\n        self.cell_types = {'Epithelial': 1}\n\n    def start(self):\n        self.simulator.createLattice(50, 50, 1)\n        self.simulator.lattice.field = self.cell_types['Epithelial']\n        self.simulator.cell_field = self.simulator.createFieldCellType()\n        self.simulator.cell_field.initialize()\n        self.simulator.addSteerableObject(self)\n        self.cell_count = {0: self.num_cells}\n        \n    def step(self, mcs):\n        self.step += 1\n        if mcs % 50 == 0:\n            cell = self.simulator.cell_field.randomCell()\n            if cell.type == self.cell_types['Epithelial']:\n                self.simulator.divideCell(cell)\n        self.cell_count[mcs] = len(self.simulator.cell_field.cells)\n\nsimulator = CompuCellSetup.Simulator()\nsimulator.setLatticeUnit(10)\nsimulator.setSimulationDimensions(50, 50, 1)\nsimulator.setSimulationTime(1000, 1000)\nsimulator.setSolver(\"DiffusionSolver\")\nsteppable = CellProliferationSimulation(simulator, 100)\nsimulator.addSteerable(steppable)\nsimulator.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_12_Paper_12_0618_0311_run1\\generated_cc3d_model.cc3d"
+  }
+}

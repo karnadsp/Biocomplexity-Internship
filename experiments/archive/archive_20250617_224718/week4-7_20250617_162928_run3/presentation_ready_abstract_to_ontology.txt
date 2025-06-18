@@ -1,0 +1,1160 @@
+Experiment: week4-7
+Date: 20250617_162928
+Run Number: 3
+
+Initial Description:
+- E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed.
+
+Ontology Annotations:
+<think>
+
+
+Alright
+,
+ I
+ need
+ to
+ create
+ structured
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+.
+ The
+ user
+ wants
+ me
+ to
+ include
+ relevant
+ terms
+ from
+ Cell
+ Ont
+ology
+,
+ Gene
+ Ont
+ology
+ (
+GO
+),
+ and
+ Me
+SH
+.
+ I
+'ll
+ format
+ the
+ response
+ as
+ a
+ JSON
+ object
+ with
+ categories
+ for
+ each
+ ontology
+ type
+.
+
+
+First
+,
+ I
+'ll
+ start
+ by
+ identifying
+ the
+ key
+ biological
+ concepts
+ in
+ the
+ description
+.
+ The
+ main
+ focus
+ is
+ on
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+,
+ their
+ role
+ in
+ prote
+ol
+ysis
+ via
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+,
+ and
+ their
+ involvement
+ in
+ transcription
+.
+ There
+'s
+ also
+ a
+ mention
+ of
+ mathematical
+ modeling
+ and
+ a
+ comparison
+ to
+ engineering
+ safety
+ mechanisms
+.
+
+
+For
+ the
+ Cell
+ Ont
+ology
+,
+ I
+'ll
+ look
+ for
+ terms
+ related
+ to
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+.
+ The
+ term
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+"
+ itself
+ is
+ a
+ protein
+,
+ so
+ I
+'ll
+ include
+ that
+.
+ Since
+ the
+ description
+ talks
+ about
+ their
+ function
+ in
+ prote
+ol
+ysis
+,
+ I
+'ll
+ add
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+"
+ as
+ it
+'s
+ a
+ cellular
+ process
+.
+ Trans
+cription
+ is
+ another
+ key
+ function
+,
+ so
+ I
+'ll
+ include
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+ under
+ both
+ Cell
+ Ont
+ology
+ and
+ GO
+.
+
+
+Moving
+ on
+ to
+ Gene
+ Ont
+ology
+,
+ I
+'ll
+ break
+ it
+ down
+ into
+ Biological
+ Processes
+,
+ Molecular
+ Functions
+,
+ and
+ Cellular
+ Components
+.
+ Under
+ Biological
+ Processes
+,
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+olic
+ process
+"
+ and
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+ fit
+ well
+.
+ For
+ Molecular
+ Functions
+,
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+ is
+ directly
+ relevant
+.
+ In
+ Cellular
+ Components
+,
+ the
+ "
+pro
+te
+as
+ome
+"
+ is
+ mentioned
+,
+ so
+ that
+'s
+ a
+ good
+ inclusion
+.
+
+
+Now
+,
+ for
+ Me
+SH
+ terms
+,
+ I
+'ll
+ consider
+ the
+ broader
+ biological
+ processes
+ and
+ systems
+.
+ "
+Ub
+iqu
+itin
+"
+ and
+ "
+Pro
+te
+as
+ome
+"
+ are
+ clear
+ choices
+.
+ Since
+ E
+3
+ lig
+ases
+ are
+ involved
+ in
+ both
+ prote
+ol
+ysis
+ and
+ transcription
+,
+ terms
+ like
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+"
+ and
+ "
+Trans
+cription
+,
+ Genetic
+"
+ are
+ appropriate
+.
+ The
+ mention
+ of
+ mathematical
+ modeling
+ and
+ system
+ design
+ relates
+ to
+ "
+Models
+,
+ Biological
+"
+ and
+ "
+Systems
+ Biology
+."
+ The
+ safety
+ mechanism
+ analogy
+ brings
+ in
+ "
+Safety
+"
+ and
+ "
+Engineering
+."
+
+
+I
+'ll
+ structure
+ all
+ these
+ terms
+ into
+ a
+ JSON
+ object
+,
+ categor
+izing
+ them
+ under
+ Cell
+ Ont
+ology
+,
+ Gene
+ Ont
+ology
+,
+ and
+ Me
+SH
+.
+ Each
+ category
+ will
+ have
+ its
+ specific
+ terms
+ listed
+ as
+ arrays
+.
+ I
+'ll
+ make
+ sure
+ each
+ term
+ is
+ correctly
+ placed
+ under
+ its
+ respective
+ ontology
+ and
+ sub
+category
+ where
+ applicable
+.
+
+
+I
+ should
+ double
+-check
+ each
+ term
+ to
+ ensure
+ they
+ accurately
+ reflect
+ the
+ original
+ description
+.
+ For
+ example
+,
+ confirming
+ that
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+ is
+ indeed
+ a
+ GO
+ Molecular
+ Function
+ term
+.
+ Also
+,
+ ensuring
+ that
+ Me
+SH
+ terms
+ like
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+"
+ are
+ correctly
+ categorized
+ under
+ broader
+ biological
+ processes
+.
+
+
+Finally
+,
+ I
+'ll
+ present
+ the
+ JSON
+ in
+ a
+ clear
+ format
+,
+ making
+ sure
+ it
+'s
+ valid
+ and
+ properly
+ structured
+ so
+ that
+ it
+ can
+ be
+ easily
+ used
+ or
+ parsed
+ if
+ needed
+.
+ This
+ should
+ compreh
+ensively
+ cover
+ the
+ biological
+ aspects
+ discussed
+ in
+ the
+ original
+ description
+ with
+ appropriate
+ ontology
+ annotations
+.
+
+</think>
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ {
+
+   
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+   
+ "
+Pro
+te
+ol
+ysis
+":
+ "
+pro
+te
+ol
+ysis
+",
+
+   
+ "
+Trans
+cription
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+",
+
+   
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+":
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+"
+
+ 
+ },
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ {
+
+   
+ "
+Bi
+ological
+ Process
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+   
+ ],
+
+   
+ "
+M
+olecular
+ Function
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+
+   
+ ],
+
+   
+ "
+Cell
+ular
+ Component
+":
+ [
+
+     
+ "
+pro
+te
+as
+ome
+"
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+Me
+SH
+":
+ {
+
+   
+ "
+Terms
+":
+ [
+
+     
+ "
+Ub
+iqu
+itin
+",
+
+     
+ "
+Pro
+te
+as
+ome
+",
+
+     
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+",
+
+     
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+Models
+,
+ Biological
+",
+
+     
+ "
+Systems
+ Biology
+",
+
+     
+ "
+Safety
+",
+
+     
+ "
+Engineering
+"
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+
+
+Ontology Annotations:
+
+
+
+Here
+ is
+ a
+ structured
+ JSON
+ object
+ containing
+ ontology
+ annotations
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ {
+
+   
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+   
+ "
+Pro
+te
+ol
+ysis
+":
+ "
+pro
+te
+ol
+ysis
+",
+
+   
+ "
+Trans
+cription
+":
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+",
+
+   
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+":
+ "
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+"
+
+ 
+ },
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ {
+
+   
+ "
+Bi
+ological
+ Process
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+-dependent
+ protein
+ c
+atab
+olic
+ process
+",
+
+     
+ "
+trans
+cription
+,
+ DNA
+-
+templ
+ated
+"
+
+   
+ ],
+
+   
+ "
+M
+olecular
+ Function
+":
+ [
+
+     
+ "
+ub
+iqu
+itin
+ protein
+ lig
+ase
+ activity
+"
+
+   
+ ],
+
+   
+ "
+Cell
+ular
+ Component
+":
+ [
+
+     
+ "
+pro
+te
+as
+ome
+"
+
+   
+ ]
+
+ 
+ },
+
+ 
+ "
+Me
+SH
+":
+ {
+
+   
+ "
+Terms
+":
+ [
+
+     
+ "
+Ub
+iqu
+itin
+",
+
+     
+ "
+Pro
+te
+as
+ome
+",
+
+     
+ "
+Pro
+tein
+ Processing
+,
+ Post
+-
+Trans
+l
+ational
+",
+
+     
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+Models
+,
+ Biological
+",
+
+     
+ "
+Systems
+ Biology
+",
+
+     
+ "
+Safety
+",
+
+     
+ "
+Engineering
+"
+
+   
+ ]
+
+ 
+ }
+
+}
+
+```
+

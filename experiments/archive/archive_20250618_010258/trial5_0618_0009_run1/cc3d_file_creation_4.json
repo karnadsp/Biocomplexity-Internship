@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:11:30.058268",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import CompuCellSetup\nfrom PySteppables import *\nfrom PySolver import *\nfrom PySolverFactory import *\nfrom PySolverField import *\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.setup_solver()\n        \n    def setup_solver(self):\n        # Create a solver for the cell field\n        cell_field = self.simulator.createField(\"Cell\", \"CELL\")\n        self.simulator.addSolver(\"Cell\", \"PySolver\", {\"Cell\": \"PySolver\"})\n        self.simulator.addSolver(\"Cell\", \"PySolverFactory\", {\"Cell\": \"PySolverFactory\"})\n        self.simulator.addSolver(\"Cell\", \"PySolverField\", {\"Cell\": \"PySolverField\"})\n        \n        # Set simulation dimensions\n        self.simulator.setSimulationDimensions(10, 10, 1)\n        \n        # Register steppable\n        self.simulator.registerSteppable(self)\n        \n    def start(self):\n        # Initialize cell field with a single Epithelial cell\n        cell = self.simulator.createCell(\"Epithelial\", \"CL:0000066\")\n        cell.position = (5, 5, 0)\n        self.simulator.cellField[5, 5, 0] = cell\n        \n    def step(self, mcs):\n        # Simple simulation step logic\n        pass\n\n# Create simulation instance\nsim = Simulation()\n\n# Configure simulation parameters\nsim.simulator.setNumberOfSteps(100)\nsim.simulator.setOutputFrequency(10)\nsim.simulator.simulationName = \"EpithelialCellProliferation\"\n\n# Add mitosis steppable\nmitosis_steppable = Mitosis(1, 10, 5, \"CL:0000066\")\nsim.simulator.addSteppable(mitosis_steppable)"
+  },
+  "output": {
+    "output_file": "experiments\\trial5_0618_0009_run1\\generated_cc3d_model.cc3d"
+  }
+}

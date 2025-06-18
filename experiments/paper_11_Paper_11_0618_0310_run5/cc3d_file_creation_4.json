@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:11:42.010853",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nimport CompuCell3D as cc3d\nfrom steppables import SteppableBasePy, Mitosis\nimport numpy as np\n\nclass EpithelialProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self mitosis_distance = 1.0\n        self mitosis_duration = 10.0\n        self.cell_division_rate = 0.01\n\n    def start(self):\n        self.simulator.registerSteppableParams(\n            _steppableInstance=self,\n            _modelString=\"EpithelialProliferationSimulation\",\n            _description=\"Simulation of epithelial cell proliferation\"\n        )\n        self.simulator.registerMitosisSteppable(\n            mitosis_distance=self.mitosis_distance,\n            mitosis_duration=self.mitosis_duration\n        )\n        self.simulator.setNumberOfWorkNodes(4)\n        self.simulator.setField(\n            \"CellTypes\", \n            {\"Epithelial\": 0, \"Dead\": 1}\n        )\n        self.simulator.setField(\n            \"CellGeometry\", \n            {\"Epithelial\": {\"Volume\": 10.0, \"SurfaceArea\": 10.0}}\n        )\n        self.simulator.setMaxNumberOfCells(1000)\n\n    def step(self, mcs):\n        current_cell_count = self.simulator.cellCount(\"Epithelial\")\n        print(f\"Current number of epithelial cells: {current_cell_count}\")\n        if current_cell_count > 500:\n            self.simulator.stopSimulation()\n\n# Initialize the simulation\nsim = cc3d.Simulation()\nsim.setSimulationStep(0.1)\nsim.setSimulationTime(1000.0)\nsim.addSteppable(EpithelialProliferationSimulation(sim, 1))\n\n# Run the simulation\nsim.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_11_Paper_11_0618_0310_run5\\generated_cc3d_model.cc3d"
+  }
+}

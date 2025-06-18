@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T00:32:57.148475",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy\n\nclass NeurogenesisSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _model_name):\n        SteppableBasePy.__init__(self, _simulator, _model_name)\n        self.simulator = _simulator\n        self.model_name = _model_name\n        self.simulator_name = \"CompuCell3D\"\n        \n    def start(self):\n        # Initialize simulation with 100 cells\n        self.simulator.initCells()\n        self.simulator.addCellType(\"Neuron\", \"CL:0000540\")\n        self.simulator.addCellType(\"Other\", \"D009477\")\n        \n        # Set up cell properties\n        self.simulator.setCellDiameter(\"Neuron\", 2.0)\n        self.simulator.setCellVolume(\"Neuron\", 1.0)\n        \n        # Set initial number of cells\n        self.simulator.createCells(\"Neuron\", 100)\n        \n        # Set simulation parameters\n        self.simulator.setSimulationDimensions(50, 50, 1)\n        self.simulator.setSimulationTime(1000, 1)\n        \n    def step(self):\n        # Implement logic for neurogenesis\n        if self.simulator.step_number % 50 == 0:\n            # Divide cells every 50 steps\n            for cell in self.simulator.cellList:\n                if cell.type == \"Neuron\":\n                    cell.divide()\n                    \n        # Implement apoptosis logic\n        for cell in self.simulator.cellList:\n            if cell.type == \"Neuron\":\n                if self.simulator.randomNumber(0, 1) < 0.1:\n                    cell.die()\n\ndef main():\n    # Set up simulation\n    simulator = CompuCellSetup.Simulator()\n    simulator.addSteerable(\"Simulation\", NeurogenesisSimulation)\n    \n    # Run simulation\n    simulator.run(1000)\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  "output": {
+    "output_file": "experiments\\trial5_0618_0030_run1\\generated_cc3d_model.cc3d"
+  }
+}

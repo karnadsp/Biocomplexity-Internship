@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:14:08.263550",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCell3D import CompuCellSetup\nfrom steppables import SteppableBasePy, MitosisSteppable\n\nclass CellProliferationSimulation(SteppableBasePy):\n    def __init__(self, _simulator, _frequency=1):\n        SteppableBasePy.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.step_counter = 0\n        self.mitosistep = 100  # Cells will divide every 100 steps\n\n    def start(self):\n        # Initialize cell type and properties\n        self.cell_type = self.simulator.get_cell_type(\"Epithelial\")\n        self.simulator.set_cell_type(self.cell_type)\n        # Set cell proliferation parameters\n        self.proliferation_rate = 0.1\n        self.max_cell_cycle_length = 100\n\n    def step(self):\n        self.step_counter += 1\n        if self.step_counter % self.mitosistep == 0:\n            # Trigger cell division for all Epithelial cells\n            cell_list = self.simulator.get_cells_by_type(self.cell_type)\n            for cell in cell_list:\n                self.simulator.mitosis(cell)\n\n# Create simulation instance\nsimulator = CompuCellSetup.Simulator()\nsimulator.setSimulationDimensions(50, 50, 1)\nsimulator.setSimulationTime(1000, 100)\nsimulator.addSteerable(CellProliferationSimulation(simulator, 1))\nsimulator.run()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_12_Paper_12_0618_0312_run2\\generated_cc3d_model.cc3d"
+  }
+}

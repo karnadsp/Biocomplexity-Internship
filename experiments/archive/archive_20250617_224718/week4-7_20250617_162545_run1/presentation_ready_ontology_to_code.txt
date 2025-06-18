@@ -1,0 +1,584 @@
+Experiment: week4-7
+Date: 20250617_162545
+Run Number: 1
+
+Generated CC3D Code:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+description
+":
+ "
+A
+ type
+ of
+ enzyme
+ that
+ acts
+ as
+ the
+ third
+ component
+ (
+E
+3
+)
+ in
+ the
+ ubiqu
+it
+ination
+ process
+,
+ determining
+ the
+ specificity
+ of
+ protein
+ degradation
+ in
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+description
+":
+ "
+A
+ cellular
+ system
+ responsible
+ for
+ the
+ degradation
+ of
+ proteins
+,
+ involving
+ ubiqu
+it
+ination
+ and
+ subsequent
+ prote
+as
+omal
+ degradation
+."
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ breaking
+ down
+ proteins
+ into
+ smaller
+ peptides
+ or
+ amino
+ acids
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+650
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+al
+ activation
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ by
+ which
+ a
+ gene
+'s
+ expression
+ is
+ increased
+ through
+ the
+ activation
+ of
+ transcription
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+656
+3
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+description
+":
+ "
+Any
+ process
+ that
+ mod
+ulates
+ the
+ expression
+ of
+ genes
+,
+ including
+ transcription
+al
+ and
+ post
+-trans
+cription
+al
+ regulation
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+ lig
+ase
+ activity
+",
+
+     
+ "
+description
+":
+ "
+C
+atal
+ysis
+ of
+ the
+ transfer
+ of
+ ubiqu
+itin
+ to
+ a
+ substrate
+ protein
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+484
+2
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+description
+":
+ "
+A
+ system
+ of
+ cellular
+ enzymes
+ that
+ recognize
+,
+ conjug
+ate
+,
+ and
+ degrade
+ specific
+ proteins
+,
+ thereby
+ regulating
+ the
+ turnover
+ of
+ proteins
+ within
+ the
+ cell
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Gene
+ Expression
+ Regulation
+",
+
+     
+ "
+description
+":
+ "
+Any
+ of
+ the
+ processes
+ by
+ which
+ cellular
+ or
+ viral
+ genes
+ are
+ turned
+ on
+ or
+ turned
+ off
+,
+ including
+ gene
+ activation
+ and
+ gene
+ repression
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ synthes
+izing
+ RNA
+ from
+ DNA
+,
+ carried
+ out
+ by
+ RNA
+ polymer
+ase
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Models
+,
+ The
+oretical
+",
+
+     
+ "
+description
+":
+ "
+The
+oretical
+ models
+ that
+ describe
+ or
+ explain
+ biological
+ processes
+ or
+ phenomena
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+description
+":
+ "
+An
+ interdisciplinary
+ approach
+ that
+ combines
+ biological
+ sciences
+ with
+ engineering
+ and
+ mathematical
+ sciences
+ to
+ understand
+ complex
+ biological
+ systems
+."
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
+
+CC3D File Created: experiments\week4-7_20250617_162545_run1\generated_cc3d_model.cc3d

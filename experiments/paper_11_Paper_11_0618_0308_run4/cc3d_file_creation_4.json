@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T03:10:05.026467",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import PyPythonSteppable\n\nclass EpithelialSimulation(PyPythonSteppable):\n    def __init__(self, _simulator, _frequency=1):\n        PyPythonSteppable.__init__(self, _simulator, _frequency)\n        self.simulator = _simulator\n        self.simulation_name = \"EpithelialSimulation\"\n        self.num_cells = 100\n        self.cell_types = {'Epithelial': 1}\n\n    def start(self):\n        self.simulator.initialize()\n        self.create_cells()\n\n    def create_cells(self):\n        cell_type = self.cell_types['Epithelial']\n        for _ in range(self.num_cells):\n            cell = self.simulator.createCell()\n            cell.cellType = cell_type\n            cell.position = self.simulator.getRandomPosition()\n            cell.volume = 1\n\n    def step(self):\n        current_step = self.simulator.step\n        if current_step % 100 == 0:\n            print(f\"Simulation step: {current_step}\")\n            self.check_cell_behavior()\n\n    def check_cell_behavior(self):\n        for cell in self.simulator.cellList:\n            if cell.cellType == self.cell_types['Epithelial']:\n                self.handle_transcription(cell)\n                self.handle_cell_division(cell)\n\n    def handle_transcription(self, cell):\n        pass\n\n    def handle_cell_division(self, cell):\n        pass\n\nsimulator = Simulator()\nsimulator.setSimulationName(\"EpithelialSimulation\")\nsimulator.addSteerable(EpithelialSimulation(simulator, 1))\nsimulator.run(1000)"
+  },
+  "output": {
+    "output_file": "experiments\\paper_11_Paper_11_0618_0308_run4\\generated_cc3d_model.cc3d"
+  }
+}

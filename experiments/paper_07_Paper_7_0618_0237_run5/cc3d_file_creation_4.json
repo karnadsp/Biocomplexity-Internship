@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-18T02:39:00.724419",
+  "step": "cc3d_file_creation",
+  "input": {
+    "python_code": "from cc3d.core.PySteppables import *\n\nfrom CompuCellSetup import Simulator\nfrom steppables import SteppableBasePy\n\nclass Simulation(SteppableBasePy):\n    def __init__(self, _simulator, _num_cells=100):\n        SteppableBasePy.__init__(self, _simulator)\n        self.simulator = _simulator\n        self.num_cells = _num_cells\n        self.cell_types = ['Epithelial']\n        \n    def start(self):\n        # Initialize simulation with one epithelial cell\n        self.simulator.addCellGrowthSteppable()\n        self.simulator.addCellDeathSteppable()\n        self.simulator.addCellProliferationSteppable()\n        \n        # Set initial cell configuration\n        self.simulator.createCellType('Epithelial', 'CL:0000001')\n        self.simulator.createLattice(10, 10, 10)\n        self.simulator.addCell(5, 5, 5, 'Epithelial')\n        \n        # Set simulation parameters\n        self.simulator.setField('CellProliferation', 'Cyclin-dependent Protein Kinase Activity', 1.0)\n        self.simulator.setField('CellDeath', 'Apoptosis', 0.1)\n        self.simulator.setField('CellGrowth', 'GrowthRate', 0.5)\n        \n        # Set maximum number of cells\n        self.simulator.setMaxNumberOfCells(self.num_cells)\n        \n    def step(self):\n        # Implement cell proliferation logic\n        current_cell_count = self.simulator.getCurrentCellCount()\n        if current_cell_count < self.num_cells:\n            for cell in self.simulator.getAllCells():\n                if cell.type == 'Epithelial':\n                    if cell.age > 10:\n                        self.simulator.divideCell(cell)\n                        cell.age = 0\n        else:\n            self.simulator.stopSimulation()\n            \n    def finish(self):\n        pass\n\n# Create simulation instance\nsim = Simulator()\nsim.addSteppable(Simulation(sim))\n\n# Configure simulation\nsim.configureSimulation()\nsim.runSimulation()"
+  },
+  "output": {
+    "output_file": "experiments\\paper_07_Paper_7_0618_0237_run5\\generated_cc3d_model.cc3d"
+  }
+}

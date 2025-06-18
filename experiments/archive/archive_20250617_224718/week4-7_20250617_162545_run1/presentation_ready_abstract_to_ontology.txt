@@ -1,0 +1,1710 @@
+Experiment: week4-7
+Date: 20250617_162545
+Run Number: 1
+
+Initial Description:
+- E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed.
+
+Ontology Annotations:
+<think>
+
+
+Okay
+,
+ I
+ need
+ to
+ create
+ a
+ structured
+ ontology
+ annotation
+ based
+ on
+ the
+ provided
+ information
+ about
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+.
+ The
+ user
+ wants
+ this
+ in
+ JSON
+ format
+,
+ categor
+izing
+ different
+ ontology
+ types
+ like
+ Cell
+ Ont
+ology
+,
+ GO
+,
+ and
+ Me
+SH
+.
+ 
+
+
+First
+,
+ I
+'ll
+ read
+ through
+ the
+ original
+ description
+ to
+ understand
+ the
+ key
+ points
+.
+ E
+3
+ ubiqu
+itin
+ lig
+ases
+ are
+ involved
+ in
+ prote
+ol
+ysis
+ via
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+ and
+ also
+ play
+ a
+ role
+ in
+ transcription
+.
+ The
+ study
+ uses
+ mathematical
+ modeling
+ to
+ explore
+ how
+ these
+ lig
+ases
+ balance
+ their
+ antagon
+istic
+ functions
+,
+ acting
+ like
+ a
+ safety
+ inter
+lock
+ to
+ prevent
+ sustained
+ gene
+ activation
+ when
+ destabil
+ized
+.
+
+
+Now
+,
+ I
+'ll
+ break
+ this
+ down
+ into
+ the
+ relevant
+ ont
+ologies
+.
+
+
+Starting
+ with
+ the
+ Cell
+ Ont
+ology
+ (
+CL
+),
+ I
+ need
+ terms
+ related
+ to
+ E
+3
+ lig
+ases
+ and
+ their
+ functions
+.
+ CL
+ terms
+ might
+ include
+ '
+E
+3
+ ubiqu
+itin
+ lig
+ase
+'
+ and
+ '
+ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+'
+ since
+ those
+ are
+ specific
+ cell
+ components
+.
+
+
+Next
+,
+ for
+ Gene
+ Ont
+ology
+ (
+GO
+),
+ I
+ should
+ cover
+ both
+ biological
+ processes
+ and
+ molecular
+ functions
+.
+ Processes
+ include
+ prote
+ol
+ysis
+,
+ transcription
+,
+ and
+ regulation
+ of
+ gene
+ expression
+.
+ Molecular
+ functions
+ would
+ involve
+ lig
+ase
+ activity
+,
+ specifically
+ ubiqu
+itin
+ lig
+ase
+,
+ and
+ transcription
+al
+ activation
+.
+
+
+Moving
+ on
+ to
+ Me
+SH
+ terms
+,
+ these
+ are
+ broader
+ and
+ might
+ include
+ topics
+ like
+ Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+,
+ Gene
+ Expression
+ Regulation
+,
+ and
+ Trans
+cription
+,
+ Genetic
+.
+ Also
+,
+ since
+ the
+ study
+ mentions
+ mathematical
+ modeling
+,
+ terms
+ like
+ Models
+,
+ The
+oretical
+ and
+ Systems
+ Biology
+ could
+ be
+ relevant
+.
+
+
+I
+ should
+ ensure
+ that
+ each
+ term
+ is
+ correctly
+ categorized
+ under
+ its
+ respective
+ ontology
+.
+ I
+'ll
+ structure
+ the
+ JSON
+ with
+ separate
+ sections
+ for
+ each
+ ontology
+ type
+,
+ listing
+ the
+ relevant
+ terms
+ as
+ arrays
+.
+
+
+I
+ also
+ need
+ to
+ make
+ sure
+ that
+ the
+ terms
+ are
+ accurate
+ and
+ directly
+ relate
+ to
+ the
+ description
+ provided
+.
+ For
+ example
+,
+ '
+s
+afety
+ inter
+lock
+ device
+'
+ isn
+'t
+ a
+ biological
+ term
+,
+ so
+ it
+'s
+ more
+ of
+ an
+ analogy
+ and
+ might
+ not
+ have
+ a
+ direct
+ ontology
+ term
+,
+ but
+ the
+ concept
+ relates
+ to
+ system
+ stability
+,
+ which
+ ties
+ into
+ regulation
+ and
+ systems
+ biology
+ in
+ Me
+SH
+.
+
+
+Finally
+,
+ I
+'ll
+ format
+ everything
+ into
+ a
+ JSON
+ object
+,
+ ensuring
+ proper
+ syntax
+ and
+ structure
+.
+ Each
+ category
+ will
+ have
+ its
+ own
+ key
+ with
+ an
+ array
+ of
+ terms
+.
+ This
+ should
+ provide
+ a
+ clear
+ and
+ organized
+ annotation
+ based
+ on
+ the
+ provided
+ information
+.
+
+</think>
+
+
+
+Here
+ is
+ the
+ structured
+ ontology
+ annotation
+ based
+ on
+ the
+ provided
+ information
+:
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+description
+":
+ "
+A
+ type
+ of
+ enzyme
+ that
+ acts
+ as
+ the
+ third
+ component
+ (
+E
+3
+)
+ in
+ the
+ ubiqu
+it
+ination
+ process
+,
+ determining
+ the
+ specificity
+ of
+ protein
+ degradation
+ in
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+description
+":
+ "
+A
+ cellular
+ system
+ responsible
+ for
+ the
+ degradation
+ of
+ proteins
+,
+ involving
+ ubiqu
+it
+ination
+ and
+ subsequent
+ prote
+as
+omal
+ degradation
+."
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ breaking
+ down
+ proteins
+ into
+ smaller
+ peptides
+ or
+ amino
+ acids
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+650
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+al
+ activation
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ by
+ which
+ a
+ gene
+'s
+ expression
+ is
+ increased
+ through
+ the
+ activation
+ of
+ transcription
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+656
+3
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+description
+":
+ "
+Any
+ process
+ that
+ mod
+ulates
+ the
+ expression
+ of
+ genes
+,
+ including
+ transcription
+al
+ and
+ post
+-trans
+cription
+al
+ regulation
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+ lig
+ase
+ activity
+",
+
+     
+ "
+description
+":
+ "
+C
+atal
+ysis
+ of
+ the
+ transfer
+ of
+ ubiqu
+itin
+ to
+ a
+ substrate
+ protein
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+484
+2
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+description
+":
+ "
+A
+ system
+ of
+ cellular
+ enzymes
+ that
+ recognize
+,
+ conjug
+ate
+,
+ and
+ degrade
+ specific
+ proteins
+,
+ thereby
+ regulating
+ the
+ turnover
+ of
+ proteins
+ within
+ the
+ cell
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Gene
+ Expression
+ Regulation
+",
+
+     
+ "
+description
+":
+ "
+Any
+ of
+ the
+ processes
+ by
+ which
+ cellular
+ or
+ viral
+ genes
+ are
+ turned
+ on
+ or
+ turned
+ off
+,
+ including
+ gene
+ activation
+ and
+ gene
+ repression
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ synthes
+izing
+ RNA
+ from
+ DNA
+,
+ carried
+ out
+ by
+ RNA
+ polymer
+ase
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Models
+,
+ The
+oretical
+",
+
+     
+ "
+description
+":
+ "
+The
+oretical
+ models
+ that
+ describe
+ or
+ explain
+ biological
+ processes
+ or
+ phenomena
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+description
+":
+ "
+An
+ interdisciplinary
+ approach
+ that
+ combines
+ biological
+ sciences
+ with
+ engineering
+ and
+ mathematical
+ sciences
+ to
+ understand
+ complex
+ biological
+ systems
+."
+
+   
+ }
+
+ 
+ ]
+
+}
+
+``
+`
+
+
+This
+ JSON
+ object
+ provides
+ a
+ structured
+ annotation
+ of
+ the
+ key
+ biological
+ concepts
+,
+ processes
+,
+ and
+ systems
+ described
+ in
+ the
+ original
+ text
+,
+ categorized
+ by
+ relevant
+ ont
+ologies
+ (
+Cell
+ Ont
+ology
+,
+ Gene
+ Ont
+ology
+,
+ and
+ Me
+SH
+).
+ Each
+ term
+ is
+ accompanied
+ by
+ a
+ brief
+ description
+ and
+,
+ where
+ applicable
+,
+ a
+ Gene
+ Ont
+ology
+ ID
+ (
+GO
+ ID
+).
+
+
+Ontology Annotations:
+
+
+
+```
+json
+
+
+{
+
+ 
+ "
+Cell
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+E
+3
+ ubiqu
+itin
+ lig
+ase
+",
+
+     
+ "
+description
+":
+ "
+A
+ type
+ of
+ enzyme
+ that
+ acts
+ as
+ the
+ third
+ component
+ (
+E
+3
+)
+ in
+ the
+ ubiqu
+it
+ination
+ process
+,
+ determining
+ the
+ specificity
+ of
+ protein
+ degradation
+ in
+ the
+ ubiqu
+itin
+-pro
+te
+as
+ome
+ system
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-pro
+te
+as
+ome
+ system
+",
+
+     
+ "
+description
+":
+ "
+A
+ cellular
+ system
+ responsible
+ for
+ the
+ degradation
+ of
+ proteins
+,
+ involving
+ ubiqu
+it
+ination
+ and
+ subsequent
+ prote
+as
+omal
+ degradation
+."
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Gene
+ Ont
+ology
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Pro
+te
+ol
+ysis
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ breaking
+ down
+ proteins
+ into
+ smaller
+ peptides
+ or
+ amino
+ acids
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+650
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+al
+ activation
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ by
+ which
+ a
+ gene
+'s
+ expression
+ is
+ increased
+ through
+ the
+ activation
+ of
+ transcription
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+656
+3
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Reg
+ulation
+ of
+ gene
+ expression
+",
+
+     
+ "
+description
+":
+ "
+Any
+ process
+ that
+ mod
+ulates
+ the
+ expression
+ of
+ genes
+,
+ including
+ transcription
+al
+ and
+ post
+-trans
+cription
+al
+ regulation
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+001
+046
+8
+"
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+ lig
+ase
+ activity
+",
+
+     
+ "
+description
+":
+ "
+C
+atal
+ysis
+ of
+ the
+ transfer
+ of
+ ubiqu
+itin
+ to
+ a
+ substrate
+ protein
+.",
+
+     
+ "
+go
+_id
+":
+ "
+GO
+:
+000
+484
+2
+"
+
+   
+ }
+
+ 
+ ],
+
+ 
+ "
+Me
+SH
+":
+ [
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Ub
+iqu
+itin
+-Pro
+te
+as
+ome
+ System
+",
+
+     
+ "
+description
+":
+ "
+A
+ system
+ of
+ cellular
+ enzymes
+ that
+ recognize
+,
+ conjug
+ate
+,
+ and
+ degrade
+ specific
+ proteins
+,
+ thereby
+ regulating
+ the
+ turnover
+ of
+ proteins
+ within
+ the
+ cell
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Gene
+ Expression
+ Regulation
+",
+
+     
+ "
+description
+":
+ "
+Any
+ of
+ the
+ processes
+ by
+ which
+ cellular
+ or
+ viral
+ genes
+ are
+ turned
+ on
+ or
+ turned
+ off
+,
+ including
+ gene
+ activation
+ and
+ gene
+ repression
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Trans
+cription
+,
+ Genetic
+",
+
+     
+ "
+description
+":
+ "
+The
+ process
+ of
+ synthes
+izing
+ RNA
+ from
+ DNA
+,
+ carried
+ out
+ by
+ RNA
+ polymer
+ase
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Models
+,
+ The
+oretical
+",
+
+     
+ "
+description
+":
+ "
+The
+oretical
+ models
+ that
+ describe
+ or
+ explain
+ biological
+ processes
+ or
+ phenomena
+."
+
+   
+ },
+
+   
+ {
+
+     
+ "
+term
+":
+ "
+Systems
+ Biology
+",
+
+     
+ "
+description
+":
+ "
+An
+ interdisciplinary
+ approach
+ that
+ combines
+ biological
+ sciences
+ with
+ engineering
+ and
+ mathematical
+ sciences
+ to
+ understand
+ complex
+ biological
+ systems
+."
+
+   
+ }
+
+ 
+ ]
+
+}
+
+```
+
