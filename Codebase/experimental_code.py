@@ -379,6 +379,8 @@ def extract_code_from_response(response):
     # Extract code block if present
     if "```python" in response:
         response = response.split("```python")[1].split("```")[0].strip()
+    elif "```" in response:
+        response = response.split("```")[1].split("```")[0].strip()
     
     return response
 
