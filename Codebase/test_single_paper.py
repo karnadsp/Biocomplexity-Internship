@@ -59,37 +59,39 @@ def test_first_paper(csv_file="week4papers.csv", num_runs=3):
         print("GENERATING ANALYSIS")
         print(f"{'='*60}")
         
+        # Get main experiment directory from first run
+        main_experiment_dir = paper_dirs[0].parent
+        
+        # Generate ontology comparison
+        from experimental_code import generate_ontology_comparison
+        ontology_comparison = generate_ontology_comparison(paper_dirs)
+        with open(main_experiment_dir / "ontology_comparison.txt", 'w', encoding='utf-8') as f:
+            f.write(ontology_comparison)
+        
         # Generate detailed summary
         detailed_summary = generate_detailed_summary(paper_dirs, experiment_name, paper['abstract'])
+        with open(main_experiment_dir / "experiment_summary.txt", 'w', encoding='utf-8') as f:
+            f.write(detailed_summary)
         
         # Analyze consistency
         consistency_metrics = analyze_run_consistency(paper_dirs)
         consistency_analysis = format_consistency_analysis(consistency_metrics)
-        
-        # Save results
-        from datetime import datetime
-        summary_dir = Path(f"experiments/test_{experiment_name}_summary_{datetime.now().strftime('%m%d_%H%M')}")
-        summary_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Write summary files
-        with open(summary_dir / "experiment_summary.txt", 'w', encoding='utf-8') as f:
-            f.write(detailed_summary)
-        
-        with open(summary_dir / "consistency_analysis.txt", 'w', encoding='utf-8') as f:
+        with open(main_experiment_dir / "consistency_analysis.txt", 'w', encoding='utf-8') as f:
             f.write(consistency_analysis)
-        
-        combined_report = detailed_summary + "\n\n" + consistency_analysis
-        with open(summary_dir / "complete_analysis_report.txt", 'w', encoding='utf-8') as f:
-            f.write(combined_report)
         
         print(f"\n{'='*60}")
         print("TEST COMPLETED SUCCESSFULLY!")
         print(f"{'='*60}")
-        print("Summary files generated:")
-        print(f"   • experiment_summary.txt")
-        print(f"   • consistency_analysis.txt") 
-        print(f"   • complete_analysis_report.txt")
-        print(f"All files saved in: {summary_dir}")
+        print(f"Experiment structure:")
+        print(f"  Main directory: {main_experiment_dir}")
+        print(f"  Run directories: {len(paper_dirs)} subdirectories")
+        print(f"")
+        print("Generated files:")
+        print(f"  • ontology_comparison.txt - Side-by-side ontology comparison")
+        print(f"  • experiment_summary.txt - Detailed run information")
+        print(f"  • consistency_analysis.txt - Pipeline consistency analysis")
+        print(f"  • run_X/experiment_data.json - Comprehensive data per run")
+        print(f"  • run_X/generated_cc3d_model.cc3d - Generated models")
         print(f"{'='*60}")
         
         # Quick preview of results

@@ -1,0 +1,15 @@
+paper_id,paper_name,num_runs,successful_ontology_extractions,successful_code_extractions,CellOntology_unique_terms,CellOntology_avg_consistency,CellOntology_max_consistency,CellOntology_perfect_terms,GeneOntology_unique_terms,GeneOntology_avg_consistency,GeneOntology_max_consistency,GeneOntology_perfect_terms,MeSH_unique_terms,MeSH_avg_consistency,MeSH_max_consistency,MeSH_perfect_terms,code_avg_similarity,code_min_similarity,code_max_similarity
+1,Paper_1,5,5,5,3,0.4,0.8,0,2,0.5,0.8,0,1,1,1,1,0.203,0.058,0.305
+2,Paper_2,5,5,5,4,0.3,0.4,0,5,0.24,0.4,0,3,0.333,0.6,0,0.132,0.074,0.224
+3,Paper_3,5,5,5,4,0.3,0.6,0,3,0.4,0.6,0,4,0.3,0.6,0,0.093,0.015,0.266
+4,Paper_4,5,5,5,4,0.25,0.4,0,3,0.333,0.4,0,2,0.4,0.6,0,0.147,0.033,0.289
+5,Paper_5,5,5,5,5,0.28,0.6,0,5,0.28,0.6,0,5,0.32,0.8,0,0.11,0.039,0.245
+6,Paper_6,5,5,5,1,1,1,1,1,1,1,1,1,1,1,1,0.073,0.032,0.15
+7,Paper_7,5,5,5,4,0.3,0.6,0,3,0.333,0.6,0,2,0.5,0.8,0,0.146,0.065,0.333
+8,Paper_8,5,5,5,2,0.5,0.6,0,3,0.333,0.6,0,2,0.5,0.6,0,0.141,0.055,0.29
+9,Paper_9,5,5,5,2,0.6,1,1,2,0.6,1,1,2,0.6,1,1,0.129,0.038,0.265
+10,Paper_10,5,5,5,4,0.3,0.6,0,5,0.28,0.6,0,3,0.4,0.8,0,0.136,0.062,0.232
+11,Paper_11,5,5,5,5,0.28,0.6,0,6,0.267,0.6,0,4,0.4,1,1,0.116,0.063,0.217
+12,Paper_12,5,5,5,3,0.333,0.6,0,3,0.333,0.6,0,2,0.5,0.8,0,0.143,0.056,0.292
+13,Paper_13,5,5,5,5,0.24,0.4,0,5,0.24,0.4,0,2,0.5,0.8,0,0.151,0.081,0.2
+14,Paper_14,5,5,5,5,0.24,0.4,0,4,0.25,0.4,0,4,0.25,0.4,0,0.127,0.029,0.233

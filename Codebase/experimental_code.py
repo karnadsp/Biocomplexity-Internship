@@ -29,39 +29,77 @@ if not api_token:
 client = replicate.Client(api_token=api_token)
 
 class ExperimentLogger:
-    def __init__(self, experiment_name, run_number=1):
+    def __init__(self, experiment_name, run_number=1, total_runs=1):
         self.experiment_name = experiment_name
         self.run_number = run_number
-        self.timestamp = datetime.now().strftime("%m%d_%H%M")
-        self.experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}_run{run_number}")
-        self.experiment_dir.mkdir(parents=True, exist_ok=True)
-        self.interaction_log = []
+        self.total_runs = total_runs
+        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-    def log_interaction(self, step_name, input_data, output_data):
-        """Log an interaction with timestamps and metadata"""
-        interaction = {
-            "timestamp": datetime.now().isoformat(),
-            "step": step_name,
-            "input": input_data,
-            "output": output_data
-        }
-        self.interaction_log.append(interaction)
+        # Create main experiment directory (shared across all runs)
+        self.main_experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}")
+        self.main_experiment_dir.mkdir(parents=True, exist_ok=True)
         
-        # Save individual interaction to file
-        interaction_file = self.experiment_dir / f"{step_name}_{len(self.interaction_log)}.json"
-        with open(interaction_file, 'w') as f:
-            json.dump(interaction, f, indent=2)
-            
-    def save_experiment_summary(self):
-        """Save complete experiment log"""
-        summary_file = self.experiment_dir / "experiment_summary.json"
-        with open(summary_file, 'w') as f:
-            json.dump({
-                "experiment_name": self.experiment_name,
+        # Create subdirectory for this specific run
+        self.run_dir = self.main_experiment_dir / f"run_{run_number}"
+        self.run_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Store all data for this run
+        self.run_data = {
+            "experiment_info": {
+                "experiment_name": experiment_name,
+                "run_number": run_number,
+                "total_runs": total_runs,
                 "timestamp": self.timestamp,
-                "run_number": self.run_number,
-                "interactions": self.interaction_log
-            }, f, indent=2)
+                "run_start_time": datetime.now().isoformat()
+            },
+            "inputs": {},
+            "llm_responses": [],
+            "outputs": {},
+            "metadata": {}
+        }
+        
+    def log_input(self, step_name, input_data):
+        """Log input data for a step"""
+        self.run_data["inputs"][step_name] = {
+            "timestamp": datetime.now().isoformat(),
+            "data": input_data
+        }
+        
+    def log_llm_response(self, step_name, prompt, system_message, response):
+        """Log an LLM interaction"""
+        self.run_data["llm_responses"].append({
+            "step": step_name,
+            "timestamp": datetime.now().isoformat(),
+            "prompt": prompt,
+            "system_message": system_message,
+            "response": response
+        })
+        
+    def log_output(self, step_name, output_data):
+        """Log output data for a step"""
+        self.run_data["outputs"][step_name] = {
+            "timestamp": datetime.now().isoformat(),
+            "data": output_data
+        }
+        
+    def log_metadata(self, key, value):
+        """Log metadata"""
+        self.run_data["metadata"][key] = value
+        
+    def save_run_data(self):
+        """Save all run data to a single comprehensive file"""
+        self.run_data["experiment_info"]["run_end_time"] = datetime.now().isoformat()
+        
+        # Save comprehensive run data
+        run_file = self.run_dir / "experiment_data.json"
+        with open(run_file, 'w', encoding='utf-8') as f:
+            json.dump(self.run_data, f, indent=2)
+            
+        return self.run_dir
+        
+    def get_main_experiment_dir(self):
+        """Get the main experiment directory (shared across runs)"""
+        return self.main_experiment_dir
 
 def get_llm_response(prompt, system_message, logger):
     """Helper function to get response from Replicate API"""
@@ -98,9 +136,7 @@ def get_llm_response(prompt, system_message, logger):
                 result = "".join(result)
             
             # Log the full response
-            logger.log_interaction("llm_response", 
-                                {"prompt": prompt, "system_message": system_message},
-                                {"response": result})
+            logger.log_llm_response("llm_response", prompt, system_message, result)
             
             # Remove thinking process if present
             if "</think>" in result:
@@ -249,25 +285,23 @@ def create_cc3d_file(python_code, logger):
             f.write(config_content)
         
         # Create the .cc3d zip file in the experiment directory
-        output_file = os.path.join(logger.experiment_dir, "generated_cc3d_model.cc3d")
+        output_file = os.path.join(logger.run_dir, "generated_cc3d_model.cc3d")
         with zipfile.ZipFile(output_file, 'w') as zipf:
             zipf.write(sim_file, "Simulation.py")
             zipf.write(config_file, "Simulation.cc3d")
         
-        logger.log_interaction("cc3d_file_creation", 
-                             {"python_code": python_code},
-                             {"output_file": output_file})
+        logger.log_metadata("cc3d_file_creation", {"python_code": python_code, "output_file": output_file})
         
         return output_file
 
 def run_experiment(experiment_name, description, run_number, num_runs):
     """Run a single experiment with the given parameters"""
     print(f"\nStarting experiment run {run_number} of {num_runs}...")
-    logger = ExperimentLogger(experiment_name, run_number)
+    logger = ExperimentLogger(experiment_name, run_number, num_runs)
     
     # Log initial description
     print("Generating ontology annotations...")
-    logger.log_interaction("initial_description", {}, {"description": description})
+    logger.log_input("initial_description", {"description": description})
     
     # Generate and log ontology annotations directly from description
     annotations = generate_ontology_annotations(description, "", logger)
@@ -288,10 +322,10 @@ def run_experiment(experiment_name, description, run_number, num_runs):
     
     # Save complete experiment summary
     print("Saving experiment summary...")
-    logger.save_experiment_summary()
+    run_dir = logger.save_run_data()
     
     print(f"Experiment run {run_number} completed.")
-    return logger.experiment_dir
+    return run_dir
 
 def extract_ontologies_from_response(response):
     """Extract ontology terms from LLM response"""
@@ -387,12 +421,12 @@ def analyze_run_consistency(experiment_dirs):
     for run_dir in experiment_dirs:
         try:
             print(f"\nProcessing directory: {run_dir}")
-            with open(Path(run_dir) / "experiment_summary.json", 'r') as f:
+            with open(Path(run_dir) / "experiment_data.json", 'r') as f:
                 data = json.load(f)
             
             # Get all LLM responses in order
             llm_responses = []
-            for interaction in data['interactions']:
+            for interaction in data['llm_responses']:
                 if interaction['step'] == 'llm_response':
                     llm_responses.append(interaction)
             
@@ -405,7 +439,7 @@ def analyze_run_consistency(experiment_dirs):
             if len(llm_responses) >= 1:
                 # First response should be ontologies
                 print("Processing first response as ontologies...")
-                raw_response = llm_responses[0]['output']['response']
+                raw_response = llm_responses[0]['response']
                 
                 # Process the response to extract JSON
                 processed_response = raw_response
@@ -423,7 +457,7 @@ def analyze_run_consistency(experiment_dirs):
             if len(llm_responses) >= 2:
                 # Second response should be code
                 print("Processing second response as code...")
-                code = extract_code_from_response(llm_responses[1]['output']['response'])
+                code = extract_code_from_response(llm_responses[1]['response'])
                 print(f"Extracted code length: {len(code) if code else 0}")
                 stage_results['ontology_to_code'].append(code)
             
@@ -758,13 +792,13 @@ def generate_detailed_summary(experiment_dirs, experiment_name, description):
     
     for i, exp_dir in enumerate(experiment_dirs, 1):
         try:
-            with open(Path(exp_dir) / "experiment_summary.json", 'r') as f:
+            with open(Path(exp_dir) / "experiment_data.json", 'r') as f:
                 data = json.load(f)
             
             summary_content.append(f"Run {i}: {exp_dir.name}")
             summary_content.append(f"  Directory: {exp_dir}")
-            summary_content.append(f"  Timestamp: {data.get('timestamp', 'Unknown')}")
-            summary_content.append(f"  Interactions: {len(data.get('interactions', []))}")
+            summary_content.append(f"  Timestamp: {data['experiment_info']['run_start_time']}")
+            summary_content.append(f"  Interactions: {len(data['llm_responses'])}")
             
             # Check for generated files
             cc3d_file = exp_dir / "generated_cc3d_model.cc3d"
@@ -782,6 +816,160 @@ def generate_detailed_summary(experiment_dirs, experiment_name, description):
     
     return "\n".join(summary_content)
 
+def generate_ontology_comparison(experiment_dirs):
+    """Generate a side-by-side comparison of ontologies extracted from all runs"""
+    comparison_content = []
+    
+    # Header
+    comparison_content.append("=" * 80)
+    comparison_content.append("ONTOLOGY EXTRACTION COMPARISON")
+    comparison_content.append("=" * 80)
+    comparison_content.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    comparison_content.append(f"Total Runs: {len(experiment_dirs)}")
+    comparison_content.append("")
+    
+    # Extract ontologies from each run
+    all_run_ontologies = []
+    
+    for i, run_dir in enumerate(experiment_dirs, 1):
+        try:
+            with open(Path(run_dir) / "experiment_data.json", 'r') as f:
+                data = json.load(f)
+            
+            # Get first LLM response (ontology extraction)
+            ontology_response = None
+            if data['llm_responses']:
+                raw_response = data['llm_responses'][0]['response']
+                
+                # Process the response
+                processed_response = raw_response
+                if "</think>" in processed_response:
+                    processed_response = processed_response.split("</think>")[-1].strip()
+                if "```json" in processed_response:
+                    processed_response = processed_response.split("```json")[1].split("```")[0].strip()
+                elif "```" in processed_response:
+                    processed_response = processed_response.split("```")[1].split("```")[0].strip()
+                
+                ontologies = extract_ontologies_from_response(processed_response)
+                all_run_ontologies.append({
+                    'run': i,
+                    'run_dir': run_dir.name,
+                    'ontologies': ontologies,
+                    'raw_response': processed_response
+                })
+            
+        except Exception as e:
+            comparison_content.append(f"Error processing run {i}: {str(e)}")
+            all_run_ontologies.append({
+                'run': i,
+                'run_dir': run_dir.name,
+                'ontologies': {},
+                'error': str(e)
+            })
+    
+    # Create side-by-side comparison for each category
+    for category in ['CellOntology', 'GeneOntology', 'MeSH']:
+        comparison_content.append(f"{category.upper()} TERMS COMPARISON")
+        comparison_content.append("=" * len(category) + "=" * 17)
+        comparison_content.append("")
+        
+        # Collect all unique terms across runs
+        all_terms = set()
+        for run_data in all_run_ontologies:
+            if 'ontologies' in run_data and category in run_data['ontologies']:
+                all_terms.update(run_data['ontologies'][category])
+        
+        if not all_terms:
+            comparison_content.append(f"No {category} terms found in any run.")
+            comparison_content.append("")
+            continue
+        
+        # Create header row
+        header = f"{'Term':<50}"
+        for run_data in all_run_ontologies:
+            header += f"Run {run_data['run']:<8}"
+        comparison_content.append(header)
+        comparison_content.append("-" * len(header))
+        
+        # Show each term and which runs it appeared in
+        for term in sorted(all_terms):
+            row = f"{term[:47]:<50}"
+            for run_data in all_run_ontologies:
+                if ('ontologies' in run_data and 
+                    category in run_data['ontologies'] and 
+                    term in run_data['ontologies'][category]):
+                    row += f"{'✓':<8}"
+                else:
+                    row += f"{'✗':<8}"
+            comparison_content.append(row)
+        
+        comparison_content.append("")
+        
+        # Summary statistics for this category
+        term_frequencies = {}
+        for term in all_terms:
+            count = sum(1 for run_data in all_run_ontologies 
+                       if ('ontologies' in run_data and 
+                           category in run_data['ontologies'] and 
+                           term in run_data['ontologies'][category]))
+            term_frequencies[term] = count
+        
+        # Show consistency summary
+        perfect_terms = [term for term, freq in term_frequencies.items() if freq == len(all_run_ontologies)]
+        inconsistent_terms = [term for term, freq in term_frequencies.items() if freq == 1]
+        
+        comparison_content.append(f"SUMMARY FOR {category}:")
+        comparison_content.append(f"  Total unique terms: {len(all_terms)}")
+        comparison_content.append(f"  Terms in all runs: {len(perfect_terms)}")
+        comparison_content.append(f"  Terms in only one run: {len(inconsistent_terms)}")
+        
+        if perfect_terms:
+            comparison_content.append(f"  Consistent terms: {', '.join(perfect_terms[:5])}")
+            if len(perfect_terms) > 5:
+                comparison_content.append(f"    ... and {len(perfect_terms) - 5} more")
+        
+        comparison_content.append("")
+        comparison_content.append("-" * 80)
+        comparison_content.append("")
+    
+    # Overall summary
+    comparison_content.append("OVERALL SUMMARY")
+    comparison_content.append("=" * 15)
+    
+    total_unique_terms = 0
+    total_consistent_terms = 0
+    
+    for category in ['CellOntology', 'GeneOntology', 'MeSH']:
+        category_terms = set()
+        for run_data in all_run_ontologies:
+            if 'ontologies' in run_data and category in run_data['ontologies']:
+                category_terms.update(run_data['ontologies'][category])
+        
+        consistent_terms = 0
+        for term in category_terms:
+            count = sum(1 for run_data in all_run_ontologies 
+                       if ('ontologies' in run_data and 
+                           category in run_data['ontologies'] and 
+                           term in run_data['ontologies'][category]))
+            if count == len(all_run_ontologies):
+                consistent_terms += 1
+        
+        total_unique_terms += len(category_terms)
+        total_consistent_terms += consistent_terms
+        
+        if category_terms:
+            consistency_rate = consistent_terms / len(category_terms)
+            comparison_content.append(f"{category}: {consistent_terms}/{len(category_terms)} terms consistent ({consistency_rate:.1%})")
+    
+    if total_unique_terms > 0:
+        overall_consistency = total_consistent_terms / total_unique_terms
+        comparison_content.append(f"\nOverall consistency: {total_consistent_terms}/{total_unique_terms} terms ({overall_consistency:.1%})")
+    
+    comparison_content.append("")
+    comparison_content.append("=" * 80)
+    
+    return "\n".join(comparison_content)
+
 def main():
     print("Welcome to the Biological System Modeling Assistant!")
     
@@ -794,43 +982,51 @@ def main():
     
     # Run multiple experiments
     experiment_dirs = []
+    main_experiment_dir = None
+    
     for run in range(1, num_runs + 1):
         print(f"\nRunning experiment {run} of {num_runs}...")
-        experiment_dir = run_experiment(experiment_name, description, run, num_runs)
-        experiment_dirs.append(experiment_dir)
-        print(f"Completed run {run}. Results saved in {experiment_dir}")
+        run_dir = run_experiment(experiment_name, description, run, num_runs)
+        experiment_dirs.append(run_dir)
+        
+        # Get the main experiment directory from the first run
+        if main_experiment_dir is None:
+            # Extract main directory from run directory path
+            main_experiment_dir = run_dir.parent
+        
+        print(f"Completed run {run}. Results saved in {run_dir}")
     
-    # Create a summary of all runs
-    summary_dir = Path(f"experiments/{experiment_name}_summary_{datetime.now().strftime('%m%d_%H%M')}")
-    summary_dir.mkdir(parents=True, exist_ok=True)
+    print(f"\nGenerating comprehensive analysis...")
     
-    print(f"\nGenerating comprehensive summary...")
+    # Generate ontology comparison (NEW!)
+    ontology_comparison = generate_ontology_comparison(experiment_dirs)
+    with open(main_experiment_dir / "ontology_comparison.txt", 'w', encoding='utf-8') as f:
+        f.write(ontology_comparison)
     
     # Generate detailed experiment summary
     detailed_summary = generate_detailed_summary(experiment_dirs, experiment_name, description)
-    with open(summary_dir / "experiment_summary.txt", 'w', encoding='utf-8') as f:
+    with open(main_experiment_dir / "experiment_summary.txt", 'w', encoding='utf-8') as f:
         f.write(detailed_summary)
     
     # Perform and save consistency analysis
     consistency_metrics = analyze_run_consistency(experiment_dirs)
     consistency_analysis = format_consistency_analysis(consistency_metrics)
-    
-    with open(summary_dir / "consistency_analysis.txt", 'w', encoding='utf-8') as f:
+    with open(main_experiment_dir / "consistency_analysis.txt", 'w', encoding='utf-8') as f:
         f.write(consistency_analysis)
-    
-    # Generate a combined report
-    combined_report = detailed_summary + "\n\n" + consistency_analysis
-    with open(summary_dir / "complete_analysis_report.txt", 'w', encoding='utf-8') as f:
-        f.write(combined_report)
     
     print(f"\n{'='*60}")
     print(f"ALL RUNS COMPLETED SUCCESSFULLY!")
     print(f"{'='*60}")
-    print(f"Summary files generated:")
-    print(f"   • experiment_summary.txt - Detailed run information")
-    print(f"   • consistency_analysis.txt - Pipeline consistency analysis")
-    print(f"   • complete_analysis_report.txt - Combined comprehensive report")
-    print(f"All files saved in: {summary_dir}")
+    print(f"Experiment structure:")
+    print(f"  Main directory: {main_experiment_dir}")
+    print(f"  Run directories: {num_runs} subdirectories (run_1, run_2, etc.)")
+    print(f"")
+    print(f"Generated files:")
+    print(f"  • ontology_comparison.txt - Side-by-side ontology comparison")
+    print(f"  • experiment_summary.txt - Detailed run information")  
+    print(f"  • consistency_analysis.txt - Pipeline consistency analysis")
+    print(f"  • run_X/experiment_data.json - Comprehensive data per run")
+    print(f"  • run_X/generated_cc3d_model.cc3d - Generated models")
     print(f"{'='*60}")
 
 if __name__ == "__main__":
