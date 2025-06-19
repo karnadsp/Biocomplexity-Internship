@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_24_From_Genes
+Generated: 2025-06-18 18:46:29
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+To gain performance, developers often build scientific applications in procedural languages, such as C or Fortran, which unfortunately reduces flexibility. To address this imbalance, the authors present CompuCell3D, a multitiered, flexible, and scalable problem-solving environment for morphogenesis simulations that's written in C++ using object-oriented design patterns.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:45:19.025421
+  Interactions: 2
+  CC3D Model: 1922 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:45:25.502364
+  Interactions: 2
+  CC3D Model: 3397 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:45:38.292257
+  Interactions: 2
+  CC3D Model: 1999 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:45:44.917057
+  Interactions: 2
+  CC3D Model: 2358 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:45:51.849940
+  Interactions: 2
+  CC3D Model: 2100 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:46:03.213385
+  Interactions: 2
+  CC3D Model: 3193 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:46:12.481024
+  Interactions: 2
+  CC3D Model: 1876 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:46:16.752726
+  Interactions: 2
+  CC3D Model: 1904 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:46:20.161327
+  Interactions: 2
+  CC3D Model: 1888 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_24_From_Genes_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:46:25.966234
+  Interactions: 2
+  CC3D Model: 1572 bytes

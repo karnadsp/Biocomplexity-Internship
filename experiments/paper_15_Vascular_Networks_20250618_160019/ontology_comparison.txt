@@ -1,0 +1,108 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:28:17
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+MesenchymalCell (CL:0000492)                      ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000499)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 1
+  Terms in only one run: 1
+  Consistent terms: EpithelialCell (CL:0000066)
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ActinFilamentBasedProcess (GO:0030029)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+AdherensJunctionOrganization (GO:0034333)         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ApicalPartOfCell (GO:0045177)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-CellJunctionOrganization (GO:0045216)        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+CellAdhesion (GO:0007162)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCellJunctionOrganization (GO:0045216)         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+CellJunctionAssembly (GO:0007043)                 ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       ✗       
+CellJunctionOrganization (GO:0034330)             ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMorphogenesis (GO:0000902)                    ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+CellProliferation (GO:0008283)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CytoskeletonOrganization (GO:0007010)             ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Integrin-MediatedSignalingPathway (GO:0007229)    ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+IntegrinMediatedSignalingPathway (GO:0007229)     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0007399)                        ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+TissueMorphogenesis (GO:0048729)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BiologicalPhenomena (D059887)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellAdhesion (D002448)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellAdhesion (D002467)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellAdhesion (D002470)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D008565)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (D017209)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAggregation (D002467)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAggregation (D002470)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAggregation (D002477)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCulture (D015398)                             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellLine (D002460)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D002470)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cells (D002478)                                   ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Crystallization (D014867)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+GeneExpressionRegulation (D005786)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mechanotransduction (D008565)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MembraneProteins (D008565)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mice (D008810)                                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+MolecularDynamicsSimulation (D015394)             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D008565)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogenesis (D008810)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogenesis (D008954)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009132)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D011994)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (D015394)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D018908)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D009369)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+PatternFormation (D000096522)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TissueCulture (D013577)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+TissueCulture (D014789)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 30
+  Terms in all runs: 0
+  Terms in only one run: 29
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 1/5 terms consistent (20.0%)
+GeneOntology: 0/18 terms consistent (0.0%)
+MeSH: 0/30 terms consistent (0.0%)
+
+Overall consistency: 1/53 terms (1.9%)
+
+================================================================================

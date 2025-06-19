@@ -1,0 +1,104 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:30:07
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000000)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Epithelial (CL:0000066)                           ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✓       
+Epithelial (CL:0000542)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000001)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       
+NeoplasticCell (CL:0000542)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorCell (CL:0000548)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 8
+  Terms in all runs: 0
+  Terms in only one run: 6
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✓       ✓       ✓       
+Apoptosis (GO:0006915)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Apoptotic Process (GO:0006915)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ApoptoticProcess (GO:0006915)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell-CellJunctionOrganization (GO:0045216)        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0030155)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellCycleProcess (GO:0022402)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellGrowth (GO:0016049)                           ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellProliferation (GO:0008283)                    ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+CytoskeletonOrganization (GO:0007010)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+GenerationOfPrecursorMetabolitesAndEnergy (GO:0   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Glucose Metabolic Process (GO:0006006)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ResponseToHypoxia (GO:0001666)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+WoundHealing (GO:0042060)                         ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 16
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Transport (D001943)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+BiologicalTransport (D001921)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BiologicalTransport (D058728)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Hypoxia (D012964)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellDifferentiation (D002454)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002455)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellDiffusion (D001932)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellDivision (D002460)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellSurvival (D002470)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ComputationalBiology (D058729)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Diffusion (D004195)                               ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Diffusion (D015197)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Fibroblasts (D005260)                             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+GeneExpressionRegulation (D015870)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Biological (D015415)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+NeoplasmInvasiveness (D009369)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D009369)                               ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✓       
+Neoplasms (D015198)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D018908)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ProteinTransport (D011485)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+SurfaceTension (D013503)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorMicroenvironment (D000069281)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+TumorMicroenvironment (D014061)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorMicroenvironment (D014664)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+TumorMicroenvironment (D014698)                   ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+TumorMicroenvironment (D014789)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 26
+  Terms in all runs: 0
+  Terms in only one run: 23
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/8 terms consistent (0.0%)
+GeneOntology: 0/16 terms consistent (0.0%)
+MeSH: 0/26 terms consistent (0.0%)
+
+Overall consistency: 0/50 terms (0.0%)
+
+================================================================================

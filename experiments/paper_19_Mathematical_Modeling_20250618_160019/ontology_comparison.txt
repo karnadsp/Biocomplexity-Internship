@@ -1,0 +1,126 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:36:42
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EndothelialCell (CL:0000077)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0000115)                      ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✓       
+EndothelialCell (CL:0002138)                      ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0002139)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+VascularEndothelialCell (CL:0002138)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+VascularEndothelialCell (CL:0002139)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 7
+  Terms in all runs: 0
+  Terms in only one run: 5
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ActinCytoskeletonOrganization (GO:0030036)        ✗       ✓       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+Angiogenesis (GO:0001525)                         ✓       ✓       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+ApoptoticProcess (GO:0006915)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+BloodVesselMorphogenesis (GO:0048514)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell-MatrixAdhesion (GO:0007160)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       
+CellAdhesion (GO:0007155)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellChemotaxis (GO:0060326)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✓       ✓       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+CellMigration (GO:0007160)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellMotility (GO:0006928)                         ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+CellMotility (GO:0007160)                         ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMotility (GO:0048870)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✓       ✓       ✓       
+Chemotaxis (GO:0006935)                           ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✓       
+Chemotaxis (GO:0042330)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Chemotaxis (GO:0043325)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CytoskeletalOrganization (GO:0030036)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CytoskeletalRearrangement (GO:0030036)            ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CytoskeletonOrganization (GO:0007010)             ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+PositiveRegulationOfCellMigration (GO:0030335)    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ReceptorSignalingPathway (GO:0007169)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+WoundHealing (GO:0042060)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 22
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Adrenomedullin (D000091022)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Adrenomedullin (D000091183)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Adrenomedullin (D000091602)                       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Adrenomedullin (D058728)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Angiogenesis (D011108)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Angiogenesis (D018908)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+AngiogenesisInducingAgents (D044102)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (D000091602)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D001359)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D001792)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (D002451)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (D002460)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellAdhesion (D015870)                            ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+CellDifferentiation (D002454)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDivision (D002460)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellLine (D002460)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellLine (D015870)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMovement (D002465)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+CellProliferation (D002462)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D002470)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellProliferation (D002477)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D002478)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellProliferation (D005786)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D018908)                       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cells,Cultured (D002478)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Chemoattractants (D002478)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ChemotacticFactors (D015394)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Chemotaxis (D002635)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Chemotaxis (D011506)                              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Chemotaxis (D015870)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Chemotaxis (D018130)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cytoskeleton (D003599)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EndothelialCells (D005109)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D005109)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Matrigel (D008565)                                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models,Biological (D017206)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization (D015242)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+NeovascularizationPhysiologic (D012333)           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+PeptideHormones (D015815)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Proteins (D011485)                                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Self-Assembly (D018907)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+SignalTransduction (D015398)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+TissueScaffolds (D018915)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 43
+  Terms in all runs: 0
+  Terms in only one run: 39
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/7 terms consistent (0.0%)
+GeneOntology: 0/22 terms consistent (0.0%)
+MeSH: 0/43 terms consistent (0.0%)
+
+Overall consistency: 0/72 terms (0.0%)
+
+================================================================================

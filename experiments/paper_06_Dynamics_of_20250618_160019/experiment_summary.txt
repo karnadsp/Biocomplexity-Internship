@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_06_Dynamics_of
+Generated: 2025-06-18 17:18:54
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Fusion of cell tissues is an ubiquitous phenomenon and has important technological applications including tissue biofabrication. In this work we present experimental results of aggregates fusion using adipose derived stem cells (ADSC) and a three dimensional computer simulation of the process using the cellular Potts model with aggregates reaching 10,000 cells. We consider fusion of round aggregates and monitor the dimensionless neck area of contact between the two aggregates to characterize the process, as done for the coalescence of liquid droplets and polymers. Both experiments and simulations show that the evolution of this quantity obeys a power law in time. We also study quantitatively individual cell motion with the simulation and it corresponds to an anomalous diffusion.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_1
+  Timestamp: 2025-06-18T17:17:06.340199
+  Interactions: 2
+  CC3D Model: 2509 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_2
+  Timestamp: 2025-06-18T17:17:16.799528
+  Interactions: 2
+  CC3D Model: 2444 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_3
+  Timestamp: 2025-06-18T17:17:28.092424
+  Interactions: 2
+  CC3D Model: 4184 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_4
+  Timestamp: 2025-06-18T17:17:41.504146
+  Interactions: 2
+  CC3D Model: 2951 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_5
+  Timestamp: 2025-06-18T17:17:55.313888
+  Interactions: 2
+  CC3D Model: 2277 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_6
+  Timestamp: 2025-06-18T17:18:04.034005
+  Interactions: 2
+  CC3D Model: 2487 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_7
+  Timestamp: 2025-06-18T17:18:12.751302
+  Interactions: 2
+  CC3D Model: 1965 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_8
+  Timestamp: 2025-06-18T17:18:20.630248
+  Interactions: 2
+  CC3D Model: 3276 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_9
+  Timestamp: 2025-06-18T17:18:32.498757
+  Interactions: 2
+  CC3D Model: 2908 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_06_Dynamics_of_20250618_160019\run_10
+  Timestamp: 2025-06-18T17:18:43.902303
+  Interactions: 2
+  CC3D Model: 3037 bytes

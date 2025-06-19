@@ -1,0 +1,129 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:22:52
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endocardial (CL:0000211)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Endocardial (CL:0002242)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Endocardial (CL:0002322)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EndocardialCell (CL:0000211)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+EndocardialCell (CL:0002573)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EndocardialCell (CL:0002587)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Endothelial (CL:0000115)                          ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✗       
+Mesenchymal (CL:0000182)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000669)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008001)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+MesenchymalCell (CL:0008001)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 13
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+BranchingMorphogenesis (GO:0048754)               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CartilageDevelopment (GO:0051216)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (GO:0007155)                         ✓       ✗       ✗       ✓       ✓       ✗       ✓       ✓       ✗       ✗       
+EndocardialCushionDevelopment (GO:0035987)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+EndothelialToMesenchymalTransition (GO:0001568)   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EpithelialToMesenchymalTransition (GO:0060428)    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EpitheliumDevelopment (GO:0060429)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrixOrganization (GO:0030198)      ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✓       ✓       ✓       
+HeartValveDevelopment (GO:0061384)                ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+HyaluronanBiosyntheticProcess (GO:0001527)        ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+HyaluronanBiosyntheticProcess (GO:0030212)        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+HyaluronanBiosyntheticProcess (GO:0061314)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+HyaluronanMetabolicProcess (GO:0030212)           ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+MicrofibrilAssembly (GO:0001527)                  ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       
+MulticellularOrganismDevelopment (GO:0007275)     ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ProteinaceousExtracellularMatrix (GO:0005578)     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+RegulationOfEndothelialToMesenchymalTransition    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+RegulationOfEpithelialToMesenchymalTransition (   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+SkinDevelopment (GO:0043588)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+StemCellDifferentiation (GO:0048863)              ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 22
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cartilage (D002352)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDifferentiation (D002470)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D015153)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+EndocardialCushions (D015024)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EndocardialCushions (D048468)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endocardium (D004721)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Endocardium (D004728)                             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Exosomes (D004271)                                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Exosomes (D045744)                                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Exosomes (D058407)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Exosomes (D064806)                                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D004261)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D005109)                     ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+ExtracellularMatrix (D009103)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D015302)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ExtracellularMatrix (D015494)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+GeneExpressionRegulation (D015870)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Glycosaminoglycans (D006131)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Glycosaminoglycans (D011134)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Glycosaminoglycans (D011506)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+HeartValves (D012459)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+HeartValves (D015928)                             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Hyaluronan (D002352)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Hyaluronan (D006693)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Hyaluronan (D006801)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Hyaluronan (D015474)                              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Hyaluronan (D015800)                              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+HyaluronanSynthases (D051379)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+HyaluronicAcid (D002352)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+HyaluronicAcid (D006801)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+HyaluronicAcid (D006837)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+HyaluronicAcid (D015474)                          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+MicroRNAs (D004273)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MicroRNAs (D008964)                               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MicroRNAs (D015398)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MicroRNAs (D015497)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+MicroRNAs (D046911)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MicroRNAs (D054839)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+MicroRNAs (D058729)                               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Proteoglycans (D011485)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 40
+  Terms in all runs: 0
+  Terms in only one run: 36
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/13 terms consistent (0.0%)
+GeneOntology: 0/22 terms consistent (0.0%)
+MeSH: 0/40 terms consistent (0.0%)
+
+Overall consistency: 0/75 terms (0.0%)
+
+================================================================================

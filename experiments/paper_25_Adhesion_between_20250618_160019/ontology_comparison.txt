@@ -1,0 +1,121 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:48:08
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ectodermal (CL:0000548)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+EctodermalCell (CL:0000359)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EctodermalCell (CL:0000488)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EctodermalCell (CL:0002076)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial (CL:0000066)                           ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+EpithelialCell (CL:0000007)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Mesenchymal (CL:0000005)                          ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000005)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000008)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000057)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+MesenchymalCell (CL:0000136)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 14
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Blood Vessel Development (GO:0001568)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Differentiation (GO:0030154)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Division (GO:0051301)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✗       ✓       
+CellCycle (GO:0007049)                            ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       
+CellDifferentiation (GO:0030154)                  ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✗       ✓       
+CellDivision (GO:0051301)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellFateCommitment (GO:0045165)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✗       ✗       ✓       
+ExtracellularMatrix (GO:0005576)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Growth (GO:0040007)                               ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Limb Bud Development (GO:0030326)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+LimbDevelopment (GO:0048736)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+MorphogenDiffusion (GO:0032870)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+NeuronDifferentiation (GO:0030182)                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PatternSpecification (GO:0007389)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Skeletal System Development (GO:0001501)          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+SystemDevelopment (GO:0048731)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 23
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (D002470)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Division (D015210)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Movement (D002470)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002470)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002477)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellDivision (D002470)                            ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+CellProliferation (D002470)                       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D004727)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D015213)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ExtracellularMatrix (D004437)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D005109)                     ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+ExtracellularMatrix (D018912)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ExtracellularMatrix (D044503)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+GeneExpressionRegulation (D005786)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+GrowthSubstances (D005786)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+GrowthSubstances (D012816)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+LimbBud (D014807)                                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+LimbBud (D049109)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (D008565)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D008934)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009130)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Morphogenesis (D009131)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (D012816)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogenesis (D015032)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D000069431)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D000072502)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D000090162)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Musculoskeletal Development (D009154)             ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+NeoplasmProteins (D009369)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+StochasticProcesses (D013577)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 30
+  Terms in all runs: 0
+  Terms in only one run: 27
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/14 terms consistent (0.0%)
+GeneOntology: 0/23 terms consistent (0.0%)
+MeSH: 0/30 terms consistent (0.0%)
+
+Overall consistency: 0/67 terms (0.0%)
+
+================================================================================

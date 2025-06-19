@@ -1,0 +1,152 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:45:18
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Epithelial (CL:0000000)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Epithelial (CL:0000005)                           ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial (CL:0000066)                           ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       ✓       
+EpithelialCell (CL:0000066)                       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000000)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Mesenchymal (CL:0000004)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesenchymal (CL:0000005)                          ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✓       
+Mesenchymal (CL:0000008)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal (CL:0000057)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+PresomiticMesoderm (CL:0000000)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+PresomiticMesoderm (CL:0000136)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+PresomiticMesoderm (CL:0002322)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PresomiticMesodermCell (CL:0002322)               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 16
+  Terms in all runs: 0
+  Terms in only one run: 12
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Animal Organ Morphogenesis (GO:0009887)           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Anterior/Posterior Pattern Specification (GO:00   ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Anterior/PosteriorPatternFormation (GO:0009952)   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+AxonGuidance (GO:0007411)                         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Blood Vessel Development (GO:0001568)             ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Fate Commitment (GO:0045165)                 ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell fate commitment (GO:0045165)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-CellJunctionOrganization (GO:0045216)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0000000)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellDetermination (GO:0000000)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDifferentiation (GO:0000000)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellFateCommitment (GO:0045165)                   ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Determination of left/right symmetry (GO:000736   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+DeterminationOfDorsalIdentity (GO:0007368)        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ensheathment of neurons (GO:0007272)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EphrinReceptorSignalingPathway (GO:0048013)       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Gastrulation (GO:0000000)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Gastrulation (GO:0007276)                         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+In Utero Embryonic Development (GO:0001701)       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+In utero embryonic development (GO:0001701)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Integrin-mediated signaling pathway (GO:0007229   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Intercellular bridge (GO:0045171)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Multicellular Organism Development (GO:0007275)   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+MulticellularOrganismDevelopment (GO:0007275)     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+NervousSystemDevelopment (GO:0007399)             ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Regionalization (GO:0003002)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Skeletal system development (GO:0001501)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+SomiteDevelopment (GO:0007272)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Somitogenesis (GO:0000000)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Somitogenesis (GO:0001756)                        ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✗       
+Somitogenesis (GO:0007272)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Somitogenesis (GO:0007368)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 36
+  Terms in all runs: 0
+  Terms in only one run: 29
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion Molecules (D000071198)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Adhesion Molecules (D002448)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion Molecules (D015815)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion Molecules, Neuronal (D015334)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Movement (D002465)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D015472)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesionMolecules (D015476)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellDifferentiation (D018908)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cells (D002478)                                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+EphA4 (D000000)                                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+EphrinB2 (D000000)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Ephrins (D004723)                                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Ephrins (D051444)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Ephrins (D058729)                                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+FGF8 (D000000)                                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Fibroblast Growth Factor 8 (D051380)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+FibroblastGrowthFactor8 (D017209)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Gastrulation (D009866)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Gastrulation (D013270)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Gastrulation (D015032)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Gastrulation (D015144)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+GeneExpressionRegulation (D015495)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mitosis (D008938)                                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009132)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (D015158)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+N-CAM (D000000)                                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+N-Cadherin (D015142)                              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+N-Cadherin (D019812)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+N-cadherin (D000000)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neural Cell Adhesion Molecule (D009432)           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Notch (D000000)                                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Notch (D015190)                                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+NotchReceptor (D015495)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+PresomiticMesoderm (D000096222)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Receptors, Eph Family (D015474)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Receptors, Notch (D015495)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+SignalTransduction (D015398)                      ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Somite (D000072277)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Somites (D012999)                                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Somites (D015157)                                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Somitogenesis (D012995)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Somitogenesis (D015843)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Wnt (D000000)                                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Wnt (D051379)                                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Wnt Proteins (D015814)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+WntSignalingPathway (D058750)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 46
+  Terms in all runs: 0
+  Terms in only one run: 44
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/16 terms consistent (0.0%)
+GeneOntology: 0/36 terms consistent (0.0%)
+MeSH: 0/46 terms consistent (0.0%)
+
+Overall consistency: 0/98 terms (0.0%)
+
+================================================================================

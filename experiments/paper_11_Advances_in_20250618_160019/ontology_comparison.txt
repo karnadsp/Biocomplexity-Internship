@@ -1,0 +1,104 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:20:49
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+Mesenchymal (CL:0008019)                          ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 2
+  Terms in all runs: 2
+  Terms in only one run: 0
+  Consistent terms: Epithelial (CL:0000066), Mesenchymal (CL:0008019)
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Adherens Junction Organization (GO:0034332)       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Apoptotic Process (GO:0006915)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Axon Guidance (GO:0007411)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Cell Junctions (GO:0034330)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Migration (GO:0007165)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Migration (GO:0016477)                       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Motility (GO:0006928)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Motility (GO:0048870)                        ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✓       
+Cell Projection Organization (GO:0030030)         ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✓       
+Cell-Cell Junction Organization (GO:0045216)      ✓       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-Matrix Adhesion (GO:0007160)                 ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       
+CellAdhesion (GO:0007155)                         ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+CellMigration (GO:0030030)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMotility (GO:0006928)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellMotility (GO:0007160)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellShapeChange (GO:0030030)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellShapeChange (GO:0034332)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+IntegrinMediatedSignalingPathway (GO:0007229)     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Positive Regulation of Cell Migration (GO:00303   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 20
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (D002470)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015735)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Movement (D002465)                           ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Movement (D002467)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Movement (D002470)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellAdhesion (D002470)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+CellMotility (D015201)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002465)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+Collagen (D003094)                                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Collagen (D011471)                                ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Collagen (D011506)                                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+Collagen (D015203)                                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Epithelial-Mesenchymal Transition (D000069638)    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial-Mesenchymal Transition (D000071193)    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial-Mesenchymal Transition (D044882)       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial-Mesenchymal Transition (D049109)       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial-MesenchymalTransition (D015124)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Epithelial-MesenchymalTransition (D047466)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Epithelial-MesenchymalTransition (D048469)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D045744)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D017207)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D009369)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+Neoplasm Invasiveness (D012689)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D017346)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Protein Binding (D011485)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Protein Binding (D011494)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Surface Tension (D013577)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 27
+  Terms in all runs: 0
+  Terms in only one run: 21
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 2/2 terms consistent (100.0%)
+GeneOntology: 0/20 terms consistent (0.0%)
+MeSH: 0/27 terms consistent (0.0%)
+
+Overall consistency: 2/49 terms (4.1%)
+
+================================================================================

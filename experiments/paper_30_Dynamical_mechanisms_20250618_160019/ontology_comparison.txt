@@ -1,0 +1,113 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:58:45
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Chondrocyte (CL:0000066)                          ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000066)                           ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✓       
+Mesenchymal (CL:0000005)                          ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000007)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000136)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000006)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+MesenchymalCell (CL:0000136)                      ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✗       
+MesenchymalStemCell (CL:0000134)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 9
+  Terms in all runs: 0
+  Terms in only one run: 4
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✓       
+AnimalOrganMorphogenesis (GO:0009887)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✓       ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+CellDifferentiation (GO:0030154)                  ✓       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+DevelopmentalGrowth (GO:0048589)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+EmbryonicMorphogenesis (GO:0048598)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+EnzymeLinkedReceptorProteinSignalingPathway (GO   ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (GO:0005576)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (GO:0005578)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrixOrganization (GO:0030198)      ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       ✗       
+ProteinaceousExtracellularMatrix (GO:0005578)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ReceptorSignalingActivity (GO:0007169)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ReceptorSignalingPathway (GO:0007169)             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+RegulationOfAngiogenesis (GO:0045765)             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+SkeletalSystemDevelopment (GO:0001501)            ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 17
+  Terms in all runs: 1
+  Terms in only one run: 9
+  Consistent terms: SkeletalSystemDevelopment (GO:0001501)
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CellDifferentiation (D001868)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002460)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellDifferentiation (D002470)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D049109)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D054877)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellDifferentiation (D058728)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Chondrogenesis (D000091223)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Chondrogenesis (D015303)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ExtracellularMatrixProteins (D000093183)          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+FibroblastGrowthFactor (D005109)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+FibroblastGrowthFactor (D005347)                  ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+FibroblastGrowthFactors (D005109)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       
+FibroblastGrowthFactors (D005347)                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+FibroblastGrowthFactors (D005353)                 ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+Fibronectins (D005109)                            ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Fibronectins (D005347)                            ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       
+Fibronectins (D005352)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Fibronectins (D005353)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+LimbBud (D008104)                                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009131)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+NeovascularizationPhysiologic (D009369)           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ProteinBinding (D011485)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Proteins (D011506)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+SpatioTemporalAnalysis (D013096)                  ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015474)            ✓       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015533)            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015665)            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015666)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+TransformingGrowthFactorBeta (D015678)            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015694)            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TransformingGrowthFactorBeta (D015877)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+TransformingGrowthFactorBeta (D015930)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 32
+  Terms in all runs: 0
+  Terms in only one run: 25
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/9 terms consistent (0.0%)
+GeneOntology: 1/17 terms consistent (5.9%)
+MeSH: 0/32 terms consistent (0.0%)
+
+Overall consistency: 1/58 terms (1.7%)
+
+================================================================================

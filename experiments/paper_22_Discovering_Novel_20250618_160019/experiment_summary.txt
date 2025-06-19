@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_22_Discovering_Novel
+Generated: 2025-06-18 18:42:59
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Solid tumors must recruit new blood vessels for growth and maintenance. Discovering drugs that block this tumor-induced development of new blood vessels (angiogenesis) is an important approach in cancer treatment. However, the complexity of angiogenesis and the difficulty in implementing and evaluating rationally-designed treatments prevent the discovery of effective new therapies. This paper presents a massively parallel computational search-based approach for the discovery of novel potential cancer treatments using a high fidelity simulation of angiogenesis. Discovering new therapies is viewed as multi-objective combinatorial optimization over two competing objectives: minimizing the cost of developing the intervention while minimizing the oxygen provided to the cancer tumor by angiogenesis. Results show the effectiveness of the search process in finding interventions that are currently in use and more interestingly, discovering some new approaches that are counter intuitive yet effective.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:40:47.516221
+  Interactions: 2
+  CC3D Model: 2202 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:40:56.291729
+  Interactions: 2
+  CC3D Model: 2640 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:41:05.540136
+  Interactions: 2
+  CC3D Model: 3406 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:41:19.778940
+  Interactions: 2
+  CC3D Model: 2694 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:41:31.946138
+  Interactions: 2
+  CC3D Model: 4800 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:41:52.558008
+  Interactions: 2
+  CC3D Model: 2845 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:42:04.150146
+  Interactions: 2
+  CC3D Model: 2339 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:42:19.869509
+  Interactions: 2
+  CC3D Model: 2865 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:42:33.122003
+  Interactions: 2
+  CC3D Model: 3249 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_22_Discovering_Novel_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:42:48.941646
+  Interactions: 2
+  CC3D Model: 2833 bytes

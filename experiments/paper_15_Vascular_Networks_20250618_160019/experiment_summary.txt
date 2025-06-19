@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_15_Vascular_Networks
+Generated: 2025-06-18 18:28:17
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Recent experimental and theoretical studies suggest that crystallization and glass-like solidification are useful analogies for understanding cell ordering in confluent biological tissues. It remains unexplored how cellular ordering contributes to pattern formation during morphogenesis. With a computational model we show that a system of elongated, cohering biological cells can get dynamically arrested in a network pattern. Our model provides an explanation for the formation of cellular networks in culture systems that exclude intercellular interaction via chemotaxis or mechanical traction.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:26:13.839539
+  Interactions: 2
+  CC3D Model: 3513 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:26:26.971491
+  Interactions: 2
+  CC3D Model: 2350 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:26:36.751397
+  Interactions: 2
+  CC3D Model: 2516 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:26:44.398224
+  Interactions: 2
+  CC3D Model: 2973 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:26:55.524018
+  Interactions: 2
+  CC3D Model: 2745 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:27:08.215309
+  Interactions: 2
+  CC3D Model: 2693 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:27:16.991966
+  Interactions: 2
+  CC3D Model: 3233 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:27:43.810054
+  Interactions: 2
+  CC3D Model: 2632 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:27:54.888742
+  Interactions: 2
+  CC3D Model: 3460 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_15_Vascular_Networks_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:28:05.892182
+  Interactions: 2
+  CC3D Model: 3005 bytes

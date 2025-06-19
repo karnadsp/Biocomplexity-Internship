@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_30_Dynamical_mechanisms
+Generated: 2025-06-18 18:58:45
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We describe a ‘reactor–diffusion’ mechanism for precartilage condensation based on recent experiments on chondrogenesis in the early vertebrate limb and additional hypotheses. Cellular differentiation of mesenchymal cells into subtypes with different fibroblast growth factor (FGF) receptors occurs in the presence of spatio-temporal variations of FGFs and transforming growth factor-betas (TGF-?s). One class of differentiated cells produces elevated quantities of the extracellular matrix protein fibronectin, which initiates adhesion-mediated preskeletal mesenchymal condensation. The same class of cells also produces an FGFdependent laterally acting inhibitor that keeps condensations from expanding beyond a critical size. We show that this ‘reactor–diffusion’ mechanism leads naturally to patterning consistent with skeletal form, and describe simulations of spatio-temporal distribution of these differentiated cell types and the TGF-? and inhibitor concentrations in the developing limb bud.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:56:43.354042
+  Interactions: 2
+  CC3D Model: 3104 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:56:55.225404
+  Interactions: 2
+  CC3D Model: 3327 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:57:09.894847
+  Interactions: 2
+  CC3D Model: 2698 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:57:20.298212
+  Interactions: 2
+  CC3D Model: 2650 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:57:31.722329
+  Interactions: 2
+  CC3D Model: 1977 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:57:41.063144
+  Interactions: 2
+  CC3D Model: 2598 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:57:50.475823
+  Interactions: 2
+  CC3D Model: 3150 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:58:03.517113
+  Interactions: 2
+  CC3D Model: 2911 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:58:16.164740
+  Interactions: 2
+  CC3D Model: 2759 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_30_Dynamical_mechanisms_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:58:31.587429
+  Interactions: 2
+  CC3D Model: 3132 bytes

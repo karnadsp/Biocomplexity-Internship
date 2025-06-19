@@ -1,0 +1,24 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_01_Lattice-Based_Model
+Generated: 2025-06-18 14:58:45
+Total Runs: 2
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+A computational model of ductal carcinoma in situ using cellular automata to simulate epithelial cell growth and division.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_01_Lattice-Based_Model_20250618_145424\run_1
+  Timestamp: 2025-06-18T14:54:24.351218
+  Interactions: 2
+  CC3D Model: 2788 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_01_Lattice-Based_Model_20250618_145713\run_2
+  Timestamp: 2025-06-18T14:57:13.981161
+  Interactions: 2
+  CC3D Model: 2192 bytes

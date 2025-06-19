@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_19_Mathematical_Modeling
+Generated: 2025-06-18 18:36:43
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+A recently proposed approach was used to model the self-organization into capillary-like structures of human vascular endothelial cells cultured on Matrigel. The model combines a Cellular Potts Model, considering cell adhesion, cytoskeletal rearrangement and chemotaxis, and a Partial Differential Equation model describing the release and the diffusion of a chemoattractant. The results were compared with the data from real in vitro experiments to establish the capability of the model to accurately reproduce both the spontaneous self-assembly of unstimulated cells and their self-organization in the presence of the proangiogenic factor adrenomedullin. The results showed that the model can accurately reproduce the self-assembly of unstimulated cells, but it failed in reproducing the adrenomedullin-induced self-organization of the cells. The extension of the model to include cell proliferation led to a good match between simulated and experimental patterns in both cases with predicted proliferation rates in agreement with the data of cell proliferation experiments.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:34:37.239565
+  Interactions: 2
+  CC3D Model: 3400 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:34:50.569666
+  Interactions: 2
+  CC3D Model: 2747 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:35:01.668843
+  Interactions: 2
+  CC3D Model: 2482 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:35:09.964498
+  Interactions: 2
+  CC3D Model: 2912 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:35:23.213347
+  Interactions: 2
+  CC3D Model: 2964 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:35:36.605870
+  Interactions: 2
+  CC3D Model: 2901 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:35:51.559473
+  Interactions: 2
+  CC3D Model: 4013 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:36:07.586699
+  Interactions: 2
+  CC3D Model: 2965 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:36:18.753151
+  Interactions: 2
+  CC3D Model: 2929 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_19_Mathematical_Modeling_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:36:31.982714
+  Interactions: 2
+  CC3D Model: 2638 bytes

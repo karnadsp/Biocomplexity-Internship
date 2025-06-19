@@ -1,0 +1,128 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:56:42
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+LimbCell (CL:0000548)                             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal (CL:0000492)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal (CL:0000499)                          ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 1
+  Terms in only one run: 0
+  Consistent terms: Epithelial (CL:0000066)
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AnatomicalStructureFormationInvolvedInMorphogen   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Blood Vessel Development (GO:0001568)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✓       ✓       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+Cell Differentiation (GO:0030154)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDevelopment (GO:0048869)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (GO:0030154)                  ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+CellFateCommitment (GO:0045165)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMotility (GO:0048870)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cellular Developmental Process (GO:0048869)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellularDevelopmentalProcess (GO:0048869)         ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+EmbryonicLimbMorphogenesis (GO:0035113)           ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+EmbryonicMorphogenesis (GO:0035113)               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+EmbryonicMorphogenesis (GO:0048598)               ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Locomotion (GO:0040011)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (GO:0009653)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Multicellular Organism Development (GO:0007275)   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+MulticellularOrganismDevelopment (GO:0007275)     ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✓       
+NervousSystemDevelopment (GO:0007399)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+OrganMorphogenesis (GO:0009887)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       ✓       
+StemCellDifferentiation (GO:0048863)              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+System Development (GO:0048731)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+TissueMorphogenesis (GO:0048729)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+TubeDevelopment (GO:0035295)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 25
+  Terms in all runs: 0
+  Terms in only one run: 14
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BiomechanicalPhenomena (D001697)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Differentiation (D002470)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDifferentiation (D001796)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002454)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002470)                     ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+CellMovement (D002465)                            ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002468)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ComputationalBiology (D058728)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EmbryonicDevelopment (D007129)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ExtracellularMatrix (D002478)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ExtracellularMatrix (D005130)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrix (D015673)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+LimbBud (D008198)                                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+LimbDevelopment (D006001)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+LimbDevelopment (D008198)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+LimbDevelopment (D008565)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D008579)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D008868)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D009132)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ModelsBiological (D020153)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogen (D000091482)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogenesis (D009130)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogenesis (D009132)                           ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (D009135)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (D018908)                           ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogenetic Fields (D009131)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogens (D000091602)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+NeuralCrest (D009369)                             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Organogenesis (D000091222)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Organogenesis (D012717)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PatternFormation (D010802)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PatternRecognition (D010375)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+PatternRecognition (D011110)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Reaction-Diffusion (D015222)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ReactionDiffusion (D015334)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+ReactionDiffusion (D015499)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ReactionDiffusion (D015815)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ReactionDiffusion (D018907)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Simulation (D012867)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+SystemsBiology (D013394)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+SystemsBiology (D013577)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+TuringTest (D013577)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 43
+  Terms in all runs: 0
+  Terms in only one run: 39
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 1/5 terms consistent (20.0%)
+GeneOntology: 0/25 terms consistent (0.0%)
+MeSH: 0/43 terms consistent (0.0%)
+
+Overall consistency: 1/73 terms (1.4%)
+
+================================================================================

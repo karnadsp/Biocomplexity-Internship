@@ -1,0 +1,113 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:52:01
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000000)                           ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+Epithelial (CL:0000066)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✓       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal (CL:0000001)                          ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+MesenchymalCell (CL:0000000)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000134)                      ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000492)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+StemCell (CL:0000003)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 6
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BloodVesselDevelopment (GO:0001568)               ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell adhesion (GO:0007155)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell differentiation (GO:0030154)                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellDifferentiation (GO:0030154)                  ✓       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+CellFateCommitment (GO:0045165)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cellular developmental process (GO:0048869)       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellularDevelopmentalProcess (GO:0048869)         ✗       ✓       ✗       ✓       ✗       ✗       ✓       ✓       ✓       ✗       
+CellularProcess (GO:0009987)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+EstablishmentOrMaintenanceOfCellPolarity (GO:00   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Generation of a precursor metabolite or energy    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MetabolicProcess (GO:0008152)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Multicellular organism development (GO:0007275)   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MulticellularOrganismDevelopment (GO:0007275)     ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       ✓       ✗       
+NervousSystemDevelopment (GO:0007399)             ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Regionalization (GO:0003002)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+SystemDevelopment (GO:0048731)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 20
+  Terms in all runs: 0
+  Terms in only one run: 12
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BiologicalPhenomena (D000071195)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Movement (D002465)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002470)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002454)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002460)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+CellDifferentiation (D002470)                     ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDifferentiation (D005260)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D015495)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDivision (D002465)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellDivision (D002471)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002465)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+CellProliferation (D015533)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellProliferation (D058728)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cells (D002478)                                   ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+DevelopmentalBiology (D013577)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+DevelopmentalBiology (D015673)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+EmbryonicDevelopment (D004864)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+GeneExpressionRegulation (D005786)                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mice (D008810)                                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ModelsBiological (D015303)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D015534)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ModelsBiological (D015870)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D049109)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D058750)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+PatternFormation (D015674)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ReactionDiffusion (D015866)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Signal Transduction (D015398)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Stem Cells (D018908)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+StemCells (D012964)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 29
+  Terms in all runs: 0
+  Terms in only one run: 23
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/20 terms consistent (0.0%)
+MeSH: 0/29 terms consistent (0.0%)
+
+Overall consistency: 0/59 terms (0.0%)
+
+================================================================================

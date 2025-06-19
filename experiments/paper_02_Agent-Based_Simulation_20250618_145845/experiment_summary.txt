@@ -1,0 +1,24 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_02_Agent-Based_Simulation
+Generated: 2025-06-18 15:02:46
+Total Runs: 2
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+An agent-based model of tumor growth incorporating cell-cell adhesion and migration dynamics in tissue microenvironments.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_02_Agent-Based_Simulation_20250618_145845\run_1
+  Timestamp: 2025-06-18T14:58:45.805688
+  Interactions: 2
+  CC3D Model: 3492 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_02_Agent-Based_Simulation_20250618_150044\run_2
+  Timestamp: 2025-06-18T15:00:44.159013
+  Interactions: 2
+  CC3D Model: 2672 bytes

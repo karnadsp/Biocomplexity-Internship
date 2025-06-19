@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_18_3D_Multi-Cell
+Generated: 2025-06-18 18:34:36
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We present a 3D multi-cell simulation of a generic simplification of vascular tumor growth which can be easily extended and adapted to describe more specific vascular tumor types and host tissues. Initially, tumor cells proliferate as they take up the oxygen which the pre-existing vasculature supplies. The tumor grows exponentially. When the oxygen level drops below a threshold, the tumor cells become hypoxic and start secreting pro-angiogenic factors. At this stage, the tumor reaches a maximum diameter characteristic of an avascular tumor spheroid. The endothelial cells in the pre-existing vasculature respond to the pro-angiogenic factors both by chemotaxing towards higher concentrations of pro-angiogenic factors and by forming new blood vessels via angiogenesis. The tumor-induced vasculature increases the growth rate of the resulting vascularized solid tumor compared to an avascular tumor, allowing the tumor to grow beyond the spheroid in these lineargrowth phases. First, in the linear-spherical phase of growth, the tumor remains spherical while its volume increases. Second, in the linear-cylindrical phase of growth the tumor elongates into a cylinder. Finally, in the linear-sheet phase of growth, tumor growth accelerates as the tumor changes from cylindrical to paddle-shaped. Substantial periods during which the tumor grows slowly or not at all separate the exponential from the linear-spherical and the linear-spherical from the linear-cylindrical growth phases. In contrast to other simulations in which avascular tumors remain spherical, our simulated avascular tumors form cylinders following the blood vessels, leading to a different distribution of hypoxic cells within the tumor. Our simulations cover time periods which are long enough to produce a range of biologically reasonable complex morphologies, allowing us to study how tumor-induced angiogenesis affects the growth rate, size and morphology of simulated tumors.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:32:08.557717
+  Interactions: 2
+  CC3D Model: 2781 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:32:28.930570
+  Interactions: 2
+  CC3D Model: 2771 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:32:46.778635
+  Interactions: 2
+  CC3D Model: 2572 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:32:57.943165
+  Interactions: 2
+  CC3D Model: 2919 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:33:13.216559
+  Interactions: 2
+  CC3D Model: 2684 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:33:23.552077
+  Interactions: 2
+  CC3D Model: 4297 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:33:41.338478
+  Interactions: 2
+  CC3D Model: 3256 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:33:53.772418
+  Interactions: 2
+  CC3D Model: 2985 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:34:05.161461
+  Interactions: 2
+  CC3D Model: 3368 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_18_3D_Multi-Cell_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:34:18.519032
+  Interactions: 2
+  CC3D Model: 5176 bytes

@@ -1,0 +1,103 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:32:07
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EpithelialCell (CL:0000066)                       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+GlialCell (CL:0000125)                            ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 2
+  Terms in all runs: 2
+  Terms in only one run: 0
+  Consistent terms: GlialCell (CL:0000125), EpithelialCell (CL:0000066)
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ApoptoticProcess (GO:0006915)                     ✓       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✓       
+AxonGuidance (GO:0007411)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Axonogenesis (GO:0007409)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+BrainDevelopment (GO:0007420)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-CellJunctionOrganization (GO:0045216)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-cellJunctionAssembly (GO:0007043)            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+CellDeath (GO:0008219)                            ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       
+CellJunctionAssembly (GO:0007043)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       
+CellJunctionOrganization (GO:0034330)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMigration (GO:0016477)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMotility (GO:0006928)                         ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       
+CellMovement (GO:0051276)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellProjectionOrganization (GO:0030030)           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellRearrangement (GO:0034329)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellSurfaceAreaExpansion (GO:0007283)             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+InSituCellDeath (GO:0001701)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Locomotion (GO:0040011)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+NervousSystemDevelopment (GO:0007399)             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ProgrammedCellDeath (GO:0012501)                  ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 21
+  Terms in all runs: 1
+  Terms in only one run: 16
+  Consistent terms: CellAdhesion (GO:0007155)
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Apoptosis (D017209)                               ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+CellAdhesion (D002448)                            ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+CellAdhesion (D002470)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (D015201)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellAdhesion (D015215)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDeath (D002470)                               ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellDeath (D016923)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✗       
+CellMovement (D002460)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002465)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+CellMovement (D002470)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellMovement (D015398)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMovement (D016922)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D016923)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellProliferation (D002478)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ComputationalBiology (D058750)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ComputerSimulation (D058750)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Drosophila (D004064)                              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Drosophila (D015201)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+EpithelialCells (D018908)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Epithelium (D005130)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelium (D015201)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+GrowthandDevelopment (D006131)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ProteinBinding (D011485)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+SignalTransduction (D015398)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 24
+  Terms in all runs: 0
+  Terms in only one run: 18
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 2/2 terms consistent (100.0%)
+GeneOntology: 1/21 terms consistent (4.8%)
+MeSH: 0/24 terms consistent (0.0%)
+
+Overall consistency: 3/47 terms (6.4%)
+
+================================================================================

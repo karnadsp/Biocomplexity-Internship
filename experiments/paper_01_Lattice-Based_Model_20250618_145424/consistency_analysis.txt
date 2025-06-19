@@ -1,0 +1,142 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-18 14:58:45
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 3
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 1
+     • Average consistency: 100.0%
+     • Maximum consistency: 100.0%
+     • Terms with 100% consistency: 1
+
+  TOP CONSISTENT TERMS:
+     100.0% [██████████] Epithelial (CL:0000066)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 66.7%
+     • Maximum consistency: 100.0%
+     • Terms with 100% consistency: 1
+
+  TOP CONSISTENT TERMS:
+     100.0% [██████████] Cell Division (GO:0051781)
+     50.0% [█████░░░░░] Cell Growth (GO:0016049)
+     50.0% [█████░░░░░] Cell Growth (GO:0016045)
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Ductal Carcinoma In Situ (C53604)
+     50.0% [█████░░░░░] Cell Proliferation (D002205)
+     50.0% [█████░░░░░] Ductal Carcinoma In Situ (D019039)
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 1
+     • Average similarity: 8.4%
+     • Minimum similarity: 8.4%
+     • Maximum similarity: 8.4%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 8.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 1
+     • Average consistency: 100.0%
+     • Maximum consistency: 100.0%
+     • Terms with 100% consistency: 1
+
+  TOP CONSISTENT TERMS:
+     100.0% [██████████] Epithelial (CL:0000066)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 66.7%
+     • Maximum consistency: 100.0%
+     • Terms with 100% consistency: 1
+
+  TOP CONSISTENT TERMS:
+     100.0% [██████████] Cell Division (GO:0051781)
+     50.0% [█████░░░░░] Cell Growth (GO:0016049)
+     50.0% [█████░░░░░] Cell Growth (GO:0016045)
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 3
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Ductal Carcinoma In Situ (C53604)
+     50.0% [█████░░░░░] Cell Proliferation (D002205)
+     50.0% [█████░░░░░] Ductal Carcinoma In Situ (D019039)
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 1
+     • Average similarity: 8.4%
+     • Minimum similarity: 8.4%
+     • Maximum similarity: 8.4%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 8.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (8.4%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (8.4%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

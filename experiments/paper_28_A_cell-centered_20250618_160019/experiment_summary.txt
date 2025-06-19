@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_28_A_cell-centered
+Generated: 2025-06-18 18:54:11
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Explaining embryonic development of multicellular organisms requires insight into complex interactions between genetic regulation and physical, generic mechanisms at multiple scales. As more physicists move into developmental biology, we need to be aware of the ‘‘cultural’’ differences between the two fields, whose concepts of ‘‘explanations’’ and ‘‘models’’ traditionally differ: biologists aiming to identify genetic pathways and expression patterns, physicists tending to look for generic underlying principles. Here we discuss how we can combine such biological and physical approaches into a cell-centered approach to developmental biology. Genetic information can only indirectly influence the morphology and physiology of multicellular organisms. DNA translates into proteins and regulatory RNA sequences, which steer the biophysical properties of cells, their response to signals from neighboring cells, and the production and properties of extracellular matrix (ECM).We argue that in many aspects of biological development, cells’ inner workings are irrelevant: what matter are the cell’s biophysical properties, the signals it emits and its responses to extracellular signals. Thus we can separate questions about genetic regulation from questions about development. First, we ask what effects a gene network has on cell phenomenology, and how it operates. We then ask through which mechanisms such single-cell phenomenology directs multicellular morphogenesis and physiology. This approach treats the cell as the fundamental module of development. We discuss how this cell-centered approach—which requires significant input from computational biophysics—can assist and supplement experimental research in developmental biology. We review cell-centered approaches, focusing in particular on the Cellular Potts Model (CPM), and present the Tissue Simulation Toolkit which implements the CPM.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:52:02.153239
+  Interactions: 2
+  CC3D Model: 2802 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:52:15.361876
+  Interactions: 2
+  CC3D Model: 2426 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:52:28.358463
+  Interactions: 2
+  CC3D Model: 2939 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:52:40.310674
+  Interactions: 2
+  CC3D Model: 2295 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:52:50.322225
+  Interactions: 2
+  CC3D Model: 2315 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:53:04.155086
+  Interactions: 2
+  CC3D Model: 2801 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:53:15.470742
+  Interactions: 2
+  CC3D Model: 2141 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:53:26.811062
+  Interactions: 2
+  CC3D Model: 2858 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:53:39.034339
+  Interactions: 2
+  CC3D Model: 5023 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_28_A_cell-centered_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:54:02.288469
+  Interactions: 2
+  CC3D Model: 2425 bytes

@@ -1,0 +1,156 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-18 15:02:46
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 7
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 2
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] tumor cell (CL:0002353)
+     50.0% [█████░░░░░] Tumor Cell (CL:0002353)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 6
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell migration (GO:0016477)
+     50.0% [█████░░░░░] Cell Migration (GO:0016477)
+     50.0% [█████░░░░░] cell-cell adhesion (GO:0098602)
+     50.0% [█████░░░░░] Positive Regulation of Cell Proliferation (GO:0008284)
+     50.0% [█████░░░░░] positive regulation of cell proliferation (GO:0008284)
+     ... and 1 more terms
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 7
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell migration (D059205)
+     50.0% [█████░░░░░] neoplasm growth (D000071204)
+     50.0% [█████░░░░░] Cell Adhesion (D0000710)
+     50.0% [█████░░░░░] Neoplasms (D009369)
+     50.0% [█████░░░░░] Cell Migration (D059205)
+     ... and 2 more terms
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 1
+     • Average similarity: 9.0%
+     • Minimum similarity: 9.0%
+     • Maximum similarity: 9.0%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 9.0% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 2
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] tumor cell (CL:0002353)
+     50.0% [█████░░░░░] Tumor Cell (CL:0002353)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 6
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell migration (GO:0016477)
+     50.0% [█████░░░░░] Cell Migration (GO:0016477)
+     50.0% [█████░░░░░] cell-cell adhesion (GO:0098602)
+     50.0% [█████░░░░░] Positive Regulation of Cell Proliferation (GO:0008284)
+     50.0% [█████░░░░░] positive regulation of cell proliferation (GO:0008284)
+     ... and 1 more terms
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 7
+     • Average consistency: 50.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell migration (D059205)
+     50.0% [█████░░░░░] neoplasm growth (D000071204)
+     50.0% [█████░░░░░] Cell Adhesion (D0000710)
+     50.0% [█████░░░░░] Neoplasms (D009369)
+     50.0% [█████░░░░░] Cell Migration (D059205)
+     ... and 2 more terms
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 1
+     • Average similarity: 9.0%
+     • Minimum similarity: 9.0%
+     • Maximum similarity: 9.0%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 9.0% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (9.0%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (9.0%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

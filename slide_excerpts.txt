@@ -1,0 +1,255 @@
+SLIDE-READY EXCERPTS FOR BIOLOGICAL MODELING ASSISTANT
+============================================================
+Generated: 2025-06-18 20:06:28
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: A computational model of ductal carcinoma in situ using cellular automata to simulate epithelial cell growth and division.
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "Epithelial" } ], "GeneOntolog...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from CompuCell3D import CompuCellSetup from steppables import PySteppables class...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: A computational model of ductal carcinoma in situ using cellular automata to simulate epithelial cell growth and division.
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "Epithelial" } ], "GeneOntolog...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from CompuCell3D import CompuCellSetup from steppables import SteppableBasePy im...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "Epithelial" }, { "id": "CL:00...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from PyQt5.QtCore import * from PyQt5.QtGui import * from cc3d.core.PyCoreSpecs ...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000092", "term": "Epithelial" }, { "id": "CL:00...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from cc3d.core.PyCoreSpecs import Metadata, PottsCore from cc3d.cpp import Compu...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000092", "term": "Epithelial" }, { "id": "CL:00...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from PySteppables import * import CompuCellSetup from random import random from ...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "EpithelialCell" }, { "id": "C...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from cc3d.core.PyCoreSpecs import Metadata, CellTypePlugin, VolumePlugin, Contac...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "EpithelialCell" }, { "id": "C...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from cc3d.core.PyCoreSpecs import Metadata, PottsCore from cc3d.cpp import Compu...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000066", "term": "EpithelialCell" }, { "id": "C...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from pybind.core import * from pybind import * from pybind.stl import * from pyb...
+
+----------------------------------------
+
+EXPERIMENT: paper_01_Lattice-Based_Model
+----------------------------------------
+DESCRIPTION: Ductal carcinoma in situ (DCIS) is a heterogeneous group of non-invasive lesions of the breast that result from abnormal proliferation of mammary epithelial cells. Pathologists...
+
+SLIDE 1: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  { "CellOntology": [ { "id": "CL:0000092", "term": "EpithelialCell" }, { "id": "C...
+
+----------------------------------------
+
+SLIDE 2: Ontology Extraction
+
+KEY POINTS:
+• AI extracts biological ontology terms
+• Identifies Cell Ontology, Gene Ontology, and MeSH terms
+• Structures biological knowledge
+
+SAMPLE OUTPUT:
+  from cc3d.core.PyCoreSpecs import * from cc3d.cpp import CompuCell import CompuC...
+
+----------------------------------------

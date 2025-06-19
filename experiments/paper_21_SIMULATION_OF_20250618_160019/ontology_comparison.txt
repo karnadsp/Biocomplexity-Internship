@@ -1,0 +1,125 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:40:46
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BacterialCell (CL:0000000)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+BacterialCell (CL:0000084)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+BacterialCell (CL:0000097)                        ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+BacterialCell (CL:0000148)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+BacterialCell (CL:0000236)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BacterialCell (CL:0000255)                        ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+BacterialCell (CL:0000393)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+EpithelialCell (CL:0000066)                       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EpithelialCell (CL:0000255)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+MesenchymalCell (CL:0000492)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 7
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BiofilmFormation (GO:0009311)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+BiofilmFormation (GO:0043952)                     ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-CellJunctionOrganization (GO:0045216)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell-cellJunctionAssembly (GO:0007043)            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell-substrateAdhesion (GO:0007043)               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✓       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✓       
+CellAdhesion (GO:0043952)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0045216)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellDivision (GO:0007043)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellGrowth (GO:0016049)                           ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellGrowth (GO:0043951)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellMotility (GO:0048870)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellularMacromolecularComplexAssembly (GO:00346   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellularMacromolecularComplexSubunitOrganizatio   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellularProcess (GO:0009987)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ExtracellularMatrixOrganization (GO:0045229)      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ExtracellularPolysaccharideBiosyntheticProcess    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+GenerationOfPrecursorMetabolitesAndEnergy (GO:0   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+LipidMetabolicProcess (GO:0006629)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Locomotion (GO:0040011)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MulticellularOrganismalProcess (GO:0032501)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+RegulationofCellAdhesion (GO:0030155)             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ResponseToBioticStimulus (GO:0009607)             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ResponseToNutrient (GO:0009314)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       
+ResponseToNutrient (GO:0042594)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Synapse (GO:0045202)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 27
+  Terms in all runs: 0
+  Terms in only one run: 19
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BacterialAdhesion (D001704)                       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+BacterialGrowth (D001315)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+BacterialGrowth (D001706)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+BacterialPhysiology (D001711)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D001690)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Biofilms (D001703)                                ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D001704)                                ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Biofilms (D001706)                                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Biofilms (D001725)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Biofilms (D015647)                                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+BiologicalPhenomena (D001665)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BiophysicalPhenomena (D001697)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002460)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002467)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (D002468)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (D012333)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D015153)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D019465)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellDivision (D002465)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002468)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ComputationalBiology (D058428)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+DiseaseModels (D004194)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Instability (D007103)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+MicrobialGrowth (D018908)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D012045)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ModelsBiological (D012335)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D015190)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Neoplasms (D009369)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+NutrientCompetition (D053842)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Nutrients (D009687)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Phenotype (D010865)                               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Polysaccharides (D010087)                         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Probiotics (D011315)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ProteinBinding (D011485)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 34
+  Terms in all runs: 0
+  Terms in only one run: 31
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/27 terms consistent (0.0%)
+MeSH: 0/34 terms consistent (0.0%)
+
+Overall consistency: 0/71 terms (0.0%)
+
+================================================================================

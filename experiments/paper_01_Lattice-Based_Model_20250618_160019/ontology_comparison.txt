@@ -1,0 +1,119 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 16:03:08
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial (CL:0000066)                           ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✓       
+EpithelialCell (CL:0000092)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MammaryEpithelial (CL:0000492)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+MammaryEpithelialCell (CL:0000492)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MammaryEpithelialCell (CL:0000540)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+MammaryEpithelialCell (CL:0000632)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MammaryEpithelialCell (CL:0000653)                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MammaryEpithelialCell (CL:0008019)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+MammaryEpithelialCell (CL:0008032)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorCell (CL:0000084)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 12
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ActinCytoskeletonOrganization (GO:0030036)        ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       
+ActinFilament-BasedMovement (GO:0030048)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Apoptosis (GO:0006915)                            ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+Autophagy (GO:0006914)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell-MatrixAdhesion (GO:0007160)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       
+CellAdhesion (GO:0007160)                         ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+CellContractility (GO:0006928)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellContractility (GO:0030030)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCycleProcess (GO:0022402)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDeath (GO:0008219)                            ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✗       
+CellInvasion (GO:0030155)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellMigration (GO:0016477)                        ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+ContractileFiber (GO:0043292)                     ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Contractility (GO:0006936)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+LamellipodiumAssembly (GO:0030032)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Necrosis (GO:0006914)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 2
+  Terms in only one run: 10
+  Consistent terms: CellProliferation (GO:0008283), Apoptosis (GO:0006915)
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Apoptosis (D013577)                               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Apoptosis (D017209)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Apoptosis (D018301)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+BreastNeoplasms (D001943)                         ✗       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+BreastNeoplasms (D002466)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Carcinoma (D002277)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Carcinoma (D002352)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Carcinoma (D002448)                               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Carcinoma (D002470)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Carcinoma (D002471)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CarcinomaInSitu (D018301)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CarcinomaIntraductalNoninfiltrating (D002466)     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+CarcinomaIntraductalNoninfiltrating (D018301)     ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+CarcinomaIntraductalNoninfiltrating (D054258)     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002448)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellAdhesion (D015735)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D015738)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D016923)                            ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellMovement (D002448)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D018301)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+ComedoCarcinoma (D003111)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+DuctalCarcinoma (D002352)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Necrosis (D009421)                                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Necrosis (D018301)                                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+NeoplasmInvasion (D009369)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+NeoplasmInvasiveness (D009369)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+NeoplasmMetastasis (D009687)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Neoplasms (D009369)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+NeoplasticCellTransformation (D019636)            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+PrecancerousConditions (D011230)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Proliferation (D011014)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Proliferation (D011127)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorMicroenvironment (D000069258)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+TumorMicroenvironment (D000086382)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 34
+  Terms in all runs: 0
+  Terms in only one run: 29
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/12 terms consistent (0.0%)
+GeneOntology: 2/18 terms consistent (11.1%)
+MeSH: 0/34 terms consistent (0.0%)
+
+Overall consistency: 2/64 terms (3.1%)
+
+================================================================================

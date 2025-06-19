@@ -1,0 +1,104 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 17:18:53
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AdiposeDerivedStemCell (CL:0000134)               ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+AdiposeDerivedStemCell (CL:0002251)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✗       ✓       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✓       
+MesenchymalCell (CL:0000492)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+MesenchymalStemCell (CL:0000134)                  ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✓       ✓       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 0
+  Terms in only one run: 2
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ActinFilament-BasedProcess (GO:0030029)           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ApoptoticProcess (GO:0006915)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-MatrixAdhesion (GO:0007160)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (GO:0007155)                         ✓       ✗       ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✓       
+CellAggregation (GO:0007043)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAggregation (GO:0045216)                      ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellJunctionAssembly (GO:0007043)                 ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellMigration (GO:0016477)                        ✗       ✗       ✓       ✗       ✓       ✓       ✓       ✓       ✗       ✗       
+CellMorphogenesis (GO:0000902)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellMotion (GO:0006928)                           ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CytoskeletonOrganization (GO:0007010)             ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ExtracellularMatrixOrganization (GO:0030198)      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+NervousSystemDevelopment (GO:0007399)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+RegulationOfCellMorphogenesis (GO:0022604)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+RegulationOfCellularComponentSize (GO:0032535)    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BiocompatibleMaterials (D064426)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Bioengineering (D001300)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellAggregation (D002352)                         ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       
+CellAggregation (D002448)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAggregation (D002453)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAggregation (D002467)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellAggregation (D002470)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002454)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellFusion (D002470)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+CellFusion (D015854)                              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002465)                            ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellMovement (D010375)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+ComputerSimulation (D015196)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Diffusion (D003593)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Polymers (D011134)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+ProteinBinding (D011485)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+StemCells (D015190)                               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+StemCells (D015399)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+StemCells (D015403)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+StemCells (D015533)                               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+StemCells (D019127)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+StemCells (D049088)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+TissueEngineering (D015199)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TissueEngineering (D015201)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+TissueEngineering (D015533)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TissueEngineering (D016022)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+TissueEngineering (D019636)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 27
+  Terms in all runs: 0
+  Terms in only one run: 23
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/5 terms consistent (0.0%)
+GeneOntology: 0/18 terms consistent (0.0%)
+MeSH: 0/27 terms consistent (0.0%)
+
+Overall consistency: 0/50 terms (0.0%)
+
+================================================================================

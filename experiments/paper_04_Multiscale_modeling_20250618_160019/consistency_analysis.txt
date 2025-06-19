@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-18 17:10:01
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 38
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 27
+     • Average consistency: 13.7%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Naive CD8-Positive T-Lymphocyte (CL:0000895)
+     30.0% [███░░░░░░░] Effector CD8-Positive T-Lymphocyte (CL:0000913)
+     20.0% [██░░░░░░░░] CD8-Positive T-Lymphocyte (CL:0000625)
+     20.0% [██░░░░░░░░] CD8-Positive T-Lymphocyte (CL:0000624)
+     20.0% [██░░░░░░░░] CD8-PositiveT-Lymphocyte (CL:0000625)
+     ... and 22 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Naive CD8-Positive T-Lymphocyte (CL:0000895)
+     30.0% Effector CD8-Positive T-Lymphocyte (CL:0000913)
+     20.0% CD8-Positive T-Lymphocyte (CL:0000625)
+     ... and 24 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 37
+     • Average consistency: 13.8%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Apoptosis (GO:0006915)
+     30.0% [███░░░░░░░] ApoptoticProcess (GO:0006915)
+     30.0% [███░░░░░░░] T-CellActivation (GO:0042110)
+     30.0% [███░░░░░░░] T-Cell Activation (GO:0042110)
+     20.0% [██░░░░░░░░] Immune Response (GO:0006955)
+     ... and 32 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Apoptosis (GO:0006915)
+     30.0% ApoptoticProcess (GO:0006915)
+     30.0% T-CellActivation (GO:0042110)
+     ... and 34 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 38
+     • Average consistency: 13.4%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] T-Lymphocytes (D013601)
+     30.0% [███░░░░░░░] Interleukin-2 (D007369)
+     30.0% [███░░░░░░░] Apoptosis (D017209)
+     20.0% [██░░░░░░░░] Proteins (D011506)
+     20.0% [██░░░░░░░░] CellDifferentiation (D015735)
+     ... and 33 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Interleukin-2 (D007369)
+     30.0% Apoptosis (D017209)
+     20.0% Proteins (D011506)
+     ... and 34 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 16.5%
+     • Minimum similarity: 7.4%
+     • Maximum similarity: 35.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 11.6% [█░░░░░░░░░]
+     Runs 1-3: 8.7% [░░░░░░░░░░]
+     Runs 1-4: 10.7% [█░░░░░░░░░]
+     Runs 1-5: 19.6% [█░░░░░░░░░]
+     Runs 1-6: 14.1% [█░░░░░░░░░]
+     Runs 1-7: 10.7% [█░░░░░░░░░]
+     Runs 1-8: 13.2% [█░░░░░░░░░]
+     Runs 1-9: 22.1% [██░░░░░░░░]
+     Runs 1-10: 11.9% [█░░░░░░░░░]
+     Runs 2-3: 20.7% [██░░░░░░░░]
+     Runs 2-4: 18.4% [█░░░░░░░░░]
+     Runs 2-5: 15.6% [█░░░░░░░░░]
+     Runs 2-6: 17.8% [█░░░░░░░░░]
+     Runs 2-7: 16.1% [█░░░░░░░░░]
+     Runs 2-8: 17.1% [█░░░░░░░░░]
+     Runs 2-9: 15.9% [█░░░░░░░░░]
+     Runs 2-10: 7.8% [░░░░░░░░░░]
+     Runs 3-4: 21.1% [██░░░░░░░░]
+     Runs 3-5: 19.4% [█░░░░░░░░░]
+     Runs 3-6: 12.7% [█░░░░░░░░░]
+     Runs 3-7: 14.4% [█░░░░░░░░░]
+     Runs 3-8: 17.8% [█░░░░░░░░░]
+     Runs 3-9: 19.2% [█░░░░░░░░░]
+     Runs 3-10: 9.3% [░░░░░░░░░░]
+     Runs 4-5: 22.2% [██░░░░░░░░]
+     Runs 4-6: 25.2% [██░░░░░░░░]
+     Runs 4-7: 27.7% [██░░░░░░░░]
+     Runs 4-8: 35.8% [███░░░░░░░]
+     Runs 4-9: 25.7% [██░░░░░░░░]
+     Runs 4-10: 10.9% [█░░░░░░░░░]
+     Runs 5-6: 10.8% [█░░░░░░░░░]
+     Runs 5-7: 10.0% [░░░░░░░░░░]
+     Runs 5-8: 13.2% [█░░░░░░░░░]
+     Runs 5-9: 9.1% [░░░░░░░░░░]
+     Runs 5-10: 8.5% [░░░░░░░░░░]
+     Runs 6-7: 28.4% [██░░░░░░░░]
+     Runs 6-8: 21.0% [██░░░░░░░░]
+     Runs 6-9: 24.3% [██░░░░░░░░]
+     Runs 6-10: 13.2% [█░░░░░░░░░]
+     Runs 7-8: 26.2% [██░░░░░░░░]
+     Runs 7-9: 18.9% [█░░░░░░░░░]
+     Runs 7-10: 10.2% [█░░░░░░░░░]
+     Runs 8-9: 18.9% [█░░░░░░░░░]
+     Runs 8-10: 10.8% [█░░░░░░░░░]
+     Runs 9-10: 7.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 27
+     • Average consistency: 13.7%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Naive CD8-Positive T-Lymphocyte (CL:0000895)
+     30.0% [███░░░░░░░] Effector CD8-Positive T-Lymphocyte (CL:0000913)
+     20.0% [██░░░░░░░░] CD8-Positive T-Lymphocyte (CL:0000625)
+     20.0% [██░░░░░░░░] CD8-Positive T-Lymphocyte (CL:0000624)
+     20.0% [██░░░░░░░░] CD8-PositiveT-Lymphocyte (CL:0000625)
+     ... and 22 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Naive CD8-Positive T-Lymphocyte (CL:0000895)
+     30.0% Effector CD8-Positive T-Lymphocyte (CL:0000913)
+     20.0% CD8-Positive T-Lymphocyte (CL:0000625)
+     ... and 24 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 37
+     • Average consistency: 13.8%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Apoptosis (GO:0006915)
+     30.0% [███░░░░░░░] ApoptoticProcess (GO:0006915)
+     30.0% [███░░░░░░░] T-CellActivation (GO:0042110)
+     30.0% [███░░░░░░░] T-Cell Activation (GO:0042110)
+     20.0% [██░░░░░░░░] Immune Response (GO:0006955)
+     ... and 32 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Apoptosis (GO:0006915)
+     30.0% ApoptoticProcess (GO:0006915)
+     30.0% T-CellActivation (GO:0042110)
+     ... and 34 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 38
+     • Average consistency: 13.4%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] T-Lymphocytes (D013601)
+     30.0% [███░░░░░░░] Interleukin-2 (D007369)
+     30.0% [███░░░░░░░] Apoptosis (D017209)
+     20.0% [██░░░░░░░░] Proteins (D011506)
+     20.0% [██░░░░░░░░] CellDifferentiation (D015735)
+     ... and 33 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Interleukin-2 (D007369)
+     30.0% Apoptosis (D017209)
+     20.0% Proteins (D011506)
+     ... and 34 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 16.5%
+     • Minimum similarity: 7.4%
+     • Maximum similarity: 35.8%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 11.6% [█░░░░░░░░░]
+     Runs 1-3: 8.7% [░░░░░░░░░░]
+     Runs 1-4: 10.7% [█░░░░░░░░░]
+     Runs 1-5: 19.6% [█░░░░░░░░░]
+     Runs 1-6: 14.1% [█░░░░░░░░░]
+     Runs 1-7: 10.7% [█░░░░░░░░░]
+     Runs 1-8: 13.2% [█░░░░░░░░░]
+     Runs 1-9: 22.1% [██░░░░░░░░]
+     Runs 1-10: 11.9% [█░░░░░░░░░]
+     Runs 2-3: 20.7% [██░░░░░░░░]
+     Runs 2-4: 18.4% [█░░░░░░░░░]
+     Runs 2-5: 15.6% [█░░░░░░░░░]
+     Runs 2-6: 17.8% [█░░░░░░░░░]
+     Runs 2-7: 16.1% [█░░░░░░░░░]
+     Runs 2-8: 17.1% [█░░░░░░░░░]
+     Runs 2-9: 15.9% [█░░░░░░░░░]
+     Runs 2-10: 7.8% [░░░░░░░░░░]
+     Runs 3-4: 21.1% [██░░░░░░░░]
+     Runs 3-5: 19.4% [█░░░░░░░░░]
+     Runs 3-6: 12.7% [█░░░░░░░░░]
+     Runs 3-7: 14.4% [█░░░░░░░░░]
+     Runs 3-8: 17.8% [█░░░░░░░░░]
+     Runs 3-9: 19.2% [█░░░░░░░░░]
+     Runs 3-10: 9.3% [░░░░░░░░░░]
+     Runs 4-5: 22.2% [██░░░░░░░░]
+     Runs 4-6: 25.2% [██░░░░░░░░]
+     Runs 4-7: 27.7% [██░░░░░░░░]
+     Runs 4-8: 35.8% [███░░░░░░░]
+     Runs 4-9: 25.7% [██░░░░░░░░]
+     Runs 4-10: 10.9% [█░░░░░░░░░]
+     Runs 5-6: 10.8% [█░░░░░░░░░]
+     Runs 5-7: 10.0% [░░░░░░░░░░]
+     Runs 5-8: 13.2% [█░░░░░░░░░]
+     Runs 5-9: 9.1% [░░░░░░░░░░]
+     Runs 5-10: 8.5% [░░░░░░░░░░]
+     Runs 6-7: 28.4% [██░░░░░░░░]
+     Runs 6-8: 21.0% [██░░░░░░░░]
+     Runs 6-9: 24.3% [██░░░░░░░░]
+     Runs 6-10: 13.2% [█░░░░░░░░░]
+     Runs 7-8: 26.2% [██░░░░░░░░]
+     Runs 7-9: 18.9% [█░░░░░░░░░]
+     Runs 7-10: 10.2% [█░░░░░░░░░]
+     Runs 8-9: 18.9% [█░░░░░░░░░]
+     Runs 8-10: 10.8% [█░░░░░░░░░]
+     Runs 9-10: 7.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (13.7%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (13.8%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (13.4%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (13.7%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (13.8%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (13.4%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (16.5%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (16.5%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

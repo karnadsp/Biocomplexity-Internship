@@ -44,7 +44,7 @@ def get_experiment_name_from_title(title, paper_id):
         clean_name = "".join(c for c in title if c.isalnum() or c in "._-").replace(" ", "_")[:20]
         return f"paper_{paper_id:02d}_{clean_name}"
 
-def run_full_experiment_workflow(experiment_name, description, num_runs):
+def run_full_experiment_workflow(experiment_name, description, num_runs, batch_timestamp):
     """
     Run the complete experimental_code.py workflow for a single paper.
     This generates all the rich outputs (ontology_comparison.txt, consistency_analysis.txt, etc.)
@@ -58,7 +58,7 @@ def run_full_experiment_workflow(experiment_name, description, num_runs):
     
     for run in range(1, num_runs + 1):
         print(f"  Running experiment {run} of {num_runs}...")
-        run_dir = run_experiment(experiment_name, description, run, num_runs)
+        run_dir = run_experiment(experiment_name, description, run, num_runs, batch_timestamp)
         experiment_dirs.append(run_dir)
         
         # Get the main experiment directory from the first run
@@ -211,7 +211,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
         try:
             # Run the COMPLETE experimental_code.py workflow
             experiment_dirs, main_experiment_dir, consistency_metrics = run_full_experiment_workflow(
-                experiment_name, paper['abstract'], num_runs_per_paper
+                experiment_name, paper['abstract'], num_runs_per_paper, batch_timestamp
             )
             
             # Extract metrics for CSV

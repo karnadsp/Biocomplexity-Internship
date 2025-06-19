@@ -1,0 +1,99 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:42:58
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cancer (CL:0002598)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Endothelial (CL:0000115)                          ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✓       ✓       ✗       
+Endothelial (CL:0000136)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endothelial (CL:0000548)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0002608)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Epithelial (CL:0000000)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000003)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000066)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial (CL:0000540)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Epithelial (CL:0000584)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Fibroblast (CL:0000057)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000001)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 12
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellMigration (GO:0016477)                        ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✗       
+CellProliferation (GO:0008283)                    ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+GrowthFactorBinding (GO:0019838)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MetabolicProcess (GO:0008152)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PositiveRegulationOfAngiogenesis (GO:0045766)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ResponseToHypoxia (GO:0001666)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 8
+  Terms in all runs: 2
+  Terms in only one run: 5
+  Consistent terms: CellProliferation (GO:0008283), Angiogenesis (GO:0001525)
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AngiogenesisInhibitors (D000071244)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+AngiogenesisInhibitors (D000073924)               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+AngiogenesisInhibitors (D000374)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+AngiogenesisInhibitors (D000911)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+AngiogenesisInhibitors (D006643)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+AngiogenesisInhibitors (D015927)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+AngiogenesisInhibitors (D017353)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+AngiogenesisInhibitors (D018301)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellHypoxia (D002460)                             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CellProliferation (D002461)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellProliferation (D002470)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+DrugDiscovery (D003486)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+DrugDiscovery (D018355)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+GeneExpressionRegulation (D005786)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D009369)                               ✗       ✓       ✓       ✗       ✓       ✗       ✓       ✗       ✓       ✓       
+Neovascularization (D006392)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization (D018931)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization (D018965)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+NeovascularizationPathologic (D009369)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+NeovascularizationPathologic (D018358)            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+NeovascularizationPathologic (D018376)            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Oxygen (D010102)                                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Oxygen (D012110)                                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Oxygen (D015152)                                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 24
+  Terms in all runs: 0
+  Terms in only one run: 22
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/12 terms consistent (0.0%)
+GeneOntology: 2/8 terms consistent (25.0%)
+MeSH: 0/24 terms consistent (0.0%)
+
+Overall consistency: 2/44 terms (4.5%)
+
+================================================================================

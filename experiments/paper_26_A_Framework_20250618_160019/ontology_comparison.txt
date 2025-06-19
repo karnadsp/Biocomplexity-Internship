@@ -1,0 +1,114 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 18:49:52
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Chondrocyte (CL:0000001)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000000)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000010)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial (CL:0000548)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EpithelialCell (CL:0000066)                       ✓       ✗       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✗       
+EpithelialCell (CL:0000548)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Mesenchymal (CL:0000001)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0000499)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+MesenchymalCell (CL:0008019)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       
+MesenchymalCell (CL:0008020)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+StromalCell (CL:0000499)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 12
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✗       ✓       
+Cell-MatrixAdhesion (GO:0007160)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+CellCommunication (GO:0007154)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellCycle (GO:0007049)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+CellDifferentiation (GO:0030154)                  ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+CellMorphogenesis (GO:0000902)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMotility (GO:0048870)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellularDevelopmentalProcess (GO:0048869)         ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       
+GlandDevelopment (GO:0048732)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Growth (GO:0040007)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+MulticellularOrganismDevelopment (GO:0007275)     ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+StemCellDifferentiation (GO:0048863)              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TissueMorphogenesis (GO:0048729)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Animals (D000818)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellAggregation (D002477)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellCommunication (D002470)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellCommunication (D002478)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002454)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDifferentiation (D002460)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellDivision (D002471)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellMovement (D002465)                            ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✓       
+CellProliferation (D002470)                       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Cells (D002478)                                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+ComputationalBiology (D000071664)                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ComputationalBiology (D018908)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+LimbBud (D008107)                                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+LimbBud (D015154)                                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D015141)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D000071196)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogenesis (D005109)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogenesis (D008607)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogenesis (D015398)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D015533)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (D018908)                           ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D047928)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D049228)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D064486)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+NeoplasmMetastasis (D009369)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+PatternFormation (D020530)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+PatternFormation (D051379)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+SignalTransduction (D015398)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Simulation (D015405)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Software (D010977)                                ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 30
+  Terms in all runs: 0
+  Terms in only one run: 25
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/12 terms consistent (0.0%)
+GeneOntology: 0/18 terms consistent (0.0%)
+MeSH: 0/30 terms consistent (0.0%)
+
+Overall consistency: 0/60 terms (0.0%)
+
+================================================================================

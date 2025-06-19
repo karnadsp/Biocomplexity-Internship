@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_29_Multiscale_Models
+Generated: 2025-06-18 18:56:42
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Dynamical systems in which geometrically extended model cells produce and interact with diffusible (morphogen) and non-diffusible (extracellular matrix) chemical fields have proved very useful as models for developmental processes. The embryonic vertebrate limb is an apt system for such mathematical and computational modeling since it has been the subject of hundreds of experimental studies, and its normal and variant morphologies and spatiotemporal organization of expressed genes are well known. Because of its stereotypical proximodistally generated increase in the number of parallel skeletal elements, the limb lends itself to being modeled by Turing-type systems which are capable of producing periodic, or quasiperiodic, arrangements of spot- and stripe-like elements. This chapter describes several such models, including, (i) a system of partial differential equations in which changing cell density enters into the dynamics explicitly, (ii) a model for morphogen dynamics alone, derived from the latter system in the “morphostatic limit” where cell movement relaxes on a much slower time-scale than cell differentiation, (iii) a discrete stochastic model for the simplified pattern formation that occurs when limb cells are placed in planar culture, and (iv) several hybrid models in which continuum morphogen systems interact with cells represented as energy-minimizing mesoscopic entities. Progress in devising computational methods for handling 3D, multiscale, multimodel simulations of organogenesis is discussed, as well as for simulating reaction–diffusion dynamics in domains of irregular shape.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:54:11.791829
+  Interactions: 2
+  CC3D Model: 2504 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:54:22.609604
+  Interactions: 2
+  CC3D Model: 3216 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:54:39.823730
+  Interactions: 2
+  CC3D Model: 5256 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:55:05.706197
+  Interactions: 2
+  CC3D Model: 3097 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:55:17.107509
+  Interactions: 2
+  CC3D Model: 3180 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:55:31.671418
+  Interactions: 2
+  CC3D Model: 2375 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:55:42.813554
+  Interactions: 2
+  CC3D Model: 2845 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:55:54.376904
+  Interactions: 2
+  CC3D Model: 2611 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:56:08.535723
+  Interactions: 2
+  CC3D Model: 3543 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_29_Multiscale_Models_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:56:28.064442
+  Interactions: 2
+  CC3D Model: 3598 bytes

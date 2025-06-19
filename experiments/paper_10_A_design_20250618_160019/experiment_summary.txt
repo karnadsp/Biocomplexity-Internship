@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_10_A_design
+Generated: 2025-06-18 18:18:21
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+E3 ubiquitin ligases are important cellular components that determine the specificity of proteolysis in the ubiquitin-proteasome system. However, an increasing number of studies have indicated that E3 ubiquitin ligases also participate in transcription. Intrigued by the apparently paradoxical functions of E3 ubiquitin ligases in both proteolysis and transcriptional activation, we investigated the underlying design principles using mathematical modeling. We found that the antagonistic functions integrated in E3 ubiquitin ligases can prevent any undesirable sustained activation of downstream genes when E3 ubiquitin ligases are destabilized by unexpected perturbations. Interestingly, this design principle of the system is similar to the operational principle of a safety interlock device in engineering systems, which prevents a system from abnormal operation unless stability is guaranteed.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_10_A_design_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:16:33.527056
+  Interactions: 2
+  CC3D Model: 2894 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_10_A_design_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:16:44.506762
+  Interactions: 2
+  CC3D Model: 2201 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_10_A_design_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:16:55.328991
+  Interactions: 2
+  CC3D Model: 1980 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_10_A_design_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:17:01.991386
+  Interactions: 2
+  CC3D Model: 2611 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_10_A_design_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:17:11.151881
+  Interactions: 2
+  CC3D Model: 2795 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_10_A_design_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:17:21.600626
+  Interactions: 2
+  CC3D Model: 2609 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_10_A_design_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:17:31.540060
+  Interactions: 2
+  CC3D Model: 2803 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_10_A_design_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:17:43.664917
+  Interactions: 2
+  CC3D Model: 2736 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_10_A_design_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:17:53.919915
+  Interactions: 2
+  CC3D Model: 4463 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_10_A_design_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:18:11.727597
+  Interactions: 2
+  CC3D Model: 2446 bytes

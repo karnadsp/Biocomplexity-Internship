@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_03_Integrating_multi-scale
+Generated: 2025-06-18 17:07:11
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Insights into the mechanisms of development of the mammalian four-chamberedheart are based on biological observations at organ, tissue, cell, and molecularlevels, but the full integration of these experimental data awaits a systems biologyapproach. Such an approach can be employed to formulate and test conceptualmodels in a computational simulation. To illustrate how this can be applied toheart development, we used the process of trabeculation, which is the formationof muscular strands during chamber development. We selected this processbecause it is localized, involves a restricted number of cell types, and a rangeof experimental data is available. Trabeculation of the ventricles is based onthe interplay between endocardial and myocardial cells and involves molecularpathways underlying cell–cell interactions and tissue-speciﬁc cell behavior. Acellular Potts model was used for the simulation of these multi-scale processes.With fairly simple inputs, of which the relative contributions are unknown, aniterative exploration achieved an outcome that resembles the trabeculation processand allows further investigation of contributing factors. The systems biologypipeline from biological observations and conceptual modeling to a mathematicalmodel and computational algorithms is described and discussed. The multi-levelbiological observations provide the components and their connections of theconceptual model. However, the true strength of systems biology must be foundin the biological test of the predictions that result from an experimental change inthe computational model. These validated predictions will ultimately elucidate thefunctional role of a component or interaction in the process of heart development
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_1
+  Timestamp: 2025-06-18T17:05:15.575690
+  Interactions: 2
+  CC3D Model: 3784 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_2
+  Timestamp: 2025-06-18T17:05:36.766148
+  Interactions: 2
+  CC3D Model: 2396 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_3
+  Timestamp: 2025-06-18T17:05:46.081084
+  Interactions: 2
+  CC3D Model: 3784 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_4
+  Timestamp: 2025-06-18T17:06:00.417247
+  Interactions: 2
+  CC3D Model: 2606 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_5
+  Timestamp: 2025-06-18T17:06:10.289394
+  Interactions: 2
+  CC3D Model: 2590 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_6
+  Timestamp: 2025-06-18T17:06:20.578121
+  Interactions: 2
+  CC3D Model: 2365 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_7
+  Timestamp: 2025-06-18T17:06:31.057645
+  Interactions: 2
+  CC3D Model: 2386 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_8
+  Timestamp: 2025-06-18T17:06:39.735163
+  Interactions: 2
+  CC3D Model: 2901 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_9
+  Timestamp: 2025-06-18T17:06:49.448675
+  Interactions: 2
+  CC3D Model: 2418 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_03_Integrating_multi-scale_20250618_160019\run_10
+  Timestamp: 2025-06-18T17:06:59.654824
+  Interactions: 2
+  CC3D Model: 2913 bytes

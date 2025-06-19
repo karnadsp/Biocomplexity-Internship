@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_12_Hyaluronan_A
+Generated: 2025-06-18 18:22:53
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+During embryonic development, cardiac valves arise at specific regions in the cardiac endothelium that swell up due to enhanced extracellular matrix production (so-called endocardial cushions). An important extracellular matrix component that is produced by the endocardial cells is the glycosaminoglycan hyaluronan. A deficiency in hyaluronan synthesis results in a failure to form endocardial cushions and a loss of their cellularization by a process called endothelial-to-mesenchymal transformation. Expression of the major hyaluronan synthase Has2 is under the influence of both positive and negative regulators. MicroRNA-dependent degradation of Has2 is required to control extracellular hyaluronan levels and thereby the size of the endocardial cushions. In this article, we review the current literature on hyaluronan synthesis during cardiac valve formation and propose that a balanced activity of both positive and negative regulators is required to maintain the critical homeostasis of hyaluronan levels in the extracellular matrix and thereby the size of the endocardial cushions. The activating and inhibitory interactions between microRNA-23, Has2, and hyaluronan are reminiscent of a reaction–diffusion system. Using a mathematical modeling approach we show that the system can produce a confined expression of hyaluronan, but only if the inhibitory signal is transferred to adjacent cells in exosomes.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:20:50.690997
+  Interactions: 2
+  CC3D Model: 2794 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:21:04.268627
+  Interactions: 2
+  CC3D Model: 3096 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:21:16.409042
+  Interactions: 2
+  CC3D Model: 2453 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:21:29.035464
+  Interactions: 2
+  CC3D Model: 2963 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:21:41.689064
+  Interactions: 2
+  CC3D Model: 3555 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:21:53.959292
+  Interactions: 2
+  CC3D Model: 2742 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:22:06.996034
+  Interactions: 2
+  CC3D Model: 2837 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:22:18.036781
+  Interactions: 2
+  CC3D Model: 3296 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:22:30.001470
+  Interactions: 2
+  CC3D Model: 2999 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_12_Hyaluronan_A_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:22:41.989778
+  Interactions: 2
+  CC3D Model: 2752 bytes

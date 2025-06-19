@@ -29,13 +29,18 @@ if not api_token:
 client = replicate.Client(api_token=api_token)
 
 class ExperimentLogger:
-    def __init__(self, experiment_name, run_number=1, total_runs=1):
+    def __init__(self, experiment_name, run_number=1, total_runs=1, batch_timestamp=None):
         self.experiment_name = experiment_name
         self.run_number = run_number
         self.total_runs = total_runs
-        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        # Create main experiment directory (shared across all runs)
+        # Use provided batch timestamp or create one for single experiments
+        if batch_timestamp:
+            self.timestamp = batch_timestamp
+        else:
+            self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Create main experiment directory (shared across all runs for this paper)
         self.main_experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}")
         self.main_experiment_dir.mkdir(parents=True, exist_ok=True)
         
@@ -102,36 +107,36 @@ class ExperimentLogger:
         return self.main_experiment_dir
 
 def get_llm_response(prompt, system_message, logger):
-    """Helper function to get response from Replicate API"""
+    """Helper function to get response from Replicate API using DeepSeek V3"""
     # Format the prompt with system message
     full_prompt = f"{system_message}\n\n{prompt}"
     
     print(f"\nSending request to API...")
     
-    # Get the specific deployment
-    deployment = replicate.deployments.get("umsi-amadaman/cc3d-deepseekr1")
+    # Use DeepSeek V3 public model (switched from R1 deployment)
+    # V3 automatically maps API temperature 1.0 to optimal model temperature 0.3
+    model = "deepseek-ai/deepseek-v3"
     
     max_retries = 3
     retry_delay = 5  # seconds
     
     for attempt in range(max_retries):
         try:
-            # Create and wait for prediction
-            prediction = deployment.predictions.create(
+            # Create and wait for prediction using the public model
+            prediction = client.run(
+                model,
                 input={
                     "prompt": full_prompt,
-                    "temperature": 0.3,  # Lower temperature for more consistent outputs
+                    "temperature": 1.0,  # V3 maps API temp 1.0 to model temp 0.3 automatically
                     "top_p": 0.9,
                     "max_tokens": 2000
                 }
             )
             
-            print("Waiting for response...")
-            prediction.wait()
             print("Received response!")
             
             # Get the response and handle list output
-            result = prediction.output
+            result = prediction
             if isinstance(result, list):
                 result = "".join(result)
             
@@ -294,10 +299,10 @@ def create_cc3d_file(python_code, logger):
         
         return output_file
 
-def run_experiment(experiment_name, description, run_number, num_runs):
+def run_experiment(experiment_name, description, run_number, num_runs, batch_timestamp=None):
     """Run a single experiment with the given parameters"""
     print(f"\nStarting experiment run {run_number} of {num_runs}...")
-    logger = ExperimentLogger(experiment_name, run_number, num_runs)
+    logger = ExperimentLogger(experiment_name, run_number, num_runs, batch_timestamp)
     
     # Log initial description
     print("Generating ontology annotations...")

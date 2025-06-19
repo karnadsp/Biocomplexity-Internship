@@ -1,0 +1,69 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 15:02:46
+Total Runs: 2
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Tumor Cell (CL:0002353)                           ✓       ✗       
+tumor cell (CL:0002353)                           ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 2
+  Terms in all runs: 0
+  Terms in only one run: 2
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Cell Migration (GO:0016477)                       ✓       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✓       ✗       
+Positive Regulation of Cell Proliferation (GO:0   ✓       ✗       
+cell migration (GO:0016477)                       ✗       ✓       
+cell-cell adhesion (GO:0098602)                   ✗       ✓       
+positive regulation of cell proliferation (GO:0   ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 6
+  Terms in all runs: 0
+  Terms in only one run: 6
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Cell Adhesion (D0000710)                          ✓       ✗       
+Cell Migration (D059205)                          ✓       ✗       
+Neoplasms (D009369)                               ✓       ✗       
+Tumor Microenvironment (D054507)                  ✓       ✗       
+cell migration (D059205)                          ✗       ✓       
+neoplasm growth (D000071204)                      ✗       ✓       
+tissue microenvironment (D000071213)              ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 7
+  Terms in all runs: 0
+  Terms in only one run: 7
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/2 terms consistent (0.0%)
+GeneOntology: 0/6 terms consistent (0.0%)
+MeSH: 0/7 terms consistent (0.0%)
+
+Overall consistency: 0/15 terms (0.0%)
+
+================================================================================

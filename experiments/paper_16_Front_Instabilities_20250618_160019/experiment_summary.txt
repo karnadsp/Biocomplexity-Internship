@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_16_Front_Instabilities
+Generated: 2025-06-18 18:30:07
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We use the Glazier-Graner-Hogeweg model to simulate three-dimensional (3D), single-phenotype, avascular tumors growing in an homogeneous tissue matrix (TM) supplying a single limiting nutrient. We study the effects of two parameters on tumor morphology: a diffusion-limitation parameter defined as the ratio of the tumor-substrate consumption rate to the substrate-transport rate, and the tumor-TM surface tension. This initial model omits necrosis and oxidative/hypoxic metabolism effects, which can further influence tumor morphology, but our simplified model still shows significant parameter dependencies. The diffusion-limitation parameter determines whether the growing solid tumor develops a smooth (noninvasive) or fingered (invasive) interface, as in our earlier two-dimensional (2D) simulations. The sensitivity of 3D tumor morphology to tumor-TM surface tension increases with the size of the diffusion-limitation parameter, as in 2D. The 3D results are unexpectedly close to those in 2D. Our results therefore may justify using simpler 2D simulations of tumor growth, instead of more realistic but more computationally expensive 3D simulations. While geometrical artifacts mean that 2D sections of connected 3D tumors may be disconnected, the morphologies of 3D simulated tumors nevertheless correlate with the morphologies of their 2D sections, especially for low-surface-tension tumors, allowing the use of 2D sections to partially reconstruct medically-important 3D-tumor structures.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:28:18.203983
+  Interactions: 2
+  CC3D Model: 3594 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:28:33.503206
+  Interactions: 2
+  CC3D Model: 2500 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:28:41.426626
+  Interactions: 2
+  CC3D Model: 2253 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:28:48.491539
+  Interactions: 2
+  CC3D Model: 2962 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:28:58.627175
+  Interactions: 2
+  CC3D Model: 2834 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:29:10.208491
+  Interactions: 2
+  CC3D Model: 2593 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:29:19.758486
+  Interactions: 2
+  CC3D Model: 2782 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:29:30.187796
+  Interactions: 2
+  CC3D Model: 3000 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:29:41.636658
+  Interactions: 2
+  CC3D Model: 3532 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_16_Front_Instabilities_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:29:57.304564
+  Interactions: 2
+  CC3D Model: 2799 bytes

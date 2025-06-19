@@ -1,0 +1,63 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-18 14:58:45
+Total Runs: 2
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✓       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 1
+  Terms in all runs: 1
+  Terms in only one run: 0
+  Consistent terms: Epithelial (CL:0000066)
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Cell Division (GO:0051781)                        ✓       ✓       
+Cell Growth (GO:0016045)                          ✗       ✓       
+Cell Growth (GO:0016049)                          ✓       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 3
+  Terms in all runs: 1
+  Terms in only one run: 2
+  Consistent terms: Cell Division (GO:0051781)
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       
+--------------------------------------------------------------------------
+Cell Proliferation (D002205)                      ✗       ✓       
+Ductal Carcinoma In Situ (C53604)                 ✓       ✗       
+Ductal Carcinoma In Situ (D019039)                ✗       ✓       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 3
+  Terms in all runs: 0
+  Terms in only one run: 3
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 1/1 terms consistent (100.0%)
+GeneOntology: 1/3 terms consistent (33.3%)
+MeSH: 0/3 terms consistent (0.0%)
+
+Overall consistency: 2/7 terms (28.6%)
+
+================================================================================

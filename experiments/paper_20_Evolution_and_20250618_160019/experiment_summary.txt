@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_20_Evolution_and
+Generated: 2025-06-18 18:38:36
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Development is the powerful process involving a genome in the transformation from one egg cell to a multicellular organism with many cell types. The dividing cells manage to organize and assign themselves special, differentiated roles in a reliable manner, creating a spatio-temporal pattern and division of labor. This despite the fact that little positional information may be available to them initially to guide this patterning. Inspired by a model of developmental biologist L. Wolpert, we simulate this situation in an evolutionary setting where individuals have to grow into “French flag” patterns. The cells in our model exist in a 2-layer Potts model physical environment. Controlled by continuous genetic regulatory networks, identical for all cells of one individual, the cells can individually differ in parameters including target volume, shape, orientation, and diffusion. Intercellular communication is possible via secretion and sensing of diffusing morphogens. Evolved individuals growing from a single cell can develop the French flag pattern by setting up and maintaining asymmetric morphogen gradients – a behavior predicted by several theoretical models.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_1
+  Timestamp: 2025-06-18T18:36:43.976028
+  Interactions: 2
+  CC3D Model: 2593 bytes
+
+Run 2: run_2
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_2
+  Timestamp: 2025-06-18T18:36:55.331924
+  Interactions: 2
+  CC3D Model: 2317 bytes
+
+Run 3: run_3
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_3
+  Timestamp: 2025-06-18T18:37:05.298572
+  Interactions: 2
+  CC3D Model: 3213 bytes
+
+Run 4: run_4
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_4
+  Timestamp: 2025-06-18T18:37:18.786708
+  Interactions: 2
+  CC3D Model: 2607 bytes
+
+Run 5: run_5
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_5
+  Timestamp: 2025-06-18T18:37:29.534824
+  Interactions: 2
+  CC3D Model: 2229 bytes
+
+Run 6: run_6
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_6
+  Timestamp: 2025-06-18T18:37:39.406158
+  Interactions: 2
+  CC3D Model: 2344 bytes
+
+Run 7: run_7
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_7
+  Timestamp: 2025-06-18T18:37:48.769710
+  Interactions: 2
+  CC3D Model: 2534 bytes
+
+Run 8: run_8
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_8
+  Timestamp: 2025-06-18T18:38:01.067333
+  Interactions: 2
+  CC3D Model: 2919 bytes
+
+Run 9: run_9
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_9
+  Timestamp: 2025-06-18T18:38:15.871030
+  Interactions: 2
+  CC3D Model: 1882 bytes
+
+Run 10: run_10
+  Directory: experiments\paper_20_Evolution_and_20250618_160019\run_10
+  Timestamp: 2025-06-18T18:38:25.167074
+  Interactions: 2
+  CC3D Model: 2324 bytes
