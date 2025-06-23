@@ -29,7 +29,7 @@ if not api_token:
 client = replicate.Client(api_token=api_token)
 
 class ExperimentLogger:
-    def __init__(self, experiment_name, run_number=1, total_runs=1, batch_timestamp=None):
+    def __init__(self, experiment_name, run_number=1, total_runs=1, batch_timestamp=None, batch_dir=None):
         self.experiment_name = experiment_name
         self.run_number = run_number
         self.total_runs = total_runs
@@ -41,7 +41,12 @@ class ExperimentLogger:
             self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
         # Create main experiment directory (shared across all runs for this paper)
-        self.main_experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}")
+        if batch_dir:
+            # If we're part of a batch, create the experiment directory inside the batch directory
+            self.main_experiment_dir = Path(batch_dir) / f"{experiment_name}_{self.timestamp}"
+        else:
+            # For standalone experiments, create directly in experiments folder
+            self.main_experiment_dir = Path(f"experiments/{experiment_name}_{self.timestamp}")
         self.main_experiment_dir.mkdir(parents=True, exist_ok=True)
         
         # Create subdirectory for this specific run
@@ -299,10 +304,10 @@ def create_cc3d_file(python_code, logger):
         
         return output_file
 
-def run_experiment(experiment_name, description, run_number, num_runs, batch_timestamp=None):
+def run_experiment(experiment_name, description, run_number, num_runs, batch_timestamp=None, batch_dir=None):
     """Run a single experiment with the given parameters"""
     print(f"\nStarting experiment run {run_number} of {num_runs}...")
-    logger = ExperimentLogger(experiment_name, run_number, num_runs, batch_timestamp)
+    logger = ExperimentLogger(experiment_name, run_number, num_runs, batch_timestamp, batch_dir)
     
     # Log initial description
     print("Generating ontology annotations...")
