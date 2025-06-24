@@ -44,13 +44,13 @@ def get_experiment_name_from_title(title, paper_id):
         clean_name = "".join(c for c in title if c.isalnum() or c in "._-").replace(" ", "_")[:20]
         return f"paper_{paper_id:02d}_{clean_name}"
 
-def run_full_experiment_workflow(experiment_name, description, num_runs, batch_timestamp, batch_dir=None):
+def run_full_experiment_workflow(experiment_name, description, num_runs, batch_timestamp, batch_dir=None, model_type="reasoning"):
     """
     Run the complete experimental_code.py workflow for a single paper.
     This generates all the rich outputs (ontology_comparison.txt, consistency_analysis.txt, etc.)
     and returns the experiment directories and main directory.
     """
-    print(f"Running full experimental workflow for: {experiment_name}")
+    print(f"Running full experimental workflow for: {experiment_name} using {model_type} model")
     
     # Run multiple experiments (same as experimental_code.py main())
     experiment_dirs = []
@@ -58,7 +58,7 @@ def run_full_experiment_workflow(experiment_name, description, num_runs, batch_t
     
     for run in range(1, num_runs + 1):
         print(f"  Running experiment {run} of {num_runs}...")
-        run_dir = run_experiment(experiment_name, description, run, num_runs, batch_timestamp, batch_dir)
+        run_dir = run_experiment(experiment_name, description, run, num_runs, batch_timestamp, batch_dir, model_type)
         experiment_dirs.append(run_dir)
         
         # Get the main experiment directory from the first run
@@ -85,7 +85,7 @@ def run_full_experiment_workflow(experiment_name, description, num_runs, batch_t
     with open(main_experiment_dir / "consistency_analysis.txt", 'w', encoding='utf-8') as f:
         f.write(consistency_analysis)
     
-    print(f"Full workflow completed for {experiment_name}")
+    print(f"Full workflow completed for {experiment_name} using {model_type} model")
     print(f"Results saved in: {main_experiment_dir}")
     
     return experiment_dirs, main_experiment_dir, consistency_metrics
@@ -177,7 +177,7 @@ def extract_metrics_from_consistency_data(consistency_metrics, experiment_dirs):
     
     return metrics
 
-def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_consistency_results.csv"):
+def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_consistency_results.csv", model_type="reasoning"):
     """
     Process papers from CSV using the full experimental_code.py workflow.
     This generates all the rich outputs for each paper AND creates a CSV summary.
@@ -186,10 +186,11 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
     # Load abstracts
     abstracts = load_abstracts_csv(input_csv)
     print(f"Loaded {len(abstracts)} paper abstracts from {input_csv}")
+    print(f"Using {model_type} model for all experiments")
     
-    # Create batch directory
+    # Create batch directory with model type in name
     batch_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    batch_dir = Path(f"experiments/batch_{batch_timestamp}")
+    batch_dir = Path(f"experiments/batch_{model_type}_{batch_timestamp}")
     batch_dir.mkdir(parents=True, exist_ok=True)
     
     # Prepare CSV data
@@ -199,7 +200,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
     # Process each paper using the FULL experimental workflow
     for i, paper in enumerate(abstracts, 1):
         print(f"\n{'='*80}")
-        print(f"PROCESSING PAPER {i}/{len(abstracts)}")
+        print(f"PROCESSING PAPER {i}/{len(abstracts)} with {model_type.upper()} MODEL")
         print(f"{'='*80}")
         print(f"Title: {paper['name'][:60]}...")
         print(f"Abstract length: {len(paper['abstract'])} characters")
@@ -209,9 +210,9 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
         print(f"Experiment name: {experiment_name}")
         
         try:
-            # Run the COMPLETE experimental_code.py workflow
+            # Run the COMPLETE experimental_code.py workflow with specified model
             experiment_dirs, main_experiment_dir, consistency_metrics = run_full_experiment_workflow(
-                experiment_name, paper['abstract'], num_runs_per_paper, batch_timestamp, batch_dir
+                experiment_name, paper['abstract'], num_runs_per_paper, batch_timestamp, batch_dir, model_type
             )
             
             # Extract metrics for CSV
@@ -222,6 +223,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
                 'paper_id': i,
                 'paper_name': paper['name'],
                 'experiment_name': experiment_name,
+                'model_type': model_type,
                 'abstract_length': len(paper['abstract']),
                 'experiment_directory': str(main_experiment_dir),
                 **metrics  # Include all extracted metrics
@@ -240,6 +242,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
                 'paper_id': i,
                 'paper_name': paper['name'],
                 'experiment_name': experiment_name,
+                'model_type': model_type,
                 'abstract_length': len(paper['abstract']),
                 'experiment_directory': 'ERROR',
                 'num_runs': 0,
@@ -269,7 +272,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
     
     if csv_data:
         fieldnames = [
-            'paper_id', 'paper_name', 'experiment_name', 'abstract_length', 'experiment_directory',
+            'paper_id', 'paper_name', 'experiment_name', 'model_type', 'abstract_length', 'experiment_directory',
             'num_runs', 'successful_ontology_extractions', 'successful_code_extractions',
             'overall_consistency_score', 'consistency_grade',
             'CellOntology_unique_terms', 'CellOntology_avg_consistency', 'CellOntology_max_consistency', 'CellOntology_perfect_terms',
@@ -286,6 +289,7 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
         print(f"\n{'='*80}")
         print(f"BATCH PROCESSING COMPLETE!")
         print(f"{'='*80}")
+        print(f"Model used: {model_type.upper()}")
         print(f"CSV summary saved to: {output_path}")
         
         # Print enhanced summary statistics
@@ -328,13 +332,14 @@ def batch_process_to_csv(input_csv, num_runs_per_paper=3, output_csv="paper_cons
         if code_values:
             print(f"Average code similarity: {statistics.mean(code_values):.1%}")
         
-        print(f"\nEach paper has been processed with the FULL experimental workflow.")
+        print(f"\nEach paper has been processed with the FULL experimental workflow using {model_type.upper()} model.")
         print(f"Check individual experiment directories for rich outputs:")
         print(f"  • ontology_comparison.txt - Side-by-side ontology comparison")
         print(f"  • experiment_summary.txt - Detailed run information")  
         print(f"  • consistency_analysis.txt - Professional analysis report")
         print(f"  • run_X/experiment_data.json - Comprehensive data per run")
         print(f"  • run_X/generated_cc3d_model.cc3d - Generated models")
+        print(f"  • Thinking processes logged for reasoning model runs")
     
     return output_path
 
@@ -342,6 +347,23 @@ if __name__ == "__main__":
     # Example usage
     input_csv = input("Enter path to input CSV file: ")
     num_runs = int(input("Enter number of runs per paper (default 3): ") or "3")
+    
+    # Model selection
+    print("\nChoose the AI model to use for all papers:")
+    print("1. DeepSeek R1 (reasoning model) - Shows step-by-step thinking")
+    print("2. DeepSeek V3 (non-reasoning model) - Direct responses")
+    model_choice = input("Enter your choice (1 or 2, default: 1): ").strip() or "1"
+    
+    if model_choice == "1":
+        model_type = "reasoning"
+        print("Using DeepSeek R1 (reasoning model) for all papers")
+    elif model_choice == "2":
+        model_type = "non_reasoning"
+        print("Using DeepSeek V3 (non-reasoning model) for all papers")
+    else:
+        model_type = "reasoning"
+        print("Invalid choice, defaulting to DeepSeek R1 (reasoning model)")
+    
     output_name = input("Enter output CSV filename (default: paper_consistency_results.csv): ") or "paper_consistency_results.csv"
     
-    batch_process_to_csv(input_csv, num_runs, output_name) 
+    batch_process_to_csv(input_csv, num_runs, output_name, model_type) 
