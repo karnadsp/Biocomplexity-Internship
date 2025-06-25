@@ -1,0 +1,124 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 04:15:15
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Bacterial Cell (CL:0000099)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Bacterial Cell (CL:0000252)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Bacterial Cell (CL:0000255)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Bacterial Cell (CL:0000257)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Bacterial cell (CL:0000252)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Bacterial cell (CL:0000255)                       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BacterialCell (CL:0000222)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+BacterialCell (CL:0000255)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Microbial Community (CL:0000623)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+bacterial cell (CL:0000252)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+bacterium (CL:0000252)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+biofilm-forming cell (CL:0001034)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 12
+  Terms in all runs: 0
+  Terms in only one run: 12
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biofilm Formation (GO:0043704)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Biofilm Formation (GO:0043705)                    ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Biofilm formation (GO:0042710)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Biofilm formation (GO:0043705)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BiofilmFormation (GO:0042710)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✗       
+Cell Proliferation (GO:0042127)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell adhesion (GO:0007155)                        ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Cell division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell growth (GO:0016049)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell-CellAdhesion (GO:0098602)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-MatrixAdhesion (GO:0007160)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-cell adhesion (GO:0098602)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-cell adhesion (GO:0098742)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellAdhesion (GO:0007155)                         ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Nutrient Transport (GO:0006810)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Nutrient Uptake (GO:0031672)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+NutrientUptake (GO:0051176)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern Specification (GO:0007389)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+Pattern formation (GO:0003006)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ResponseToNutrientLevels (GO:0031667)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Transport (GO:0006810)                            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+biofilm formation (GO:0042710)                    ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell adhesion (GO:0007155)                        ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-matrix adhesion (GO:0007160)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-substrate adhesion (GO:0031589)              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+pattern specification (GO:0007389)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 28
+  Terms in all runs: 0
+  Terms in only one run: 18
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Bacterial Adhesion (D001432)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Bacterial Growth (D018352)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Biofilms (D000071404)                             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Biofilms (D000409)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D001644)                                ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D001914)                                ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D001964)                                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biofilms (D005257)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Biofilms (D058088)                                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Biofilms (D064626)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Biofilms (D064946)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Adhesion (D002448)                           ✓       ✓       ✓       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Cell Adhesion (D002449)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Movement (D002465)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellAdhesion (D002448)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D015815)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Computational Biology (D019296)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✓       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+ComputerSimulation (D003198)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008958)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008962)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008964)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models,Biological (D008957)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsTheoretical (D003198)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Monte Carlo Method (D019529)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Nutrients (D009746)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Nutrients (D009747)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 30
+  Terms in all runs: 0
+  Terms in only one run: 24
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/12 terms consistent (0.0%)
+GeneOntology: 0/28 terms consistent (0.0%)
+MeSH: 0/30 terms consistent (0.0%)
+
+Overall consistency: 0/70 terms (0.0%)
+
+================================================================================

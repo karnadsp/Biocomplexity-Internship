@@ -1,0 +1,96 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 02:13:18
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial Cell of Mammary Gland (CL:0000066)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mammary Epithelial Cell (CL:0000188)              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+mammary epithelial cell (CL:0000188)              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+mammary epithelial cell (CL:0002492)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+mammary epithelial cell (CL:0002500)              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+mammary gland epithelial cell (CL:0000092)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 6
+  Terms in all runs: 0
+  Terms in only one run: 6
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Actomyosin contractility (GO:0031032)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Apoptosis (GO:0006915)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+Apoptotic Process (GO:0006915)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       
+Cell Division (GO:0051301)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Migration (GO:0016477)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       
+Contractility (GO:0030050)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Necrosis (GO:0070269)                             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Necrotic Cell Death (GO:0070269)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+apoptotic process (GO:0006915)                    ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+cell adhesion (GO:0007155)                        ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+cell contractility (GO:0045059)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+cell contraction (GO:0006928)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell contraction (GO:0006937)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+necrotic cell death (GO:0070265)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+necrotic cell death (GO:0070269)                  ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Apoptosis (D017209)                               ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✗       
+Breast Neoplasms (D001943)                        ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+Carcinoma, Intraductal, Noninfiltrating (D01830   ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       
+Carcinoma, Intraductal, Noninfiltrating (D05494   ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D002448)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✗       
+Cell Movement (D002465)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Proliferation (D002466)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002470)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049630)                      ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Proliferation (D049928)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Contractility (D003326)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Ductal Carcinoma in Situ (D054498)                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Necrosis (D009336)                                ✗       ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✓       ✗       
+Neoplasm Invasiveness (D009361)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D009362)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/6 terms consistent (0.0%)
+GeneOntology: 0/18 terms consistent (0.0%)
+MeSH: 0/18 terms consistent (0.0%)
+
+Overall consistency: 0/42 terms (0.0%)
+
+================================================================================

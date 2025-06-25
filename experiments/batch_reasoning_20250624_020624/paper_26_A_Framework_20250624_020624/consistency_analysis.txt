@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 04:45:04
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 24
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 7
+     • Average consistency: 24.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] mesenchymal cell (CL:0008019)
+     30.0% [███░░░░░░░] epithelial cell (CL:0000066)
+     30.0% [███░░░░░░░] Epithelial Cell (CL:0000066)
+     30.0% [███░░░░░░░] Mesenchymal Cell (CL:0008019)
+     20.0% [██░░░░░░░░] Mesenchymal (CL:0008019)
+     ... and 2 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% mesenchymal cell (CL:0008019)
+     30.0% epithelial cell (CL:0000066)
+     30.0% Epithelial Cell (CL:0000066)
+     ... and 4 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 16.1%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] response to chemical (GO:0042221)
+     30.0% [███░░░░░░░] Pattern Specification (GO:0007389)
+     30.0% [███░░░░░░░] Cell Growth (GO:0016049)
+     20.0% [██░░░░░░░░] cell-cell adhesion (GO:0098602)
+     20.0% [██░░░░░░░░] cell morphogenesis (GO:0000902)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% response to chemical (GO:0042221)
+     30.0% Pattern Specification (GO:0007389)
+     30.0% Cell Growth (GO:0016049)
+     ... and 20 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 24
+     • Average consistency: 14.2%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Morphogenesis (D009024)
+     20.0% [██░░░░░░░░] Cell Proliferation (D002466)
+     20.0% [██░░░░░░░░] Computational Biology (D019295)
+     20.0% [██░░░░░░░░] Morphogenesis (D009029)
+     20.0% [██░░░░░░░░] Morphogenesis (D009030)
+     ... and 19 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Morphogenesis (D009024)
+     20.0% Cell Proliferation (D002466)
+     20.0% Computational Biology (D019295)
+     ... and 21 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 10.0%
+     • Minimum similarity: 0.4%
+     • Maximum similarity: 26.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 2.5% [░░░░░░░░░░]
+     Runs 1-3: 11.1% [█░░░░░░░░░]
+     Runs 1-4: 2.9% [░░░░░░░░░░]
+     Runs 1-5: 15.5% [█░░░░░░░░░]
+     Runs 1-6: 2.9% [░░░░░░░░░░]
+     Runs 1-7: 8.7% [░░░░░░░░░░]
+     Runs 1-8: 16.8% [█░░░░░░░░░]
+     Runs 1-9: 4.8% [░░░░░░░░░░]
+     Runs 1-10: 7.6% [░░░░░░░░░░]
+     Runs 2-3: 0.7% [░░░░░░░░░░]
+     Runs 2-4: 1.7% [░░░░░░░░░░]
+     Runs 2-5: 1.0% [░░░░░░░░░░]
+     Runs 2-6: 0.4% [░░░░░░░░░░]
+     Runs 2-7: 0.9% [░░░░░░░░░░]
+     Runs 2-8: 0.9% [░░░░░░░░░░]
+     Runs 2-9: 0.9% [░░░░░░░░░░]
+     Runs 2-10: 2.7% [░░░░░░░░░░]
+     Runs 3-4: 10.8% [█░░░░░░░░░]
+     Runs 3-5: 22.3% [██░░░░░░░░]
+     Runs 3-6: 14.1% [█░░░░░░░░░]
+     Runs 3-7: 21.1% [██░░░░░░░░]
+     Runs 3-8: 19.7% [█░░░░░░░░░]
+     Runs 3-9: 12.6% [█░░░░░░░░░]
+     Runs 3-10: 4.9% [░░░░░░░░░░]
+     Runs 4-5: 18.3% [█░░░░░░░░░]
+     Runs 4-6: 2.8% [░░░░░░░░░░]
+     Runs 4-7: 6.3% [░░░░░░░░░░]
+     Runs 4-8: 21.6% [██░░░░░░░░]
+     Runs 4-9: 10.9% [█░░░░░░░░░]
+     Runs 4-10: 2.3% [░░░░░░░░░░]
+     Runs 5-6: 9.7% [░░░░░░░░░░]
+     Runs 5-7: 21.2% [██░░░░░░░░]
+     Runs 5-8: 19.1% [█░░░░░░░░░]
+     Runs 5-9: 10.4% [█░░░░░░░░░]
+     Runs 5-10: 6.0% [░░░░░░░░░░]
+     Runs 6-7: 19.9% [█░░░░░░░░░]
+     Runs 6-8: 24.4% [██░░░░░░░░]
+     Runs 6-9: 26.6% [██░░░░░░░░]
+     Runs 6-10: 5.6% [░░░░░░░░░░]
+     Runs 7-8: 17.8% [█░░░░░░░░░]
+     Runs 7-9: 6.8% [░░░░░░░░░░]
+     Runs 7-10: 8.4% [░░░░░░░░░░]
+     Runs 8-9: 13.1% [█░░░░░░░░░]
+     Runs 8-10: 6.2% [░░░░░░░░░░]
+     Runs 9-10: 6.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 7
+     • Average consistency: 24.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] mesenchymal cell (CL:0008019)
+     30.0% [███░░░░░░░] epithelial cell (CL:0000066)
+     30.0% [███░░░░░░░] Epithelial Cell (CL:0000066)
+     30.0% [███░░░░░░░] Mesenchymal Cell (CL:0008019)
+     20.0% [██░░░░░░░░] Mesenchymal (CL:0008019)
+     ... and 2 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% mesenchymal cell (CL:0008019)
+     30.0% epithelial cell (CL:0000066)
+     30.0% Epithelial Cell (CL:0000066)
+     ... and 4 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 16.1%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] response to chemical (GO:0042221)
+     30.0% [███░░░░░░░] Pattern Specification (GO:0007389)
+     30.0% [███░░░░░░░] Cell Growth (GO:0016049)
+     20.0% [██░░░░░░░░] cell-cell adhesion (GO:0098602)
+     20.0% [██░░░░░░░░] cell morphogenesis (GO:0000902)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% response to chemical (GO:0042221)
+     30.0% Pattern Specification (GO:0007389)
+     30.0% Cell Growth (GO:0016049)
+     ... and 20 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 24
+     • Average consistency: 14.2%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Morphogenesis (D009024)
+     20.0% [██░░░░░░░░] Cell Proliferation (D002466)
+     20.0% [██░░░░░░░░] Computational Biology (D019295)
+     20.0% [██░░░░░░░░] Morphogenesis (D009029)
+     20.0% [██░░░░░░░░] Morphogenesis (D009030)
+     ... and 19 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Morphogenesis (D009024)
+     20.0% Cell Proliferation (D002466)
+     20.0% Computational Biology (D019295)
+     ... and 21 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 10.0%
+     • Minimum similarity: 0.4%
+     • Maximum similarity: 26.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 2.5% [░░░░░░░░░░]
+     Runs 1-3: 11.1% [█░░░░░░░░░]
+     Runs 1-4: 2.9% [░░░░░░░░░░]
+     Runs 1-5: 15.5% [█░░░░░░░░░]
+     Runs 1-6: 2.9% [░░░░░░░░░░]
+     Runs 1-7: 8.7% [░░░░░░░░░░]
+     Runs 1-8: 16.8% [█░░░░░░░░░]
+     Runs 1-9: 4.8% [░░░░░░░░░░]
+     Runs 1-10: 7.6% [░░░░░░░░░░]
+     Runs 2-3: 0.7% [░░░░░░░░░░]
+     Runs 2-4: 1.7% [░░░░░░░░░░]
+     Runs 2-5: 1.0% [░░░░░░░░░░]
+     Runs 2-6: 0.4% [░░░░░░░░░░]
+     Runs 2-7: 0.9% [░░░░░░░░░░]
+     Runs 2-8: 0.9% [░░░░░░░░░░]
+     Runs 2-9: 0.9% [░░░░░░░░░░]
+     Runs 2-10: 2.7% [░░░░░░░░░░]
+     Runs 3-4: 10.8% [█░░░░░░░░░]
+     Runs 3-5: 22.3% [██░░░░░░░░]
+     Runs 3-6: 14.1% [█░░░░░░░░░]
+     Runs 3-7: 21.1% [██░░░░░░░░]
+     Runs 3-8: 19.7% [█░░░░░░░░░]
+     Runs 3-9: 12.6% [█░░░░░░░░░]
+     Runs 3-10: 4.9% [░░░░░░░░░░]
+     Runs 4-5: 18.3% [█░░░░░░░░░]
+     Runs 4-6: 2.8% [░░░░░░░░░░]
+     Runs 4-7: 6.3% [░░░░░░░░░░]
+     Runs 4-8: 21.6% [██░░░░░░░░]
+     Runs 4-9: 10.9% [█░░░░░░░░░]
+     Runs 4-10: 2.3% [░░░░░░░░░░]
+     Runs 5-6: 9.7% [░░░░░░░░░░]
+     Runs 5-7: 21.2% [██░░░░░░░░]
+     Runs 5-8: 19.1% [█░░░░░░░░░]
+     Runs 5-9: 10.4% [█░░░░░░░░░]
+     Runs 5-10: 6.0% [░░░░░░░░░░]
+     Runs 6-7: 19.9% [█░░░░░░░░░]
+     Runs 6-8: 24.4% [██░░░░░░░░]
+     Runs 6-9: 26.6% [██░░░░░░░░]
+     Runs 6-10: 5.6% [░░░░░░░░░░]
+     Runs 7-8: 17.8% [█░░░░░░░░░]
+     Runs 7-9: 6.8% [░░░░░░░░░░]
+     Runs 7-10: 8.4% [░░░░░░░░░░]
+     Runs 8-9: 13.1% [█░░░░░░░░░]
+     Runs 8-10: 6.2% [░░░░░░░░░░]
+     Runs 9-10: 6.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (24.3%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (16.1%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (14.2%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (24.3%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (16.1%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (14.2%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (10.0%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (10.0%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

@@ -1,0 +1,82 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 00:13:42
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000255)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal Stem Cell (CL:0008019)                ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 4
+  Terms in all runs: 0
+  Terms in only one run: 1
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Process (GO:0032502)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+DevelopmentalProcess (GO:0032502)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Multicellular Organism Development (GO:0007275)   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern Specification (GO:0007389)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+PatternSpecification (GO:0007389)                 ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell differentiation (GO:0030154)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell migration (GO:0016477)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+morphogenesis (GO:0009653)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+morphogenesis of an epithelium (GO:0002009)       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 11
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Computational Biology (D019284)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ComputationalBiology (D019296)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computer Simulation (D003196)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+ComputerSimulation (D003196)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ComputerSimulation (D003198)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✓       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✓       
+Object-Oriented Programming (D015990)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Problem Solving (D011335)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Software (D012984)                                ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Software (D065886)                                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Software Design (D012689)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 13
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/4 terms consistent (0.0%)
+GeneOntology: 0/11 terms consistent (0.0%)
+MeSH: 0/13 terms consistent (0.0%)
+
+Overall consistency: 0/28 terms (0.0%)
+
+================================================================================

@@ -111,28 +111,36 @@ class ExperimentLogger:
         """Get the main experiment directory (shared across runs)"""
         return self.main_experiment_dir
 
-def get_llm_response(prompt, system_message, logger):
-    """Helper function to get response from Replicate API using DeepSeek V3"""
+def get_llm_response(prompt, system_message, logger, model_type="reasoning"):
+    """Helper function to get response from Replicate API using specified model type"""
     # Format the prompt with system message
     full_prompt = f"{system_message}\n\n{prompt}"
     
-    print(f"\nSending request to API...")
+    print(f"\nSending request to API using {model_type} model...")
     
-    # Use DeepSeek V3 public model (switched from R1 deployment)
-    # V3 automatically maps API temperature 1.0 to optimal model temperature 0.3
-    model = "deepseek-ai/deepseek-v3"
+    # Choose model based on type
+    if model_type == "reasoning":
+        # Use DeepSeek R1 for reasoning capabilities
+        model = "deepseek-ai/deepseek-r1"
+        temperature = 0.7  # Good balance for reasoning model
+        print("Using DeepSeek R1 (reasoning model)")
+    else:  # non_reasoning
+        # Use DeepSeek V3 for non-reasoning baseline
+        model = "deepseek-ai/deepseek-v3"
+        temperature = 1.0  # V3 maps API temp 1.0 to model temp 0.3 automatically
+        print("Using DeepSeek V3 (non-reasoning model)")
     
     max_retries = 3
     retry_delay = 5  # seconds
     
     for attempt in range(max_retries):
         try:
-            # Create and wait for prediction using the public model
+            # Create and wait for prediction using the specified model
             prediction = client.run(
                 model,
                 input={
                     "prompt": full_prompt,
-                    "temperature": 1.0,  # V3 maps API temp 1.0 to model temp 0.3 automatically
+                    "temperature": temperature,
                     "top_p": 0.9,
                     "max_tokens": 2000
                 }
@@ -145,11 +153,20 @@ def get_llm_response(prompt, system_message, logger):
             if isinstance(result, list):
                 result = "".join(result)
             
-            # Log the full response
+            # Log the full response with model info
             logger.log_llm_response("llm_response", prompt, system_message, result)
+            logger.log_metadata("model_type", model_type)
+            logger.log_metadata("model_name", model)
             
-            # Remove thinking process if present
-            if "</think>" in result:
+            # Handle reasoning model output (extract and log thinking process)
+            if model_type == "reasoning" and "</think>" in result:
+                thinking_process = result.split("</think>")[0] + "</think>"
+                result = result.split("</think>")[-1].strip()
+                # Log the thinking process separately for analysis
+                logger.log_metadata("thinking_process", thinking_process)
+                print("Reasoning process captured and logged.")
+            elif "</think>" in result:
+                # Remove thinking process if present in non-reasoning model
                 result = result.split("</think>")[-1].strip()
             
             # For ontology responses, we expect JSON
@@ -186,16 +203,16 @@ def get_llm_response(prompt, system_message, logger):
     
     return result
 
-def generate_clarification_questions(description, logger):
+def generate_clarification_questions(description, logger, model_type="reasoning"):
     """Generate ontology-focused clarification questions based on the description"""
     system_message = """You are a biological modeling expert. Generate specific clarification questions 
     focusing on Cell Ontology, Gene Ontology (GO), and MeSH terms that would help understand the system better.
     Format your response as a numbered list of questions."""
     
     prompt = f"Based on this biological system description, what clarification questions would help identify relevant ontologies?\n\nDescription: {description}"
-    return get_llm_response(prompt, system_message, logger)
+    return get_llm_response(prompt, system_message, logger, model_type)
 
-def generate_ontology_annotations(description, clarifications, logger):
+def generate_ontology_annotations(description, clarifications, logger, model_type="reasoning"):
     """Generate structured ontology-based annotations from the clarifications"""
     system_message = """You are a biological modeling expert. Create structured ontology annotations based on the provided information. 
     Include relevant Cell Ontology, GO, and MeSH terms where applicable.
@@ -243,10 +260,10 @@ def generate_ontology_annotations(description, clarifications, logger):
     prompt = f"""Original description: {description}\n\nClarifications provided: {clarifications}\n\n
     Return ONLY a JSON object with ontology annotations. Format all IDs and terms exactly as specified in the system message."""
     
-    response = get_llm_response(prompt, system_message, logger)
+    response = get_llm_response(prompt, system_message, logger, model_type)
     return extract_ontologies_from_response(response)
 
-def generate_cc3d_starter_code(annotations, logger):
+def generate_cc3d_starter_code(annotations, logger, model_type="reasoning"):
     """Generate CC3D starter code based on the ontology annotations"""
     system_message = """You are a CompuCell3D expert. Generate a valid CompuCell3D simulation file.
     Return ONLY the Python code without any additional text, explanations, or thinking process.
@@ -259,7 +276,7 @@ def generate_cc3d_starter_code(annotations, logger):
     prompt = f"""Generate a valid CompuCell3D simulation file based on these ontology annotations.
     Return ONLY the Python code:\n\n{annotations}"""
     
-    return get_llm_response(prompt, system_message, logger)
+    return get_llm_response(prompt, system_message, logger, model_type)
 
 def create_cc3d_file(python_code, logger):
     """Create a proper .cc3d file structure"""
@@ -304,22 +321,23 @@ def create_cc3d_file(python_code, logger):
         
         return output_file
 
-def run_experiment(experiment_name, description, run_number, num_runs, batch_timestamp=None, batch_dir=None):
+def run_experiment(experiment_name, description, run_number, num_runs, batch_timestamp=None, batch_dir=None, model_type="reasoning"):
     """Run a single experiment with the given parameters"""
-    print(f"\nStarting experiment run {run_number} of {num_runs}...")
+    print(f"\nStarting experiment run {run_number} of {num_runs} using {model_type} model...")
     logger = ExperimentLogger(experiment_name, run_number, num_runs, batch_timestamp, batch_dir)
     
-    # Log initial description
+    # Log initial description and model type
     print("Generating ontology annotations...")
     logger.log_input("initial_description", {"description": description})
+    logger.log_metadata("experiment_model_type", model_type)
     
     # Generate and log ontology annotations directly from description
-    annotations = generate_ontology_annotations(description, "", logger)
+    annotations = generate_ontology_annotations(description, "", logger, model_type)
     print("Ontology annotations generated.")
     
     # Generate and log CC3D code
     print("Generating CC3D code...")
-    cc3d_code = generate_cc3d_starter_code(annotations, logger)
+    cc3d_code = generate_cc3d_starter_code(annotations, logger, model_type)
     if isinstance(cc3d_code, str):
         cc3d_code = cc3d_code.replace("```python", "").replace("```", "").strip()
     
@@ -334,7 +352,7 @@ def run_experiment(experiment_name, description, run_number, num_runs, batch_tim
     print("Saving experiment summary...")
     run_dir = logger.save_run_data()
     
-    print(f"Experiment run {run_number} completed.")
+    print(f"Experiment run {run_number} completed using {model_type} model.")
     return run_dir
 
 def extract_ontologies_from_response(response):
@@ -989,6 +1007,22 @@ def main():
     experiment_name = input("Enter a name for this experiment: ")
     num_runs = int(input("Enter the number of runs for reproducibility assessment (default: 3): ") or "3")
     
+    # Model selection
+    print("\nChoose the AI model to use:")
+    print("1. DeepSeek R1 (reasoning model) - Shows step-by-step thinking")
+    print("2. DeepSeek V3 (non-reasoning model) - Direct responses")
+    model_choice = input("Enter your choice (1 or 2, default: 1): ").strip() or "1"
+    
+    if model_choice == "1":
+        model_type = "reasoning"
+        print("Using DeepSeek R1 (reasoning model)")
+    elif model_choice == "2":
+        model_type = "non_reasoning"
+        print("Using DeepSeek V3 (non-reasoning model)")
+    else:
+        model_type = "reasoning"
+        print("Invalid choice, defaulting to DeepSeek R1 (reasoning model)")
+    
     print("\nPlease provide a description of the biological system you wish to model:")
     description = input("> ")
     
@@ -998,7 +1032,7 @@ def main():
     
     for run in range(1, num_runs + 1):
         print(f"\nRunning experiment {run} of {num_runs}...")
-        run_dir = run_experiment(experiment_name, description, run, num_runs)
+        run_dir = run_experiment(experiment_name, description, run, num_runs, model_type=model_type)
         experiment_dirs.append(run_dir)
         
         # Get the main experiment directory from the first run
@@ -1010,7 +1044,7 @@ def main():
     
     print(f"\nGenerating comprehensive analysis...")
     
-    # Generate ontology comparison (NEW!)
+    # Generate ontology comparison
     ontology_comparison = generate_ontology_comparison(experiment_dirs)
     with open(main_experiment_dir / "ontology_comparison.txt", 'w', encoding='utf-8') as f:
         f.write(ontology_comparison)
@@ -1029,6 +1063,7 @@ def main():
     print(f"\n{'='*60}")
     print(f"ALL RUNS COMPLETED SUCCESSFULLY!")
     print(f"{'='*60}")
+    print(f"Model used: {model_type}")
     print(f"Experiment structure:")
     print(f"  Main directory: {main_experiment_dir}")
     print(f"  Run directories: {num_runs} subdirectories (run_1, run_2, etc.)")
@@ -1040,6 +1075,44 @@ def main():
     print(f"  • run_X/experiment_data.json - Comprehensive data per run")
     print(f"  • run_X/generated_cc3d_model.cc3d - Generated models")
     print(f"{'='*60}")
+    
+    # Optional: Ask if user wants to run a comparison with the other model
+    if num_runs >= 2:
+        other_model = "non_reasoning" if model_type == "reasoning" else "reasoning"
+        other_model_name = "DeepSeek V3 (non-reasoning)" if model_type == "reasoning" else "DeepSeek R1 (reasoning)"
+        
+        print(f"\nWould you like to run a comparison experiment with {other_model_name}?")
+        comparison_choice = input("This will help compare reasoning vs non-reasoning approaches (y/n): ").strip().lower()
+        
+        if comparison_choice == 'y' or comparison_choice == 'yes':
+            print(f"\nRunning comparison experiments with {other_model_name}...")
+            
+            # Create comparison batch directory
+            comparison_batch_dir = main_experiment_dir.parent / f"comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            comparison_batch_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Run experiments with the other model
+            comparison_dirs = []
+            for run in range(1, num_runs + 1):
+                print(f"\nRunning comparison experiment {run} of {num_runs}...")
+                run_dir = run_experiment(f"{experiment_name}_comparison", description, run, num_runs, 
+                                       batch_dir=str(comparison_batch_dir), model_type=other_model)
+                comparison_dirs.append(run_dir)
+                print(f"Completed comparison run {run}. Results saved in {run_dir}")
+            
+            # Generate comparison analysis
+            comparison_analysis = generate_ontology_comparison(comparison_dirs)
+            with open(comparison_batch_dir / "comparison_ontology_analysis.txt", 'w', encoding='utf-8') as f:
+                f.write(comparison_analysis)
+            
+            print(f"\n{'='*60}")
+            print(f"COMPARISON EXPERIMENTS COMPLETED!")
+            print(f"{'='*60}")
+            print(f"Original model: {model_type}")
+            print(f"Comparison model: {other_model}")
+            print(f"Original results: {main_experiment_dir}")
+            print(f"Comparison results: {comparison_batch_dir}")
+            print(f"{'='*60}")
 
 if __name__ == "__main__":
     main() 

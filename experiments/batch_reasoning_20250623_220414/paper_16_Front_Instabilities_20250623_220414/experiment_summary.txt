@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_16_Front_Instabilities
+Generated: 2025-06-23 23:31:41
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We use the Glazier-Graner-Hogeweg model to simulate three-dimensional (3D), single-phenotype, avascular tumors growing in an homogeneous tissue matrix (TM) supplying a single limiting nutrient. We study the effects of two parameters on tumor morphology: a diffusion-limitation parameter defined as the ratio of the tumor-substrate consumption rate to the substrate-transport rate, and the tumor-TM surface tension. This initial model omits necrosis and oxidative/hypoxic metabolism effects, which can further influence tumor morphology, but our simplified model still shows significant parameter dependencies. The diffusion-limitation parameter determines whether the growing solid tumor develops a smooth (noninvasive) or fingered (invasive) interface, as in our earlier two-dimensional (2D) simulations. The sensitivity of 3D tumor morphology to tumor-TM surface tension increases with the size of the diffusion-limitation parameter, as in 2D. The 3D results are unexpectedly close to those in 2D. Our results therefore may justify using simpler 2D simulations of tumor growth, instead of more realistic but more computationally expensive 3D simulations. While geometrical artifacts mean that 2D sections of connected 3D tumors may be disconnected, the morphologies of 3D simulated tumors nevertheless correlate with the morphologies of their 2D sections, especially for low-surface-tension tumors, allowing the use of 2D sections to partially reconstruct medically-important 3D-tumor structures.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_1
+  Timestamp: 2025-06-23T23:25:41.048007
+  Interactions: 2
+  CC3D Model: 10681 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_2
+  Timestamp: 2025-06-23T23:26:23.005132
+  Interactions: 2
+  CC3D Model: 3228 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_3
+  Timestamp: 2025-06-23T23:26:57.181729
+  Interactions: 2
+  CC3D Model: 2329 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_4
+  Timestamp: 2025-06-23T23:27:30.853144
+  Interactions: 2
+  CC3D Model: 2822 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_5
+  Timestamp: 2025-06-23T23:28:16.134050
+  Interactions: 2
+  CC3D Model: 3758 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_6
+  Timestamp: 2025-06-23T23:28:55.683993
+  Interactions: 2
+  CC3D Model: 10105 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_7
+  Timestamp: 2025-06-23T23:29:39.686381
+  Interactions: 2
+  CC3D Model: 3107 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_8
+  Timestamp: 2025-06-23T23:30:11.263500
+  Interactions: 2
+  CC3D Model: 3077 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_9
+  Timestamp: 2025-06-23T23:30:36.484935
+  Interactions: 2
+  CC3D Model: 2589 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_220414\paper_16_Front_Instabilities_20250623_220414\run_10
+  Timestamp: 2025-06-23T23:31:01.653338
+  Interactions: 2
+  CC3D Model: 3117 bytes

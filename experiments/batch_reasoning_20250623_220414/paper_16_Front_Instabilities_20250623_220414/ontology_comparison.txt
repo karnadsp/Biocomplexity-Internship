@@ -1,0 +1,113 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 23:31:41
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Neoplastic Cell (CL:0001062)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplastic Cell (CL:0001063)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       
+Neoplastic Cell (CL:0008032)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Tumor Cell (CL:0001063)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+avascular tumor cell (CL:0008001)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+neoplastic cell (CL:0008032)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+neoplastic cell (CL:0008034)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+tumor cell (CL:0001063)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 8
+  Terms in all runs: 0
+  Terms in only one run: 7
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Simulation (GO:0039023)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Growth (GO:0016049)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Population Proliferation (GO:0008283)        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell-Substrate Adhesion (GO:0031589)              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Growth (GO:0040007)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogenesis (GO:0009653)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Multicellular Organism Growth (GO:0035264)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Nutrient Transport (GO:0015793)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Nutrient Transport (GO:0015798)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Response to Nutrient Levels (GO:0031667)          ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Substrate Transport (GO:0008645)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Substrate Transport (GO:1901679)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell morphogenesis (GO:0000902)                   ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell population proliferation (GO:0008283)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+cell-substrate adhesion (GO:0031589)              ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+nutrient transport (GO:0015793)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+nutrient transport (GO:0015872)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+simulation of biological process (GO:0043945)     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+tumor growth (GO:0007346)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 23
+  Terms in all runs: 0
+  Terms in only one run: 17
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Models (D001694)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Biological Transport (D001692)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biological Transport (D001704)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Biophysical Phenomena (D001690)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D002448)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Division (D002454)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002460)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049109)                      ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+Computational Biology (D019296)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computer Simulation (D003196)                     ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computer Simulation (D003197)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✓       ✓       
+Diffusion (D004064)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+Diffusion (D004065)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✗       
+Imaging, Three-Dimensional (D018198)              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Biological (D008964)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Growth (D018303)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D009361)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D054242)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Neoplasms (D009369)                               ✗       ✓       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✓       
+Surface Properties (D013492)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Surface Tension (D013526)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Tumor Growth (D018303)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Tumor Microenvironment (D059016)                  ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 28
+  Terms in all runs: 0
+  Terms in only one run: 19
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/8 terms consistent (0.0%)
+GeneOntology: 0/23 terms consistent (0.0%)
+MeSH: 0/28 terms consistent (0.0%)
+
+Overall consistency: 0/59 terms (0.0%)
+
+================================================================================

@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_25_Adhesion_between
+Generated: 2025-06-24 04:38:19
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+A central question in developmental biology is how cells interact to organize into tissues? In this paper, we study the role of mesenchyme-ectoderm interaction in the growing chick limb bud using Glazier and Graner's cellular Potts model, a grid-based stochastic framework designed to simulate cell interactions and movement. We simulate cellular mechanisms including cell adhesion, growth, and division and diffusion of morphogens, to show that differential adhesion between the cells, diffusion of growth factors through the extracellular matrix, and the elastic properties of the apical ectodermal ridge together can produce the proper shape of the limb bud.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:32:15.497292
+  Interactions: 2
+  CC3D Model: 2717 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:32:46.920093
+  Interactions: 2
+  CC3D Model: 3408 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:33:20.089308
+  Interactions: 2
+  CC3D Model: 3565 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:34:07.144526
+  Interactions: 2
+  CC3D Model: 2721 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:34:40.530606
+  Interactions: 2
+  CC3D Model: 3809 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:35:11.424111
+  Interactions: 2
+  CC3D Model: 3522 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:35:47.736891
+  Interactions: 2
+  CC3D Model: 3111 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:36:14.628215
+  Interactions: 2
+  CC3D Model: 9452 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:37:01.294492
+  Interactions: 2
+  CC3D Model: 9516 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_25_Adhesion_between_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:37:50.321305
+  Interactions: 2
+  CC3D Model: 2953 bytes

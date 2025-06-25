@@ -1,0 +1,296 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 00:03:20
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 22
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 4
+     • Average consistency: 30.0%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Endothelial Cell (CL:0000115)
+     20.0% [██░░░░░░░░] Blood Vessel Endothelial Cell (CL:0000077)
+     10.0% [█░░░░░░░░░] Endothelial (CL:0000115)
+     10.0% [█░░░░░░░░░] Cancer Cell (CL:0001063)
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Blood Vessel Endothelial Cell (CL:0000077)
+     10.0% Endothelial (CL:0000115)
+     10.0% Cancer Cell (CL:0001063)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 14
+     • Average consistency: 19.3%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Angiogenesis (GO:0001525)
+     40.0% [████░░░░░░] Blood Vessel Morphogenesis (GO:0048514)
+     30.0% [███░░░░░░░] Response to Drug (GO:0042493)
+     20.0% [██░░░░░░░░] Negative Regulation of Angiogenesis (GO:0016525)
+     10.0% [█░░░░░░░░░] Oxygen transport (GO:0015671)
+     ... and 9 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Blood Vessel Morphogenesis (GO:0048514)
+     30.0% Response to Drug (GO:0042493)
+     20.0% Negative Regulation of Angiogenesis (GO:0016525)
+     ... and 10 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 22
+     • Average consistency: 15.5%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Antineoplastic Agents (D000970)
+     50.0% [█████░░░░░] Neoplasms (D009369)
+     30.0% [███░░░░░░░] Angiogenesis Inhibitors (D019379)
+     20.0% [██░░░░░░░░] Neovascularization, Pathologic (D018908)
+     10.0% [█░░░░░░░░░] Drug Discovery (D0000783)
+     ... and 17 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Angiogenesis Inhibitors (D019379)
+     20.0% Neovascularization, Pathologic (D018908)
+     10.0% Drug Discovery (D0000783)
+     ... and 17 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.8%
+     • Minimum similarity: 0.2%
+     • Maximum similarity: 21.4%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 5.4% [░░░░░░░░░░]
+     Runs 1-3: 0.9% [░░░░░░░░░░]
+     Runs 1-4: 2.2% [░░░░░░░░░░]
+     Runs 1-5: 6.7% [░░░░░░░░░░]
+     Runs 1-6: 4.2% [░░░░░░░░░░]
+     Runs 1-7: 7.9% [░░░░░░░░░░]
+     Runs 1-8: 0.8% [░░░░░░░░░░]
+     Runs 1-9: 7.4% [░░░░░░░░░░]
+     Runs 1-10: 1.6% [░░░░░░░░░░]
+     Runs 2-3: 16.2% [█░░░░░░░░░]
+     Runs 2-4: 9.0% [░░░░░░░░░░]
+     Runs 2-5: 1.8% [░░░░░░░░░░]
+     Runs 2-6: 3.4% [░░░░░░░░░░]
+     Runs 2-7: 3.7% [░░░░░░░░░░]
+     Runs 2-8: 15.8% [█░░░░░░░░░]
+     Runs 2-9: 12.2% [█░░░░░░░░░]
+     Runs 2-10: 4.1% [░░░░░░░░░░]
+     Runs 3-4: 11.0% [█░░░░░░░░░]
+     Runs 3-5: 4.9% [░░░░░░░░░░]
+     Runs 3-6: 21.4% [██░░░░░░░░]
+     Runs 3-7: 3.9% [░░░░░░░░░░]
+     Runs 3-8: 16.4% [█░░░░░░░░░]
+     Runs 3-9: 17.6% [█░░░░░░░░░]
+     Runs 3-10: 3.8% [░░░░░░░░░░]
+     Runs 4-5: 2.5% [░░░░░░░░░░]
+     Runs 4-6: 18.8% [█░░░░░░░░░]
+     Runs 4-7: 5.2% [░░░░░░░░░░]
+     Runs 4-8: 13.0% [█░░░░░░░░░]
+     Runs 4-9: 6.0% [░░░░░░░░░░]
+     Runs 4-10: 2.2% [░░░░░░░░░░]
+     Runs 5-6: 5.3% [░░░░░░░░░░]
+     Runs 5-7: 3.9% [░░░░░░░░░░]
+     Runs 5-8: 1.0% [░░░░░░░░░░]
+     Runs 5-9: 3.5% [░░░░░░░░░░]
+     Runs 5-10: 1.3% [░░░░░░░░░░]
+     Runs 6-7: 4.8% [░░░░░░░░░░]
+     Runs 6-8: 13.3% [█░░░░░░░░░]
+     Runs 6-9: 13.6% [█░░░░░░░░░]
+     Runs 6-10: 3.7% [░░░░░░░░░░]
+     Runs 7-8: 1.7% [░░░░░░░░░░]
+     Runs 7-9: 2.2% [░░░░░░░░░░]
+     Runs 7-10: 0.2% [░░░░░░░░░░]
+     Runs 8-9: 11.2% [█░░░░░░░░░]
+     Runs 8-10: 5.7% [░░░░░░░░░░]
+     Runs 9-10: 5.9% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 4
+     • Average consistency: 30.0%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Endothelial Cell (CL:0000115)
+     20.0% [██░░░░░░░░] Blood Vessel Endothelial Cell (CL:0000077)
+     10.0% [█░░░░░░░░░] Endothelial (CL:0000115)
+     10.0% [█░░░░░░░░░] Cancer Cell (CL:0001063)
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Blood Vessel Endothelial Cell (CL:0000077)
+     10.0% Endothelial (CL:0000115)
+     10.0% Cancer Cell (CL:0001063)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 14
+     • Average consistency: 19.3%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Angiogenesis (GO:0001525)
+     40.0% [████░░░░░░] Blood Vessel Morphogenesis (GO:0048514)
+     30.0% [███░░░░░░░] Response to Drug (GO:0042493)
+     20.0% [██░░░░░░░░] Negative Regulation of Angiogenesis (GO:0016525)
+     10.0% [█░░░░░░░░░] Oxygen transport (GO:0015671)
+     ... and 9 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Blood Vessel Morphogenesis (GO:0048514)
+     30.0% Response to Drug (GO:0042493)
+     20.0% Negative Regulation of Angiogenesis (GO:0016525)
+     ... and 10 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 22
+     • Average consistency: 15.5%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Antineoplastic Agents (D000970)
+     50.0% [█████░░░░░] Neoplasms (D009369)
+     30.0% [███░░░░░░░] Angiogenesis Inhibitors (D019379)
+     20.0% [██░░░░░░░░] Neovascularization, Pathologic (D018908)
+     10.0% [█░░░░░░░░░] Drug Discovery (D0000783)
+     ... and 17 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Angiogenesis Inhibitors (D019379)
+     20.0% Neovascularization, Pathologic (D018908)
+     10.0% Drug Discovery (D0000783)
+     ... and 17 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.8%
+     • Minimum similarity: 0.2%
+     • Maximum similarity: 21.4%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 5.4% [░░░░░░░░░░]
+     Runs 1-3: 0.9% [░░░░░░░░░░]
+     Runs 1-4: 2.2% [░░░░░░░░░░]
+     Runs 1-5: 6.7% [░░░░░░░░░░]
+     Runs 1-6: 4.2% [░░░░░░░░░░]
+     Runs 1-7: 7.9% [░░░░░░░░░░]
+     Runs 1-8: 0.8% [░░░░░░░░░░]
+     Runs 1-9: 7.4% [░░░░░░░░░░]
+     Runs 1-10: 1.6% [░░░░░░░░░░]
+     Runs 2-3: 16.2% [█░░░░░░░░░]
+     Runs 2-4: 9.0% [░░░░░░░░░░]
+     Runs 2-5: 1.8% [░░░░░░░░░░]
+     Runs 2-6: 3.4% [░░░░░░░░░░]
+     Runs 2-7: 3.7% [░░░░░░░░░░]
+     Runs 2-8: 15.8% [█░░░░░░░░░]
+     Runs 2-9: 12.2% [█░░░░░░░░░]
+     Runs 2-10: 4.1% [░░░░░░░░░░]
+     Runs 3-4: 11.0% [█░░░░░░░░░]
+     Runs 3-5: 4.9% [░░░░░░░░░░]
+     Runs 3-6: 21.4% [██░░░░░░░░]
+     Runs 3-7: 3.9% [░░░░░░░░░░]
+     Runs 3-8: 16.4% [█░░░░░░░░░]
+     Runs 3-9: 17.6% [█░░░░░░░░░]
+     Runs 3-10: 3.8% [░░░░░░░░░░]
+     Runs 4-5: 2.5% [░░░░░░░░░░]
+     Runs 4-6: 18.8% [█░░░░░░░░░]
+     Runs 4-7: 5.2% [░░░░░░░░░░]
+     Runs 4-8: 13.0% [█░░░░░░░░░]
+     Runs 4-9: 6.0% [░░░░░░░░░░]
+     Runs 4-10: 2.2% [░░░░░░░░░░]
+     Runs 5-6: 5.3% [░░░░░░░░░░]
+     Runs 5-7: 3.9% [░░░░░░░░░░]
+     Runs 5-8: 1.0% [░░░░░░░░░░]
+     Runs 5-9: 3.5% [░░░░░░░░░░]
+     Runs 5-10: 1.3% [░░░░░░░░░░]
+     Runs 6-7: 4.8% [░░░░░░░░░░]
+     Runs 6-8: 13.3% [█░░░░░░░░░]
+     Runs 6-9: 13.6% [█░░░░░░░░░]
+     Runs 6-10: 3.7% [░░░░░░░░░░]
+     Runs 7-8: 1.7% [░░░░░░░░░░]
+     Runs 7-9: 2.2% [░░░░░░░░░░]
+     Runs 7-10: 0.2% [░░░░░░░░░░]
+     Runs 8-9: 11.2% [█░░░░░░░░░]
+     Runs 8-10: 5.7% [░░░░░░░░░░]
+     Runs 9-10: 5.9% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (30.0%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (19.3%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (15.5%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (30.0%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (19.3%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (15.5%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (6.8%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (6.8%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

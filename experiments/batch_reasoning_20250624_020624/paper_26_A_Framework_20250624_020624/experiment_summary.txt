@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_26_A_Framework
+Generated: 2025-06-24 04:45:03
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We present COMPUCELL3D, a software framework for three-dimensional simulation of morphogenesis in different organisms. COMPUCELL3D employs biologically relevant models for cell clustering, growth, and interaction with chemical fields. COMPUCELL3D uses design patterns for speed, efficient memory management, extensibility, and flexibility to allow an almost unlimited variety of simulations. We have verified COMPUCELL3D by building a model of growth and skeletal pattern formation in the avian (chicken) limb bud.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:38:21.259566
+  Interactions: 2
+  CC3D Model: 3891 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:39:03.406440
+  Interactions: 2
+  CC3D Model: 10124 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:39:49.103130
+  Interactions: 2
+  CC3D Model: 3103 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:40:17.637960
+  Interactions: 2
+  CC3D Model: 3160 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:40:52.513171
+  Interactions: 2
+  CC3D Model: 2688 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:41:42.116992
+  Interactions: 2
+  CC3D Model: 1666 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:42:14.049873
+  Interactions: 2
+  CC3D Model: 3032 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:42:53.609706
+  Interactions: 2
+  CC3D Model: 2500 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:43:39.323815
+  Interactions: 2
+  CC3D Model: 2789 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_26_A_Framework_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:44:16.835757
+  Interactions: 2
+  CC3D Model: 9963 bytes

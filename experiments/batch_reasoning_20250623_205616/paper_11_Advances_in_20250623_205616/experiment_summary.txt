@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_11_Advances_in
+Generated: 2025-06-23 21:50:15
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+This paper presents simulations of in vitro Epithelial to Mesenchymal Transition (EMT). The conditions of 2D migration on the surface, and 3D invasion into a collagen gel are represented as a cellular Potts model. The model demonstrates that a loss of endocardial adhesion is a sufficient condition for 2D migration behaviour, while a simultaneous loss of endocardial cohesion and gain in endocardial to collagen gel adhesion is a sufficient condition for 3D invasion. The 3D model captures the hierarchy effective surface tensions that correspond to the three experimental conditions of stable monolayer, 2D migration, and 3D invasion. A 2D cellular Potts model is used to investigate the relationship between cell shape changes, motility and adhesion during the condition of 2D migration.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_1
+  Timestamp: 2025-06-23T21:45:17.605471
+  Interactions: 2
+  CC3D Model: 1965 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_2
+  Timestamp: 2025-06-23T21:45:52.248344
+  Interactions: 2
+  CC3D Model: 2500 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_3
+  Timestamp: 2025-06-23T21:46:30.597656
+  Interactions: 2
+  CC3D Model: 3247 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_4
+  Timestamp: 2025-06-23T21:47:06.993359
+  Interactions: 2
+  CC3D Model: 2222 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_5
+  Timestamp: 2025-06-23T21:47:44.531178
+  Interactions: 2
+  CC3D Model: 9301 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_6
+  Timestamp: 2025-06-23T21:48:10.871814
+  Interactions: 2
+  CC3D Model: 2428 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_7
+  Timestamp: 2025-06-23T21:48:31.954955
+  Interactions: 2
+  CC3D Model: 3222 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_8
+  Timestamp: 2025-06-23T21:48:55.983253
+  Interactions: 2
+  CC3D Model: 3535 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_9
+  Timestamp: 2025-06-23T21:49:15.895602
+  Interactions: 2
+  CC3D Model: 2482 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_205616\paper_11_Advances_in_20250623_205616\run_10
+  Timestamp: 2025-06-23T21:49:49.380086
+  Interactions: 2
+  CC3D Model: 2958 bytes

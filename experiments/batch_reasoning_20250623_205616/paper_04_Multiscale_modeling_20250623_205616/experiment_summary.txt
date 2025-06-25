@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_04_Multiscale_modeling
+Generated: 2025-06-23 21:15:36
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+CD8 T-cells are critical in controlling infection by intracellular pathogens. Upon encountering antigen presenting cells, T-cell receptor activation promotes the differentiation of naïve CD8 T-cells into strongly proliferating activated and effector stages. We propose a 2D-multiscale computational model to study the maturation of CD8 T-cells in a lymph node controlled by their molecular profile. A novel molecular pathway is presented and converted into an ordinary differential equation model, coupled with a cellular Potts model to describe cell-cell interactions. Key molecular players such as activated IL2 receptor and Tbet levels control the differentiation from naïve into activated and effector stages, respectively, while caspases and Fas-Fas ligand interactions control cell apoptosis. Coupling this molecular model to the cellular scale successfully reproduces qualitatively the evolution of total CD8 T-cell counts observed in mice lymph node, between Day 3 and 5.5 post-infection. Furthermore, this model allows us to make testable predictions of the evolution of the different CD8 T-cell stages.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_1
+  Timestamp: 2025-06-23T21:10:51.406960
+  Interactions: 2
+  CC3D Model: 4144 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_2
+  Timestamp: 2025-06-23T21:11:16.447047
+  Interactions: 2
+  CC3D Model: 4028 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_3
+  Timestamp: 2025-06-23T21:11:42.144537
+  Interactions: 2
+  CC3D Model: 2594 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_4
+  Timestamp: 2025-06-23T21:12:10.005429
+  Interactions: 2
+  CC3D Model: 3244 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_5
+  Timestamp: 2025-06-23T21:12:39.683492
+  Interactions: 2
+  CC3D Model: 2591 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_6
+  Timestamp: 2025-06-23T21:13:00.987047
+  Interactions: 2
+  CC3D Model: 9579 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_7
+  Timestamp: 2025-06-23T21:13:42.350737
+  Interactions: 2
+  CC3D Model: 3673 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_8
+  Timestamp: 2025-06-23T21:14:14.954482
+  Interactions: 2
+  CC3D Model: 2567 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_9
+  Timestamp: 2025-06-23T21:14:35.754394
+  Interactions: 2
+  CC3D Model: 3390 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_205616\paper_04_Multiscale_modeling_20250623_205616\run_10
+  Timestamp: 2025-06-23T21:14:58.652614
+  Interactions: 2
+  CC3D Model: 10031 bytes

@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_29_Multiscale_Models
+Generated: 2025-06-24 05:03:01
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Dynamical systems in which geometrically extended model cells produce and interact with diffusible (morphogen) and non-diffusible (extracellular matrix) chemical fields have proved very useful as models for developmental processes. The embryonic vertebrate limb is an apt system for such mathematical and computational modeling since it has been the subject of hundreds of experimental studies, and its normal and variant morphologies and spatiotemporal organization of expressed genes are well known. Because of its stereotypical proximodistally generated increase in the number of parallel skeletal elements, the limb lends itself to being modeled by Turing-type systems which are capable of producing periodic, or quasiperiodic, arrangements of spot- and stripe-like elements. This chapter describes several such models, including, (i) a system of partial differential equations in which changing cell density enters into the dynamics explicitly, (ii) a model for morphogen dynamics alone, derived from the latter system in the “morphostatic limit” where cell movement relaxes on a much slower time-scale than cell differentiation, (iii) a discrete stochastic model for the simplified pattern formation that occurs when limb cells are placed in planar culture, and (iv) several hybrid models in which continuum morphogen systems interact with cells represented as energy-minimizing mesoscopic entities. Progress in devising computational methods for handling 3D, multiscale, multimodel simulations of organogenesis is discussed, as well as for simulating reaction–diffusion dynamics in domains of irregular shape.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:57:06.372634
+  Interactions: 2
+  CC3D Model: 2475 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:57:40.897676
+  Interactions: 2
+  CC3D Model: 1897 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:58:11.400534
+  Interactions: 2
+  CC3D Model: 3111 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:58:39.219354
+  Interactions: 2
+  CC3D Model: 2616 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:59:23.838755
+  Interactions: 2
+  CC3D Model: 2960 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:59:54.246997
+  Interactions: 2
+  CC3D Model: 2600 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_7
+  Timestamp: 2025-06-24T05:00:24.705363
+  Interactions: 2
+  CC3D Model: 9963 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_8
+  Timestamp: 2025-06-24T05:01:04.263262
+  Interactions: 2
+  CC3D Model: 2117 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_9
+  Timestamp: 2025-06-24T05:01:51.686411
+  Interactions: 2
+  CC3D Model: 10275 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_29_Multiscale_Models_20250624_020624\run_10
+  Timestamp: 2025-06-24T05:02:30.972949
+  Interactions: 2
+  CC3D Model: 2561 bytes

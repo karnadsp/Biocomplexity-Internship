@@ -1,0 +1,128 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 02:30:43
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CD8-Positive T-Cell (CL:0000625)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CD8-positive, alpha-beta T cell (CL:0000625)      ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✓       
+activated CD8-positive, alpha-beta T cell (CL:0   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+activated CD8-positive, alpha-beta T cell (CL:0   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+activated T cell (CL:0000909)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+antigen-presenting cell (CL:0000001)              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+effector CD8-positive, alpha-beta T cell (CL:00   ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+effector CD8-positive, alpha-beta T cell (CL:00   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+naive CD8-positive, alpha-beta T cell (CL:00008   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+naive CD8-positive, alpha-beta T cell (CL:00009   ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+naive CD8-positive, alpha-beta T cell (CL:00010   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+naive thymus-derived CD8-positive, alpha-beta T   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 12
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Apoptotic Process (GO:0006915)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Apoptotic process (GO:0006915)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Caspase activity (GO:0004197)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+DNA-binding transcription factor activity (GO:0   ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+Extrinsic Apoptotic Signaling Pathway (GO:00971   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extrinsic apoptotic signaling pathway (GO:00086   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Interleukin-2 receptor activity (GO:0004916)      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+T Cell Differentiation (GO:0043368)               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+T cell activation (GO:0042110)                    ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+T cell differentiation (GO:0030217)               ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       
+T cell differentiation involved in immune respo   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+T cell proliferation (GO:0042098)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+T cell receptor signaling pathway (GO:0050852)    ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+T cell receptor signaling pathway (GO:0050862)    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+T-Cell Receptor Signaling Pathway (GO:0050852)    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+T-cell differentiation (GO:0030217)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+T-cell receptor signaling pathway (GO:0050852)    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+activation of cysteine-type endopeptidase activ   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+apoptotic process (GO:0006915)                    ✓       ✗       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✓       
+apoptotic signaling pathway (GO:0097190)          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+caspase activity (GO:0004197)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell differentiation (GO:0030154)                 ✓       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+extrinsic apoptotic signaling pathway (GO:00086   ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+interleukin-2 receptor activity (GO:0004910)      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+interleukin-2 receptor activity (GO:0004916)      ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+interleukin-2-mediated signaling pathway (GO:00   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+regulation of cell proliferation (GO:0042127)     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+signal transduction (GO:0007165)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 31
+  Terms in all runs: 0
+  Terms in only one run: 21
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Antigen-Presenting Cells (D000938)                ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+Antigen-Presenting Cells (D059488)                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Apoptosis (D017209)                               ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+CD8-Positive T-Lymphocytes (D053118)              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CD8-Positive T-Lymphocytes (D053149)              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CD8-Positive T-Lymphocytes (D053686)              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+CD8-Positive T-Lymphocytes (D053687)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CD8-Positive T-Lymphocytes (D053729)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CD8-Positive T-Lymphocytes (D055527)              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CD8-Positive T-Lymphocytes (D055815)              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Caspases (D002045)                                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Caspases (D056905)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Differentiation (D002454)                    ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       
+Cell Proliferation (D049630)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049711)                      ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Computational Biology (D019285)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Fas Ligand Protein (D017293)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Fas Ligand Protein (D018788)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Fas Ligand Protein (D047348)                      ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Fas Ligand Protein (D050858)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Fas Receptor (D018643)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Interleukin-2 (D007386)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Interleukin-2 (D007387)                           ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Interleukin-2 Receptor (D017142)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Lymph Node (D008198)                              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Lymph Nodes (D008198)                             ✓       ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✓       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✓       
+Receptors, Interleukin-2 (D015741)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+T-Box Domain Proteins (D051241)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+T-Box Transcription Factor TBX21 (D052738)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+T-Lymphocytes (D013601)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 31
+  Terms in all runs: 0
+  Terms in only one run: 22
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/12 terms consistent (0.0%)
+GeneOntology: 0/31 terms consistent (0.0%)
+MeSH: 0/31 terms consistent (0.0%)
+
+Overall consistency: 0/74 terms (0.0%)
+
+================================================================================

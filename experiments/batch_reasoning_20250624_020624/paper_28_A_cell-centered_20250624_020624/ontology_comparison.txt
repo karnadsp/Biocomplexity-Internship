@@ -1,0 +1,107 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 04:57:05
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+somatic cell (CL:0002371)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 0
+  Terms in only one run: 4
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (GO:0007154)                   ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+Cell Division (GO:0008283)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Division (GO:0051301)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Signaling (GO:0023052)                       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell morphogenesis (GO:0000902)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+Cell-cell signaling (GO:0007267)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Process (GO:0032502)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular matrix organization (GO:0030198)    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis of a Multicellular Organism (GO:0   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Multicellular Organism Development (GO:0007275)   ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+Multicellular organism development (GO:0007275)   ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Response to Extracellular Stimulus (GO:0009991)   ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       
+Response to extracellular stimulus (GO:0009991)   ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Signaling (GO:0023052)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell communication (GO:0007154)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell morphogenesis (GO:0000902)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+multicellular organism development (GO:0007275)   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+response to extracellular stimulus (GO:0009991)   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 25
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biophysical Phenomena (D001690)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Biophysical Phenomena (D001694)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biophysical Phenomena (D001701)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Biophysics (D001704)                              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biophysics (D001706)                              ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✓       ✓       
+Cell Adhesion (D002448)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Proliferation (D002465)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049109)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049630)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Computational Biology (D018698)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computational Biology (D036623)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D002454)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D002869)                   ✗       ✗       ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✓       
+Developmental Biology (D019594)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D019685)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✓       
+Gene Regulatory Networks (D058951)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008964)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogenesis (D009029)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 23
+  Terms in all runs: 0
+  Terms in only one run: 17
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/5 terms consistent (0.0%)
+GeneOntology: 0/25 terms consistent (0.0%)
+MeSH: 0/23 terms consistent (0.0%)
+
+Overall consistency: 0/53 terms (0.0%)
+
+================================================================================

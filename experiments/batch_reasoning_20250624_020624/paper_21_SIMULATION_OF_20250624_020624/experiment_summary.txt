@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_21_SIMULATION_OF
+Generated: 2025-06-24 04:15:15
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+The CompuCell3D modeling environment provides a convenient platform for biofilm simulations using the Glazier-Graner-Hogeweg (GGH) model, a cell-oriented framework designed to simulate growth and pattern formation due to biological cells’ behaviors. We show how to develop such a simulation, based on the hybrid (continuum-discrete) model of Picioreanu, van Loosdrecht, and Heijnen (PLH), simulate the growth of a single-species bacterial biofilm, and study the roles of cell-cell and cell-field interactions in determining biofilm morphology. In our simulations, which generalize the PLH model by treating cells as spatially extended, deformable bodies, differential adhesion between cells, and their competition for a substrate (nutrient), suffice to produce a fingering instability that generates the finger shapes of biofilms. Our results agree with most features of the PLH model, although our inclusion of cell adhesion, which is difficult to implement using other modeling approaches, results in slightly different patterns. Our simulations thus provide the groundwork for simulations of medically and industrially important multispecies biofilms.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:08:59.405863
+  Interactions: 2
+  CC3D Model: 2924 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:09:37.402035
+  Interactions: 2
+  CC3D Model: 2543 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:10:18.450410
+  Interactions: 2
+  CC3D Model: 3038 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:10:50.797518
+  Interactions: 2
+  CC3D Model: 2214 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:11:17.299440
+  Interactions: 2
+  CC3D Model: 2909 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:11:49.215600
+  Interactions: 2
+  CC3D Model: 9966 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:12:32.898633
+  Interactions: 2
+  CC3D Model: 9891 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:13:13.185914
+  Interactions: 2
+  CC3D Model: 9628 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:14:10.463934
+  Interactions: 2
+  CC3D Model: 3155 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_21_SIMULATION_OF_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:14:43.202187
+  Interactions: 2
+  CC3D Model: 2555 bytes

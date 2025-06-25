@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_24_From_Genes
+Generated: 2025-06-24 04:32:14
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+To gain performance, developers often build scientific applications in procedural languages, such as C or Fortran, which unfortunately reduces flexibility. To address this imbalance, the authors present CompuCell3D, a multitiered, flexible, and scalable problem-solving environment for morphogenesis simulations that's written in C++ using object-oriented design patterns.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:26:51.860159
+  Interactions: 2
+  CC3D Model: 2279 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:27:23.887322
+  Interactions: 2
+  CC3D Model: 2538 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:27:54.669152
+  Interactions: 2
+  CC3D Model: 2862 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:28:27.000821
+  Interactions: 2
+  CC3D Model: 2514 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:29:04.237397
+  Interactions: 2
+  CC3D Model: 2636 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:29:35.066996
+  Interactions: 2
+  CC3D Model: 2275 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:29:57.621024
+  Interactions: 2
+  CC3D Model: 2111 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:30:39.337075
+  Interactions: 2
+  CC3D Model: 2826 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:31:18.281835
+  Interactions: 2
+  CC3D Model: 1712 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_24_From_Genes_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:31:51.960432
+  Interactions: 2
+  CC3D Model: 3001 bytes

@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_03_Integrating_multi-scale
+Generated: 2025-06-23 22:20:02
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Insights into the mechanisms of development of the mammalian four-chamberedheart are based on biological observations at organ, tissue, cell, and molecularlevels, but the full integration of these experimental data awaits a systems biologyapproach. Such an approach can be employed to formulate and test conceptualmodels in a computational simulation. To illustrate how this can be applied toheart development, we used the process of trabeculation, which is the formationof muscular strands during chamber development. We selected this processbecause it is localized, involves a restricted number of cell types, and a rangeof experimental data is available. Trabeculation of the ventricles is based onthe interplay between endocardial and myocardial cells and involves molecularpathways underlying cell–cell interactions and tissue-speciﬁc cell behavior. Acellular Potts model was used for the simulation of these multi-scale processes.With fairly simple inputs, of which the relative contributions are unknown, aniterative exploration achieved an outcome that resembles the trabeculation processand allows further investigation of contributing factors. The systems biologypipeline from biological observations and conceptual modeling to a mathematicalmodel and computational algorithms is described and discussed. The multi-levelbiological observations provide the components and their connections of theconceptual model. However, the true strength of systems biology must be foundin the biological test of the predictions that result from an experimental change inthe computational model. These validated predictions will ultimately elucidate thefunctional role of a component or interaction in the process of heart development
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_1
+  Timestamp: 2025-06-23T22:15:39.508906
+  Interactions: 2
+  CC3D Model: 3241 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_2
+  Timestamp: 2025-06-23T22:16:02.453867
+  Interactions: 2
+  CC3D Model: 2885 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_3
+  Timestamp: 2025-06-23T22:16:27.749596
+  Interactions: 2
+  CC3D Model: 2744 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_4
+  Timestamp: 2025-06-23T22:16:59.154739
+  Interactions: 2
+  CC3D Model: 1920 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_5
+  Timestamp: 2025-06-23T22:17:31.267447
+  Interactions: 2
+  CC3D Model: 2977 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_6
+  Timestamp: 2025-06-23T22:18:04.730997
+  Interactions: 2
+  CC3D Model: 3160 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_7
+  Timestamp: 2025-06-23T22:18:31.025944
+  Interactions: 2
+  CC3D Model: 3172 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_8
+  Timestamp: 2025-06-23T22:18:55.504384
+  Interactions: 2
+  CC3D Model: 2800 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_9
+  Timestamp: 2025-06-23T22:19:10.784140
+  Interactions: 2
+  CC3D Model: 2746 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_220414\paper_03_Integrating_multi-scale_20250623_220414\run_10
+  Timestamp: 2025-06-23T22:19:34.510200
+  Interactions: 2
+  CC3D Model: 2760 bytes

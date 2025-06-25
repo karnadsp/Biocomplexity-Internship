@@ -1,0 +1,113 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 21:10:49
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cardiac Muscle Cell (CL:0000746)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cardiomyocyte (CL:0000746)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Endocardial Cell (CL:0002240)                     ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Endocardial Cell (CL:0002250)                     ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Endocardial Cell (CL:0002251)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Myocardial Cell (CL:0000746)                      ✓       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Myocyte (CL:0000187)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+endocardial cell (CL:0002240)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+endocardial cell (CL:0002250)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+myocardial cell (CL:0000746)                      ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 5
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Modeling (GO:0032259)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Biological Models (GO:0061456)                    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cardiac Trabecula Formation (GO:0061314)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Division (GO:0051301)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✓       
+Cell-Cell Adhesion (GO:0007156)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Adhesion (GO:0098602)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Communication (GO:0007154)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell-Cell Interaction (GO:0098602)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Signaling (GO:0007156)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-Cell Signaling (GO:0045121)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cellular Extravasation (GO:0048863)               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Development (GO:0007507)                    ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Morphogenesis (GO:0003007)                  ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✗       ✗       ✗       
+Heart Trabecula Formation (GO:0061380)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Multicellular Organismal Process (GO:0032501)     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Signal Transduction (GO:0007165)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Systems Biology (GO:0044271)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Tissue Development (GO:0009888)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Tissue Morphogenesis (GO:0048729)                 ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+heart development (GO:0007507)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 25
+  Terms in all runs: 0
+  Terms in only one run: 21
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Movement (D002465)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Computational Biology (D019295)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computational Biology (D019296)                   ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Computational Biology (D026022)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Heart (D006331)                                   ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Heart (D006332)                                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Development (D006321)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Development (D006330)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Development (D006331)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Heart Development (D006357)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heart Ventricle (D006352)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Biological (D003196)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Biological (D009123)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D008664)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009030)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Systems Biology (D000069043)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Systems Biology (D000069283)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Systems Biology (D000072322)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Systems Biology (D053674)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Systems Biology (D058116)                         ✓       ✓       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 24
+  Terms in all runs: 0
+  Terms in only one run: 18
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/25 terms consistent (0.0%)
+MeSH: 0/24 terms consistent (0.0%)
+
+Overall consistency: 0/59 terms (0.0%)
+
+================================================================================

@@ -1,0 +1,93 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 21:40:19
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✓       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✓       
+epithelial cell (CL:0000066)                      ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+mesenchymal cell (CL:0008019)                     ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 6
+  Terms in all runs: 0
+  Terms in only one run: 0
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       
+Cell Migration (GO:0016477)                       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✓       ✓       
+Cell Morphogenesis (GO:0000902)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Motility (GO:0048870)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+Cell Shape (GO:0008360)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Matrix Adhesion (GO:0007160)                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+cell adhesion (GO:0007155)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell migration (GO:0016477)                       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell morphogenesis (GO:0000902)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell motility (GO:0048870)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0098602)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0098609)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-matrix adhesion (GO:0007160)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-substrate adhesion (GO:0031589)              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+computational simulation (GO:0035195)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 17
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (D002448)                           ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Adhesion Molecules (D015815)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Culture Techniques (D002465)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Movement (D002465)                           ✓       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✗       
+Collagen (D003093)                                ✓       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✓       
+Collagen Type I (D019259)                         ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Computer Simulation (D003196)                     ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+Epithelial-Mesenchymal Transition (D057865)       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Epithelial-Mesenchymal Transition (D057885)       ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       
+Epithelial-Mesenchymal Transition (D058750)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Extracellular Matrix (D005109)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008958)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Biological (D008964)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 16
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/6 terms consistent (0.0%)
+GeneOntology: 0/17 terms consistent (0.0%)
+MeSH: 0/16 terms consistent (0.0%)
+
+Overall consistency: 0/39 terms (0.0%)
+
+================================================================================

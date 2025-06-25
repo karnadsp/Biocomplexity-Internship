@@ -1,0 +1,127 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 22:46:38
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Malignant cell (CL:0001063)                       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Malignant cell (CL:0001064)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+MalignantCell (CL:0001064)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neoplasm (CL:0000004)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Neoplastic Cell (CL:0001064)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neuroblast (CL:0000579)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neuroblastoma (CL:0000576)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neuroblastoma (CL:0008000)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neuroblastoma Cell (CL:0000576)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Neuroblastoma Cell (CL:0002571)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+NeuroblastomaCell (CL:0000572)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Tumor Cell (CL:0001062)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+TumorCell (CL:0001064)                            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 14
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Death (GO:0008219)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Migration (GO:0016477)                       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✓       
+Cell Motility (GO:0006928)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✓       
+Cell Proliferation (GO:0008283)                   ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✓       
+Cell Shape (GO:0016049)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell motility (GO:0016477)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell proliferation (GO:0008283)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMigration (GO:0016477)                        ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellMotility (GO:0048870)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Contact Inhibition (GO:0060242)                   ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Contact Inhibition of Cell Proliferation (GO:00   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Contact inhibition (GO:0060242)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ContactInhibition (GO:0060242)                    ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Growth (GO:0040007)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Regulation of Cell Size (GO:0008361)              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Regulation of cell size (GO:0008361)              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+RegulationOfCellSize (GO:0008361)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Response to Mechanical Stimulus (GO:0009612)      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ResponseToMechanicalStimulus (GO:0009612)         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell migration (GO:0016477)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell motility (GO:0048870)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+contact inhibition of cell proliferation (GO:00   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+regulation of cell shape (GO:0008360)             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+regulation of cell size (GO:0008361)              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 26
+  Terms in all runs: 0
+  Terms in only one run: 18
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Movement (D002465)                           ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✓       ✓       ✓       
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049109)                      ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✓       ✗       
+Cell Proliferation (D049710)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Shape (D016542)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Size (D002467)                               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Size (D002471)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Size (D016543)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellMovement (D002465)                            ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+CellProliferation (D011747)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (D049109)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellShape (D002471)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellSize (D002470)                                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+CellSize (D002477)                                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Contact Inhibition (D003259)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Contact Inhibition (D003267)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Contact Inhibition (D003271)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Contact Inhibition (D003276)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Contact Inhibition (D018198)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Contact Inhibition (D018333)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Contact Inhibition (D018570)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Contact Inhibition (D018908)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+ContactInhibition (D003273)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ContactInhibition (D018908)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Models,Biological (D008957)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D009361)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neoplasm Invasiveness (D009362)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Metastasis (D009362)                     ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Neoplasms (D009369)                               ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✗       
+Neuroblastoma (D009447)                           ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✗       
+Stress,Mechanical (D013128)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 33
+  Terms in all runs: 0
+  Terms in only one run: 25
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/14 terms consistent (0.0%)
+GeneOntology: 0/26 terms consistent (0.0%)
+MeSH: 0/33 terms consistent (0.0%)
+
+Overall consistency: 0/73 terms (0.0%)
+
+================================================================================

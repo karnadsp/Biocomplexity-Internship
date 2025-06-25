@@ -1,0 +1,294 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 03:10:49
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 19
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 4
+     • Average consistency: 35.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Epithelial (CL:0000066)
+     50.0% [█████░░░░░] Mesenchymal (CL:0008019)
+     20.0% [██░░░░░░░░] mesenchymal cell (CL:0008019)
+     20.0% [██░░░░░░░░] epithelial cell (CL:0000066)
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% mesenchymal cell (CL:0008019)
+     20.0% epithelial cell (CL:0000066)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 19
+     • Average consistency: 16.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Cell Migration (GO:0016477)
+     40.0% [████░░░░░░] Cell Adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] cell-cell adhesion (GO:0098609)
+     20.0% [██░░░░░░░░] Collagen-Containing Extracellular Matrix (GO:0062023)
+     20.0% [██░░░░░░░░] cell motility (GO:0048870)
+     ... and 14 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Migration (GO:0016477)
+     40.0% Cell Adhesion (GO:0007155)
+     20.0% cell-cell adhesion (GO:0098609)
+     ... and 16 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 17
+     • Average consistency: 20.6%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Cell Movement (D002465)
+     40.0% [████░░░░░░] Collagen (D003093)
+     40.0% [████░░░░░░] Epithelial-Mesenchymal Transition (D058750)
+     30.0% [███░░░░░░░] Cell Adhesion (D015815)
+     30.0% [███░░░░░░░] Extracellular Matrix (D005109)
+     ... and 12 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Collagen (D003093)
+     40.0% Epithelial-Mesenchymal Transition (D058750)
+     30.0% Cell Adhesion (D015815)
+     ... and 13 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.6%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 37.2%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 13.8% [█░░░░░░░░░]
+     Runs 1-3: 5.4% [░░░░░░░░░░]
+     Runs 1-4: 15.4% [█░░░░░░░░░]
+     Runs 1-5: 7.1% [░░░░░░░░░░]
+     Runs 1-6: 7.0% [░░░░░░░░░░]
+     Runs 1-7: 8.1% [░░░░░░░░░░]
+     Runs 1-8: 6.7% [░░░░░░░░░░]
+     Runs 1-9: 6.7% [░░░░░░░░░░]
+     Runs 1-10: 15.2% [█░░░░░░░░░]
+     Runs 2-3: 3.2% [░░░░░░░░░░]
+     Runs 2-4: 11.2% [█░░░░░░░░░]
+     Runs 2-5: 6.5% [░░░░░░░░░░]
+     Runs 2-6: 7.5% [░░░░░░░░░░]
+     Runs 2-7: 11.4% [█░░░░░░░░░]
+     Runs 2-8: 2.8% [░░░░░░░░░░]
+     Runs 2-9: 2.0% [░░░░░░░░░░]
+     Runs 2-10: 5.8% [░░░░░░░░░░]
+     Runs 3-4: 29.3% [██░░░░░░░░]
+     Runs 3-5: 6.0% [░░░░░░░░░░]
+     Runs 3-6: 4.2% [░░░░░░░░░░]
+     Runs 3-7: 10.0% [░░░░░░░░░░]
+     Runs 3-8: 37.2% [███░░░░░░░]
+     Runs 3-9: 5.1% [░░░░░░░░░░]
+     Runs 3-10: 23.5% [██░░░░░░░░]
+     Runs 4-5: 6.7% [░░░░░░░░░░]
+     Runs 4-6: 5.2% [░░░░░░░░░░]
+     Runs 4-7: 3.4% [░░░░░░░░░░]
+     Runs 4-8: 8.8% [░░░░░░░░░░]
+     Runs 4-9: 10.3% [█░░░░░░░░░]
+     Runs 4-10: 10.2% [█░░░░░░░░░]
+     Runs 5-6: 10.9% [█░░░░░░░░░]
+     Runs 5-7: 1.7% [░░░░░░░░░░]
+     Runs 5-8: 0.6% [░░░░░░░░░░]
+     Runs 5-9: 0.8% [░░░░░░░░░░]
+     Runs 5-10: 5.9% [░░░░░░░░░░]
+     Runs 6-7: 1.5% [░░░░░░░░░░]
+     Runs 6-8: 0.4% [░░░░░░░░░░]
+     Runs 6-9: 0.3% [░░░░░░░░░░]
+     Runs 6-10: 3.7% [░░░░░░░░░░]
+     Runs 7-8: 3.9% [░░░░░░░░░░]
+     Runs 7-9: 1.3% [░░░░░░░░░░]
+     Runs 7-10: 4.9% [░░░░░░░░░░]
+     Runs 8-9: 16.6% [█░░░░░░░░░]
+     Runs 8-10: 27.4% [██░░░░░░░░]
+     Runs 9-10: 13.4% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 4
+     • Average consistency: 35.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Epithelial (CL:0000066)
+     50.0% [█████░░░░░] Mesenchymal (CL:0008019)
+     20.0% [██░░░░░░░░] mesenchymal cell (CL:0008019)
+     20.0% [██░░░░░░░░] epithelial cell (CL:0000066)
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% mesenchymal cell (CL:0008019)
+     20.0% epithelial cell (CL:0000066)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 19
+     • Average consistency: 16.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Cell Migration (GO:0016477)
+     40.0% [████░░░░░░] Cell Adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] cell-cell adhesion (GO:0098609)
+     20.0% [██░░░░░░░░] Collagen-Containing Extracellular Matrix (GO:0062023)
+     20.0% [██░░░░░░░░] cell motility (GO:0048870)
+     ... and 14 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Migration (GO:0016477)
+     40.0% Cell Adhesion (GO:0007155)
+     20.0% cell-cell adhesion (GO:0098609)
+     ... and 16 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 17
+     • Average consistency: 20.6%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Cell Movement (D002465)
+     40.0% [████░░░░░░] Collagen (D003093)
+     40.0% [████░░░░░░] Epithelial-Mesenchymal Transition (D058750)
+     30.0% [███░░░░░░░] Cell Adhesion (D015815)
+     30.0% [███░░░░░░░] Extracellular Matrix (D005109)
+     ... and 12 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Collagen (D003093)
+     40.0% Epithelial-Mesenchymal Transition (D058750)
+     30.0% Cell Adhesion (D015815)
+     ... and 13 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.6%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 37.2%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 13.8% [█░░░░░░░░░]
+     Runs 1-3: 5.4% [░░░░░░░░░░]
+     Runs 1-4: 15.4% [█░░░░░░░░░]
+     Runs 1-5: 7.1% [░░░░░░░░░░]
+     Runs 1-6: 7.0% [░░░░░░░░░░]
+     Runs 1-7: 8.1% [░░░░░░░░░░]
+     Runs 1-8: 6.7% [░░░░░░░░░░]
+     Runs 1-9: 6.7% [░░░░░░░░░░]
+     Runs 1-10: 15.2% [█░░░░░░░░░]
+     Runs 2-3: 3.2% [░░░░░░░░░░]
+     Runs 2-4: 11.2% [█░░░░░░░░░]
+     Runs 2-5: 6.5% [░░░░░░░░░░]
+     Runs 2-6: 7.5% [░░░░░░░░░░]
+     Runs 2-7: 11.4% [█░░░░░░░░░]
+     Runs 2-8: 2.8% [░░░░░░░░░░]
+     Runs 2-9: 2.0% [░░░░░░░░░░]
+     Runs 2-10: 5.8% [░░░░░░░░░░]
+     Runs 3-4: 29.3% [██░░░░░░░░]
+     Runs 3-5: 6.0% [░░░░░░░░░░]
+     Runs 3-6: 4.2% [░░░░░░░░░░]
+     Runs 3-7: 10.0% [░░░░░░░░░░]
+     Runs 3-8: 37.2% [███░░░░░░░]
+     Runs 3-9: 5.1% [░░░░░░░░░░]
+     Runs 3-10: 23.5% [██░░░░░░░░]
+     Runs 4-5: 6.7% [░░░░░░░░░░]
+     Runs 4-6: 5.2% [░░░░░░░░░░]
+     Runs 4-7: 3.4% [░░░░░░░░░░]
+     Runs 4-8: 8.8% [░░░░░░░░░░]
+     Runs 4-9: 10.3% [█░░░░░░░░░]
+     Runs 4-10: 10.2% [█░░░░░░░░░]
+     Runs 5-6: 10.9% [█░░░░░░░░░]
+     Runs 5-7: 1.7% [░░░░░░░░░░]
+     Runs 5-8: 0.6% [░░░░░░░░░░]
+     Runs 5-9: 0.8% [░░░░░░░░░░]
+     Runs 5-10: 5.9% [░░░░░░░░░░]
+     Runs 6-7: 1.5% [░░░░░░░░░░]
+     Runs 6-8: 0.4% [░░░░░░░░░░]
+     Runs 6-9: 0.3% [░░░░░░░░░░]
+     Runs 6-10: 3.7% [░░░░░░░░░░]
+     Runs 7-8: 3.9% [░░░░░░░░░░]
+     Runs 7-9: 1.3% [░░░░░░░░░░]
+     Runs 7-10: 4.9% [░░░░░░░░░░]
+     Runs 8-9: 16.6% [█░░░░░░░░░]
+     Runs 8-10: 27.4% [██░░░░░░░░]
+     Runs 9-10: 13.4% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (35.0%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (16.3%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.6%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (35.0%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (16.3%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.6%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (8.6%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (8.6%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

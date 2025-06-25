@@ -1,0 +1,104 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 23:20:06
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endothelial Cell (CL:0000115)                     ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+endothelial cell (CL:0000115)                     ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 2
+  Terms in all runs: 0
+  Terms in only one run: 0
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+Cell-Matrix Adhesion (GO:0007160)                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+Extracellular Matrix Remodeling (GO:0030036)      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Plasminogen Activation (GO:0031639)               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Proteolysis (GO:0006508)                          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Response to Growth Factor (GO:0070848)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Vasculogenesis (GO:0001570)                       ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+angiogenesis (GO:0001525)                         ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+cell proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+extracellular matrix organization (GO:0030198)    ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+proteolysis (GO:0006508)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+vascular endothelial growth factor receptor sig   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+vascular endothelial growth factor signaling pa   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+vasculogenesis (GO:0001570)                       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 16
+  Terms in all runs: 0
+  Terms in only one run: 8
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (D000096)                            ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Angiogenesis (D000096362)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Angiogenesis Inhibitors (D000622)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Angiogenesis Inhibitors (D019379)                 ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Chemokines (D018566)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Chemokines (D018833)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Chemokines (D018875)                              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Chemokines (D018908)                              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Endothelial Cells (D004727)                       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✓       
+Extracellular Matrix (D004782)                    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+Growth Factors (D005786)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Growth Factors (D006233)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Growth Substances (D006131)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+High-Throughput Screening (D058030)               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+High-Throughput Screening (D064727)               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+High-Throughput Screening Assays (D059748)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Neovascularization, Physiologic (D052858)         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Physiologic (D054856)         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Plasminogen Activators (D010955)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Plasminogen Activators (D010957)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Predictive Toxicology (D062885)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Thalidomide (D013792)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Toxicology (D014050)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Toxicology (D014120)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Toxicology (D014122)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Vascular Development (D014655)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Vascular Endothelial Growth Factor (D014642)      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Vascular Endothelial Growth Factors (D000092402   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Vascular Endothelial Growth Factors (D000431)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Vascular Endothelial Growth Factors (D014642)     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 32
+  Terms in all runs: 0
+  Terms in only one run: 27
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/2 terms consistent (0.0%)
+GeneOntology: 0/16 terms consistent (0.0%)
+MeSH: 0/32 terms consistent (0.0%)
+
+Overall consistency: 0/50 terms (0.0%)
+
+================================================================================

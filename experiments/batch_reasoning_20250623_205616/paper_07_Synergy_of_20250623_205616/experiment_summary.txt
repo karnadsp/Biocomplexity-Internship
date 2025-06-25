@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_07_Synergy_of
+Generated: 2025-06-23 21:29:46
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+A key step in blood vessel development (angiogenesis) is lumen formation: the hollowing of vessels for blood perfusion. Two alternative lumen formation mechanisms are suggested to function in different types of blood vessels. The vacuolation mechanism is suggested for lumen formation in small vessels by coalescence of intracellular vacuoles, a view that was extended to extracellular lumen formation by exocytosis of vacuoles. The cell–cell repulsion mechanism is suggested to initiate extracellular lumen formation in large vessels by active repulsion of adjacent cells, and active cell shape changes extend the lumen. We used an agent-based computer model, based on the cellular Potts model, to compare and study both mechanisms separately and combined. An extensive sensitivity analysis shows that each of the mechanisms on its own can produce lumens in a narrow region of parameter space. However, combining both mechanisms makes lumen formation much more robust to the values of the parameters, suggesting that the mechanisms may work synergistically and operate in parallel, rather than in different vessel types.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_1
+  Timestamp: 2025-06-23T21:25:14.444507
+  Interactions: 2
+  CC3D Model: 2171 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_2
+  Timestamp: 2025-06-23T21:25:37.665968
+  Interactions: 2
+  CC3D Model: 9802 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_3
+  Timestamp: 2025-06-23T21:26:06.701835
+  Interactions: 2
+  CC3D Model: 2721 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_4
+  Timestamp: 2025-06-23T21:26:36.699005
+  Interactions: 2
+  CC3D Model: 2853 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_5
+  Timestamp: 2025-06-23T21:26:59.017495
+  Interactions: 2
+  CC3D Model: 9626 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_6
+  Timestamp: 2025-06-23T21:27:36.288902
+  Interactions: 2
+  CC3D Model: 2045 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_7
+  Timestamp: 2025-06-23T21:28:07.016550
+  Interactions: 2
+  CC3D Model: 2620 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_8
+  Timestamp: 2025-06-23T21:28:29.492779
+  Interactions: 2
+  CC3D Model: 2708 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_9
+  Timestamp: 2025-06-23T21:28:50.971095
+  Interactions: 2
+  CC3D Model: 2839 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_205616\paper_07_Synergy_of_20250623_205616\run_10
+  Timestamp: 2025-06-23T21:29:19.108171
+  Interactions: 2
+  CC3D Model: 2823 bytes

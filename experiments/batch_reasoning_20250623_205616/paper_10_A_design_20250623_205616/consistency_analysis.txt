@@ -1,0 +1,286 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 21:45:17
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 25
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 1
+     • Average consistency: 10.0%
+     • Maximum consistency: 10.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     10.0% [█░░░░░░░░░] Cell (CL:0000000)
+
+  INCONSISTENT TERMS (< 50%):
+     10.0% Cell (CL:0000000)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 24
+     • Average consistency: 12.9%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Ubiquitin-dependent protein catabolic process (GO:0006511)
+     30.0% [███░░░░░░░] ubiquitin-dependent protein catabolic process (GO:0006511)
+     20.0% [██░░░░░░░░] Proteasome-mediated ubiquitin-dependent protein catabolic process (GO:0043161)
+     20.0% [██░░░░░░░░] positive regulation of transcription by RNA polymerase II (GO:0045944)
+     20.0% [██░░░░░░░░] Regulation of transcription, DNA-templated (GO:0006355)
+     ... and 19 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Ubiquitin-dependent protein catabolic process (GO:0006511)
+     30.0% ubiquitin-dependent protein catabolic process (GO:0006511)
+     20.0% Proteasome-mediated ubiquitin-dependent protein catabolic process (GO:0043161)
+     ... and 21 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 25
+     • Average consistency: 12.8%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Systems Biology (D053683)
+     30.0% [███░░░░░░░] Models, Theoretical (D008957)
+     20.0% [██░░░░░░░░] Proteolysis (D011485)
+     20.0% [██░░░░░░░░] Models, Theoretical (D008962)
+     20.0% [██░░░░░░░░] Transcription, Genetic (D014158)
+     ... and 20 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Systems Biology (D053683)
+     30.0% Models, Theoretical (D008957)
+     20.0% Proteolysis (D011485)
+     ... and 22 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.8%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 31.0%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 6.9% [░░░░░░░░░░]
+     Runs 1-3: 3.8% [░░░░░░░░░░]
+     Runs 1-4: 5.3% [░░░░░░░░░░]
+     Runs 1-5: 13.5% [█░░░░░░░░░]
+     Runs 1-6: 1.3% [░░░░░░░░░░]
+     Runs 1-7: 31.0% [███░░░░░░░]
+     Runs 1-8: 9.9% [░░░░░░░░░░]
+     Runs 1-9: 11.1% [█░░░░░░░░░]
+     Runs 1-10: 9.7% [░░░░░░░░░░]
+     Runs 2-3: 5.4% [░░░░░░░░░░]
+     Runs 2-4: 10.8% [█░░░░░░░░░]
+     Runs 2-5: 2.3% [░░░░░░░░░░]
+     Runs 2-6: 5.5% [░░░░░░░░░░]
+     Runs 2-7: 6.0% [░░░░░░░░░░]
+     Runs 2-8: 0.7% [░░░░░░░░░░]
+     Runs 2-9: 0.8% [░░░░░░░░░░]
+     Runs 2-10: 1.6% [░░░░░░░░░░]
+     Runs 3-4: 10.3% [█░░░░░░░░░]
+     Runs 3-5: 10.3% [█░░░░░░░░░]
+     Runs 3-6: 5.9% [░░░░░░░░░░]
+     Runs 3-7: 6.2% [░░░░░░░░░░]
+     Runs 3-8: 0.5% [░░░░░░░░░░]
+     Runs 3-9: 0.7% [░░░░░░░░░░]
+     Runs 3-10: 1.5% [░░░░░░░░░░]
+     Runs 4-5: 1.9% [░░░░░░░░░░]
+     Runs 4-6: 9.2% [░░░░░░░░░░]
+     Runs 4-7: 7.0% [░░░░░░░░░░]
+     Runs 4-8: 0.5% [░░░░░░░░░░]
+     Runs 4-9: 1.3% [░░░░░░░░░░]
+     Runs 4-10: 2.5% [░░░░░░░░░░]
+     Runs 5-6: 1.2% [░░░░░░░░░░]
+     Runs 5-7: 19.7% [█░░░░░░░░░]
+     Runs 5-8: 14.4% [█░░░░░░░░░]
+     Runs 5-9: 4.6% [░░░░░░░░░░]
+     Runs 5-10: 7.3% [░░░░░░░░░░]
+     Runs 6-7: 0.7% [░░░░░░░░░░]
+     Runs 6-8: 0.5% [░░░░░░░░░░]
+     Runs 6-9: 0.3% [░░░░░░░░░░]
+     Runs 6-10: 0.4% [░░░░░░░░░░]
+     Runs 7-8: 15.7% [█░░░░░░░░░]
+     Runs 7-9: 17.3% [█░░░░░░░░░]
+     Runs 7-10: 10.0% [█░░░░░░░░░]
+     Runs 8-9: 7.5% [░░░░░░░░░░]
+     Runs 8-10: 11.0% [█░░░░░░░░░]
+     Runs 9-10: 10.4% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 1
+     • Average consistency: 10.0%
+     • Maximum consistency: 10.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     10.0% [█░░░░░░░░░] Cell (CL:0000000)
+
+  INCONSISTENT TERMS (< 50%):
+     10.0% Cell (CL:0000000)
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 24
+     • Average consistency: 12.9%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Ubiquitin-dependent protein catabolic process (GO:0006511)
+     30.0% [███░░░░░░░] ubiquitin-dependent protein catabolic process (GO:0006511)
+     20.0% [██░░░░░░░░] Proteasome-mediated ubiquitin-dependent protein catabolic process (GO:0043161)
+     20.0% [██░░░░░░░░] positive regulation of transcription by RNA polymerase II (GO:0045944)
+     20.0% [██░░░░░░░░] Regulation of transcription, DNA-templated (GO:0006355)
+     ... and 19 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Ubiquitin-dependent protein catabolic process (GO:0006511)
+     30.0% ubiquitin-dependent protein catabolic process (GO:0006511)
+     20.0% Proteasome-mediated ubiquitin-dependent protein catabolic process (GO:0043161)
+     ... and 21 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 25
+     • Average consistency: 12.8%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] Systems Biology (D053683)
+     30.0% [███░░░░░░░] Models, Theoretical (D008957)
+     20.0% [██░░░░░░░░] Proteolysis (D011485)
+     20.0% [██░░░░░░░░] Models, Theoretical (D008962)
+     20.0% [██░░░░░░░░] Transcription, Genetic (D014158)
+     ... and 20 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Systems Biology (D053683)
+     30.0% Models, Theoretical (D008957)
+     20.0% Proteolysis (D011485)
+     ... and 22 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.8%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 31.0%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 6.9% [░░░░░░░░░░]
+     Runs 1-3: 3.8% [░░░░░░░░░░]
+     Runs 1-4: 5.3% [░░░░░░░░░░]
+     Runs 1-5: 13.5% [█░░░░░░░░░]
+     Runs 1-6: 1.3% [░░░░░░░░░░]
+     Runs 1-7: 31.0% [███░░░░░░░]
+     Runs 1-8: 9.9% [░░░░░░░░░░]
+     Runs 1-9: 11.1% [█░░░░░░░░░]
+     Runs 1-10: 9.7% [░░░░░░░░░░]
+     Runs 2-3: 5.4% [░░░░░░░░░░]
+     Runs 2-4: 10.8% [█░░░░░░░░░]
+     Runs 2-5: 2.3% [░░░░░░░░░░]
+     Runs 2-6: 5.5% [░░░░░░░░░░]
+     Runs 2-7: 6.0% [░░░░░░░░░░]
+     Runs 2-8: 0.7% [░░░░░░░░░░]
+     Runs 2-9: 0.8% [░░░░░░░░░░]
+     Runs 2-10: 1.6% [░░░░░░░░░░]
+     Runs 3-4: 10.3% [█░░░░░░░░░]
+     Runs 3-5: 10.3% [█░░░░░░░░░]
+     Runs 3-6: 5.9% [░░░░░░░░░░]
+     Runs 3-7: 6.2% [░░░░░░░░░░]
+     Runs 3-8: 0.5% [░░░░░░░░░░]
+     Runs 3-9: 0.7% [░░░░░░░░░░]
+     Runs 3-10: 1.5% [░░░░░░░░░░]
+     Runs 4-5: 1.9% [░░░░░░░░░░]
+     Runs 4-6: 9.2% [░░░░░░░░░░]
+     Runs 4-7: 7.0% [░░░░░░░░░░]
+     Runs 4-8: 0.5% [░░░░░░░░░░]
+     Runs 4-9: 1.3% [░░░░░░░░░░]
+     Runs 4-10: 2.5% [░░░░░░░░░░]
+     Runs 5-6: 1.2% [░░░░░░░░░░]
+     Runs 5-7: 19.7% [█░░░░░░░░░]
+     Runs 5-8: 14.4% [█░░░░░░░░░]
+     Runs 5-9: 4.6% [░░░░░░░░░░]
+     Runs 5-10: 7.3% [░░░░░░░░░░]
+     Runs 6-7: 0.7% [░░░░░░░░░░]
+     Runs 6-8: 0.5% [░░░░░░░░░░]
+     Runs 6-9: 0.3% [░░░░░░░░░░]
+     Runs 6-10: 0.4% [░░░░░░░░░░]
+     Runs 7-8: 15.7% [█░░░░░░░░░]
+     Runs 7-9: 17.3% [█░░░░░░░░░]
+     Runs 7-10: 10.0% [█░░░░░░░░░]
+     Runs 8-9: 7.5% [░░░░░░░░░░]
+     Runs 8-10: 11.0% [█░░░░░░░░░]
+     Runs 9-10: 10.4% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (10.0%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (12.9%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (12.8%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (10.0%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (12.9%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (12.8%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (6.8%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (6.8%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

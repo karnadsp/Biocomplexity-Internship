@@ -1,0 +1,120 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 00:25:04
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+Limb bud cell (CL:0000352)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0000135)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+mesenchymal cell (CL:0000136)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+mesenchymal cell (CL:0000492)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+mesenchymal cell (CL:0008019)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 6
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Division (GO:0051301)                        ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Cell Growth (GO:0016049)                          ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✗       
+Cell division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell-Cell Signaling (GO:0007267)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-CellAdhesion (GO:0098609)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Matrix Adhesion (GO:0007160)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+CellDivision (GO:0051301)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Growth (GO:0040007)                               ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (GO:0009653)                        ✓       ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       ✗       
+Pattern Specification (GO:0007389)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Pattern Specification Involved in Limb Developm   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern specification (GO:0007389)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+PatternSpecification (GO:0007389)                 ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Response to Chemical (GO:0042221)                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+ResponseToChemical (GO:0042221)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Skeletal System Development (GO:0001501)          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Skeletal System Morphogenesis (GO:0048705)        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+SkeletalSystemDevelopment (GO:0001501)            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+anatomical structure morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+cell growth (GO:0016049)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0098602)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+morphogenesis (GO:0009653)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+pattern specification (GO:0007389)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 28
+  Terms in all runs: 0
+  Terms in only one run: 21
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✓       
+Cell Proliferation (D005075)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049109)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Proliferation (D049710)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+CellProliferation (D002460)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computational Biology (D019296)                   ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ComputationalBiology (D019296)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+ComputerSimulation (D003198)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D002869)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Embryonic Development (D004622)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Limb Bud (D054058)                                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Limb Bud (D058628)                                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Limb Buds (D008060)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Limb Buds (D054882)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Limb Buds (D054983)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Limb Buds (D065889)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+LimbBud (D054883)                                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+LimbBud (D058529)                                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008947)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+ModelsBiological (D008954)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✓       
+Morphogenesis (D009029)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (D009030)                           ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009048)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✓       ✗       
+Morphogenesis (D009132)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern Formation (D010143)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+SkeletalDevelopment (D013123)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 28
+  Terms in all runs: 0
+  Terms in only one run: 22
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/28 terms consistent (0.0%)
+MeSH: 0/28 terms consistent (0.0%)
+
+Overall consistency: 0/66 terms (0.0%)
+
+================================================================================

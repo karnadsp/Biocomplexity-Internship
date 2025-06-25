@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_14_A_Computational
+Generated: 2025-06-23 22:02:12
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Vascular development is a complex process regulated by dynamic biological networks that vary in topology and state across different tissues and developmental stages. Signals regulating de novo blood vessel formation (vasculogenesis) and remodeling (angiogenesis) come from a variety of biological pathways linked to endothelial cell (EC) behavior, extracellular matrix (ECM) remodeling and the local generation of chemokines and growth factors. Simulating these interactions at a systems level requires sufficient biological detail about the relevant molecular pathways and associated cellular behaviors, and tractable computational models that offset mathematical and biological complexity. Here, we describe a novel multicellular agent-based model of vasculogenesis using the CompuCell3D (http://www.compucell3d.org/) modeling environment supplemented with semi-automatic knowledgebase creation. The model incorporates vascular endothelial growth factor signals, pro- and anti-angiogenic inflammatory chemokine signals, and the plasminogen activating system of enzymes and proteases linked to ECM interactions, to simulate nascent EC organization, growth and remodeling. The model was shown to recapitulate stereotypical capillary plexus formation and structural emergence of non-coded cellular behaviors, such as a heterologous bridging phenomenon linking endothelial tip cells together during formation of polygonal endothelial cords. Molecular targets in the computational model were mapped to signatures of vascular disruption derived from in vitro chemical profiling using the EPA's ToxCast high-throughput screening (HTS) dataset. Simulating the HTS data with the cell-agent based model of vascular development predicted adverse effects of a reference anti-angiogenic thalidomide analog, 5HPP-33, on in vitro angiogenesis with respect to both concentration-response and morphological consequences. These findings support the utility of cell agent-based models for simulating a morphogenetic series of events and for the first time demonstrate the applicability of these models for predictive toxicology.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_1
+  Timestamp: 2025-06-23T21:56:43.878121
+  Interactions: 2
+  CC3D Model: 5171 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_2
+  Timestamp: 2025-06-23T21:57:13.867090
+  Interactions: 2
+  CC3D Model: 9927 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_3
+  Timestamp: 2025-06-23T21:57:51.742566
+  Interactions: 2
+  CC3D Model: 4135 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_4
+  Timestamp: 2025-06-23T21:58:23.100377
+  Interactions: 2
+  CC3D Model: 3010 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_5
+  Timestamp: 2025-06-23T21:58:43.801242
+  Interactions: 2
+  CC3D Model: 4044 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_6
+  Timestamp: 2025-06-23T21:59:19.014415
+  Interactions: 2
+  CC3D Model: 3495 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_7
+  Timestamp: 2025-06-23T21:59:50.577112
+  Interactions: 2
+  CC3D Model: 3742 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_8
+  Timestamp: 2025-06-23T22:00:23.820619
+  Interactions: 2
+  CC3D Model: 2541 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_9
+  Timestamp: 2025-06-23T22:01:01.809606
+  Interactions: 2
+  CC3D Model: 3468 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_205616\paper_14_A_Computational_20250623_205616\run_10
+  Timestamp: 2025-06-23T22:01:37.737957
+  Interactions: 2
+  CC3D Model: 4016 bytes

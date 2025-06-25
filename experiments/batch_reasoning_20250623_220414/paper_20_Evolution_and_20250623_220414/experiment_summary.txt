@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_20_Evolution_and
+Generated: 2025-06-23 23:53:14
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Development is the powerful process involving a genome in the transformation from one egg cell to a multicellular organism with many cell types. The dividing cells manage to organize and assign themselves special, differentiated roles in a reliable manner, creating a spatio-temporal pattern and division of labor. This despite the fact that little positional information may be available to them initially to guide this patterning. Inspired by a model of developmental biologist L. Wolpert, we simulate this situation in an evolutionary setting where individuals have to grow into “French flag” patterns. The cells in our model exist in a 2-layer Potts model physical environment. Controlled by continuous genetic regulatory networks, identical for all cells of one individual, the cells can individually differ in parameters including target volume, shape, orientation, and diffusion. Intercellular communication is possible via secretion and sensing of diffusing morphogens. Evolved individuals growing from a single cell can develop the French flag pattern by setting up and maintaining asymmetric morphogen gradients – a behavior predicted by several theoretical models.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_1
+  Timestamp: 2025-06-23T23:48:12.397344
+  Interactions: 2
+  CC3D Model: 3320 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_2
+  Timestamp: 2025-06-23T23:48:50.880003
+  Interactions: 2
+  CC3D Model: 3777 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_3
+  Timestamp: 2025-06-23T23:49:24.585309
+  Interactions: 2
+  CC3D Model: 10088 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_4
+  Timestamp: 2025-06-23T23:50:08.163095
+  Interactions: 2
+  CC3D Model: 3273 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_5
+  Timestamp: 2025-06-23T23:50:30.621413
+  Interactions: 2
+  CC3D Model: 2699 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_6
+  Timestamp: 2025-06-23T23:50:58.002092
+  Interactions: 2
+  CC3D Model: 9689 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_7
+  Timestamp: 2025-06-23T23:51:30.501649
+  Interactions: 2
+  CC3D Model: 2608 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_8
+  Timestamp: 2025-06-23T23:51:54.328505
+  Interactions: 2
+  CC3D Model: 1915 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_9
+  Timestamp: 2025-06-23T23:52:31.467540
+  Interactions: 2
+  CC3D Model: 3331 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_220414\paper_20_Evolution_and_20250623_220414\run_10
+  Timestamp: 2025-06-23T23:52:52.495265
+  Interactions: 2
+  CC3D Model: 3277 bytes

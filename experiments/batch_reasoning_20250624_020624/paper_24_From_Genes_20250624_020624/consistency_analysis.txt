@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 04:32:15
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 12
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 6
+     • Average consistency: 16.7%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] mesenchymal cell (CL:0008019)
+     30.0% [███░░░░░░░] epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Stromal cell (CL:0000499)
+     10.0% [█░░░░░░░░░] Epithelial (CL:0000066)
+     10.0% [█░░░░░░░░░] Somatic cell (CL:0002371)
+     ... and 1 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% mesenchymal cell (CL:0008019)
+     30.0% epithelial cell (CL:0000066)
+     10.0% Stromal cell (CL:0000499)
+     ... and 3 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 8
+     • Average consistency: 17.5%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Morphogenesis (GO:0009653)
+     40.0% [████░░░░░░] anatomical structure morphogenesis (GO:0009653)
+     10.0% [█░░░░░░░░░] Cell morphogenesis (GO:0000902)
+     10.0% [█░░░░░░░░░] Pattern specification process (GO:0007389)
+     10.0% [█░░░░░░░░░] Pattern Specification (GO:0007389)
+     ... and 3 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Morphogenesis (GO:0009653)
+     40.0% anatomical structure morphogenesis (GO:0009653)
+     10.0% Cell morphogenesis (GO:0000902)
+     ... and 5 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 20.8%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Software (D012984)
+     50.0% [█████░░░░░] Computer Simulation (D003196)
+     30.0% [███░░░░░░░] Morphogenesis (D009024)
+     20.0% [██░░░░░░░░] Morphogenesis (D009030)
+     20.0% [██░░░░░░░░] Computer Simulation (D003198)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Morphogenesis (D009024)
+     20.0% Morphogenesis (D009030)
+     20.0% Computer Simulation (D003198)
+     ... and 7 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 13.6%
+     • Minimum similarity: 3.3%
+     • Maximum similarity: 27.9%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 23.4% [██░░░░░░░░]
+     Runs 1-3: 9.2% [░░░░░░░░░░]
+     Runs 1-4: 13.7% [█░░░░░░░░░]
+     Runs 1-5: 20.9% [██░░░░░░░░]
+     Runs 1-6: 9.1% [░░░░░░░░░░]
+     Runs 1-7: 25.4% [██░░░░░░░░]
+     Runs 1-8: 9.0% [░░░░░░░░░░]
+     Runs 1-9: 9.6% [░░░░░░░░░░]
+     Runs 1-10: 13.1% [█░░░░░░░░░]
+     Runs 2-3: 6.0% [░░░░░░░░░░]
+     Runs 2-4: 12.8% [█░░░░░░░░░]
+     Runs 2-5: 18.7% [█░░░░░░░░░]
+     Runs 2-6: 13.3% [█░░░░░░░░░]
+     Runs 2-7: 23.0% [██░░░░░░░░]
+     Runs 2-8: 11.6% [█░░░░░░░░░]
+     Runs 2-9: 7.8% [░░░░░░░░░░]
+     Runs 2-10: 10.2% [█░░░░░░░░░]
+     Runs 3-4: 14.4% [█░░░░░░░░░]
+     Runs 3-5: 5.5% [░░░░░░░░░░]
+     Runs 3-6: 6.1% [░░░░░░░░░░]
+     Runs 3-7: 14.4% [█░░░░░░░░░]
+     Runs 3-8: 12.9% [█░░░░░░░░░]
+     Runs 3-9: 12.0% [█░░░░░░░░░]
+     Runs 3-10: 7.3% [░░░░░░░░░░]
+     Runs 4-5: 6.4% [░░░░░░░░░░]
+     Runs 4-6: 24.1% [██░░░░░░░░]
+     Runs 4-7: 14.5% [█░░░░░░░░░]
+     Runs 4-8: 3.3% [░░░░░░░░░░]
+     Runs 4-9: 12.4% [█░░░░░░░░░]
+     Runs 4-10: 11.7% [█░░░░░░░░░]
+     Runs 5-6: 18.7% [█░░░░░░░░░]
+     Runs 5-7: 27.9% [██░░░░░░░░]
+     Runs 5-8: 7.3% [░░░░░░░░░░]
+     Runs 5-9: 11.9% [█░░░░░░░░░]
+     Runs 5-10: 11.6% [█░░░░░░░░░]
+     Runs 6-7: 21.6% [██░░░░░░░░]
+     Runs 6-8: 10.6% [█░░░░░░░░░]
+     Runs 6-9: 18.4% [█░░░░░░░░░]
+     Runs 6-10: 23.9% [██░░░░░░░░]
+     Runs 7-8: 13.5% [█░░░░░░░░░]
+     Runs 7-9: 20.4% [██░░░░░░░░]
+     Runs 7-10: 8.6% [░░░░░░░░░░]
+     Runs 8-9: 17.4% [█░░░░░░░░░]
+     Runs 8-10: 10.9% [█░░░░░░░░░]
+     Runs 9-10: 7.2% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 6
+     • Average consistency: 16.7%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] mesenchymal cell (CL:0008019)
+     30.0% [███░░░░░░░] epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Stromal cell (CL:0000499)
+     10.0% [█░░░░░░░░░] Epithelial (CL:0000066)
+     10.0% [█░░░░░░░░░] Somatic cell (CL:0002371)
+     ... and 1 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% mesenchymal cell (CL:0008019)
+     30.0% epithelial cell (CL:0000066)
+     10.0% Stromal cell (CL:0000499)
+     ... and 3 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 8
+     • Average consistency: 17.5%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Morphogenesis (GO:0009653)
+     40.0% [████░░░░░░] anatomical structure morphogenesis (GO:0009653)
+     10.0% [█░░░░░░░░░] Cell morphogenesis (GO:0000902)
+     10.0% [█░░░░░░░░░] Pattern specification process (GO:0007389)
+     10.0% [█░░░░░░░░░] Pattern Specification (GO:0007389)
+     ... and 3 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Morphogenesis (GO:0009653)
+     40.0% anatomical structure morphogenesis (GO:0009653)
+     10.0% Cell morphogenesis (GO:0000902)
+     ... and 5 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 12
+     • Average consistency: 20.8%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Software (D012984)
+     50.0% [█████░░░░░] Computer Simulation (D003196)
+     30.0% [███░░░░░░░] Morphogenesis (D009024)
+     20.0% [██░░░░░░░░] Morphogenesis (D009030)
+     20.0% [██░░░░░░░░] Computer Simulation (D003198)
+     ... and 7 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Morphogenesis (D009024)
+     20.0% Morphogenesis (D009030)
+     20.0% Computer Simulation (D003198)
+     ... and 7 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 13.6%
+     • Minimum similarity: 3.3%
+     • Maximum similarity: 27.9%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 23.4% [██░░░░░░░░]
+     Runs 1-3: 9.2% [░░░░░░░░░░]
+     Runs 1-4: 13.7% [█░░░░░░░░░]
+     Runs 1-5: 20.9% [██░░░░░░░░]
+     Runs 1-6: 9.1% [░░░░░░░░░░]
+     Runs 1-7: 25.4% [██░░░░░░░░]
+     Runs 1-8: 9.0% [░░░░░░░░░░]
+     Runs 1-9: 9.6% [░░░░░░░░░░]
+     Runs 1-10: 13.1% [█░░░░░░░░░]
+     Runs 2-3: 6.0% [░░░░░░░░░░]
+     Runs 2-4: 12.8% [█░░░░░░░░░]
+     Runs 2-5: 18.7% [█░░░░░░░░░]
+     Runs 2-6: 13.3% [█░░░░░░░░░]
+     Runs 2-7: 23.0% [██░░░░░░░░]
+     Runs 2-8: 11.6% [█░░░░░░░░░]
+     Runs 2-9: 7.8% [░░░░░░░░░░]
+     Runs 2-10: 10.2% [█░░░░░░░░░]
+     Runs 3-4: 14.4% [█░░░░░░░░░]
+     Runs 3-5: 5.5% [░░░░░░░░░░]
+     Runs 3-6: 6.1% [░░░░░░░░░░]
+     Runs 3-7: 14.4% [█░░░░░░░░░]
+     Runs 3-8: 12.9% [█░░░░░░░░░]
+     Runs 3-9: 12.0% [█░░░░░░░░░]
+     Runs 3-10: 7.3% [░░░░░░░░░░]
+     Runs 4-5: 6.4% [░░░░░░░░░░]
+     Runs 4-6: 24.1% [██░░░░░░░░]
+     Runs 4-7: 14.5% [█░░░░░░░░░]
+     Runs 4-8: 3.3% [░░░░░░░░░░]
+     Runs 4-9: 12.4% [█░░░░░░░░░]
+     Runs 4-10: 11.7% [█░░░░░░░░░]
+     Runs 5-6: 18.7% [█░░░░░░░░░]
+     Runs 5-7: 27.9% [██░░░░░░░░]
+     Runs 5-8: 7.3% [░░░░░░░░░░]
+     Runs 5-9: 11.9% [█░░░░░░░░░]
+     Runs 5-10: 11.6% [█░░░░░░░░░]
+     Runs 6-7: 21.6% [██░░░░░░░░]
+     Runs 6-8: 10.6% [█░░░░░░░░░]
+     Runs 6-9: 18.4% [█░░░░░░░░░]
+     Runs 6-10: 23.9% [██░░░░░░░░]
+     Runs 7-8: 13.5% [█░░░░░░░░░]
+     Runs 7-9: 20.4% [██░░░░░░░░]
+     Runs 7-10: 8.6% [░░░░░░░░░░]
+     Runs 8-9: 17.4% [█░░░░░░░░░]
+     Runs 8-10: 10.9% [█░░░░░░░░░]
+     Runs 9-10: 7.2% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (16.7%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (17.5%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.8%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (16.7%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (17.5%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.8%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (13.6%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (13.6%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

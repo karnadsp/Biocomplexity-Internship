@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 22:20:03
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 20
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 14
+     • Average consistency: 14.3%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] myocardial cell (CL:0000746)
+     30.0% [███░░░░░░░] Cardiomyocyte (CL:0000746)
+     20.0% [██░░░░░░░░] Myocardial Cell (CL:0000746)
+     20.0% [██░░░░░░░░] endocardial cell (CL:0002250)
+     10.0% [█░░░░░░░░░] Endocardial Cell (CL:0002240)
+     ... and 9 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% myocardial cell (CL:0000746)
+     30.0% Cardiomyocyte (CL:0000746)
+     20.0% Myocardial Cell (CL:0000746)
+     ... and 11 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 17
+     • Average consistency: 20.0%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Heart Development (GO:0007507)
+     50.0% [█████░░░░░] Cell Proliferation (GO:0008283)
+     40.0% [████░░░░░░] Cell-Cell Signaling (GO:0007267)
+     30.0% [███░░░░░░░] heart development (GO:0007507)
+     20.0% [██░░░░░░░░] Cell-Cell Signaling (GO:0045121)
+     ... and 12 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell-Cell Signaling (GO:0007267)
+     30.0% heart development (GO:0007507)
+     20.0% Cell-Cell Signaling (GO:0045121)
+     ... and 12 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 20
+     • Average consistency: 17.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Systems Biology (D058116)
+     40.0% [████░░░░░░] Heart Development (D006331)
+     40.0% [████░░░░░░] Computational Biology (D019295)
+     20.0% [██░░░░░░░░] Heart Development (D006332)
+     20.0% [██░░░░░░░░] Heart (D006321)
+     ... and 15 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Heart Development (D006331)
+     40.0% Computational Biology (D019295)
+     20.0% Heart Development (D006332)
+     ... and 16 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 16.1%
+     • Minimum similarity: 2.7%
+     • Maximum similarity: 31.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 14.4% [█░░░░░░░░░]
+     Runs 1-3: 16.2% [█░░░░░░░░░]
+     Runs 1-4: 21.4% [██░░░░░░░░]
+     Runs 1-5: 21.4% [██░░░░░░░░]
+     Runs 1-6: 12.6% [█░░░░░░░░░]
+     Runs 1-7: 21.9% [██░░░░░░░░]
+     Runs 1-8: 12.4% [█░░░░░░░░░]
+     Runs 1-9: 2.8% [░░░░░░░░░░]
+     Runs 1-10: 12.7% [█░░░░░░░░░]
+     Runs 2-3: 9.8% [░░░░░░░░░░]
+     Runs 2-4: 17.9% [█░░░░░░░░░]
+     Runs 2-5: 15.7% [█░░░░░░░░░]
+     Runs 2-6: 16.6% [█░░░░░░░░░]
+     Runs 2-7: 18.4% [█░░░░░░░░░]
+     Runs 2-8: 21.4% [██░░░░░░░░]
+     Runs 2-9: 2.7% [░░░░░░░░░░]
+     Runs 2-10: 17.2% [█░░░░░░░░░]
+     Runs 3-4: 21.8% [██░░░░░░░░]
+     Runs 3-5: 21.1% [██░░░░░░░░]
+     Runs 3-6: 7.8% [░░░░░░░░░░]
+     Runs 3-7: 11.3% [█░░░░░░░░░]
+     Runs 3-8: 22.3% [██░░░░░░░░]
+     Runs 3-9: 4.4% [░░░░░░░░░░]
+     Runs 3-10: 31.3% [███░░░░░░░]
+     Runs 4-5: 29.4% [██░░░░░░░░]
+     Runs 4-6: 18.3% [█░░░░░░░░░]
+     Runs 4-7: 16.8% [█░░░░░░░░░]
+     Runs 4-8: 29.0% [██░░░░░░░░]
+     Runs 4-9: 9.0% [░░░░░░░░░░]
+     Runs 4-10: 17.4% [█░░░░░░░░░]
+     Runs 5-6: 21.1% [██░░░░░░░░]
+     Runs 5-7: 22.4% [██░░░░░░░░]
+     Runs 5-8: 22.0% [██░░░░░░░░]
+     Runs 5-9: 14.6% [█░░░░░░░░░]
+     Runs 5-10: 13.9% [█░░░░░░░░░]
+     Runs 6-7: 16.7% [█░░░░░░░░░]
+     Runs 6-8: 13.6% [█░░░░░░░░░]
+     Runs 6-9: 18.8% [█░░░░░░░░░]
+     Runs 6-10: 11.2% [█░░░░░░░░░]
+     Runs 7-8: 12.5% [█░░░░░░░░░]
+     Runs 7-9: 8.8% [░░░░░░░░░░]
+     Runs 7-10: 11.9% [█░░░░░░░░░]
+     Runs 8-9: 11.8% [█░░░░░░░░░]
+     Runs 8-10: 17.1% [█░░░░░░░░░]
+     Runs 9-10: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 14
+     • Average consistency: 14.3%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] myocardial cell (CL:0000746)
+     30.0% [███░░░░░░░] Cardiomyocyte (CL:0000746)
+     20.0% [██░░░░░░░░] Myocardial Cell (CL:0000746)
+     20.0% [██░░░░░░░░] endocardial cell (CL:0002250)
+     10.0% [█░░░░░░░░░] Endocardial Cell (CL:0002240)
+     ... and 9 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% myocardial cell (CL:0000746)
+     30.0% Cardiomyocyte (CL:0000746)
+     20.0% Myocardial Cell (CL:0000746)
+     ... and 11 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 17
+     • Average consistency: 20.0%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Heart Development (GO:0007507)
+     50.0% [█████░░░░░] Cell Proliferation (GO:0008283)
+     40.0% [████░░░░░░] Cell-Cell Signaling (GO:0007267)
+     30.0% [███░░░░░░░] heart development (GO:0007507)
+     20.0% [██░░░░░░░░] Cell-Cell Signaling (GO:0045121)
+     ... and 12 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell-Cell Signaling (GO:0007267)
+     30.0% heart development (GO:0007507)
+     20.0% Cell-Cell Signaling (GO:0045121)
+     ... and 12 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 20
+     • Average consistency: 17.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] Systems Biology (D058116)
+     40.0% [████░░░░░░] Heart Development (D006331)
+     40.0% [████░░░░░░] Computational Biology (D019295)
+     20.0% [██░░░░░░░░] Heart Development (D006332)
+     20.0% [██░░░░░░░░] Heart (D006321)
+     ... and 15 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Heart Development (D006331)
+     40.0% Computational Biology (D019295)
+     20.0% Heart Development (D006332)
+     ... and 16 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 16.1%
+     • Minimum similarity: 2.7%
+     • Maximum similarity: 31.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 14.4% [█░░░░░░░░░]
+     Runs 1-3: 16.2% [█░░░░░░░░░]
+     Runs 1-4: 21.4% [██░░░░░░░░]
+     Runs 1-5: 21.4% [██░░░░░░░░]
+     Runs 1-6: 12.6% [█░░░░░░░░░]
+     Runs 1-7: 21.9% [██░░░░░░░░]
+     Runs 1-8: 12.4% [█░░░░░░░░░]
+     Runs 1-9: 2.8% [░░░░░░░░░░]
+     Runs 1-10: 12.7% [█░░░░░░░░░]
+     Runs 2-3: 9.8% [░░░░░░░░░░]
+     Runs 2-4: 17.9% [█░░░░░░░░░]
+     Runs 2-5: 15.7% [█░░░░░░░░░]
+     Runs 2-6: 16.6% [█░░░░░░░░░]
+     Runs 2-7: 18.4% [█░░░░░░░░░]
+     Runs 2-8: 21.4% [██░░░░░░░░]
+     Runs 2-9: 2.7% [░░░░░░░░░░]
+     Runs 2-10: 17.2% [█░░░░░░░░░]
+     Runs 3-4: 21.8% [██░░░░░░░░]
+     Runs 3-5: 21.1% [██░░░░░░░░]
+     Runs 3-6: 7.8% [░░░░░░░░░░]
+     Runs 3-7: 11.3% [█░░░░░░░░░]
+     Runs 3-8: 22.3% [██░░░░░░░░]
+     Runs 3-9: 4.4% [░░░░░░░░░░]
+     Runs 3-10: 31.3% [███░░░░░░░]
+     Runs 4-5: 29.4% [██░░░░░░░░]
+     Runs 4-6: 18.3% [█░░░░░░░░░]
+     Runs 4-7: 16.8% [█░░░░░░░░░]
+     Runs 4-8: 29.0% [██░░░░░░░░]
+     Runs 4-9: 9.0% [░░░░░░░░░░]
+     Runs 4-10: 17.4% [█░░░░░░░░░]
+     Runs 5-6: 21.1% [██░░░░░░░░]
+     Runs 5-7: 22.4% [██░░░░░░░░]
+     Runs 5-8: 22.0% [██░░░░░░░░]
+     Runs 5-9: 14.6% [█░░░░░░░░░]
+     Runs 5-10: 13.9% [█░░░░░░░░░]
+     Runs 6-7: 16.7% [█░░░░░░░░░]
+     Runs 6-8: 13.6% [█░░░░░░░░░]
+     Runs 6-9: 18.8% [█░░░░░░░░░]
+     Runs 6-10: 11.2% [█░░░░░░░░░]
+     Runs 7-8: 12.5% [█░░░░░░░░░]
+     Runs 7-9: 8.8% [░░░░░░░░░░]
+     Runs 7-10: 11.9% [█░░░░░░░░░]
+     Runs 8-9: 11.8% [█░░░░░░░░░]
+     Runs 8-10: 17.1% [█░░░░░░░░░]
+     Runs 9-10: 14.1% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (14.3%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (20.0%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (17.0%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (14.3%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (20.0%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (17.0%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (16.1%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (16.1%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================
