@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 23:58:21
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 31
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 9
+     • Average consistency: 12.2%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] bacterium (CL:0000255)
+     10.0% [█░░░░░░░░░] Biofilm matrix-associated cell (CL:0000394)
+     10.0% [█░░░░░░░░░] Bacterial Cell (CL:0000362)
+     10.0% [█░░░░░░░░░] bacterial cell (CL:0000255)
+     10.0% [█░░░░░░░░░] Biofilm Matrix (CL:0000255)
+     ... and 4 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% bacterium (CL:0000255)
+     10.0% Biofilm matrix-associated cell (CL:0000394)
+     10.0% Bacterial Cell (CL:0000362)
+     ... and 6 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 31
+     • Average consistency: 12.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Cell Adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] Biofilm formation (GO:0042710)
+     20.0% [██░░░░░░░░] Biofilm Formation (GO:0042710)
+     20.0% [██░░░░░░░░] cell adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] biofilm formation (GO:0042710)
+     ... and 26 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Adhesion (GO:0007155)
+     20.0% Biofilm formation (GO:0042710)
+     20.0% Biofilm Formation (GO:0042710)
+     ... and 28 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 22
+     • Average consistency: 18.2%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Cell Adhesion (D002448)
+     60.0% [██████░░░░] Computer Simulation (D003198)
+     40.0% [████░░░░░░] Biofilms (D001644)
+     40.0% [████░░░░░░] Models, Biological (D008957)
+     20.0% [██░░░░░░░░] Nutrients (D009750)
+     ... and 17 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Biofilms (D001644)
+     40.0% Models, Biological (D008957)
+     20.0% Nutrients (D009750)
+     ... and 17 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 12.7%
+     • Minimum similarity: 1.7%
+     • Maximum similarity: 41.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 25.7% [██░░░░░░░░]
+     Runs 1-3: 22.9% [██░░░░░░░░]
+     Runs 1-4: 19.3% [█░░░░░░░░░]
+     Runs 1-5: 28.8% [██░░░░░░░░]
+     Runs 1-6: 20.0% [██░░░░░░░░]
+     Runs 1-7: 14.5% [█░░░░░░░░░]
+     Runs 1-8: 19.1% [█░░░░░░░░░]
+     Runs 1-9: 15.3% [█░░░░░░░░░]
+     Runs 1-10: 11.6% [█░░░░░░░░░]
+     Runs 2-3: 16.7% [█░░░░░░░░░]
+     Runs 2-4: 15.3% [█░░░░░░░░░]
+     Runs 2-5: 41.6% [████░░░░░░]
+     Runs 2-6: 29.1% [██░░░░░░░░]
+     Runs 2-7: 12.9% [█░░░░░░░░░]
+     Runs 2-8: 12.7% [█░░░░░░░░░]
+     Runs 2-9: 6.9% [░░░░░░░░░░]
+     Runs 2-10: 8.7% [░░░░░░░░░░]
+     Runs 3-4: 12.4% [█░░░░░░░░░]
+     Runs 3-5: 10.5% [█░░░░░░░░░]
+     Runs 3-6: 9.6% [░░░░░░░░░░]
+     Runs 3-7: 12.7% [█░░░░░░░░░]
+     Runs 3-8: 16.3% [█░░░░░░░░░]
+     Runs 3-9: 13.8% [█░░░░░░░░░]
+     Runs 3-10: 3.5% [░░░░░░░░░░]
+     Runs 4-5: 4.5% [░░░░░░░░░░]
+     Runs 4-6: 4.1% [░░░░░░░░░░]
+     Runs 4-7: 2.3% [░░░░░░░░░░]
+     Runs 4-8: 6.5% [░░░░░░░░░░]
+     Runs 4-9: 3.7% [░░░░░░░░░░]
+     Runs 4-10: 1.7% [░░░░░░░░░░]
+     Runs 5-6: 29.2% [██░░░░░░░░]
+     Runs 5-7: 9.4% [░░░░░░░░░░]
+     Runs 5-8: 27.2% [██░░░░░░░░]
+     Runs 5-9: 12.0% [█░░░░░░░░░]
+     Runs 5-10: 3.1% [░░░░░░░░░░]
+     Runs 6-7: 6.7% [░░░░░░░░░░]
+     Runs 6-8: 14.5% [█░░░░░░░░░]
+     Runs 6-9: 4.5% [░░░░░░░░░░]
+     Runs 6-10: 5.1% [░░░░░░░░░░]
+     Runs 7-8: 9.9% [░░░░░░░░░░]
+     Runs 7-9: 11.4% [█░░░░░░░░░]
+     Runs 7-10: 6.6% [░░░░░░░░░░]
+     Runs 8-9: 3.2% [░░░░░░░░░░]
+     Runs 8-10: 1.9% [░░░░░░░░░░]
+     Runs 9-10: 5.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 9
+     • Average consistency: 12.2%
+     • Maximum consistency: 30.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     30.0% [███░░░░░░░] bacterium (CL:0000255)
+     10.0% [█░░░░░░░░░] Biofilm matrix-associated cell (CL:0000394)
+     10.0% [█░░░░░░░░░] Bacterial Cell (CL:0000362)
+     10.0% [█░░░░░░░░░] bacterial cell (CL:0000255)
+     10.0% [█░░░░░░░░░] Biofilm Matrix (CL:0000255)
+     ... and 4 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% bacterium (CL:0000255)
+     10.0% Biofilm matrix-associated cell (CL:0000394)
+     10.0% Bacterial Cell (CL:0000362)
+     ... and 6 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 31
+     • Average consistency: 12.3%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Cell Adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] Biofilm formation (GO:0042710)
+     20.0% [██░░░░░░░░] Biofilm Formation (GO:0042710)
+     20.0% [██░░░░░░░░] cell adhesion (GO:0007155)
+     20.0% [██░░░░░░░░] biofilm formation (GO:0042710)
+     ... and 26 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Adhesion (GO:0007155)
+     20.0% Biofilm formation (GO:0042710)
+     20.0% Biofilm Formation (GO:0042710)
+     ... and 28 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 22
+     • Average consistency: 18.2%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] Cell Adhesion (D002448)
+     60.0% [██████░░░░] Computer Simulation (D003198)
+     40.0% [████░░░░░░] Biofilms (D001644)
+     40.0% [████░░░░░░] Models, Biological (D008957)
+     20.0% [██░░░░░░░░] Nutrients (D009750)
+     ... and 17 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Biofilms (D001644)
+     40.0% Models, Biological (D008957)
+     20.0% Nutrients (D009750)
+     ... and 17 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 12.7%
+     • Minimum similarity: 1.7%
+     • Maximum similarity: 41.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 25.7% [██░░░░░░░░]
+     Runs 1-3: 22.9% [██░░░░░░░░]
+     Runs 1-4: 19.3% [█░░░░░░░░░]
+     Runs 1-5: 28.8% [██░░░░░░░░]
+     Runs 1-6: 20.0% [██░░░░░░░░]
+     Runs 1-7: 14.5% [█░░░░░░░░░]
+     Runs 1-8: 19.1% [█░░░░░░░░░]
+     Runs 1-9: 15.3% [█░░░░░░░░░]
+     Runs 1-10: 11.6% [█░░░░░░░░░]
+     Runs 2-3: 16.7% [█░░░░░░░░░]
+     Runs 2-4: 15.3% [█░░░░░░░░░]
+     Runs 2-5: 41.6% [████░░░░░░]
+     Runs 2-6: 29.1% [██░░░░░░░░]
+     Runs 2-7: 12.9% [█░░░░░░░░░]
+     Runs 2-8: 12.7% [█░░░░░░░░░]
+     Runs 2-9: 6.9% [░░░░░░░░░░]
+     Runs 2-10: 8.7% [░░░░░░░░░░]
+     Runs 3-4: 12.4% [█░░░░░░░░░]
+     Runs 3-5: 10.5% [█░░░░░░░░░]
+     Runs 3-6: 9.6% [░░░░░░░░░░]
+     Runs 3-7: 12.7% [█░░░░░░░░░]
+     Runs 3-8: 16.3% [█░░░░░░░░░]
+     Runs 3-9: 13.8% [█░░░░░░░░░]
+     Runs 3-10: 3.5% [░░░░░░░░░░]
+     Runs 4-5: 4.5% [░░░░░░░░░░]
+     Runs 4-6: 4.1% [░░░░░░░░░░]
+     Runs 4-7: 2.3% [░░░░░░░░░░]
+     Runs 4-8: 6.5% [░░░░░░░░░░]
+     Runs 4-9: 3.7% [░░░░░░░░░░]
+     Runs 4-10: 1.7% [░░░░░░░░░░]
+     Runs 5-6: 29.2% [██░░░░░░░░]
+     Runs 5-7: 9.4% [░░░░░░░░░░]
+     Runs 5-8: 27.2% [██░░░░░░░░]
+     Runs 5-9: 12.0% [█░░░░░░░░░]
+     Runs 5-10: 3.1% [░░░░░░░░░░]
+     Runs 6-7: 6.7% [░░░░░░░░░░]
+     Runs 6-8: 14.5% [█░░░░░░░░░]
+     Runs 6-9: 4.5% [░░░░░░░░░░]
+     Runs 6-10: 5.1% [░░░░░░░░░░]
+     Runs 7-8: 9.9% [░░░░░░░░░░]
+     Runs 7-9: 11.4% [█░░░░░░░░░]
+     Runs 7-10: 6.6% [░░░░░░░░░░]
+     Runs 8-9: 3.2% [░░░░░░░░░░]
+     Runs 8-10: 1.9% [░░░░░░░░░░]
+     Runs 9-10: 5.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (12.2%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (12.3%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (18.2%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (12.2%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (12.3%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (18.2%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (12.7%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (12.7%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

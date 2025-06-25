@@ -1,0 +1,93 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 22:57:28
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+No CellOntology terms found in any run.
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+E3 ubiquitin-protein ligase activity (GO:006163   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mathematical modeling of biological process (GO   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Regulation of transcription by RNA polymerase I   ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+Ubiquitin-dependent protein catabolic process (   ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       
+Ubiquitin-protein transferase activity (GO:0004   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+biological models (GO:0061458)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+modelling of biological system (GO:0032259)       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+negative regulation of transcription, DNA-templ   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+positive regulation of transcription by RNA pol   ✓       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+proteasome-mediated ubiquitin-dependent protein   ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+proteasome-mediated ubiquitin-dependent protein   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+regulation of proteolysis (GO:0030162)            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+regulation of transcription by RNA polymerase I   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+ubiquitin-dependent protein catabolic process (   ✓       ✓       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+ubiquitin-protein ligase activity (GO:0061630)    ✓       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 15
+  Terms in all runs: 0
+  Terms in only one run: 8
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Models, Biological (D008947)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Biological (D008958)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Theoretical (D008441)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Models, Theoretical (D008562)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D008957)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D008958)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D008962)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D016540)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D016948)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Proteasome Endopeptidase Complex (D015815)        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Proteasome Endopeptidase Complex (D020934)        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Proteasome Endopeptidase Complex (D020935)        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Protein Stability (D011725)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Proteolysis (D015894)                             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Systems Biology (D000072663)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Systems Biology (D053381)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Systems Biology (D058109)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Systems Stability (D058109)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Transcription Factors (D014158)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Transcription, Genetic (D014158)                  ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✓       
+Transcriptional Activation (D000079442)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Transcriptional Activation (D014158)              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Proteasome System (D017208)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Ubiquitin-Proteasome System (D017209)             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Ubiquitin-Proteasome System (D038681)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Proteasome System (D043486)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D015799)               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D015927)               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D017208)               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D017386)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Ubiquitin-Protein Ligases (D020135)               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D020755)               ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Ubiquitin-Protein Ligases (D020798)               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 33
+  Terms in all runs: 0
+  Terms in only one run: 30
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+GeneOntology: 0/15 terms consistent (0.0%)
+MeSH: 0/33 terms consistent (0.0%)
+
+Overall consistency: 0/48 terms (0.0%)
+
+================================================================================

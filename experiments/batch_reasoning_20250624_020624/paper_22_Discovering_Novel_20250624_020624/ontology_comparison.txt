@@ -1,0 +1,101 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 04:20:45
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Blood vessel endothelial cell (CL:0002138)        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Endothelial (CL:0000115)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endothelial Cell (CL:0000115)                     ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✓       ✗       
+Endothelial Progenitor Cell (CL:0002619)          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0000115)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+endothelial cell (CL:0000115)                     ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 6
+  Terms in all runs: 0
+  Terms in only one run: 4
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✓       ✗       
+Blood Vessel Development (GO:0001568)             ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Blood Vessel Morphogenesis (GO:0048514)           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+Blood vessel development (GO:0001568)             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellularResponseToOxygenLevels (GO:0070482)       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Computational Biology (GO:0048019)                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computational modeling (GO:0086018)               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Negative Regulation of Angiogenesis (GO:0016525   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+RegulationOfBiologicalQuality (GO:0065008)        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Response to Drug (GO:0042493)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Response to Oxygen Levels (GO:0070482)            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Response to drug (GO:0042493)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ResponseToDrug (GO:0042493)                       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+angiogenesis (GO:0001525)                         ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+drug metabolic process (GO:0017144)               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+negative regulation of angiogenesis (GO:0016525   ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+oxygen transport (GO:0015671)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 18
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (D000096)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Angiogenesis Inhibitors (D000071196)              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Angiogenesis Inhibitors (D000091342)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Angiogenesis Inhibitors (D019140)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Angiogenesis Inhibitors (D019158)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+Angiogenesis Inhibitors (D019379)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Angiogenesis Inhibitors (D019391)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+AngiogenesisInhibitors (D019379)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+AngiogenesisInhibitors (D019391)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Antineoplastic Agents (D000970)                   ✗       ✓       ✓       ✗       ✓       ✗       ✓       ✓       ✓       ✓       
+AntineoplasticAgents (D000970)                    ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Blood Vessels (D001808)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+ComputerSimulation (D003196)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Drug Discovery (D015195)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Drug Discovery (D046788)                          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Drug Discovery (D058492)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+DrugDiscovery (D015195)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D009369)                               ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✓       ✗       
+Neovascularization, Pathologic (D018908)          ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✓       
+Neovascularization, Pathologic (D053120)          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D054268)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neovascularization,Pathologic (D018889)           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 23
+  Terms in all runs: 0
+  Terms in only one run: 17
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/6 terms consistent (0.0%)
+GeneOntology: 0/18 terms consistent (0.0%)
+MeSH: 0/23 terms consistent (0.0%)
+
+Overall consistency: 0/47 terms (0.0%)
+
+================================================================================

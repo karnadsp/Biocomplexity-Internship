@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_08_The_effects
+Generated: 2025-06-24 02:53:39
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+There are numerous biological examples where genes associated with migratory ability of cells also confer the cells with an increased fitness even though these genes may not have any known effect on the cell mitosis rates. Here, we provide insight into these observations by analyzing the effects of cell migration, compression, and contact inhibition on the growth of tumor cell clusters using the Cellular Potts Model (CPM) in a monolayer geometry. This is a follow-up of a previous study (Thalhauser et al. 2010) in which a Moran-type model was used to study the interaction of cell proliferation, migratory potential and death on the emergence of invasive phenotypes. Here, we extend the study to include the effects of cell size and shape. In particular, we investigate the interplay between cell motility and compressibility within the CPM and find that the CPM predicts that increased cell motility leads to smaller cells. This is an artifact in the CPM. An analysis of the CPM reveals an explicit inverse-relationship between the cell stiffness and motility parameters. We use this relationship to compensate for motility-induced changes in cell size in the CPM so that in the corrected CPM, cell size is independent of the cell motility. We find that subject to comparable levels of compression, clusters of motile cells grow faster than clusters of less motile cells, in qualitative agreement with biological observations and our previous study. Increasing compression tends to reduce growth rates. Contact inhibition penalizes clumped cells by halting their growth and gives motile cells an even greater advantage. Finally, our model predicts cell size distributions that are consistent with those observed in clusters of neuroblastoma cells cultured in low and high density conditions.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_1
+  Timestamp: 2025-06-24T02:47:46.524366
+  Interactions: 2
+  CC3D Model: 3378 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_2
+  Timestamp: 2025-06-24T02:48:14.257407
+  Interactions: 2
+  CC3D Model: 2870 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_3
+  Timestamp: 2025-06-24T02:48:46.363485
+  Interactions: 2
+  CC3D Model: 10276 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_4
+  Timestamp: 2025-06-24T02:49:31.871295
+  Interactions: 2
+  CC3D Model: 9727 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_5
+  Timestamp: 2025-06-24T02:50:18.956945
+  Interactions: 2
+  CC3D Model: 3554 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_6
+  Timestamp: 2025-06-24T02:50:56.323913
+  Interactions: 2
+  CC3D Model: 3209 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_7
+  Timestamp: 2025-06-24T02:51:23.857957
+  Interactions: 2
+  CC3D Model: 1820 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_8
+  Timestamp: 2025-06-24T02:52:04.885634
+  Interactions: 2
+  CC3D Model: 2887 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_9
+  Timestamp: 2025-06-24T02:52:32.995775
+  Interactions: 2
+  CC3D Model: 3072 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_08_The_effects_20250624_020624\run_10
+  Timestamp: 2025-06-24T02:53:03.627137
+  Interactions: 2
+  CC3D Model: 10055 bytes

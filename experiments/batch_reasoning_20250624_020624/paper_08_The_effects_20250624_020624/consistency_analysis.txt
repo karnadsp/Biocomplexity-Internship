@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 02:53:41
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 23
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 13
+     • Average consistency: 10.8%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] Malignant cell (CL:0001064)
+     10.0% [█░░░░░░░░░] Neuroblastoma (CL:0002495)
+     10.0% [█░░░░░░░░░] Neuroblastoma Cell (CL:0005017)
+     10.0% [█░░░░░░░░░] Tumor Cell (CL:0001062)
+     10.0% [█░░░░░░░░░] Neuroblast (CL:0000605)
+     ... and 8 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Malignant cell (CL:0001064)
+     10.0% Neuroblastoma (CL:0002495)
+     10.0% Neuroblastoma Cell (CL:0005017)
+     ... and 10 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 18
+     • Average consistency: 24.4%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Cell Migration (GO:0016477)
+     80.0% [████████░░] Contact Inhibition (GO:0060242)
+     60.0% [██████░░░░] Cell Proliferation (GO:0008283)
+     40.0% [████░░░░░░] Cell Motility (GO:0006928)
+     30.0% [███░░░░░░░] Regulation of Cell Size (GO:0008361)
+     ... and 13 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Motility (GO:0006928)
+     30.0% Regulation of Cell Size (GO:0008361)
+     20.0% Cell Population Proliferation (GO:0008283)
+     ... and 12 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 22.2%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Cell Movement (D002465)
+     70.0% [███████░░░] Neuroblastoma (D009447)
+     70.0% [███████░░░] Cell Proliferation (D049109)
+     30.0% [███░░░░░░░] Neoplasm Invasiveness (D009361)
+     30.0% [███░░░░░░░] Neoplasms (D009369)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Neoplasm Invasiveness (D009361)
+     30.0% Neoplasms (D009369)
+     20.0% Models, Biological (D008954)
+     ... and 17 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.5%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 18.9%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 14.3% [█░░░░░░░░░]
+     Runs 1-3: 4.0% [░░░░░░░░░░]
+     Runs 1-4: 3.3% [░░░░░░░░░░]
+     Runs 1-5: 7.2% [░░░░░░░░░░]
+     Runs 1-6: 4.9% [░░░░░░░░░░]
+     Runs 1-7: 14.9% [█░░░░░░░░░]
+     Runs 1-8: 1.9% [░░░░░░░░░░]
+     Runs 1-9: 10.2% [█░░░░░░░░░]
+     Runs 1-10: 3.5% [░░░░░░░░░░]
+     Runs 2-3: 7.0% [░░░░░░░░░░]
+     Runs 2-4: 3.7% [░░░░░░░░░░]
+     Runs 2-5: 8.0% [░░░░░░░░░░]
+     Runs 2-6: 6.8% [░░░░░░░░░░]
+     Runs 2-7: 16.6% [█░░░░░░░░░]
+     Runs 2-8: 7.8% [░░░░░░░░░░]
+     Runs 2-9: 12.4% [█░░░░░░░░░]
+     Runs 2-10: 5.6% [░░░░░░░░░░]
+     Runs 3-4: 6.4% [░░░░░░░░░░]
+     Runs 3-5: 7.0% [░░░░░░░░░░]
+     Runs 3-6: 2.0% [░░░░░░░░░░]
+     Runs 3-7: 4.2% [░░░░░░░░░░]
+     Runs 3-8: 2.6% [░░░░░░░░░░]
+     Runs 3-9: 2.1% [░░░░░░░░░░]
+     Runs 3-10: 7.9% [░░░░░░░░░░]
+     Runs 4-5: 0.7% [░░░░░░░░░░]
+     Runs 4-6: 2.0% [░░░░░░░░░░]
+     Runs 4-7: 0.3% [░░░░░░░░░░]
+     Runs 4-8: 0.5% [░░░░░░░░░░]
+     Runs 4-9: 1.7% [░░░░░░░░░░]
+     Runs 4-10: 5.3% [░░░░░░░░░░]
+     Runs 5-6: 7.6% [░░░░░░░░░░]
+     Runs 5-7: 17.2% [█░░░░░░░░░]
+     Runs 5-8: 3.5% [░░░░░░░░░░]
+     Runs 5-9: 18.9% [█░░░░░░░░░]
+     Runs 5-10: 2.8% [░░░░░░░░░░]
+     Runs 6-7: 5.0% [░░░░░░░░░░]
+     Runs 6-8: 2.6% [░░░░░░░░░░]
+     Runs 6-9: 15.9% [█░░░░░░░░░]
+     Runs 6-10: 4.4% [░░░░░░░░░░]
+     Runs 7-8: 4.5% [░░░░░░░░░░]
+     Runs 7-9: 10.5% [█░░░░░░░░░]
+     Runs 7-10: 6.9% [░░░░░░░░░░]
+     Runs 8-9: 9.8% [░░░░░░░░░░]
+     Runs 8-10: 4.4% [░░░░░░░░░░]
+     Runs 9-10: 4.6% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 13
+     • Average consistency: 10.8%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] Malignant cell (CL:0001064)
+     10.0% [█░░░░░░░░░] Neuroblastoma (CL:0002495)
+     10.0% [█░░░░░░░░░] Neuroblastoma Cell (CL:0005017)
+     10.0% [█░░░░░░░░░] Tumor Cell (CL:0001062)
+     10.0% [█░░░░░░░░░] Neuroblast (CL:0000605)
+     ... and 8 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Malignant cell (CL:0001064)
+     10.0% Neuroblastoma (CL:0002495)
+     10.0% Neuroblastoma Cell (CL:0005017)
+     ... and 10 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 18
+     • Average consistency: 24.4%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Cell Migration (GO:0016477)
+     80.0% [████████░░] Contact Inhibition (GO:0060242)
+     60.0% [██████░░░░] Cell Proliferation (GO:0008283)
+     40.0% [████░░░░░░] Cell Motility (GO:0006928)
+     30.0% [███░░░░░░░] Regulation of Cell Size (GO:0008361)
+     ... and 13 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Cell Motility (GO:0006928)
+     30.0% Regulation of Cell Size (GO:0008361)
+     20.0% Cell Population Proliferation (GO:0008283)
+     ... and 12 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 22.2%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Cell Movement (D002465)
+     70.0% [███████░░░] Neuroblastoma (D009447)
+     70.0% [███████░░░] Cell Proliferation (D049109)
+     30.0% [███░░░░░░░] Neoplasm Invasiveness (D009361)
+     30.0% [███░░░░░░░] Neoplasms (D009369)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Neoplasm Invasiveness (D009361)
+     30.0% Neoplasms (D009369)
+     20.0% Models, Biological (D008954)
+     ... and 17 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 6.5%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 18.9%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 14.3% [█░░░░░░░░░]
+     Runs 1-3: 4.0% [░░░░░░░░░░]
+     Runs 1-4: 3.3% [░░░░░░░░░░]
+     Runs 1-5: 7.2% [░░░░░░░░░░]
+     Runs 1-6: 4.9% [░░░░░░░░░░]
+     Runs 1-7: 14.9% [█░░░░░░░░░]
+     Runs 1-8: 1.9% [░░░░░░░░░░]
+     Runs 1-9: 10.2% [█░░░░░░░░░]
+     Runs 1-10: 3.5% [░░░░░░░░░░]
+     Runs 2-3: 7.0% [░░░░░░░░░░]
+     Runs 2-4: 3.7% [░░░░░░░░░░]
+     Runs 2-5: 8.0% [░░░░░░░░░░]
+     Runs 2-6: 6.8% [░░░░░░░░░░]
+     Runs 2-7: 16.6% [█░░░░░░░░░]
+     Runs 2-8: 7.8% [░░░░░░░░░░]
+     Runs 2-9: 12.4% [█░░░░░░░░░]
+     Runs 2-10: 5.6% [░░░░░░░░░░]
+     Runs 3-4: 6.4% [░░░░░░░░░░]
+     Runs 3-5: 7.0% [░░░░░░░░░░]
+     Runs 3-6: 2.0% [░░░░░░░░░░]
+     Runs 3-7: 4.2% [░░░░░░░░░░]
+     Runs 3-8: 2.6% [░░░░░░░░░░]
+     Runs 3-9: 2.1% [░░░░░░░░░░]
+     Runs 3-10: 7.9% [░░░░░░░░░░]
+     Runs 4-5: 0.7% [░░░░░░░░░░]
+     Runs 4-6: 2.0% [░░░░░░░░░░]
+     Runs 4-7: 0.3% [░░░░░░░░░░]
+     Runs 4-8: 0.5% [░░░░░░░░░░]
+     Runs 4-9: 1.7% [░░░░░░░░░░]
+     Runs 4-10: 5.3% [░░░░░░░░░░]
+     Runs 5-6: 7.6% [░░░░░░░░░░]
+     Runs 5-7: 17.2% [█░░░░░░░░░]
+     Runs 5-8: 3.5% [░░░░░░░░░░]
+     Runs 5-9: 18.9% [█░░░░░░░░░]
+     Runs 5-10: 2.8% [░░░░░░░░░░]
+     Runs 6-7: 5.0% [░░░░░░░░░░]
+     Runs 6-8: 2.6% [░░░░░░░░░░]
+     Runs 6-9: 15.9% [█░░░░░░░░░]
+     Runs 6-10: 4.4% [░░░░░░░░░░]
+     Runs 7-8: 4.5% [░░░░░░░░░░]
+     Runs 7-9: 10.5% [█░░░░░░░░░]
+     Runs 7-10: 6.9% [░░░░░░░░░░]
+     Runs 8-9: 9.8% [░░░░░░░░░░]
+     Runs 8-10: 4.4% [░░░░░░░░░░]
+     Runs 9-10: 4.6% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (10.8%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (24.4%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (22.2%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (10.8%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (24.4%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (22.2%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (6.5%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (6.5%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_13_Ovarian_Tumor
+Generated: 2025-06-23 21:56:42
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+Ovarian cancer relapse is often characterized by metastatic spread throughout the peritoneal cavity with tumors attached to multiple organs. In this study, interaction of ovarian cancer cells with the peritoneal tumor microenvironment was evaluated in a xenograft model based on intraperitoneal injection of fluorescent SKOV3.ip1 ovarian cancer cells. Intra-vital microscopy of mixed GFP-red fluorescent protein (RFP) cell populations injected into the peritoneum demonstrated that cancer cells aggregate and attach as mixed spheroids, emphasizing the importance of homotypic adhesion in tumor formation. Electron microscopy provided high resolution structural information about local attachment sites. Experimental measurements from the mouse model were used to build a three-dimensional cellular Potts ovarian tumor model (OvTM) that examines ovarian cancer cell attachment, chemotaxis, growth, and vascularization. OvTM simulations provide insight into the relative influence of cancer cell–cell adhesion, oxygen availability, and local architecture on tumor growth and morphology. Notably, tumors on the mesentery, omentum, or spleen readily invade the “open” architecture, while tumors attached to the gut encounter barriers that restrict invasion and instead rapidly expand into the peritoneal space. Simulations suggest that rapid neovascularization of SKOV3.ip1 tumors is triggered by constitutive release of angiogenic factors in the absence of hypoxia. This research highlights the importance of cellular adhesion and tumor microenvironment in the seeding of secondary ovarian tumors on diverse organs within the peritoneal cavity. Results of the OvTM simulations indicate that invasion is strongly influenced by features underlying the mesothelial lining at different sites, but is also affected by local production of chemotactic factors. The integrated in vivo mouse model and computer simulations provide a unique platform for evaluating targeted therapies for ovarian cancer relapse.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_1
+  Timestamp: 2025-06-23T21:51:18.661213
+  Interactions: 2
+  CC3D Model: 1728 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_2
+  Timestamp: 2025-06-23T21:51:53.191786
+  Interactions: 2
+  CC3D Model: 3330 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_3
+  Timestamp: 2025-06-23T21:52:17.618575
+  Interactions: 2
+  CC3D Model: 2876 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_4
+  Timestamp: 2025-06-23T21:52:48.998634
+  Interactions: 2
+  CC3D Model: 4067 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_5
+  Timestamp: 2025-06-23T21:53:21.484357
+  Interactions: 2
+  CC3D Model: 3042 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_6
+  Timestamp: 2025-06-23T21:53:44.549893
+  Interactions: 2
+  CC3D Model: 9788 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_7
+  Timestamp: 2025-06-23T21:54:28.839026
+  Interactions: 2
+  CC3D Model: 4336 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_8
+  Timestamp: 2025-06-23T21:55:08.499690
+  Interactions: 2
+  CC3D Model: 3009 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_9
+  Timestamp: 2025-06-23T21:55:34.354065
+  Interactions: 2
+  CC3D Model: 4721 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_205616\paper_13_Ovarian_Tumor_20250623_205616\run_10
+  Timestamp: 2025-06-23T21:56:04.752507
+  Interactions: 2
+  CC3D Model: 2363 bytes

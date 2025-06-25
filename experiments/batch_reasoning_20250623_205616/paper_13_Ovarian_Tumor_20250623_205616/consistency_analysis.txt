@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 21:56:43
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 28
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 15
+     • Average consistency: 10.7%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] Mesothelial Cell (CL:0000077)
+     10.0% [█░░░░░░░░░] Epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Epithelial (CL:0002253)
+     10.0% [█░░░░░░░░░] Ovarian Cancer Cell (CL:0001063)
+     10.0% [█░░░░░░░░░] epithelial cell (CL:0000066)
+     ... and 10 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Mesothelial Cell (CL:0000077)
+     10.0% Epithelial cell (CL:0000066)
+     10.0% Epithelial (CL:0002253)
+     ... and 12 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 28
+     • Average consistency: 15.7%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Chemotaxis (GO:0006935)
+     70.0% [███████░░░] Angiogenesis (GO:0001525)
+     20.0% [██░░░░░░░░] Blood vessel morphogenesis (GO:0048514)
+     20.0% [██░░░░░░░░] angiogenesis (GO:0001525)
+     20.0% [██░░░░░░░░] Response to hypoxia (GO:0001666)
+     ... and 23 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Blood vessel morphogenesis (GO:0048514)
+     20.0% angiogenesis (GO:0001525)
+     20.0% Response to hypoxia (GO:0001666)
+     ... and 23 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 27
+     • Average consistency: 18.9%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Ovarian Neoplasms (D010051)
+     40.0% [████░░░░░░] Peritoneal Cavity (D010537)
+     40.0% [████░░░░░░] Neoplasm Metastasis (D009362)
+     40.0% [████░░░░░░] Tumor Microenvironment (D059016)
+     40.0% [████░░░░░░] Cell Adhesion (D015815)
+     ... and 22 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Peritoneal Cavity (D010537)
+     40.0% Neoplasm Metastasis (D009362)
+     40.0% Tumor Microenvironment (D059016)
+     ... and 23 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 11.0%
+     • Minimum similarity: 1.2%
+     • Maximum similarity: 24.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 7.6% [░░░░░░░░░░]
+     Runs 1-3: 5.5% [░░░░░░░░░░]
+     Runs 1-4: 15.7% [█░░░░░░░░░]
+     Runs 1-5: 9.2% [░░░░░░░░░░]
+     Runs 1-6: 6.6% [░░░░░░░░░░]
+     Runs 1-7: 14.7% [█░░░░░░░░░]
+     Runs 1-8: 14.7% [█░░░░░░░░░]
+     Runs 1-9: 9.9% [░░░░░░░░░░]
+     Runs 1-10: 6.5% [░░░░░░░░░░]
+     Runs 2-3: 17.4% [█░░░░░░░░░]
+     Runs 2-4: 13.1% [█░░░░░░░░░]
+     Runs 2-5: 21.4% [██░░░░░░░░]
+     Runs 2-6: 2.3% [░░░░░░░░░░]
+     Runs 2-7: 12.4% [█░░░░░░░░░]
+     Runs 2-8: 15.3% [█░░░░░░░░░]
+     Runs 2-9: 13.4% [█░░░░░░░░░]
+     Runs 2-10: 6.5% [░░░░░░░░░░]
+     Runs 3-4: 14.0% [█░░░░░░░░░]
+     Runs 3-5: 17.7% [█░░░░░░░░░]
+     Runs 3-6: 5.8% [░░░░░░░░░░]
+     Runs 3-7: 15.4% [█░░░░░░░░░]
+     Runs 3-8: 24.6% [██░░░░░░░░]
+     Runs 3-9: 13.8% [█░░░░░░░░░]
+     Runs 3-10: 8.1% [░░░░░░░░░░]
+     Runs 4-5: 6.5% [░░░░░░░░░░]
+     Runs 4-6: 2.2% [░░░░░░░░░░]
+     Runs 4-7: 14.5% [█░░░░░░░░░]
+     Runs 4-8: 13.3% [█░░░░░░░░░]
+     Runs 4-9: 14.2% [█░░░░░░░░░]
+     Runs 4-10: 10.5% [█░░░░░░░░░]
+     Runs 5-6: 5.9% [░░░░░░░░░░]
+     Runs 5-7: 15.4% [█░░░░░░░░░]
+     Runs 5-8: 20.7% [██░░░░░░░░]
+     Runs 5-9: 11.9% [█░░░░░░░░░]
+     Runs 5-10: 5.4% [░░░░░░░░░░]
+     Runs 6-7: 2.8% [░░░░░░░░░░]
+     Runs 6-8: 4.1% [░░░░░░░░░░]
+     Runs 6-9: 1.2% [░░░░░░░░░░]
+     Runs 6-10: 1.8% [░░░░░░░░░░]
+     Runs 7-8: 12.0% [█░░░░░░░░░]
+     Runs 7-9: 10.1% [█░░░░░░░░░]
+     Runs 7-10: 6.0% [░░░░░░░░░░]
+     Runs 8-9: 12.8% [█░░░░░░░░░]
+     Runs 8-10: 21.0% [██░░░░░░░░]
+     Runs 9-10: 9.1% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 15
+     • Average consistency: 10.7%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] Mesothelial Cell (CL:0000077)
+     10.0% [█░░░░░░░░░] Epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Epithelial (CL:0002253)
+     10.0% [█░░░░░░░░░] Ovarian Cancer Cell (CL:0001063)
+     10.0% [█░░░░░░░░░] epithelial cell (CL:0000066)
+     ... and 10 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Mesothelial Cell (CL:0000077)
+     10.0% Epithelial cell (CL:0000066)
+     10.0% Epithelial (CL:0002253)
+     ... and 12 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 28
+     • Average consistency: 15.7%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Chemotaxis (GO:0006935)
+     70.0% [███████░░░] Angiogenesis (GO:0001525)
+     20.0% [██░░░░░░░░] Blood vessel morphogenesis (GO:0048514)
+     20.0% [██░░░░░░░░] angiogenesis (GO:0001525)
+     20.0% [██░░░░░░░░] Response to hypoxia (GO:0001666)
+     ... and 23 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% Blood vessel morphogenesis (GO:0048514)
+     20.0% angiogenesis (GO:0001525)
+     20.0% Response to hypoxia (GO:0001666)
+     ... and 23 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 27
+     • Average consistency: 18.9%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Ovarian Neoplasms (D010051)
+     40.0% [████░░░░░░] Peritoneal Cavity (D010537)
+     40.0% [████░░░░░░] Neoplasm Metastasis (D009362)
+     40.0% [████░░░░░░] Tumor Microenvironment (D059016)
+     40.0% [████░░░░░░] Cell Adhesion (D015815)
+     ... and 22 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Peritoneal Cavity (D010537)
+     40.0% Neoplasm Metastasis (D009362)
+     40.0% Tumor Microenvironment (D059016)
+     ... and 23 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 11.0%
+     • Minimum similarity: 1.2%
+     • Maximum similarity: 24.6%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 7.6% [░░░░░░░░░░]
+     Runs 1-3: 5.5% [░░░░░░░░░░]
+     Runs 1-4: 15.7% [█░░░░░░░░░]
+     Runs 1-5: 9.2% [░░░░░░░░░░]
+     Runs 1-6: 6.6% [░░░░░░░░░░]
+     Runs 1-7: 14.7% [█░░░░░░░░░]
+     Runs 1-8: 14.7% [█░░░░░░░░░]
+     Runs 1-9: 9.9% [░░░░░░░░░░]
+     Runs 1-10: 6.5% [░░░░░░░░░░]
+     Runs 2-3: 17.4% [█░░░░░░░░░]
+     Runs 2-4: 13.1% [█░░░░░░░░░]
+     Runs 2-5: 21.4% [██░░░░░░░░]
+     Runs 2-6: 2.3% [░░░░░░░░░░]
+     Runs 2-7: 12.4% [█░░░░░░░░░]
+     Runs 2-8: 15.3% [█░░░░░░░░░]
+     Runs 2-9: 13.4% [█░░░░░░░░░]
+     Runs 2-10: 6.5% [░░░░░░░░░░]
+     Runs 3-4: 14.0% [█░░░░░░░░░]
+     Runs 3-5: 17.7% [█░░░░░░░░░]
+     Runs 3-6: 5.8% [░░░░░░░░░░]
+     Runs 3-7: 15.4% [█░░░░░░░░░]
+     Runs 3-8: 24.6% [██░░░░░░░░]
+     Runs 3-9: 13.8% [█░░░░░░░░░]
+     Runs 3-10: 8.1% [░░░░░░░░░░]
+     Runs 4-5: 6.5% [░░░░░░░░░░]
+     Runs 4-6: 2.2% [░░░░░░░░░░]
+     Runs 4-7: 14.5% [█░░░░░░░░░]
+     Runs 4-8: 13.3% [█░░░░░░░░░]
+     Runs 4-9: 14.2% [█░░░░░░░░░]
+     Runs 4-10: 10.5% [█░░░░░░░░░]
+     Runs 5-6: 5.9% [░░░░░░░░░░]
+     Runs 5-7: 15.4% [█░░░░░░░░░]
+     Runs 5-8: 20.7% [██░░░░░░░░]
+     Runs 5-9: 11.9% [█░░░░░░░░░]
+     Runs 5-10: 5.4% [░░░░░░░░░░]
+     Runs 6-7: 2.8% [░░░░░░░░░░]
+     Runs 6-8: 4.1% [░░░░░░░░░░]
+     Runs 6-9: 1.2% [░░░░░░░░░░]
+     Runs 6-10: 1.8% [░░░░░░░░░░]
+     Runs 7-8: 12.0% [█░░░░░░░░░]
+     Runs 7-9: 10.1% [█░░░░░░░░░]
+     Runs 7-10: 6.0% [░░░░░░░░░░]
+     Runs 8-9: 12.8% [█░░░░░░░░░]
+     Runs 8-10: 21.0% [██░░░░░░░░]
+     Runs 9-10: 9.1% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (10.7%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (15.7%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (18.9%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (10.7%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (15.7%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (18.9%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (11.0%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (11.0%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

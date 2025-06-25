@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_17_Computer_Simulation
+Generated: 2025-06-23 23:37:23
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+We present a computer simulation and associated experimental validation of assembly of glial-like support cells into the interweaving hexagonal lattice that spans the Drosophila pupal eye. This process of cell movements organizes the ommatidial array into a functional pattern. Unlike earlier simulations that focused on the arrangements of cells within individual ommatidia, here we examine the local movements that lead to large-scale organization of the emerging eye field. Simulations based on our experimental observations of cell adhesion, cell death, and cell movement successfully patterned a tracing of an emerging wild-type pupal eye. Surprisingly, altering cell adhesion had only a mild effect on patterning, contradicting our previous hypothesis that the patterning was primarily the result of referential adhesion between IRMclass surface proteins. Instead, our simulations highlighted the importance of programmed cell death (PCD) as well as a previously unappreciated variable: the expansion of cells’ apical surface areas, which promoted rearrangement of neighboring cells. We tested this prediction experimentally by preventing expansion in the apical area of individual cells: patterning was disrupted in a manner predicted by our simulations. Our work demonstrates the value of combining computer simulation with in vivo experiments to uncover novel mechanisms that are perpetuated throughout the eye field. It also demonstrates the utility of the Glazier–Graner–Hogeweg model (GGH) for modeling the links between local cellular interactions and emergent properties of developing epithelia as well as predicting unanticipated results in vivo.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_1
+  Timestamp: 2025-06-23T23:31:41.674033
+  Interactions: 2
+  CC3D Model: 3489 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_2
+  Timestamp: 2025-06-23T23:32:14.380394
+  Interactions: 2
+  CC3D Model: 2544 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_3
+  Timestamp: 2025-06-23T23:32:53.036966
+  Interactions: 2
+  CC3D Model: 3158 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_4
+  Timestamp: 2025-06-23T23:33:18.257457
+  Interactions: 2
+  CC3D Model: 2670 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_5
+  Timestamp: 2025-06-23T23:33:43.661674
+  Interactions: 2
+  CC3D Model: 2005 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_6
+  Timestamp: 2025-06-23T23:34:16.789933
+  Interactions: 2
+  CC3D Model: 9597 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_7
+  Timestamp: 2025-06-23T23:35:03.667823
+  Interactions: 2
+  CC3D Model: 3204 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_8
+  Timestamp: 2025-06-23T23:35:32.607325
+  Interactions: 2
+  CC3D Model: 9459 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_9
+  Timestamp: 2025-06-23T23:36:11.101723
+  Interactions: 2
+  CC3D Model: 1959 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_220414\paper_17_Computer_Simulation_20250623_220414\run_10
+  Timestamp: 2025-06-23T23:36:47.153357
+  Interactions: 2
+  CC3D Model: 9407 bytes

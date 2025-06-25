@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_23_Coordinated_Action
+Generated: 2025-06-24 04:26:50
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+During gastrulation in vertebrates, mesenchymal cells at the anterior end of the presomitic mesoderm (PSM) periodically compact, transiently epithelialize and detach from the posterior PSM to form somites. In the prevailing clock-and-wavefront model of somitogenesis, periodic gene expression, particularly of Notch and Wnt, interacts with an FGF8-based thresholding mechanism to determine cell fates. However, this model does not explain how cell determination and subsequent differentiation translates into somite morphology. In this paper, we use computer simulations of chick somitogenesis to show that experimentally-observed temporal and spatial patterns of adhesive N-CAM and N-cadherin and repulsive EphA4–ephrinB2 pairs suffice to reproduce the complex dynamic morphological changes of somitogenesis in wild-type and N-cadherin (?/?) chick, including intersomitic separation, boundary-shape evolution and sorting of misdifferentiated cells across compartment boundaries. Since different models of determination yield the same, experimentally-observed, distribution of adhesion and repulsion molecules, the patterning is independent of the details of this mechanism.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:20:47.203857
+  Interactions: 2
+  CC3D Model: 3494 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:21:24.658039
+  Interactions: 2
+  CC3D Model: 2993 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:21:58.196095
+  Interactions: 2
+  CC3D Model: 3439 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:22:27.906433
+  Interactions: 2
+  CC3D Model: 3362 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:23:08.614170
+  Interactions: 2
+  CC3D Model: 2935 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:23:48.813818
+  Interactions: 2
+  CC3D Model: 2577 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:24:18.876911
+  Interactions: 2
+  CC3D Model: 3848 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:25:01.173676
+  Interactions: 2
+  CC3D Model: 2568 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:25:40.203244
+  Interactions: 2
+  CC3D Model: 9360 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_23_Coordinated_Action_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:26:24.520945
+  Interactions: 2
+  CC3D Model: 2570 bytes

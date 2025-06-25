@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_05_Somites_Without
+Generated: 2025-06-23 22:31:37
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+The formation of body segments (somites) in vertebrate embryos is accompanied by molecular oscillations (segmentation clock). Interaction of this oscillator with a wave traveling along the body axis (the clock-and-wavefront model) is generally believed to control somite number, size, and axial identity. Here we show that a clock-and-wavefront mechanism is unnecessary for somite formation. Non-somite mesoderm treated with Noggin generates many somites that form simultaneously, without cyclic expression of Notch-pathway genes, yet have normal size, shape, and fate. These somites have axial identity: The Hox code is fixed independently of somite fate. However, these somites are not subdivided into rostral and caudal halves, which is necessary for neural segmentation. We propose that somites are self-organizing structures whose size and shape is controlled by local cell-cell interactions.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_1
+  Timestamp: 2025-06-23T22:25:47.237613
+  Interactions: 2
+  CC3D Model: 3477 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_2
+  Timestamp: 2025-06-23T22:26:13.924778
+  Interactions: 2
+  CC3D Model: 3458 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_3
+  Timestamp: 2025-06-23T22:26:40.103421
+  Interactions: 2
+  CC3D Model: 3011 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_4
+  Timestamp: 2025-06-23T22:27:07.303013
+  Interactions: 2
+  CC3D Model: 3299 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_5
+  Timestamp: 2025-06-23T22:27:53.283127
+  Interactions: 2
+  CC3D Model: 9893 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_6
+  Timestamp: 2025-06-23T22:28:33.318530
+  Interactions: 2
+  CC3D Model: 3398 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_7
+  Timestamp: 2025-06-23T22:29:10.179909
+  Interactions: 2
+  CC3D Model: 3148 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_8
+  Timestamp: 2025-06-23T22:29:44.115217
+  Interactions: 2
+  CC3D Model: 9593 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_9
+  Timestamp: 2025-06-23T22:30:35.232746
+  Interactions: 2
+  CC3D Model: 3060 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250623_220414\paper_05_Somites_Without_20250623_220414\run_10
+  Timestamp: 2025-06-23T22:31:08.787056
+  Interactions: 2
+  CC3D Model: 3141 bytes

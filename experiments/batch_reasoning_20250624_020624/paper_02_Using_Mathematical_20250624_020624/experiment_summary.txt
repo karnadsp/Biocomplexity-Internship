@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_02_Using_Mathematical
+Generated: 2025-06-24 02:19:02
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+This chapter will explain what kind of support mathematics can give to biology and medicine. In order to explain the concepts in practice cell migration is used as a specific example. This phenomenon is of great biomedical interest because it is a fundamental phenomenon both in physiological (e.g. wound healing, immune response) and pathological processes (e.g. chronic inflammation, detachment of metastasis and related tissue invasion). Also a key feature of any artificial system aimed atmimicking biological structures is to allow and enhance cellmigration on or inside it. At the same time anti-cancer treatment can become more efficient blocking cell’s capability to migrate towards distant sites and invade different organs.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_1
+  Timestamp: 2025-06-24T02:13:20.524941
+  Interactions: 2
+  CC3D Model: 10086 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_2
+  Timestamp: 2025-06-24T02:13:58.576693
+  Interactions: 2
+  CC3D Model: 9769 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_3
+  Timestamp: 2025-06-24T02:14:31.896515
+  Interactions: 2
+  CC3D Model: 2493 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_4
+  Timestamp: 2025-06-24T02:15:03.439703
+  Interactions: 2
+  CC3D Model: 10019 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_5
+  Timestamp: 2025-06-24T02:15:42.207892
+  Interactions: 2
+  CC3D Model: 1977 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_6
+  Timestamp: 2025-06-24T02:16:34.253502
+  Interactions: 2
+  CC3D Model: 9823 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_7
+  Timestamp: 2025-06-24T02:17:19.513888
+  Interactions: 2
+  CC3D Model: 1942 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_8
+  Timestamp: 2025-06-24T02:17:50.909114
+  Interactions: 2
+  CC3D Model: 2568 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_9
+  Timestamp: 2025-06-24T02:18:13.673918
+  Interactions: 2
+  CC3D Model: 2457 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_02_Using_Mathematical_20250624_020624\run_10
+  Timestamp: 2025-06-24T02:18:39.024193
+  Interactions: 2
+  CC3D Model: 3056 bytes

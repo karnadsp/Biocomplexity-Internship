@@ -1,0 +1,123 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 03:55:43
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endothelial Cell (CL:0000115)                     ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✓       
+Endothelial cell (CL:0000115)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0000115)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Hypoxic Cell (CL:0001064)                         ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Hypoxic cell (CL:0001062)                         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+MalignantCell (CL:0001063)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Neoplastic Cell (CL:0001063)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neoplastic Cell (CL:0001064)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Neoplastic Cell (CL:0008002)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Tumor Cell (CL:0001064)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Tumor cell (CL:0001063)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+endothelial cell (CL:0000115)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+endothelial cell (CL:0008001)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+hypoxic cell (CL:0001064)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+neoplastic cell (CL:0008001)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+tumor cell (CL:0001063)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 16
+  Terms in all runs: 0
+  Terms in only one run: 14
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       
+Blood Vessel Morphogenesis (GO:0048514)           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✓       
+Cell proliferation (GO:0008283)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellProliferation (GO:0008283)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Chemotaxis (GO:0006935)                           ✗       ✓       ✓       ✓       ✓       ✗       ✓       ✓       ✗       ✓       
+Oxygen Transport (GO:0015671)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Oxygen transport (GO:0015671)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Positive regulation of angiogenesis (GO:0045766   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Response to Hypoxia (GO:0001666)                  ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✗       ✗       
+Response to Oxygen Levels (GO:0070482)            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Response to hypoxia (GO:0001666)                  ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ResponseToHypoxia (GO:0001666)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Secreted Pro-angiogenic Factor (GO:0050692)       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+angiogenesis (GO:0001525)                         ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+blood vessel development (GO:0001568)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+blood vessel morphogenesis (GO:0048514)           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell chemotaxis (GO:0060326)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+cell population proliferation (GO:0008283)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+chemotaxis (GO:0006935)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+regulation of signaling by secretion (GO:005069   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+response to hypoxia (GO:0001666)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+response to oxygen levels (GO:0070482)            ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 24
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (D000096)                            ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+AngiogenesisInducingAgents (D000096)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Hypoxia (D015323)                            ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Proliferation (D002460)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D049109)                      ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✓       
+Chemotaxis (D002648)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       
+Endothelial Cells (D004727)                       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Hypoxia (D000860)                                 ✓       ✓       ✓       ✓       ✗       ✓       ✓       ✓       ✓       ✓       
+Morphology (D009024)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Angiogenesis (D018345)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Neoplasm Growth (D018358)                         ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neoplasm Invasiveness (D009362)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neoplasms (D009369)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Neoplasms (D018358)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neovascularization (D054058)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D015161)          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D018352)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Neovascularization, Pathologic (D018866)          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D018889)          ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D018908)          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D018909)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Neovascularization, Pathologic (D057127)          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neovascularization,Pathologic (D018889)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Tumor Cells, Cultured (D018339)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Tumor Growth (D018303)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Tumor Microenvironment (D059016)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Tumor Microenvironment (D060750)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Tumor Microenvironment (D064413)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Vascular Endothelial Growth Factors (D018847)     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 29
+  Terms in all runs: 0
+  Terms in only one run: 22
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/16 terms consistent (0.0%)
+GeneOntology: 0/24 terms consistent (0.0%)
+MeSH: 0/29 terms consistent (0.0%)
+
+Overall consistency: 0/69 terms (0.0%)
+
+================================================================================

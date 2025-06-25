@@ -1,0 +1,119 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 04:08:58
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell (CL:0000000)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+DifferentiatedCell (CL:0000373)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Egg Cell (CL:0000021)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Egg Cell (CL:0000022)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+EggCell (CL:0000021)                              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+SomaticCell (CL:0002371)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Stem Cell (CL:0000034)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+differentiated cell (CL:0000371)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+egg cell (CL:0000000)                             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+egg cell (CL:0000020)                             ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+epithelial cell (CL:0000211)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+fertilized egg cell (CL:0000010)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+stem cell (CL:0000034)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 14
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Communication (GO:0007154)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Differentiation (GO:0030154)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+Cell Division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+Cell-Cell Signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+CellCommunication (GO:0007154)                    ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellDifferentiation (GO:0030154)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+CellDivision (GO:0051301)                         ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogen Gradient (GO:0009952)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MorphogenGradientFormation (GO:0007369)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+MulticellularOrganismDevelopment (GO:0007275)     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern Specification (GO:0007389)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Pattern Specification Process (GO:0007389)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+PatternSpecification (GO:0007389)                 ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+RegulationOfGeneExpression (GO:0010468)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell communication (GO:0007154)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+cell differentiation (GO:0030154)                 ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+cell division (GO:0051301)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+cell-cell signaling (GO:0007267)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+determination of left/right symmetry (GO:000736   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+developmental process (GO:0032502)                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+morphogen gradient (GO:0009952)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+multicellular organism development (GO:0032502)   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+pattern specification (GO:0007389)                ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+signal transduction (GO:0007165)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 24
+  Terms in all runs: 0
+  Terms in only one run: 17
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Evolution (D005075)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Biological Models (D001692)                       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Biological Ontologies (D064886)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BiologicalEvolution (D005075)                     ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (D015398)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Differentiation (D002454)                    ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✓       ✓       
+CellDifferentiation (D002454)                     ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Developmental Biology (D002684)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Developmental Biology (D002869)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Developmental Biology (D019504)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D019895)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+DevelopmentalBiology (D002684)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Genetic Regulatory Networks (D056426)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Genetic Regulatory Networks (D059667)             ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Genetic Regulatory Networks (D059706)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       
+Models,Biological (D008957)                       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ModelsBiological (D008954)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogenesis (D009048)                           ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogens (D009029)                              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogens (D019636)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogens (D056728)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D059027)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Pattern Formation (D059686)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Pattern Formation, Biological (D064589)           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 27
+  Terms in all runs: 0
+  Terms in only one run: 20
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/14 terms consistent (0.0%)
+GeneOntology: 0/24 terms consistent (0.0%)
+MeSH: 0/27 terms consistent (0.0%)
+
+Overall consistency: 0/65 terms (0.0%)
+
+================================================================================

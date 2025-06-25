@@ -1,0 +1,117 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 03:17:38
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endocardial Cell (CL:0002251)                     ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+endocardial cell (CL:0002250)                     ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+endocardial cell (CL:0002251)                     ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✗       ✓       ✗       
+endocardial cell (CL:0002252)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+endocardial cushion cell (CL:0005002)             ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+mesenchymal cell (CL:0000669)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+mesenchymal cell (CL:0008019)                     ✗       ✓       ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       
+mesenchymal cell (CL:0008020)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 5
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Developmental Process Involved in Reproduction    ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endothelial to Mesenchymal Transition (GO:00609   ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Exosome Secretion (GO:0140112)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular Vesicle Secretion (GO:0140352)      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Glycosaminoglycan Biosynthetic Process (GO:0030   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Hyaluronan Biosynthetic Process (GO:0030212)      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Hyaluronan Synthase Activity (GO:0047742)         ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cardiac endothelial to mesenchymal transition (   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+endothelial to mesenchymal cell differentiation   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+endothelial to mesenchymal transition (GO:00609   ✗       ✓       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       
+exosome assembly (GO:0140112)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+exosome secretion (GO:0070062)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+extracellular exosome (GO:0070062)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+extracellular matrix organization (GO:0030198)    ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✗       
+extracellular matrix organization (GO:0070613)    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+gene silencing by miRNA (GO:0035195)              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+glycosaminoglycan biosynthetic process (GO:0006   ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+glycosaminoglycan biosynthetic process (GO:0006   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+glycosaminoglycan metabolic process (GO:0030203   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+hyaluronan biosynthetic process (GO:0030212)      ✓       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✓       
+miRNA-Mediated Gene Silencing (GO:0035195)        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+miRNA-mediated gene silencing (GO:0035195)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+microRNA-mediated gene silencing (GO:0035195)     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+negative regulation of extracellular matrix org   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+negative regulation of gene expression (GO:0010   ✓       ✗       ✗       ✗       ✓       ✗       ✓       ✓       ✓       ✗       
+negative regulation of hyaluronan biosynthetic    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 27
+  Terms in all runs: 0
+  Terms in only one run: 20
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Embryonic Development (D000096)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Embryonic Development (D004625)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Embryonic Development (D047108)                   ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Endocardial Cushions (D004698)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endocardial Cushions (D004699)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Endocardial Cushions (D017124)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Endocardial Cushions (D054068)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Endocardium (D004699)                             ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endothelial Cells (D004727)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✓       
+Endothelial-Mesenchymal Transition (D057706)      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Endothelium (D004728)                             ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Exosomes (D055354)                                ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       
+Exosomes (D055374)                                ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Extracellular Matrix (D005109)                    ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✓       ✓       
+Hyaluronic Acid (D006801)                         ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Hyaluronic Acid (D006814)                         ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Hyaluronic Acid (D006820)                         ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✓       ✓       ✓       
+Mesenchymal Stromal Cells (D059630)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MicroRNAs (D030841)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+MicroRNAs (D035342)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+MicroRNAs (D036342)                               ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✓       
+MicroRNAs (D046911)                               ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Theoretical (D008957)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Theoretical (D008962)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Reaction-Diffusion Systems (D017208)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 26
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/27 terms consistent (0.0%)
+MeSH: 0/26 terms consistent (0.0%)
+
+Overall consistency: 0/63 terms (0.0%)
+
+================================================================================

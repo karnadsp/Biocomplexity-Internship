@@ -1,0 +1,85 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-23 23:25:40
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Mesenchymal (CL:0008019)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+epithelial cell (CL:0000546)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+mesenchymal cell (CL:0008019)                     ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 0
+  Terms in only one run: 4
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Formation Involved in Morp   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell-cell adhesion (GO:0098609)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computational modeling (GO:0086013)               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern specification involved in morphogenesis   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+anatomical structure morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+cell morphogenesis (GO:0000902)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+cell population proliferation (GO:0008283)        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0098609)                   ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+cellular response to mechanical stimulus (GO:00   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+pattern formation involved in morphogenesis (GO   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+pattern specification process (GO:0007389)        ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 13
+  Terms in all runs: 0
+  Terms in only one run: 11
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (D002246)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Adhesion (D002448)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Biology (D002465)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Culture Techniques (D015497)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Crystallization (D003440)                         ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Crystallization (D003442)                         ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Models, Biological (D046788)                      ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✗       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✓       
+Morphogenesis (D009029)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Tissues (D013577)                                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 13
+  Terms in all runs: 0
+  Terms in only one run: 9
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/5 terms consistent (0.0%)
+GeneOntology: 0/13 terms consistent (0.0%)
+MeSH: 0/13 terms consistent (0.0%)
+
+Overall consistency: 0/31 terms (0.0%)
+
+================================================================================

@@ -1,0 +1,106 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 05:03:01
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epithelial (CL:0000066)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Epithelial cell (CL:0000066)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000222)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Mesenchymal (CL:0008019)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+Mesenchymal Cell (CL:0000182)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal Stem Cell (CL:0008034)                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesenchymal cell (CL:0000004)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal cell (CL:0008019)                     ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 8
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anterior/posterior pattern specification (GO:00   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Differentiation (GO:0030154)                 ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✓       
+Cell Population Proliferation (GO:0008283)        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell differentiation (GO:0030154)                 ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computational Modeling (GO:0086017)               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       
+Extracellular matrix organization (GO:0030198)    ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogen Mediated Signaling (GO:0009952)         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogen-Mediated Signaling (GO:0060070)         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogen-mediated Patterning (GO:0009952)        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogen-mediated patterning (GO:0040002)        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Pattern Formation (GO:0003002)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Pattern Specification (GO:0007389)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✓       
+Pattern specification (GO:0007389)                ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Regulation by Morphogen (GO:0043408)              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Regulation of Morphogen Production (GO:0043408)   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Single-organism Developmental Process (GO:00447   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 19
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Differentiation (D002454)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+Computational Biology (D019295)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Developmental Biology (D002684)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Developmental Biology (D002869)                   ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✓       ✗       ✓       ✗       ✓       ✓       ✓       ✗       ✓       ✓       
+Limb Buds (D054258)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008956)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Models, Theoretical (D003196)                     ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogenesis (D009030)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009048)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       
+Morphogens (D009029)                              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Organogenesis (D009875)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Organogenesis (D009937)                           ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Reaction Diffusion (D017208)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Reaction Diffusion (D063806)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Reaction Diffusion Analysis (D062105)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Reaction-Diffusion (D017208)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Reaction-Diffusion Analysis (D065190)             ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Stochastic Models (D052899)                       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 23
+  Terms in all runs: 0
+  Terms in only one run: 16
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/19 terms consistent (0.0%)
+MeSH: 0/23 terms consistent (0.0%)
+
+Overall consistency: 0/52 terms (0.0%)
+
+================================================================================

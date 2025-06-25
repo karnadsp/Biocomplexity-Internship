@@ -1,0 +1,109 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 02:47:44
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endothelial (CL:0000115)                          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Endothelial Cell (CL:0000115)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Endothelial cell (CL:0000115)                     ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+EndothelialCell (CL:0000115)                      ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+endothelial cell (CL:0000115)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 5
+  Terms in all runs: 0
+  Terms in only one run: 2
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Angiogenesis (GO:0001525)                         ✓       ✗       ✓       ✓       ✗       ✓       ✓       ✓       ✗       ✗       
+Blood Vessel Lumenization (GO:0060982)            ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Blood vessel morphogenesis (GO:0001568)           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+BloodVesselDevelopment (GO:0001568)               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Shape (GO:0008360)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell morphogenesis (GO:0000902)                   ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-Cell Adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell-CellJunctionOrganization (GO:0045216)        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-cell adhesion (GO:0098602)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell-cell adhesion regulation (GO:0022407)        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell-cell junction assembly (GO:0007043)          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+CellShape (GO:0008360)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Exocytosis (GO:0006887)                           ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       ✗       ✗       
+In silico simulation (GO:0035914)                 ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Lumen development (GO:0046906)                    ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Lumen formation (GO:0045216)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+LumenDevelopment (GO:0045216)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+RegulationOfCellMigration (GO:0030334)            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Single-organism membrane tube lumen formation (   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Vacuole organization (GO:0033365)                 ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+angiogenesis (GO:0001525)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+cell-cell junction assembly (GO:0045216)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+exocytosis (GO:0006887)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+regulation of cell shape (GO:0008360)             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 25
+  Terms in all runs: 0
+  Terms in only one run: 22
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (D0000939)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Angiogenesis (D000096)                            ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✓       ✗       ✗       
+Angiogenesis (D000096496)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Angiogenesis (D000817)                            ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Blood Vessels (D001808)                           ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       ✗       
+BloodVessels (D001808)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D002448)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Computational Biology (D019295)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+ComputationalBiology (D000080983)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Computer Simulation (D003198)                     ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+ComputerSimulation (D003196)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Endothelial Cells (D004727)                       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✓       ✗       ✗       
+Exocytosis (D005075)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Exocytosis (D005088)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Exocytosis (D005093)                              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Exocytosis (D005094)                              ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Models, Biological (D018698)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Models,Biological (D000091983)                    ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009030)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009048)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Sensitivity Analysis (D012689)                    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Vacuoles (D014616)                                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 25
+  Terms in all runs: 0
+  Terms in only one run: 19
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/5 terms consistent (0.0%)
+GeneOntology: 0/25 terms consistent (0.0%)
+MeSH: 0/25 terms consistent (0.0%)
+
+Overall consistency: 0/55 terms (0.0%)
+
+================================================================================

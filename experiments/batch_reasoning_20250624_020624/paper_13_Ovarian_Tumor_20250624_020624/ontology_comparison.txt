@@ -1,0 +1,126 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 03:24:59
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Endothelial (CL:0000115)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+EndothelialCell (CL:0000115)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Malignant Cell (CL:0001064)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+MalignantCell (CL:0000003)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesenchymal (CL:0008019)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesothelial cell (CL:0000182)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Ovarian cancer cell (CL:0001063)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Ovarian cancer cell line (CL:0008003)             ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ovarian epithelial cell (CL:0002637)              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+human ovarian cancer cell (CL:0008031)            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+malignant ovarian epithelial cell (CL:0001065)    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+malignant ovarian epithelial cell (CL:0002419)    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 15
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (GO:0001525)                         ✓       ✓       ✗       ✓       ✓       ✗       ✓       ✗       ✓       ✓       
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Migration (GO:0016477)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell adhesion (GO:0007155)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell migration involved in invasion (GO:0030023   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell population proliferation (GO:0008283)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell proliferation (GO:0008283)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-cell adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Chemotaxis (GO:0006935)                           ✗       ✓       ✗       ✓       ✓       ✗       ✓       ✗       ✓       ✗       
+Chemotaxis (GO:0030595)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Chemotaxis (GO:0042330)                           ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+HomophilicCellAdhesion (GO:0007156)               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Homotypic Cell Adhesion (GO:0007156)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Homotypic cell-cell adhesion (GO:0007156)         ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+HomotypicCell-CellAdhesion (GO:0007156)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Multicellular Organismal Process (GO:0032501)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Regulation of cell proliferation (GO:0042127)     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Response to hypoxia (GO:0001666)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+ResponseToHypoxia (GO:0001666)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+TumorInvasion (GO:0042077)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Vascularization (GO:0001944)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+angiogenesis (GO:0001525)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+cell adhesion (GO:0007155)                        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+chemotaxis (GO:0006935)                           ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+homotypic cell-cell adhesion (GO:0034101)         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+response to hypoxia (GO:0001666)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 28
+  Terms in all runs: 0
+  Terms in only one run: 23
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Angiogenesis (D019143)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D002448)                           ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+Cell Adhesion Molecules (D015815)                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+CellAdhesion (D002448)                            ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Heterografts (D058029)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Neoplasm Metastasis (D009362)                     ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✓       ✗       
+NeoplasmMetastasis (D009362)                      ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Neovascularization, Pathologic (D017788)          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D018352)          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       
+Neovascularization, Pathologic (D018719)          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+Neovascularization, Pathologic (D018866)          ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neovascularization, Pathologic (D054856)          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Neovascularization,Pathologic (D018719)           ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Ovarian Neoplasms (D010051)                       ✓       ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✓       ✓       
+OvarianNeoplasms (D010051)                        ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Peritoneal Cavity (D010516)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Peritoneal Cavity (D010529)                       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Peritoneal Cavity (D010537)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+PeritonealCavity (D010529)                        ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Tumor Microenvironment (D059016)                  ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Tumor Microenvironment (D059028)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Tumor Microenvironment (D060526)                  ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       ✗       ✗       
+Tumor Microenvironment (D060687)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       
+TumorMicroenvironment (D059016)                   ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Xenograft Model Antitumor Assays (D000071196)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Xenograft Model Antitumor Assays (D058029)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Xenograft Model Antitumor Assays (D059748)        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+XenograftModel (D053198)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 29
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/15 terms consistent (0.0%)
+GeneOntology: 0/28 terms consistent (0.0%)
+MeSH: 0/29 terms consistent (0.0%)
+
+Overall consistency: 0/72 terms (0.0%)
+
+================================================================================

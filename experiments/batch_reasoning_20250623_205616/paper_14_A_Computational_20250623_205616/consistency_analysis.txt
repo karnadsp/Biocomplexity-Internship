@@ -1,0 +1,300 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 22:02:13
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 38
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 5
+     • Average consistency: 22.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] endothelial cell (CL:0000115)
+     30.0% [███░░░░░░░] Endothelial Cell (CL:0000115)
+     10.0% [█░░░░░░░░░] Endothelial Tip Cell (CL:4033030)
+     10.0% [█░░░░░░░░░] Endothelial Tip Cell (CL:4030038)
+     10.0% [█░░░░░░░░░] Endothelial (CL:0000115)
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Endothelial Cell (CL:0000115)
+     10.0% Endothelial Tip Cell (CL:4033030)
+     10.0% Endothelial Tip Cell (CL:4030038)
+     ... and 1 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 15
+     • Average consistency: 30.0%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] extracellular matrix organization (GO:0030198)
+     60.0% [██████░░░░] angiogenesis (GO:0001525)
+     60.0% [██████░░░░] vasculogenesis (GO:0001570)
+     50.0% [█████░░░░░] cell proliferation (GO:0008283)
+     30.0% [███░░░░░░░] Vasculogenesis (GO:0001570)
+     ... and 10 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Vasculogenesis (GO:0001570)
+     30.0% proteolysis (GO:0006508)
+     30.0% Angiogenesis (GO:0001525)
+     ... and 8 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 38
+     • Average consistency: 16.3%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Extracellular Matrix (D005109)
+     60.0% [██████░░░░] Plasminogen (D010957)
+     50.0% [█████░░░░░] Endothelial Cells (D004727)
+     30.0% [███░░░░░░░] Angiogenesis (D000096)
+     30.0% [███░░░░░░░] Thalidomide (D013792)
+     ... and 33 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Angiogenesis (D000096)
+     30.0% Thalidomide (D013792)
+     20.0% Plasminogen Activators (D010957)
+     ... and 32 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.5%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 20.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 4.0% [░░░░░░░░░░]
+     Runs 1-3: 2.1% [░░░░░░░░░░]
+     Runs 1-4: 7.7% [░░░░░░░░░░]
+     Runs 1-5: 6.2% [░░░░░░░░░░]
+     Runs 1-6: 7.5% [░░░░░░░░░░]
+     Runs 1-7: 15.5% [█░░░░░░░░░]
+     Runs 1-8: 1.3% [░░░░░░░░░░]
+     Runs 1-9: 13.1% [█░░░░░░░░░]
+     Runs 1-10: 4.5% [░░░░░░░░░░]
+     Runs 2-3: 1.0% [░░░░░░░░░░]
+     Runs 2-4: 3.4% [░░░░░░░░░░]
+     Runs 2-5: 2.3% [░░░░░░░░░░]
+     Runs 2-6: 0.8% [░░░░░░░░░░]
+     Runs 2-7: 4.4% [░░░░░░░░░░]
+     Runs 2-8: 0.3% [░░░░░░░░░░]
+     Runs 2-9: 3.5% [░░░░░░░░░░]
+     Runs 2-10: 3.3% [░░░░░░░░░░]
+     Runs 3-4: 14.6% [█░░░░░░░░░]
+     Runs 3-5: 12.7% [█░░░░░░░░░]
+     Runs 3-6: 12.7% [█░░░░░░░░░]
+     Runs 3-7: 19.6% [█░░░░░░░░░]
+     Runs 3-8: 2.1% [░░░░░░░░░░]
+     Runs 3-9: 20.3% [██░░░░░░░░]
+     Runs 3-10: 9.3% [░░░░░░░░░░]
+     Runs 4-5: 15.2% [█░░░░░░░░░]
+     Runs 4-6: 12.7% [█░░░░░░░░░]
+     Runs 4-7: 8.6% [░░░░░░░░░░]
+     Runs 4-8: 2.2% [░░░░░░░░░░]
+     Runs 4-9: 17.8% [█░░░░░░░░░]
+     Runs 4-10: 11.2% [█░░░░░░░░░]
+     Runs 5-6: 12.5% [█░░░░░░░░░]
+     Runs 5-7: 11.2% [█░░░░░░░░░]
+     Runs 5-8: 4.0% [░░░░░░░░░░]
+     Runs 5-9: 9.1% [░░░░░░░░░░]
+     Runs 5-10: 9.3% [░░░░░░░░░░]
+     Runs 6-7: 17.8% [█░░░░░░░░░]
+     Runs 6-8: 7.4% [░░░░░░░░░░]
+     Runs 6-9: 14.5% [█░░░░░░░░░]
+     Runs 6-10: 11.8% [█░░░░░░░░░]
+     Runs 7-8: 2.2% [░░░░░░░░░░]
+     Runs 7-9: 6.3% [░░░░░░░░░░]
+     Runs 7-10: 10.1% [█░░░░░░░░░]
+     Runs 8-9: 11.1% [█░░░░░░░░░]
+     Runs 8-10: 5.1% [░░░░░░░░░░]
+     Runs 9-10: 9.7% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 5
+     • Average consistency: 22.0%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] endothelial cell (CL:0000115)
+     30.0% [███░░░░░░░] Endothelial Cell (CL:0000115)
+     10.0% [█░░░░░░░░░] Endothelial Tip Cell (CL:4033030)
+     10.0% [█░░░░░░░░░] Endothelial Tip Cell (CL:4030038)
+     10.0% [█░░░░░░░░░] Endothelial (CL:0000115)
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Endothelial Cell (CL:0000115)
+     10.0% Endothelial Tip Cell (CL:4033030)
+     10.0% Endothelial Tip Cell (CL:4030038)
+     ... and 1 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 15
+     • Average consistency: 30.0%
+     • Maximum consistency: 60.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     60.0% [██████░░░░] extracellular matrix organization (GO:0030198)
+     60.0% [██████░░░░] angiogenesis (GO:0001525)
+     60.0% [██████░░░░] vasculogenesis (GO:0001570)
+     50.0% [█████░░░░░] cell proliferation (GO:0008283)
+     30.0% [███░░░░░░░] Vasculogenesis (GO:0001570)
+     ... and 10 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Vasculogenesis (GO:0001570)
+     30.0% proteolysis (GO:0006508)
+     30.0% Angiogenesis (GO:0001525)
+     ... and 8 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 38
+     • Average consistency: 16.3%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Extracellular Matrix (D005109)
+     60.0% [██████░░░░] Plasminogen (D010957)
+     50.0% [█████░░░░░] Endothelial Cells (D004727)
+     30.0% [███░░░░░░░] Angiogenesis (D000096)
+     30.0% [███░░░░░░░] Thalidomide (D013792)
+     ... and 33 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Angiogenesis (D000096)
+     30.0% Thalidomide (D013792)
+     20.0% Plasminogen Activators (D010957)
+     ... and 32 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.5%
+     • Minimum similarity: 0.3%
+     • Maximum similarity: 20.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 4.0% [░░░░░░░░░░]
+     Runs 1-3: 2.1% [░░░░░░░░░░]
+     Runs 1-4: 7.7% [░░░░░░░░░░]
+     Runs 1-5: 6.2% [░░░░░░░░░░]
+     Runs 1-6: 7.5% [░░░░░░░░░░]
+     Runs 1-7: 15.5% [█░░░░░░░░░]
+     Runs 1-8: 1.3% [░░░░░░░░░░]
+     Runs 1-9: 13.1% [█░░░░░░░░░]
+     Runs 1-10: 4.5% [░░░░░░░░░░]
+     Runs 2-3: 1.0% [░░░░░░░░░░]
+     Runs 2-4: 3.4% [░░░░░░░░░░]
+     Runs 2-5: 2.3% [░░░░░░░░░░]
+     Runs 2-6: 0.8% [░░░░░░░░░░]
+     Runs 2-7: 4.4% [░░░░░░░░░░]
+     Runs 2-8: 0.3% [░░░░░░░░░░]
+     Runs 2-9: 3.5% [░░░░░░░░░░]
+     Runs 2-10: 3.3% [░░░░░░░░░░]
+     Runs 3-4: 14.6% [█░░░░░░░░░]
+     Runs 3-5: 12.7% [█░░░░░░░░░]
+     Runs 3-6: 12.7% [█░░░░░░░░░]
+     Runs 3-7: 19.6% [█░░░░░░░░░]
+     Runs 3-8: 2.1% [░░░░░░░░░░]
+     Runs 3-9: 20.3% [██░░░░░░░░]
+     Runs 3-10: 9.3% [░░░░░░░░░░]
+     Runs 4-5: 15.2% [█░░░░░░░░░]
+     Runs 4-6: 12.7% [█░░░░░░░░░]
+     Runs 4-7: 8.6% [░░░░░░░░░░]
+     Runs 4-8: 2.2% [░░░░░░░░░░]
+     Runs 4-9: 17.8% [█░░░░░░░░░]
+     Runs 4-10: 11.2% [█░░░░░░░░░]
+     Runs 5-6: 12.5% [█░░░░░░░░░]
+     Runs 5-7: 11.2% [█░░░░░░░░░]
+     Runs 5-8: 4.0% [░░░░░░░░░░]
+     Runs 5-9: 9.1% [░░░░░░░░░░]
+     Runs 5-10: 9.3% [░░░░░░░░░░]
+     Runs 6-7: 17.8% [█░░░░░░░░░]
+     Runs 6-8: 7.4% [░░░░░░░░░░]
+     Runs 6-9: 14.5% [█░░░░░░░░░]
+     Runs 6-10: 11.8% [█░░░░░░░░░]
+     Runs 7-8: 2.2% [░░░░░░░░░░]
+     Runs 7-9: 6.3% [░░░░░░░░░░]
+     Runs 7-10: 10.1% [█░░░░░░░░░]
+     Runs 8-9: 11.1% [█░░░░░░░░░]
+     Runs 8-10: 5.1% [░░░░░░░░░░]
+     Runs 9-10: 9.7% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (22.0%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (30.0%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (16.3%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (22.0%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (30.0%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (16.3%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (8.5%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (8.5%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

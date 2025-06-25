@@ -1,0 +1,102 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 02:42:08
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Adipose-Derived Mesenchymal Stem Cell (CL:00001   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Adipose-Derived Mesenchymal Stem Cell (CL:00080   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Adipose-Derived Mesenchymal Stem Cells (CL:0001   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Adipose-Derived Stem Cell (CL:0000136)            ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Stem Cell (CL:0000034)                            ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+adipose-derived mesenchymal stem cell (CL:00026   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+adipose-derived mesenchymal stem cell (CL:00080   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+mesenchymal stem cell (CL:0000134)                ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+mesenchymal stem cell (CL:0008034)                ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+mesenchymal stem cell of adipose (CL:0008012)     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 10
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (GO:0007155)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Aggregation (GO:0098743)                     ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✗       
+Cell Division (GO:0051301)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Fusion (GO:0000768)                          ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Migration (GO:0016477)                       ✗       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Motility (GO:0016477)                        ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       ✗       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell-Substrate Adhesion (GO:0031589)              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Stem Cell Proliferation (GO:0072089)              ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+biological adhesion (GO:0022610)                  ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell adhesion (GO:0007155)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell aggregation (GO:0098743)                     ✓       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+cell migration (GO:0016477)                       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell motility (GO:0006928)                        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell motility (GO:0016477)                        ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+cell population proliferation (GO:0008283)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0016337)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell-cell adhesion (GO:0098602)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+cell-cell adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+tissue fusion (GO:0060344)                        ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 21
+  Terms in all runs: 0
+  Terms in only one run: 15
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Phenomena (D001690)                    ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Fusion (D002469)                             ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Movement (D002465)                           ✓       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       
+Computer Simulation (D003196)                     ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✓       ✓       
+Computer Simulation (D003198)                     ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Diffusion (D004075)                               ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008954)                      ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Stem Cells (D013234)                              ✓       ✓       ✗       ✗       ✓       ✗       ✓       ✓       ✗       ✓       
+Stromal Cells (D053445)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Tissue Engineering (D019738)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Tissue Engineering (D020341)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Tissue Engineering (D020342)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Tissue Engineering (D020389)                      ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       
+Tissue Engineering (D020530)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Tissue Engineering (D020532)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Tissue Engineering (D054511)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 17
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/10 terms consistent (0.0%)
+GeneOntology: 0/21 terms consistent (0.0%)
+MeSH: 0/17 terms consistent (0.0%)
+
+Overall consistency: 0/48 terms (0.0%)
+
+================================================================================

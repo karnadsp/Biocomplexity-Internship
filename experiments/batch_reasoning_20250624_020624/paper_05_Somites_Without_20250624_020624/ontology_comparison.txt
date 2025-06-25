@@ -1,0 +1,137 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 02:36:50
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mesenchymal (CL:0008019)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal cell (CL:0008019)                     ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+MesenchymalCell (CL:0008019)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Mesoderm (CL:0000226)                             ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesodermal cell (CL:0000222)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Somite (CL:0000003)                               ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Somite (CL:0002322)                               ✗       ✓       ✗       ✓       ✗       ✓       ✗       ✓       ✗       ✗       
+Somite (CL:0002323)                               ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Somite (CL:0002353)                               ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+mesenchymal cell (CL:0000008)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+mesenchymal cell (CL:0000220)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+mesodermal cell (CL:0000545)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+somite (CL:0002321)                               ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+somite (CL:0002322)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 15
+  Terms in all runs: 0
+  Terms in only one run: 13
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BMP signaling pathway (GO:0030509)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+BMPsignalingpathway (GO:0030509)                  ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Cell-cell signaling (GO:0007267)                  ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Hoxgene (GO:0000977)                              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Notch signaling pathway (GO:0007219)              ✓       ✓       ✓       ✓       ✗       ✓       ✗       ✓       ✓       ✓       
+Notchsignalingpathway (GO:0007219)                ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Pattern specification process (GO:0007389)        ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Regionalization (GO:0003002)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Segmentation (GO:0007386)                         ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       
+Somite development (GO:0061053)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+anatomical structure morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+anterior/posterior pattern specification (GO:00   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+cell-cell adhesion (GO:0098609)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+cell-cell signaling (GO:0007267)                  ✓       ✓       ✓       ✗       ✓       ✗       ✗       ✓       ✓       ✗       
+cell-celladhesion (GO:0098609)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+embryonic pattern specification (GO:0009880)      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+oscillatory behavior (GO:0044050)                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+pattern specification (GO:0007389)                ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+pattern specification process (GO:0007389)        ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+proteinbinding (GO:0005515)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+regionalization (GO:0003002)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+segmentation (GO:0007386)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+segmentation (GO:0035282)                         ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+segmentation clock (GO:0035912)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+segmentationclock (GO:0042733)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+somite development (GO:0061053)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+somitedevelopment (GO:0061053)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+somitogenesis (GO:0001756)                        ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✗       ✓       ✓       
+somitogenesis (GO:0061053)                        ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 29
+  Terms in all runs: 0
+  Terms in only one run: 21
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Biological Clocks (D001689)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Body Patterning (D001831)                         ✗       ✓       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Body Patterning (D001834)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Body Patterning (D058628)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Body Patterning (D058750)                         ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+BodyPatterning (D001828)                          ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Bone Morphogenetic Proteins (D049109)             ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Cell Communication (D002465)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (D002467)                      ✗       ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (D002470)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (D015127)                      ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell Communication (D015398)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Cell Communication (D016282)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+DevelopmentalBiology (D002684)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Embryo,Vertebrate (D065088)                       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Embryonic Development (D000077198)                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Embryonic Development (D004622)                   ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Embryonic Development (D004625)                   ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Embryonic Development (D047108)                   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Hox Genes (D015851)                               ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Hox Genes (D015857)                               ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Hox Genes (D042104)                               ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Hox Genes (D042681)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Mesoderm (D008647)                                ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       
+Morphogenesis (D009030)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogenesis (D058785)                           ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Neural Tube (D009436)                             ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Noggin Protein (D019908)                          ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Notch Receptors (D015325)                         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Notch Receptors (D015326)                         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Receptor, Notch (D020868)                         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Self-organizing systems (D058109)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+SignalTransduction (D015398)                      ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Somites (D013001)                                 ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Somites (D019170)                                 ✗       ✓       ✗       ✓       ✓       ✗       ✓       ✗       ✗       ✗       
+Somites (D019577)                                 ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Somites (D019784)                                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Somites (D053684)                                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 39
+  Terms in all runs: 0
+  Terms in only one run: 29
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/15 terms consistent (0.0%)
+GeneOntology: 0/29 terms consistent (0.0%)
+MeSH: 0/39 terms consistent (0.0%)
+
+Overall consistency: 0/83 terms (0.0%)
+
+================================================================================

@@ -1,0 +1,300 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-24 04:57:06
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 25
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 5
+     • Average consistency: 26.0%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Cell (CL:0000000)
+     10.0% [█░░░░░░░░░] epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] somatic cell (CL:0002371)
+     10.0% [█░░░░░░░░░] Epithelial Cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Mesenchymal Cell (CL:0008019)
+
+  INCONSISTENT TERMS (< 50%):
+     10.0% epithelial cell (CL:0000066)
+     10.0% somatic cell (CL:0002371)
+     10.0% Epithelial Cell (CL:0000066)
+     ... and 1 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 25
+     • Average consistency: 15.6%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Response to Extracellular Stimulus (GO:0009991)
+     30.0% [███░░░░░░░] Cell Communication (GO:0007154)
+     30.0% [███░░░░░░░] Extracellular Matrix Organization (GO:0030198)
+     20.0% [██░░░░░░░░] Response to extracellular stimulus (GO:0009991)
+     20.0% [██░░░░░░░░] multicellular organism development (GO:0007275)
+     ... and 20 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Response to Extracellular Stimulus (GO:0009991)
+     30.0% Cell Communication (GO:0007154)
+     30.0% Extracellular Matrix Organization (GO:0030198)
+     ... and 22 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 19.1%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Extracellular Matrix (D005109)
+     60.0% [██████░░░░] Developmental Biology (D002869)
+     50.0% [█████░░░░░] Biophysics (D001706)
+     30.0% [███░░░░░░░] Morphogenesis (D009024)
+     30.0% [███░░░░░░░] Models, Biological (D008954)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Morphogenesis (D009024)
+     30.0% Models, Biological (D008954)
+     20.0% Models, Biological (D008957)
+     ... and 17 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 14.2%
+     • Minimum similarity: 3.5%
+     • Maximum similarity: 25.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 13.8% [█░░░░░░░░░]
+     Runs 1-3: 15.4% [█░░░░░░░░░]
+     Runs 1-4: 5.9% [░░░░░░░░░░]
+     Runs 1-5: 3.7% [░░░░░░░░░░]
+     Runs 1-6: 11.7% [█░░░░░░░░░]
+     Runs 1-7: 12.7% [█░░░░░░░░░]
+     Runs 1-8: 22.3% [██░░░░░░░░]
+     Runs 1-9: 9.8% [░░░░░░░░░░]
+     Runs 1-10: 3.5% [░░░░░░░░░░]
+     Runs 2-3: 17.7% [█░░░░░░░░░]
+     Runs 2-4: 22.5% [██░░░░░░░░]
+     Runs 2-5: 10.3% [█░░░░░░░░░]
+     Runs 2-6: 7.8% [░░░░░░░░░░]
+     Runs 2-7: 17.9% [█░░░░░░░░░]
+     Runs 2-8: 19.8% [█░░░░░░░░░]
+     Runs 2-9: 22.7% [██░░░░░░░░]
+     Runs 2-10: 20.9% [██░░░░░░░░]
+     Runs 3-4: 15.5% [█░░░░░░░░░]
+     Runs 3-5: 11.8% [█░░░░░░░░░]
+     Runs 3-6: 13.1% [█░░░░░░░░░]
+     Runs 3-7: 22.4% [██░░░░░░░░]
+     Runs 3-8: 10.1% [█░░░░░░░░░]
+     Runs 3-9: 15.2% [█░░░░░░░░░]
+     Runs 3-10: 4.7% [░░░░░░░░░░]
+     Runs 4-5: 11.6% [█░░░░░░░░░]
+     Runs 4-6: 9.6% [░░░░░░░░░░]
+     Runs 4-7: 11.7% [█░░░░░░░░░]
+     Runs 4-8: 25.3% [██░░░░░░░░]
+     Runs 4-9: 12.0% [█░░░░░░░░░]
+     Runs 4-10: 12.2% [█░░░░░░░░░]
+     Runs 5-6: 8.0% [░░░░░░░░░░]
+     Runs 5-7: 6.9% [░░░░░░░░░░]
+     Runs 5-8: 11.2% [█░░░░░░░░░]
+     Runs 5-9: 16.3% [█░░░░░░░░░]
+     Runs 5-10: 12.4% [█░░░░░░░░░]
+     Runs 6-7: 17.5% [█░░░░░░░░░]
+     Runs 6-8: 16.7% [█░░░░░░░░░]
+     Runs 6-9: 20.3% [██░░░░░░░░]
+     Runs 6-10: 18.1% [█░░░░░░░░░]
+     Runs 7-8: 13.3% [█░░░░░░░░░]
+     Runs 7-9: 15.0% [█░░░░░░░░░]
+     Runs 7-10: 6.0% [░░░░░░░░░░]
+     Runs 8-9: 24.7% [██░░░░░░░░]
+     Runs 8-10: 20.1% [██░░░░░░░░]
+     Runs 9-10: 17.0% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 5
+     • Average consistency: 26.0%
+     • Maximum consistency: 90.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     90.0% [█████████░] Cell (CL:0000000)
+     10.0% [█░░░░░░░░░] epithelial cell (CL:0000066)
+     10.0% [█░░░░░░░░░] somatic cell (CL:0002371)
+     10.0% [█░░░░░░░░░] Epithelial Cell (CL:0000066)
+     10.0% [█░░░░░░░░░] Mesenchymal Cell (CL:0008019)
+
+  INCONSISTENT TERMS (< 50%):
+     10.0% epithelial cell (CL:0000066)
+     10.0% somatic cell (CL:0002371)
+     10.0% Epithelial Cell (CL:0000066)
+     ... and 1 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 25
+     • Average consistency: 15.6%
+     • Maximum consistency: 40.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     40.0% [████░░░░░░] Response to Extracellular Stimulus (GO:0009991)
+     30.0% [███░░░░░░░] Cell Communication (GO:0007154)
+     30.0% [███░░░░░░░] Extracellular Matrix Organization (GO:0030198)
+     20.0% [██░░░░░░░░] Response to extracellular stimulus (GO:0009991)
+     20.0% [██░░░░░░░░] multicellular organism development (GO:0007275)
+     ... and 20 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     40.0% Response to Extracellular Stimulus (GO:0009991)
+     30.0% Cell Communication (GO:0007154)
+     30.0% Extracellular Matrix Organization (GO:0030198)
+     ... and 22 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 23
+     • Average consistency: 19.1%
+     • Maximum consistency: 80.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     80.0% [████████░░] Extracellular Matrix (D005109)
+     60.0% [██████░░░░] Developmental Biology (D002869)
+     50.0% [█████░░░░░] Biophysics (D001706)
+     30.0% [███░░░░░░░] Morphogenesis (D009024)
+     30.0% [███░░░░░░░] Models, Biological (D008954)
+     ... and 18 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Morphogenesis (D009024)
+     30.0% Models, Biological (D008954)
+     20.0% Models, Biological (D008957)
+     ... and 17 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 14.2%
+     • Minimum similarity: 3.5%
+     • Maximum similarity: 25.3%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 13.8% [█░░░░░░░░░]
+     Runs 1-3: 15.4% [█░░░░░░░░░]
+     Runs 1-4: 5.9% [░░░░░░░░░░]
+     Runs 1-5: 3.7% [░░░░░░░░░░]
+     Runs 1-6: 11.7% [█░░░░░░░░░]
+     Runs 1-7: 12.7% [█░░░░░░░░░]
+     Runs 1-8: 22.3% [██░░░░░░░░]
+     Runs 1-9: 9.8% [░░░░░░░░░░]
+     Runs 1-10: 3.5% [░░░░░░░░░░]
+     Runs 2-3: 17.7% [█░░░░░░░░░]
+     Runs 2-4: 22.5% [██░░░░░░░░]
+     Runs 2-5: 10.3% [█░░░░░░░░░]
+     Runs 2-6: 7.8% [░░░░░░░░░░]
+     Runs 2-7: 17.9% [█░░░░░░░░░]
+     Runs 2-8: 19.8% [█░░░░░░░░░]
+     Runs 2-9: 22.7% [██░░░░░░░░]
+     Runs 2-10: 20.9% [██░░░░░░░░]
+     Runs 3-4: 15.5% [█░░░░░░░░░]
+     Runs 3-5: 11.8% [█░░░░░░░░░]
+     Runs 3-6: 13.1% [█░░░░░░░░░]
+     Runs 3-7: 22.4% [██░░░░░░░░]
+     Runs 3-8: 10.1% [█░░░░░░░░░]
+     Runs 3-9: 15.2% [█░░░░░░░░░]
+     Runs 3-10: 4.7% [░░░░░░░░░░]
+     Runs 4-5: 11.6% [█░░░░░░░░░]
+     Runs 4-6: 9.6% [░░░░░░░░░░]
+     Runs 4-7: 11.7% [█░░░░░░░░░]
+     Runs 4-8: 25.3% [██░░░░░░░░]
+     Runs 4-9: 12.0% [█░░░░░░░░░]
+     Runs 4-10: 12.2% [█░░░░░░░░░]
+     Runs 5-6: 8.0% [░░░░░░░░░░]
+     Runs 5-7: 6.9% [░░░░░░░░░░]
+     Runs 5-8: 11.2% [█░░░░░░░░░]
+     Runs 5-9: 16.3% [█░░░░░░░░░]
+     Runs 5-10: 12.4% [█░░░░░░░░░]
+     Runs 6-7: 17.5% [█░░░░░░░░░]
+     Runs 6-8: 16.7% [█░░░░░░░░░]
+     Runs 6-9: 20.3% [██░░░░░░░░]
+     Runs 6-10: 18.1% [█░░░░░░░░░]
+     Runs 7-8: 13.3% [█░░░░░░░░░]
+     Runs 7-9: 15.0% [█░░░░░░░░░]
+     Runs 7-10: 6.0% [░░░░░░░░░░]
+     Runs 8-9: 24.7% [██░░░░░░░░]
+     Runs 8-10: 20.1% [██░░░░░░░░]
+     Runs 9-10: 17.0% [█░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (26.0%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (15.6%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (19.1%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (26.0%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (15.6%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (19.1%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (14.2%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

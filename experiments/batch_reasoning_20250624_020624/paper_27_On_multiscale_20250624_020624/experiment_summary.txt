@@ -1,0 +1,72 @@
+================================================================================
+BIOLOGICAL MODELING EXPERIMENT SUMMARY
+================================================================================
+Experiment Name: paper_27_On_multiscale
+Generated: 2025-06-24 04:51:52
+Total Runs: 10
+
+ORIGINAL BIOLOGICAL SYSTEM DESCRIPTION
+--------------------------------------------------------------------------------
+In this paper we present the foundation of a unified, object-oriented, three-dimensional biomodelling environment, which allows us to integrate multiple submodels at scales from subcellular to those of tissues and organs. Our current implementation combines a modified discrete model from statistical mechanics, the Cellular Potts Model, with a continuum reaction–diffusion model and a state automaton with well-defined conditions for cell differentiation transitions to model genetic regulation. This environment allows us to rapidly and compactly create computational models of a class of complex-developmental phenomena. To illustrate model development, we simulate a simplified version of the formation of the skeletal pattern in a growing embryonic vertebrate limb.
+
+EXPERIMENT RUN DETAILS
+--------------------------------------------------------------------------------
+Run 1: run_1
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_1
+  Timestamp: 2025-06-24T04:45:04.709540
+  Interactions: 2
+  CC3D Model: 9275 bytes
+
+Run 2: run_2
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_2
+  Timestamp: 2025-06-24T04:45:59.807233
+  Interactions: 2
+  CC3D Model: 10462 bytes
+
+Run 3: run_3
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_3
+  Timestamp: 2025-06-24T04:47:01.351846
+  Interactions: 2
+  CC3D Model: 2919 bytes
+
+Run 4: run_4
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_4
+  Timestamp: 2025-06-24T04:47:33.707014
+  Interactions: 2
+  CC3D Model: 3308 bytes
+
+Run 5: run_5
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_5
+  Timestamp: 2025-06-24T04:48:10.863122
+  Interactions: 2
+  CC3D Model: 2691 bytes
+
+Run 6: run_6
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_6
+  Timestamp: 2025-06-24T04:48:36.818254
+  Interactions: 2
+  CC3D Model: 9636 bytes
+
+Run 7: run_7
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_7
+  Timestamp: 2025-06-24T04:49:25.170996
+  Interactions: 2
+  CC3D Model: 3228 bytes
+
+Run 8: run_8
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_8
+  Timestamp: 2025-06-24T04:49:54.862156
+  Interactions: 2
+  CC3D Model: 2494 bytes
+
+Run 9: run_9
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_9
+  Timestamp: 2025-06-24T04:50:33.051776
+  Interactions: 2
+  CC3D Model: 9235 bytes
+
+Run 10: run_10
+  Directory: experiments\batch_reasoning_20250624_020624\paper_27_On_multiscale_20250624_020624\run_10
+  Timestamp: 2025-06-24T04:51:19.982684
+  Interactions: 2
+  CC3D Model: 2623 bytes

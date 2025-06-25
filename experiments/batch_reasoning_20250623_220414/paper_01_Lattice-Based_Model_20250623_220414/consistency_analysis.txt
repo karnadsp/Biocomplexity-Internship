@@ -1,0 +1,302 @@
+================================================================================
+BIOLOGICAL MODELING PIPELINE CONSISTENCY ANALYSIS
+================================================================================
+Generated: 2025-06-23 22:10:10
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+• Total experiment runs analyzed: 26
+• Pipeline stages with data: 3
+
+NATURAL LANGUAGE TO ONTOLOGY STAGE
+===================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 8
+     • Average consistency: 11.2%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] mammary epithelial cell (CL:0002492)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0002501)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0005015)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0000182)
+     10.0% [█░░░░░░░░░] Mammary Epithelial Cell (CL:0002492)
+     ... and 3 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% mammary epithelial cell (CL:0002492)
+     10.0% mammary epithelial cell (CL:0002501)
+     10.0% mammary epithelial cell (CL:0005015)
+     ... and 5 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 19
+     • Average consistency: 18.4%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell adhesion (GO:0007155)
+     50.0% [█████░░░░░] apoptotic process (GO:0006915)
+     30.0% [███░░░░░░░] cell population proliferation (GO:0008283)
+     20.0% [██░░░░░░░░] necrotic cell death (GO:0070265)
+     20.0% [██░░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 14 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% cell population proliferation (GO:0008283)
+     20.0% necrotic cell death (GO:0070265)
+     20.0% Cell Adhesion (GO:0007155)
+     ... and 14 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 26
+     • Average consistency: 20.8%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Breast Neoplasms (D001943)
+     60.0% [██████░░░░] Necrosis (D009336)
+     60.0% [██████░░░░] Cell Adhesion (D015815)
+     60.0% [██████░░░░] Apoptosis (D017209)
+     30.0% [███░░░░░░░] Cell Proliferation (D049109)
+     ... and 21 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Cell Proliferation (D049109)
+     30.0% Carcinoma, Intraductal, Noninfiltrating (D018301)
+     20.0% Cell Movement (D002465)
+     ... and 19 more
+
+--------------------------------------------------------------------------------
+
+ONTOLOGY TO CC3D CODE STAGE
+============================
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.0%
+     • Minimum similarity: 0.9%
+     • Maximum similarity: 26.1%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 11.0% [█░░░░░░░░░]
+     Runs 1-3: 5.6% [░░░░░░░░░░]
+     Runs 1-4: 3.3% [░░░░░░░░░░]
+     Runs 1-5: 8.8% [░░░░░░░░░░]
+     Runs 1-6: 14.3% [█░░░░░░░░░]
+     Runs 1-7: 6.2% [░░░░░░░░░░]
+     Runs 1-8: 13.2% [█░░░░░░░░░]
+     Runs 1-9: 10.2% [█░░░░░░░░░]
+     Runs 1-10: 12.2% [█░░░░░░░░░]
+     Runs 2-3: 11.9% [█░░░░░░░░░]
+     Runs 2-4: 1.7% [░░░░░░░░░░]
+     Runs 2-5: 10.9% [█░░░░░░░░░]
+     Runs 2-6: 4.7% [░░░░░░░░░░]
+     Runs 2-7: 4.9% [░░░░░░░░░░]
+     Runs 2-8: 26.1% [██░░░░░░░░]
+     Runs 2-9: 6.9% [░░░░░░░░░░]
+     Runs 2-10: 9.8% [░░░░░░░░░░]
+     Runs 3-4: 1.5% [░░░░░░░░░░]
+     Runs 3-5: 8.7% [░░░░░░░░░░]
+     Runs 3-6: 15.8% [█░░░░░░░░░]
+     Runs 3-7: 4.2% [░░░░░░░░░░]
+     Runs 3-8: 10.7% [█░░░░░░░░░]
+     Runs 3-9: 7.6% [░░░░░░░░░░]
+     Runs 3-10: 6.1% [░░░░░░░░░░]
+     Runs 4-5: 0.9% [░░░░░░░░░░]
+     Runs 4-6: 14.7% [█░░░░░░░░░]
+     Runs 4-7: 3.1% [░░░░░░░░░░]
+     Runs 4-8: 6.3% [░░░░░░░░░░]
+     Runs 4-9: 4.4% [░░░░░░░░░░]
+     Runs 4-10: 1.9% [░░░░░░░░░░]
+     Runs 5-6: 5.1% [░░░░░░░░░░]
+     Runs 5-7: 8.7% [░░░░░░░░░░]
+     Runs 5-8: 9.9% [░░░░░░░░░░]
+     Runs 5-9: 11.7% [█░░░░░░░░░]
+     Runs 5-10: 4.2% [░░░░░░░░░░]
+     Runs 6-7: 5.4% [░░░░░░░░░░]
+     Runs 6-8: 19.0% [█░░░░░░░░░]
+     Runs 6-9: 6.0% [░░░░░░░░░░]
+     Runs 6-10: 2.1% [░░░░░░░░░░]
+     Runs 7-8: 4.0% [░░░░░░░░░░]
+     Runs 7-9: 7.2% [░░░░░░░░░░]
+     Runs 7-10: 2.8% [░░░░░░░░░░]
+     Runs 8-9: 6.5% [░░░░░░░░░░]
+     Runs 8-10: 15.1% [█░░░░░░░░░]
+     Runs 9-10: 4.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+NATURAL LANGUAGE TO CC3D CODE (END-TO-END) STAGE
+=================================================
+
+CellOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 8
+     • Average consistency: 11.2%
+     • Maximum consistency: 20.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     20.0% [██░░░░░░░░] mammary epithelial cell (CL:0002492)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0002501)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0005015)
+     10.0% [█░░░░░░░░░] mammary epithelial cell (CL:0000182)
+     10.0% [█░░░░░░░░░] Mammary Epithelial Cell (CL:0002492)
+     ... and 3 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     20.0% mammary epithelial cell (CL:0002492)
+     10.0% mammary epithelial cell (CL:0002501)
+     10.0% mammary epithelial cell (CL:0005015)
+     ... and 5 more
+
+GeneOntology Terms:
+-------------------
+  STATISTICS:
+     • Total unique terms: 19
+     • Average consistency: 18.4%
+     • Maximum consistency: 50.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     50.0% [█████░░░░░] cell adhesion (GO:0007155)
+     50.0% [█████░░░░░] apoptotic process (GO:0006915)
+     30.0% [███░░░░░░░] cell population proliferation (GO:0008283)
+     20.0% [██░░░░░░░░] necrotic cell death (GO:0070265)
+     20.0% [██░░░░░░░░] Cell Adhesion (GO:0007155)
+     ... and 14 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% cell population proliferation (GO:0008283)
+     20.0% necrotic cell death (GO:0070265)
+     20.0% Cell Adhesion (GO:0007155)
+     ... and 14 more
+
+MeSH Terms:
+-----------
+  STATISTICS:
+     • Total unique terms: 26
+     • Average consistency: 20.8%
+     • Maximum consistency: 70.0%
+     • Terms with 100% consistency: 0
+
+  TOP CONSISTENT TERMS:
+     70.0% [███████░░░] Breast Neoplasms (D001943)
+     60.0% [██████░░░░] Necrosis (D009336)
+     60.0% [██████░░░░] Cell Adhesion (D015815)
+     60.0% [██████░░░░] Apoptosis (D017209)
+     30.0% [███░░░░░░░] Cell Proliferation (D049109)
+     ... and 21 more terms
+
+  INCONSISTENT TERMS (< 50%):
+     30.0% Cell Proliferation (D049109)
+     30.0% Carcinoma, Intraductal, Noninfiltrating (D018301)
+     20.0% Cell Movement (D002465)
+     ... and 19 more
+
+Code Similarity Analysis:
+-------------------------
+  STATISTICS:
+     • Number of comparisons: 45
+     • Average similarity: 8.0%
+     • Minimum similarity: 0.9%
+     • Maximum similarity: 26.1%
+
+  OVERALL CODE CONSISTENCY: POOR
+
+  PAIRWISE COMPARISONS:
+     Runs 1-2: 11.0% [█░░░░░░░░░]
+     Runs 1-3: 5.6% [░░░░░░░░░░]
+     Runs 1-4: 3.3% [░░░░░░░░░░]
+     Runs 1-5: 8.8% [░░░░░░░░░░]
+     Runs 1-6: 14.3% [█░░░░░░░░░]
+     Runs 1-7: 6.2% [░░░░░░░░░░]
+     Runs 1-8: 13.2% [█░░░░░░░░░]
+     Runs 1-9: 10.2% [█░░░░░░░░░]
+     Runs 1-10: 12.2% [█░░░░░░░░░]
+     Runs 2-3: 11.9% [█░░░░░░░░░]
+     Runs 2-4: 1.7% [░░░░░░░░░░]
+     Runs 2-5: 10.9% [█░░░░░░░░░]
+     Runs 2-6: 4.7% [░░░░░░░░░░]
+     Runs 2-7: 4.9% [░░░░░░░░░░]
+     Runs 2-8: 26.1% [██░░░░░░░░]
+     Runs 2-9: 6.9% [░░░░░░░░░░]
+     Runs 2-10: 9.8% [░░░░░░░░░░]
+     Runs 3-4: 1.5% [░░░░░░░░░░]
+     Runs 3-5: 8.7% [░░░░░░░░░░]
+     Runs 3-6: 15.8% [█░░░░░░░░░]
+     Runs 3-7: 4.2% [░░░░░░░░░░]
+     Runs 3-8: 10.7% [█░░░░░░░░░]
+     Runs 3-9: 7.6% [░░░░░░░░░░]
+     Runs 3-10: 6.1% [░░░░░░░░░░]
+     Runs 4-5: 0.9% [░░░░░░░░░░]
+     Runs 4-6: 14.7% [█░░░░░░░░░]
+     Runs 4-7: 3.1% [░░░░░░░░░░]
+     Runs 4-8: 6.3% [░░░░░░░░░░]
+     Runs 4-9: 4.4% [░░░░░░░░░░]
+     Runs 4-10: 1.9% [░░░░░░░░░░]
+     Runs 5-6: 5.1% [░░░░░░░░░░]
+     Runs 5-7: 8.7% [░░░░░░░░░░]
+     Runs 5-8: 9.9% [░░░░░░░░░░]
+     Runs 5-9: 11.7% [█░░░░░░░░░]
+     Runs 5-10: 4.2% [░░░░░░░░░░]
+     Runs 6-7: 5.4% [░░░░░░░░░░]
+     Runs 6-8: 19.0% [█░░░░░░░░░]
+     Runs 6-9: 6.0% [░░░░░░░░░░]
+     Runs 6-10: 2.1% [░░░░░░░░░░]
+     Runs 7-8: 4.0% [░░░░░░░░░░]
+     Runs 7-9: 7.2% [░░░░░░░░░░]
+     Runs 7-10: 2.8% [░░░░░░░░░░]
+     Runs 8-9: 6.5% [░░░░░░░░░░]
+     Runs 8-10: 15.1% [█░░░░░░░░░]
+     Runs 9-10: 4.4% [░░░░░░░░░░]
+
+--------------------------------------------------------------------------------
+
+RECOMMENDATIONS & INSIGHTS
+================================================================================
+ONTOLOGY CONSISTENCY ISSUES:
+   • CellOntology shows low consistency (11.2%) in natural_to_ontology
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (18.4%) in natural_to_ontology
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.8%) in natural_to_ontology
+     → Consider refining prompts for MeSH term extraction
+   • CellOntology shows low consistency (11.2%) in natural_to_code
+     → Consider refining prompts for CellOntology term extraction
+   • GeneOntology shows low consistency (18.4%) in natural_to_code
+     → Consider refining prompts for GeneOntology term extraction
+   • MeSH shows low consistency (20.8%) in natural_to_code
+     → Consider refining prompts for MeSH term extraction
+
+CODE GENERATION CONSISTENCY ISSUES:
+   • ontology_to_code shows low code similarity (8.0%)
+     → Consider using lower temperature or more specific prompts
+   • natural_to_code shows low code similarity (8.0%)
+     → Consider using lower temperature or more specific prompts
+
+GENERAL RECOMMENDATIONS:
+   • Run more experiments (5+ runs) for better statistical significance
+   • Monitor consistency trends over time
+   • Consider prompt engineering if consistency is below 70%
+   • Archive low-performing experiment configurations
+
+================================================================================
+End of Analysis Report
+================================================================================

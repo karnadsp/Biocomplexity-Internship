@@ -1,0 +1,134 @@
+================================================================================
+ONTOLOGY EXTRACTION COMPARISON
+================================================================================
+Generated: 2025-06-24 04:38:19
+Total Runs: 10
+
+CELLONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Apical Ectodermal Ridge (CL:0000632)              ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Apical Ectodermal Ridge Cell (CL:0000352)         ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Apical Ectodermal Ridge Cell (CL:0000353)         ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Ectodermal (CL:0000223)                           ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Ectodermal Cell (CL:0000223)                      ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✓       ✗       
+Epithelial Cell (CL:0000066)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Epithelial cell (CL:0000066)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal (CL:0000240)                          ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Mesenchymal Cell (CL:0000192)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Mesenchymal Cell (CL:0008019)                     ✗       ✗       ✗       ✗       ✓       ✓       ✓       ✓       ✗       ✓       
+Mesenchymal cell (CL:0008019)                     ✓       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+apical ectodermal ridge cell (CL:0000463)         ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+ectodermal cell (CL:0000223)                      ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+mesenchymal cell (CL:0008019)                     ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR CellOntology:
+  Total unique terms: 14
+  Terms in all runs: 0
+  Terms in only one run: 10
+
+--------------------------------------------------------------------------------
+
+GENEONTOLOGY TERMS COMPARISON
+=============================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anatomical Structure Morphogenesis (GO:0009653)   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Apical Ectodermal Ridge Morphogenesis (GO:00351   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Adhesion (GO:0007155)                        ✓       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       
+Cell Division (GO:0051301)                        ✓       ✓       ✗       ✗       ✓       ✓       ✓       ✓       ✓       ✓       
+Cell Growth (GO:0016049)                          ✗       ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Cell Growth (GO:0040007)                          ✓       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       ✗       
+Cell Proliferation (GO:0008283)                   ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Cell adhesion (GO:0007155)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell division (GO:0051301)                        ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cell growth (GO:0016049)                          ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (GO:0005578)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Extracellular Matrix (GO:0031012)                 ✓       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Extracellular Matrix Organization (GO:0030198)    ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       ✓       
+Extracellular Matrix Organization (GO:0031012)    ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Extracellular matrix (GO:0031012)                 ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular matrix organization (GO:0030198)    ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Growth (GO:0040007)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Limb Bud Development (GO:0060173)                 ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogen Activity (GO:0010181)                   ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogen Gradient (GO:0005114)                   ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Morphogen Gradient (GO:0007369)                   ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Morphogen Gradient (GO:0007389)                   ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Morphogen Transport (GO:0015846)                  ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogen Transport (GO:0035148)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Morphogen Transport (GO:0048877)                  ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogen transport (GO:0035102)                  ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogen-Mediated Signaling Pathway (GO:003511   ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell adhesion (GO:0007155)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+cell division (GO:0051301)                        ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+extracellular matrix (GO:0031012)                 ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+morphogen transport (GO:0035148)                  ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+
+SUMMARY FOR GeneOntology:
+  Total unique terms: 31
+  Terms in all runs: 0
+  Terms in only one run: 25
+
+--------------------------------------------------------------------------------
+
+MESH TERMS COMPARISON
+=====================
+
+Term                                              Run 1       Run 2       Run 3       Run 4       Run 5       Run 6       Run 7       Run 8       Run 9       Run 10      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell Adhesion (D002448)                           ✓       ✗       ✓       ✗       ✓       ✗       ✗       ✗       ✗       ✓       
+Cell Adhesion (D002468)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Cell Adhesion (D015815)                           ✗       ✓       ✗       ✓       ✗       ✓       ✓       ✗       ✓       ✗       
+Cell Division (D002454)                           ✓       ✗       ✗       ✗       ✓       ✓       ✓       ✗       ✗       ✗       
+Cell Proliferation (D011694)                      ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Cell Proliferation (D011747)                      ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       
+Cell Proliferation (D049109)                      ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Cellular Potts Model (D064928)                    ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Chick Embryo (D002644)                            ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Computer Simulation (D003196)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Computer Simulation (D003201)                     ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       
+Elasticity (D004437)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Elasticity (D004614)                              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Extracellular Matrix (D005109)                    ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       ✓       
+Growth Factors (D005786)                          ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Limb Bud (D054058)                                ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Limb Bud (D054882)                                ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       
+Limb Buds (D058167)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Limb Buds (D058629)                               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Mesenchymal Stromal Cells (D055675)               ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Models, Biological (D008954)                      ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Models, Biological (D008957)                      ✗       ✗       ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+Models, Biological (D008958)                      ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009024)                           ✓       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Morphogenesis (D009048)                           ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       
+Morphogens (D009030)                              ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✓       ✗       ✗       
+Morphogens (D019000)                              ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D019573)                              ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D019627)                              ✓       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D019636)                              ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✓       
+Morphogens (D019674)                              ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       ✗       
+Morphogens (D049067)                              ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       ✗       ✗       
+Stochastic Models (D020261)                       ✗       ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       
+Stochastic Processes (D013129)                    ✗       ✗       ✗       ✗       ✗       ✗       ✓       ✗       ✗       ✗       
+
+SUMMARY FOR MeSH:
+  Total unique terms: 34
+  Terms in all runs: 1
+  Terms in only one run: 25
+  Consistent terms: Extracellular Matrix (D005109)
+
+--------------------------------------------------------------------------------
+
+OVERALL SUMMARY
+===============
+CellOntology: 0/14 terms consistent (0.0%)
+GeneOntology: 0/31 terms consistent (0.0%)
+MeSH: 1/34 terms consistent (2.9%)
+
+Overall consistency: 1/79 terms (1.3%)
+
+================================================================================
