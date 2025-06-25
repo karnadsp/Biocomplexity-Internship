@@ -2,6 +2,8 @@
 
 This tool helps generate CompuCell3D models from biological system descriptions using AI assistance.
 
+Semi-depreciated Readme, need to update...
+
 ## Setup
 
 1. Install the required dependencies:
