@@ -1,0 +1,11 @@
+run,api_style,num_classes,num_cell_types,num_parameters,num_behaviors,has_syntax_errors,syntax_errors
+1,legacy,1,0,5,2,False,[]
+2,mixed,1,0,3,1,False,[]
+3,legacy,1,0,4,5,True,['Line 10: unterminated string literal (detected at line 10)']
+4,legacy,1,2,4,5,False,[]
+5,legacy,1,7,3,6,True,['Line 4: unterminated string literal (detected at line 4)']
+6,legacy,1,1,6,4,False,[]
+7,legacy,1,2,3,6,True,['Line 10: unterminated string literal (detected at line 10)']
+8,legacy,1,0,2,2,False,[]
+9,legacy,1,1,4,4,False,[]
+10,legacy,1,0,3,2,False,[]

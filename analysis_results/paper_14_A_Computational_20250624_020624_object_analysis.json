@@ -1,0 +1,124 @@
+{
+  "files_analyzed": 10,
+  "run_info": [
+    {
+      "run": 1,
+      "api_style": "mixed",
+      "num_classes": 2,
+      "num_cell_types": 1,
+      "num_parameters": 1,
+      "num_behaviors": 4,
+      "has_syntax_errors": true,
+      "syntax_errors": [
+        "Line 6: unterminated string literal (detected at line 6)"
+      ]
+    },
+    {
+      "run": 2,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 0,
+      "num_parameters": 5,
+      "num_behaviors": 2,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 3,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 0,
+      "num_parameters": 3,
+      "num_behaviors": 2,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 4,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 2,
+      "num_parameters": 7,
+      "num_behaviors": 3,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 5,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 1,
+      "num_parameters": 2,
+      "num_behaviors": 3,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 6,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 0,
+      "num_parameters": 1,
+      "num_behaviors": 3,
+      "has_syntax_errors": true,
+      "syntax_errors": [
+        "Line 4: unterminated string literal (detected at line 4)"
+      ]
+    },
+    {
+      "run": 7,
+      "api_style": "modern",
+      "num_classes": 2,
+      "num_cell_types": 0,
+      "num_parameters": 1,
+      "num_behaviors": 4,
+      "has_syntax_errors": true,
+      "syntax_errors": [
+        "Line 8: unterminated string literal (detected at line 8)"
+      ]
+    },
+    {
+      "run": 8,
+      "api_style": "legacy",
+      "num_classes": 2,
+      "num_cell_types": 0,
+      "num_parameters": 6,
+      "num_behaviors": 4,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 9,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 0,
+      "num_parameters": 4,
+      "num_behaviors": 1,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    },
+    {
+      "run": 10,
+      "api_style": "legacy",
+      "num_classes": 1,
+      "num_cell_types": 0,
+      "num_parameters": 2,
+      "num_behaviors": 4,
+      "has_syntax_errors": false,
+      "syntax_errors": []
+    }
+  ],
+  "experiment_dir": "experiments\\batch_reasoning_20250624_020624\\paper_14_A_Computational_20250624_020624",
+  "summary": {
+    "api_styles": {
+      "mixed": 1,
+      "legacy": 8,
+      "modern": 1
+    },
+    "avg_classes": 1.3,
+    "avg_cell_types": 0.4,
+    "avg_parameters": 3.2,
+    "avg_behaviors": 3.0,
+    "syntax_error_runs": 3
+  }
+}
