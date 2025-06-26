@@ -1,0 +1,36 @@
+CC3D Object Analysis Results Summary
+Generated from 30 papers with 300 total runs
+
+OVERALL STATISTICS:
+- Total Papers Analyzed: 30
+- Total Runs: 300
+- Average Runs per Paper: 10.0
+
+API CONSISTENCY:
+- Papers with Consistent APIs (>80%): 10 (33.3%)
+- Papers with Mixed APIs: 22 (73.3%)
+
+API DISTRIBUTION:
+- Legacy API: 30 papers (100.0%)
+
+QUALITY METRICS:
+- Average Syntax Error Rate: 26.3%
+- Papers with Syntax Errors: 27 (90.0%)
+
+COMPLEXITY METRICS:
+- Average Classes per Run: 1.1
+- Average Cell Types per Run: 0.8
+- Average Parameters per Run: 3.3
+- Average Behaviors per Run: 2.9
+
+TOP ISSUES:
+- Paper 05 (Somites_Without_20250624): Low API consistency (50.0%), Mixed APIs, Syntax errors (20.0%)
+- Paper 25 (Adhesion_between_20250624): Low API consistency (50.0%), Mixed APIs, Syntax errors (20.0%)
+- Paper 11 (Advances_in_20250624): Low API consistency (60.0%), Mixed APIs, Syntax errors (20.0%)
+- Paper 16 (Front_Instabilities_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (20.0%)
+- Paper 18 (3D_Multi-Cell_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (40.0%)
+- Paper 19 (Mathematical_Modeling_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (10.0%)
+- Paper 17 (Computer_Simulation_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (50.0%)
+- Paper 02 (Using_Mathematical_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (50.0%)
+- Paper 22 (Discovering_Novel_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (30.0%)
+- Paper 29 (Multiscale_Models_20250624): Low API consistency (70.0%), Mixed APIs, Syntax errors (20.0%)
